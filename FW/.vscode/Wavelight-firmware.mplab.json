@@ -1,0 +1,46 @@
+{
+    "version": "1.9",
+    "configurations": [
+        {
+            "name": "default",
+            "id": "",
+            "device": "ATtiny416",
+            "imagePath": "./out/Wavelight-firmware/default.elf",
+            "toolProperties": "default-tool-base",
+            "tool": "Snap",
+            "packs": [
+                {
+                    "name": "ATtiny_DFP",
+                    "vendor": "Microchip",
+                    "version": "3.4.278"
+                }
+            ],
+            "fileSet": "default",
+            "toolchain": "default-XC8"
+        }
+    ],
+    "propertyGroups": [
+        {
+            "name": "default-XC8",
+            "type": "toolchain",
+            "provider": "microchip.toolchains:xc8@3.00",
+            "properties": {}
+        },
+        {
+            "name": "default-tool-base",
+            "type": "tool",
+            "properties": {}
+        }
+    ],
+    "fileSets": [
+        {
+            "name": "default",
+            "files": [
+                {
+                    "include": "**/*",
+                    "exclude": "**/@(build|_build|out|cmake|.vscode)/**/*"
+                }
+            ]
+        }
+    ]
+}

@@ -1,0 +1,70 @@
+{
+	"configurations" : 
+	[
+		{
+			"abstractTargets" : [],
+			"directories" : 
+			[
+				{
+					"build" : ".",
+					"jsonFile" : "directory-.-b23a0b23c080df4d29ba.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.24.0"
+					},
+					"projectIndex" : 0,
+					"source" : ".",
+					"targetIndexes" : 
+					[
+						0,
+						1
+					]
+				}
+			],
+			"name" : "",
+			"projects" : 
+			[
+				{
+					"directoryIndexes" : 
+					[
+						0
+					],
+					"name" : "Wavelight_firmware_default_project",
+					"targetIndexes" : 
+					[
+						0,
+						1
+					]
+				}
+			],
+			"targets" : 
+			[
+				{
+					"directoryIndex" : 0,
+					"id" : "Wavelight_firmware_default_default_XC8_compile::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-Wavelight_firmware_default_default_XC8_compile-4dba5894ca3a3c64ea06.json",
+					"name" : "Wavelight_firmware_default_default_XC8_compile",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "Wavelight_firmware_default_image_E5NgOjff::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-Wavelight_firmware_default_image_E5NgOjff-6792cbff5c6ba69d0838.json",
+					"name" : "Wavelight_firmware_default_image_E5NgOjff",
+					"projectIndex" : 0
+				}
+			]
+		}
+	],
+	"kind" : "codemodel",
+	"paths" : 
+	{
+		"build" : "/home/lcrm/Documents/WaveLight/FW/_build/Wavelight-firmware/default",
+		"source" : "/home/lcrm/Documents/WaveLight/FW/cmake/Wavelight-firmware/default"
+	},
+	"version" : 
+	{
+		"major" : 2,
+		"minor" : 11
+	}
+}

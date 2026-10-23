@@ -1,0 +1,5 @@
+# ninja log v7
+1	340	1792732806879063091	CMakeFiles/Wavelight_firmware_default_default_XC8_compile.dir/home/lcrm/Documents/WaveLight/FW/main.c.o	af15eecd77b90b2d
+341	351	1792732807219063082	/home/lcrm/Documents/WaveLight/FW/out/Wavelight-firmware/default.elf	2f28fd1a30ce3762
+0	348	1792733642195042251	CMakeFiles/Wavelight_firmware_default_default_XC8_compile.dir/home/lcrm/Documents/WaveLight/FW/main.c.o	af15eecd77b90b2d
+348	358	1792733642543042243	/home/lcrm/Documents/WaveLight/FW/out/Wavelight-firmware/default.elf	2f28fd1a30ce3762

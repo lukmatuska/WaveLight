@@ -1,0 +1,204 @@
+{
+	"artifacts" : 
+	[
+		{
+			"path" : "/home/lcrm/Documents/WaveLight/FW/out/Wavelight-firmware/default.elf"
+		}
+	],
+	"backtrace" : 3,
+	"backtraceGraph" : 
+	{
+		"commands" : 
+		[
+			"add_executable",
+			"include",
+			"target_link_options",
+			"Wavelight_firmware_default_link_rule",
+			"target_compile_definitions"
+		],
+		"files" : 
+		[
+			".generated/main.cmake",
+			"CMakeLists.txt",
+			".generated/rule.cmake"
+		],
+		"nodes" : 
+		[
+			{
+				"file" : 1
+			},
+			{
+				"command" : 1,
+				"file" : 1,
+				"line" : 15,
+				"parent" : 0
+			},
+			{
+				"file" : 0,
+				"parent" : 1
+			},
+			{
+				"command" : 0,
+				"file" : 0,
+				"line" : 40,
+				"parent" : 2
+			},
+			{
+				"command" : 3,
+				"file" : 0,
+				"line" : 49,
+				"parent" : 2
+			},
+			{
+				"command" : 2,
+				"file" : 2,
+				"line" : 98,
+				"parent" : 4
+			},
+			{
+				"command" : 4,
+				"file" : 2,
+				"line" : 99,
+				"parent" : 4
+			}
+		]
+	},
+	"codemodelVersion" : 
+	{
+		"major" : 2,
+		"minor" : 11
+	},
+	"dependencies" : 
+	[
+		{
+			"id" : "Wavelight_firmware_default_default_XC8_compile::@6890427a1f51a3e7e1df"
+		}
+	],
+	"id" : "Wavelight_firmware_default_image_E5NgOjff::@6890427a1f51a3e7e1df",
+	"link" : 
+	{
+		"commandFragments" : 
+		[
+			{
+				"backtrace" : 5,
+				"fragment" : "-Wl,-Map=mem.map",
+				"role" : "flags"
+			},
+			{
+				"backtrace" : 5,
+				"fragment" : "-mcpu=ATtiny416",
+				"role" : "flags"
+			},
+			{
+				"backtrace" : 5,
+				"fragment" : "-Wl,--defsym=__MPLAB_BUILD=1",
+				"role" : "flags"
+			},
+			{
+				"backtrace" : 5,
+				"fragment" : "-mdfp=/home/lcrm/.mchp_packs/Microchip/ATtiny_DFP/3.4.278/xc8",
+				"role" : "flags"
+			},
+			{
+				"backtrace" : 5,
+				"fragment" : "-Wl,--gc-sections",
+				"role" : "flags"
+			},
+			{
+				"backtrace" : 5,
+				"fragment" : "-O0",
+				"role" : "flags"
+			},
+			{
+				"backtrace" : 5,
+				"fragment" : "-ffunction-sections",
+				"role" : "flags"
+			},
+			{
+				"backtrace" : 5,
+				"fragment" : "-fdata-sections",
+				"role" : "flags"
+			},
+			{
+				"backtrace" : 5,
+				"fragment" : "-fshort-enums",
+				"role" : "flags"
+			},
+			{
+				"backtrace" : 5,
+				"fragment" : "-funsigned-char",
+				"role" : "flags"
+			},
+			{
+				"backtrace" : 5,
+				"fragment" : "-funsigned-bitfields",
+				"role" : "flags"
+			},
+			{
+				"backtrace" : 5,
+				"fragment" : "-Wall",
+				"role" : "flags"
+			},
+			{
+				"backtrace" : 5,
+				"fragment" : "-gdwarf-3",
+				"role" : "flags"
+			},
+			{
+				"backtrace" : 5,
+				"fragment" : "-mno-const-data-in-progmem",
+				"role" : "flags"
+			},
+			{
+				"backtrace" : 5,
+				"fragment" : "-Wl,--memorysummary,memoryfile.xml",
+				"role" : "flags"
+			}
+		],
+		"language" : "C"
+	},
+	"name" : "Wavelight_firmware_default_image_E5NgOjff",
+	"nameOnDisk" : "default.elf",
+	"objectDependencies" : 
+	[
+		{
+			"backtrace" : 3,
+			"id" : "Wavelight_firmware_default_default_XC8_compile::@6890427a1f51a3e7e1df"
+		}
+	],
+	"orderDependencies" : 
+	[
+		{
+			"id" : "Wavelight_firmware_default_default_XC8_compile::@6890427a1f51a3e7e1df"
+		}
+	],
+	"paths" : 
+	{
+		"build" : ".",
+		"source" : "."
+	},
+	"sourceGroups" : 
+	[
+		{
+			"name" : "Object Libraries",
+			"sourceIndexes" : 
+			[
+				0
+			]
+		}
+	],
+	"sources" : 
+	[
+		{
+			"backtrace" : 3,
+			"backtraces" : 
+			[
+				3
+			],
+			"isGenerated" : true,
+			"path" : "/home/lcrm/Documents/WaveLight/FW/_build/Wavelight-firmware/default/CMakeFiles/Wavelight_firmware_default_default_XC8_compile.dir/home/lcrm/Documents/WaveLight/FW/main.c.o",
+			"sourceGroupIndex" : 0
+		}
+	],
+	"type" : "EXECUTABLE"
+}

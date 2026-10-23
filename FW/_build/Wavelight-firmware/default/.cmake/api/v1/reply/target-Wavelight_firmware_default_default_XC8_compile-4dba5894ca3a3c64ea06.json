@@ -1,0 +1,186 @@
+{
+	"artifacts" : 
+	[
+		{
+			"path" : "CMakeFiles/Wavelight_firmware_default_default_XC8_compile.dir/./home/lcrm/Documents/WaveLight/FW/main.c.o"
+		}
+	],
+	"backtrace" : 3,
+	"backtraceGraph" : 
+	{
+		"commands" : 
+		[
+			"add_library",
+			"include",
+			"target_compile_options",
+			"Wavelight_firmware_default_default_XC8_compile_rule",
+			"target_compile_definitions"
+		],
+		"files" : 
+		[
+			".generated/main.cmake",
+			"CMakeLists.txt",
+			".generated/rule.cmake"
+		],
+		"nodes" : 
+		[
+			{
+				"file" : 1
+			},
+			{
+				"command" : 1,
+				"file" : 1,
+				"line" : 15,
+				"parent" : 0
+			},
+			{
+				"file" : 0,
+				"parent" : 1
+			},
+			{
+				"command" : 0,
+				"file" : 0,
+				"line" : 24,
+				"parent" : 2
+			},
+			{
+				"command" : 3,
+				"file" : 0,
+				"line" : 25,
+				"parent" : 2
+			},
+			{
+				"command" : 2,
+				"file" : 2,
+				"line" : 74,
+				"parent" : 4
+			},
+			{
+				"command" : 4,
+				"file" : 2,
+				"line" : 75,
+				"parent" : 4
+			}
+		]
+	},
+	"codemodelVersion" : 
+	{
+		"major" : 2,
+		"minor" : 11
+	},
+	"compileGroups" : 
+	[
+		{
+			"compileCommandFragments" : 
+			[
+				{
+					"backtrace" : 5,
+					"fragment" : "-c"
+				},
+				{
+					"backtrace" : 5,
+					"fragment" : "-mcpu=ATtiny416"
+				},
+				{
+					"backtrace" : 5,
+					"fragment" : "-x"
+				},
+				{
+					"backtrace" : 5,
+					"fragment" : "c"
+				},
+				{
+					"backtrace" : 5,
+					"fragment" : "-mdfp=/home/lcrm/.mchp_packs/Microchip/ATtiny_DFP/3.4.278/xc8"
+				},
+				{
+					"backtrace" : 5,
+					"fragment" : "-Wl,--gc-sections"
+				},
+				{
+					"backtrace" : 5,
+					"fragment" : "-O0"
+				},
+				{
+					"backtrace" : 5,
+					"fragment" : "-ffunction-sections"
+				},
+				{
+					"backtrace" : 5,
+					"fragment" : "-fdata-sections"
+				},
+				{
+					"backtrace" : 5,
+					"fragment" : "-fshort-enums"
+				},
+				{
+					"backtrace" : 5,
+					"fragment" : "-funsigned-char"
+				},
+				{
+					"backtrace" : 5,
+					"fragment" : "-funsigned-bitfields"
+				},
+				{
+					"backtrace" : 5,
+					"fragment" : "-Wall"
+				},
+				{
+					"backtrace" : 5,
+					"fragment" : "-gdwarf-3"
+				},
+				{
+					"backtrace" : 5,
+					"fragment" : "-mno-const-data-in-progmem"
+				}
+			],
+			"defines" : 
+			[
+				{
+					"backtrace" : 6,
+					"define" : "XPRJ_default=default"
+				},
+				{
+					"backtrace" : 6,
+					"define" : "__ATtiny416__"
+				}
+			],
+			"language" : "C",
+			"sourceIndexes" : 
+			[
+				0
+			]
+		}
+	],
+	"id" : "Wavelight_firmware_default_default_XC8_compile::@6890427a1f51a3e7e1df",
+	"name" : "Wavelight_firmware_default_default_XC8_compile",
+	"paths" : 
+	{
+		"build" : ".",
+		"source" : "."
+	},
+	"sourceGroups" : 
+	[
+		{
+			"name" : "Source Files",
+			"sourceIndexes" : 
+			[
+				0
+			]
+		}
+	],
+	"sources" : 
+	[
+		{
+			"backtrace" : 3,
+			"backtraces" : 
+			[
+				3
+			],
+			"compileGroupIndex" : 0,
+			"path" : "/home/lcrm/Documents/WaveLight/FW/main.c",
+			"sourceGroupIndex" : 0
+		}
+	],
+	"type" : "OBJECT_LIBRARY"
+}

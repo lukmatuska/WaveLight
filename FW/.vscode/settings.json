@@ -1,0 +1,15 @@
+{
+    "mplab.clangd.compileCommandsDir": "${workspaceFolder}/_build/Wavelight-firmware/default",
+    "mplab.clangd.arguments": [
+        "--header-insertion=never"
+    ],
+    "mplab.clangd.path": "/opt/microchip/xc8/v3.00/bin/xc8-clangd",
+    "memory-inspector.debugTypes": [
+        "arm-debugger",
+        "embedded-debug",
+        "gdb",
+        "gdbtarget",
+        "mplab-core-da"
+    ],
+    "cmake.sourceDirectory": "/home/lcrm/Documents/WaveLight/FW/cmake/Wavelight-firmware/default"
+}
