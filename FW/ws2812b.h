@@ -58,7 +58,7 @@ static void ws2812b_bar(uint8_t n, uint8_t r, uint8_t g, uint8_t b) {
         ws2812b_send_byte(b);
     }
     SREG = sreg;
-    // Latch (>50 us low) is guaranteed by the caller's loop delay
+    // Latch (>280 us low for WS2812B-2020 V6) is guaranteed by the caller's loop delay
 }
 
 #define ws2812b_set_all(r, g, b) ws2812b_bar(LED_COUNT, r, g, b)

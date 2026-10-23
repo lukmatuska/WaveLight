@@ -7,7 +7,7 @@ battery and sleeps when nobody is around.
 
 - **MCU:** ATtiny416 (4 kB flash, 256 B RAM), internal 16 MHz oscillator
 - **Sensor:** ams TMF8801 time-of-flight distance sensor
-- **LEDs:** 4× WS2812B (count is configurable)
+- **LEDs:** 4× WS2812B-2020 (count is configurable)
 - **Firmware:** C, MPLAB XC8 (free license), in [`FW/`](FW/)
 - **Hardware:** KiCad project in the repository root
 
@@ -96,9 +96,12 @@ The battery signals only appear if the battery check is enabled (see
 
 - **No I²C pull-ups.** The internal ones are used and the bus runs at 50 kHz.
   Add 4.7 kΩ to VDD on SDA/SCL in the next revision.
-- **The WS2812s draw ~0.5-1 mA each even when dark** and are powered straight
-  from the battery, so the firmware can't switch them off. A high-side switch
-  on the strip power would be the biggest idle-current saving.
+- **The LEDs run straight from the battery.** The WS2812B-2020 is specified
+  for 3.3-5.3 V. Below ~3.6 V the green and blue channels may lose current
+  (dimmer, redder light), and below 3.3 V the LEDs are out of spec.
+- **The sensor dominates standby current** (~9 mA), see
+  [Power analysis](#power-analysis). A 300 mAh battery lasts about a day in
+  standby.
 - **Sensor range is ~64 cm** with the firmware built into the sensor (see
   [Sensor range](#sensor-range)).
 
@@ -236,11 +239,7 @@ Unused pins have their digital inputs disabled, and the battery divider only
 draws current during a measurement. A watchdog (~8 s, also running in sleep)
 resets the device if the sensor ever stops waking it.
 
-| Approximate current (datasheet values, not measured) | Active | Idle |
-|---|---|---|
-| TMF8801 | ~27 mA | ~9 mA at 100 ms (~4.5 mA at 200 ms) |
-| ATtiny416 | a few mA | µA range plus short wakes |
-| 4× WS2812 when dark (plus the flame itself while on) | 2-4 mA | 2-4 mA (hardware) |
+For the resulting currents and battery life, see [Power analysis](#power-analysis).
 
 **Settings.** The flame size and color are saved to EEPROM when a hold or
 color mode ends, and only if they changed. EEPROM layout: page 0 =
@@ -269,10 +268,105 @@ package fits the patch. The steps are in [`FW/PATCHING.md`](FW/PATCHING.md).
 
 ---
 
+## Power analysis
+
+Estimates for 4× WS2812B-2020 and a **300 mAh** Li-ion battery. They are
+calculated from datasheet values and a simulation of the flame code. **Nothing
+has been measured yet.**
+
+### Assumptions
+
+- **Usable capacity 270 mAh:** about 90% of 300 mAh, from 4.2 V down to the
+  3.3 V cut-off.
+- **Battery current = load current.** The LDO is linear, and the LEDs are
+  constant-current drivers. This holds while the battery is high enough for
+  the green/blue LED channels (~3.6 V); below that the LEDs draw less and get
+  dimmer.
+- **Room temperature, typical (not maximum) values.**
+- **Default firmware settings:** sensor every 33 ms while active and every
+  100 ms while idle, 900k iterations, MCU at 16 MHz.
+
+### Per component
+
+| Component | State | Current | Source |
+|---|---|---|---|
+| TMF8801 | measuring every 33 ms (light on, or < 15 s after use) | ~27 mA | DS000648: 27 mA average at 30 Hz, 900k iterations |
+| TMF8801 | measuring every 100 ms (idle) | ~9.1 mA | same energy per measurement (~0.9 mC, ~27 ms at 32.5 mA) + 85 µA standby in between |
+| TMF8801 | measuring every 200 / 255 ms | ~4.6 / ~3.7 mA | same calculation |
+| ATtiny416 | awake, 16 MHz, ~3 V | ~3 mA | datasheet fig. 36-1 |
+| ATtiny416 | idle: power-down + ~6 ms awake per wake-up (I²C, catch-up ticks) | ~0.2 mA | 6% of 3 mA; power-down itself ~0.2 µA (fig. 36-9) |
+| WS2812B-2020 ×4 | dark | ≤ 4 µA | V6 datasheet: quiescent ≤ 1 µA each |
+| WS2812B-2020 ×4 | flame | 3-71 mA average, see below | 12 mA per channel at full, flame simulated |
+| LDO, charger, watchdog, divider, pull-ups | always | a few µA | negligible |
+
+### LED current of the flame
+
+These figures come from simulating the actual `light.h` algorithm (random
+generator, heat model, colors, white balance) for 10 minutes. Each LED channel
+draws 12 mA × PWM / 255.
+
+| Color | Size 255 | Size 160 | Size 80 | Size 24 (min) |
+|---|---|---|---|---|
+| Red (default) | 31.5 mA | 15.6 mA | 6.9 mA | 3.1 mA |
+| Orange | 44.4 mA | 21.3 mA | 9.1 mA | 4.0 mA |
+| Yellow | 28.6 mA | 17.3 mA | 9.1 mA | 4.6 mA |
+| Blue | 30.5 mA | 14.9 mA | 6.6 mA | 3.0 mA |
+| Warm white 2700 K | 41.2 mA | 21.1 mA | 9.5 mA | 4.3 mA |
+| Cool white 6500 K | 71.4 mA | 37.6 mA | 17.4 mA | 8.1 mA |
+
+- **Peak:** about 108 mA for the LEDs (cool white, size 255, during flicker
+  peaks), so ~140 mA in total. This is under 0.5 C for a 300 mAh cell.
+- **Theoretical maximum:** 4 × 36 mA = 144 mA; the flame never gets there.
+
+### Total current and run time (270 mAh usable)
+
+| Scenario | Sensor | MCU | LEDs | Total | Run time |
+|---|---|---|---|---|---|
+| **Standby** (light off, idle) | 9.1 | 0.2 | 0 | **9.3 mA** | **~29 h** |
+| Light off, < 15 s after use | 27 | 3 | 0 | 30 mA | (short) |
+| On: red, size 24 | 27 | 3 | 3.1 | 33 mA | 8.2 h |
+| On: red, size 80 | 27 | 3 | 6.9 | 37 mA | 7.3 h |
+| On: red, size 160 | 27 | 3 | 15.6 | 46 mA | 5.9 h |
+| On: red, size 255 (default) | 27 | 3 | 31.5 | 62 mA | 4.4 h |
+| On: warm white, size 255 | 27 | 3 | 41.2 | 71 mA | 3.8 h |
+| On: cool white, size 255 | 27 | 3 | 71.4 | 101 mA | 2.7 h |
+
+**Example day:** the light is on for 30 min (red, size 160) and the rest is
+standby. That's 23 mAh + 219 mAh = **~240 mAh per day, so a charge lasts about
+1 day.**
+
+### Findings
+
+1. **Standby is the main drain, and almost all of it is the sensor.** One
+   measurement costs ~0.9 mC whatever the interval, so the average current
+   simply scales with how often the sensor measures.
+2. **While the light is on, the sensor costs as much as the flame.** At
+   small and medium sizes it draws more than the LEDs (27 mA vs 3-16 mA),
+   because it keeps measuring every 33 ms even when nobody is around.
+3. **The LEDs cost nothing when dark** (WS2812B-2020 V6: ≤ 1 µA). Older
+   WS2812B revisions and clones draw ~0.5-1 mA each, so check the part
+   revision if standby measures higher than expected.
+
+### Ways to extend run time (not implemented)
+
+| Change | Effect | Cost |
+|---|---|---|
+| `SENSOR_IDLE_MS` 100 → 255 | standby ~3.8 mA → **~3 days** | quick flicks are missed more often when idle |
+| + 600k instead of 900k iterations while idle (datasheet: 17.7 mA at 30 Hz) | standby ~2.5 mA → **~4.5 days** | needs a per-mode iteration setting; probably less range in idle (untested) |
+| Measure every 100 ms while the light is on and no hand is near (MCU stays awake) | red, size 160: 5.9 → 9.8 h (+65%); size 24: 8.2 → 17.8 h (+115%) | first wave while on reacts a bit slower |
+| Idle sleep instead of busy-waiting between 10 ms ticks while on | ~-2 mA while on | small code change |
+| Power switch off when not in use | ~0 mA | the battery doesn't charge while switched off (see [Board](#board)) |
+
+---
+
 ## References
 
 - TMF8801 datasheet DS000648 v7-00 (ams OSRAM): register map, commands,
   bootloader protocol, calibration
+- [WS2812B-2020 V6 datasheet](https://www.tme.com/Document/f57342b0dc3e7d573aa1f8b6b5942fcf/WS2812B-2020-V6_V1.2_EN.pdf)
+  (WorldSemi): quiescent current, channel current, supply range, reset time
+- [ATtiny416/417/814/816/817 datasheet](https://cdn.sparkfun.com/assets/e/e/4/c/8/ATtiny817-datasheet.pdf):
+  active and power-down supply current (figures 36-1, 36-9)
 - [SparkFun TMF8801 Arduino library](https://github.com/sparkfun/SparkFun_TMF8801_Arduino_Library)
   and [DFRobot TMF8x01 library](https://github.com/DFRobot/DFRobot_TMF8x01):
   measurement command bytes, calibration flow, RAM patch data
