@@ -18,11 +18,12 @@
  *
  * Requires fuse OSCCFG = 16 MHz (FREQSEL_16MHZ), factory default is 20 MHz.
  *
- * Power: while the light is off and nothing happens for IDLE_AFTER_MS (no hand,
- * no fade, no tone mode), the sensor measures every SENSOR_IDLE_MS and the MCU sleeps in
- * power-down, woken by the sensor INT pin (low on every result - the
- * TMF8801 has no distance threshold interrupt). A hand switches back to
- * SENSOR_ACTIVE_MS and the 10 ms main loop.
+ * Power: after IDLE_AFTER_MS without a hand (no gesture pending, no color
+ * mode) the sensor slows down to SENSOR_IDLE_MS / SENSOR_IDLE_KITER, whether
+ * the light is on or off. If the light is also off (and not fading), the MCU
+ * sleeps in power-down between measurements, woken by the sensor INT pin
+ * (low on every result - the TMF8801 has no distance threshold interrupt).
+ * A hand switches back to SENSOR_ACTIVE_MS / SENSOR_ACTIVE_KITER.
  *
  * Controls:
  * - wave: on / off
@@ -40,7 +41,7 @@
 
 #define F_CPU 16000000UL  // 16 MHz clock
 #define DEBUG_DISTANCE 0  // 1 = show raw distance on LEDs, 0 = night light
-#define BATTERY_CHECK  0  // 1 = battery divider fitted
+ #define BATTERY_CHECK  0  // 1 = battery divider fitted
 #define LED_COUNT      4  // WS2812 LEDs on the strip
 #define TICK_MS 10        // main loop period (fades, gesture timing)
 
@@ -49,9 +50,11 @@
 #define TONE_MODE_END_MS  1000  // after the hand left
 #define BATTERY_PERIOD_MS 60000U
 
-#define SENSOR_ACTIVE_MS 33   // measurement period while gestures are going on
-#define SENSOR_IDLE_MS   100  // measurement period while idle (max 255), longer = quick waves get missed
-#define IDLE_AFTER_MS    15000U // quiet this long with the light off -> idle
+#define SENSOR_ACTIVE_MS    33   // measurement period while a hand is around
+#define SENSOR_ACTIVE_KITER 900  // iterations (thousands) per measurement while active
+#define SENSOR_IDLE_MS      200  // measurement period while idle (max 255), longer = quick waves get missed
+#define SENSOR_IDLE_KITER   600  // fewer iterations while idle: less power, maybe less range
+#define IDLE_AFTER_MS       15000U // no hand this long -> sensor idle
 
 #include <avr/io.h>
 #include <avr/interrupt.h>
@@ -226,9 +229,10 @@ static uint16_t tone_timeout;
 static uint16_t battery_ticks;
 #endif
 
-static void sensor_period(uint8_t ms) {
+static void sensor_mode(uint8_t idle) {
     tmf8801_stop();
-    if (tmf8801_start(CAL_DATA, ms)) fail();
+    if (tmf8801_start(CAL_DATA, idle ? SENSOR_IDLE_MS : SENSOR_ACTIVE_MS,
+                      idle ? SENSOR_IDLE_KITER : SENSOR_ACTIVE_KITER)) fail();
 }
 
 /**
@@ -255,7 +259,7 @@ static void sleep_until_sensor(void) {
  * @return 1 if nothing needs the 10 ms loop
  */
 static uint8_t is_quiet(void) {
-    return !light_on && gesture_idle() && !tone_mode && !light_fading();
+    return gesture_idle() && !tone_mode;
 }
 
 /**
@@ -343,7 +347,7 @@ int main(void) {
 
     uint16_t distance;
 #if DEBUG_DISTANCE
-    if (tmf8801_start(EEPROM_BYTES + CAL_ADDR, 33)) fail();
+    if (tmf8801_start(EEPROM_BYTES + CAL_ADDR, 33, 900)) fail();
 
     uint8_t stale = 0;
     while (1) {
@@ -359,24 +363,15 @@ int main(void) {
     }
 #else
     settings_load();
-    if (tmf8801_start(CAL_DATA, SENSOR_ACTIVE_MS)) fail();
+    if (tmf8801_start(CAL_DATA, SENSOR_ACTIVE_MS, SENSOR_ACTIVE_KITER)) fail();
 
     uint16_t quiet_ticks = 0;
+    uint8_t sensor_idle = 0;
     while (1) {
-        // Active: 10 ms loop
         __builtin_avr_wdr();
-        if (tmf8801_get_distance(&distance) == 0) gesture_reading(distance);
-        tick();
-        delay_ms(TICK_MS);
 
-        quiet_ticks = is_quiet() ? quiet_ticks + 1 : 0;
-        if (quiet_ticks < IDLE_AFTER_MS / TICK_MS) continue;
-
-        // Idle: sleep between slow measurements, catch up the ticks after each
-        quiet_ticks = 0;
-        sensor_period(SENSOR_IDLE_MS);
-        do {
-            __builtin_avr_wdr();
+        if (sensor_idle && !light_on && !light_fading()) {
+            // Light off: sleep until the next (slow) measurement, catch up the ticks
             sleep_until_sensor();
             if (tmf8801_get_distance(&distance)) {
                 tmf8801_write(TMF8801_REG_INT_STATUS, TMF8801_INT_RESULT);  // don't spin on a stuck INT
@@ -388,8 +383,23 @@ int main(void) {
             for (uint8_t i = 1; i < SENSOR_IDLE_MS / TICK_MS; i++) tick();
             gesture_reading(distance);
             tick();
-        } while (is_quiet());
-        sensor_period(SENSOR_ACTIVE_MS);
+        } else {
+            // Light on (flame needs the 10 ms loop) or sensor active
+            if (tmf8801_get_distance(&distance) == 0) gesture_reading(distance);
+            tick();
+            delay_ms(TICK_MS);
+        }
+
+        if (!is_quiet()) {
+            quiet_ticks = 0;
+            if (sensor_idle) {
+                sensor_idle = 0;
+                sensor_mode(0);
+            }
+        } else if (!sensor_idle && ++quiet_ticks >= IDLE_AFTER_MS / TICK_MS) {
+            sensor_idle = 1;
+            sensor_mode(1);
+        }
     }
 #endif
 }

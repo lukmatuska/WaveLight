@@ -58,9 +58,11 @@ The battery signals only appear if the battery check is enabled (see
   once the hand has *moved* 3 cm, and objects don't move.
 - **Pulling your hand away doesn't change the setting.** On release the
   value from ~200 ms earlier is kept.
-- **Waking from idle:** after 15 s with the light off, the sensor slows down
-  to save power. The first wave still works, but a very quick flick can be
-  missed.
+- **Idle:** after 15 s without a hand, whether the light is on or off, the
+  sensor slows down (one shorter measurement every 200 ms) to save power. The
+  first wave still works, but a very quick flick can be missed. Idle
+  measurements are shorter, so a hand near the 60 cm limit may only be
+  noticed once it comes a bit closer.
 
 ---
 
@@ -99,8 +101,8 @@ The battery signals only appear if the battery check is enabled (see
 - **The LEDs run straight from the battery.** The WS2812B-2020 is specified
   for 3.3-5.3 V. Below ~3.6 V the green and blue channels may lose current
   (dimmer, redder light), and below 3.3 V the LEDs are out of spec.
-- **The sensor dominates standby current** (~9 mA), see
-  [Power analysis](#power-analysis). A 300 mAh battery lasts about a day in
+- **The sensor dominates standby current** (~3 mA), see
+  [Power analysis](#power-analysis). A 300 mAh battery lasts about 3.5 days in
   standby.
 - **Sensor range is ~64 cm** with the firmware built into the sensor (see
   [Sensor range](#sensor-range)).
@@ -140,7 +142,7 @@ The battery signals only appear if the battery check is enabled (see
 Flashing erases the EEPROM, which holds the sensor calibration and the saved size
 and color, unless the `EESAVE` fuse is set.
 
-Flash usage is about 3.6 kB, or 3.85 kB with the battery check, out of 4 kB.
+Flash usage is about 3.65 kB, or 3.9 kB with the battery check, out of 4 kB.
 
 ### Configuration
 
@@ -158,9 +160,11 @@ All settings are `#define`s.
 | `TONE_MODE_WAIT_MS` | 2000 | Time to bring the hand back after a double wave |
 | `TONE_MODE_END_MS` | 1000 | Color mode ends this long after the hand left |
 | `BATTERY_PERIOD_MS` | 60000 | Battery check interval while running |
-| `SENSOR_ACTIVE_MS` | 33 | Sensor measurement period while active |
-| `SENSOR_IDLE_MS` | 100 | Sensor measurement period while idle (max 255). Longer = less power, more missed flicks |
-| `IDLE_AFTER_MS` | 15000 | Light off and nothing happening this long → idle |
+| `SENSOR_ACTIVE_MS` | 33 | Sensor measurement period while a hand is around |
+| `SENSOR_ACTIVE_KITER` | 900 | Sensor iterations (thousands) per measurement while active |
+| `SENSOR_IDLE_MS` | 200 | Sensor measurement period while idle (max 255). Longer = less power, more missed flicks |
+| `SENSOR_IDLE_KITER` | 600 | Iterations while idle. Fewer = less power per measurement, maybe less range |
+| `IDLE_AFTER_MS` | 15000 | No hand this long → sensor idle (light on or off) |
 
 **[`gesture.h`](FW/gesture.h)**
 
@@ -225,15 +229,18 @@ travels along the strip, and occasionally the whole flame dips (a gust).
 Heat sets both the brightness and a small color shift. The size setting moves
 the base heat up and down.
 
-**Power.** While the light is on, the MCU stays awake and the sensor
-measures every 33 ms. After `IDLE_AFTER_MS` with the light off, no hand, no
-fade and no color mode:
-- the sensor switches to `SENSOR_IDLE_MS` and goes to standby between
-  measurements
-- the MCU goes to power-down and is woken by the sensor's INT pin, which goes
-  low on every result (the TMF8801 has no distance-threshold interrupt)
-- after each wake, the firmware catches up the missed 10 ms ticks so all timing
-  stays correct, then sleeps again unless a hand was seen
+**Power.** While a hand is around, the sensor measures every 33 ms with 900k
+iterations. After `IDLE_AFTER_MS` with no hand, no gesture pending and no
+color mode, **whether the light is on or off**, the sensor switches to
+`SENSOR_IDLE_MS` / `SENSOR_IDLE_KITER` (200 ms, 600k) and goes to standby
+between measurements. A hand switches it back.
+
+What the MCU does then depends on the light:
+- **Light on (or fading):** the MCU stays awake and runs the flame every 10 ms.
+- **Light off:** the MCU goes to power-down and is woken by the sensor's INT
+  pin, which goes low on every result (the TMF8801 has no distance-threshold
+  interrupt). After each wake, the firmware catches up the missed 10 ms ticks
+  so all timing stays correct, then sleeps again unless a hand was seen.
 
 Unused pins have their digital inputs disabled, and the battery divider only
 draws current during a measurement. A watchdog (~8 s, also running in sleep)
@@ -283,18 +290,23 @@ has been measured yet.**
   the green/blue LED channels (~3.6 V); below that the LEDs draw less and get
   dimmer.
 - **Room temperature, typical (not maximum) values.**
-- **Default firmware settings:** sensor every 33 ms while active and every
-  100 ms while idle, 900k iterations, MCU at 16 MHz.
+- **Default firmware settings:** sensor every 33 ms with 900k iterations
+  while a hand is around, every 200 ms with 600k iterations while idle; MCU at
+  16 MHz.
+- **The iteration count really changes the measurement time.** The datasheet
+  contradicts itself on the byte order, and the firmware follows the register
+  description. **Verify by measuring the standby current with
+  `SENSOR_IDLE_KITER` 600 vs 900.** It should drop by about a third; if it
+  doesn't, the byte order is wrong.
 
 ### Per component
 
 | Component | State | Current | Source |
 |---|---|---|---|
-| TMF8801 | measuring every 33 ms (light on, or < 15 s after use) | ~27 mA | DS000648: 27 mA average at 30 Hz, 900k iterations |
-| TMF8801 | measuring every 100 ms (idle) | ~9.1 mA | same energy per measurement (~0.9 mC, ~27 ms at 32.5 mA) + 85 µA standby in between |
-| TMF8801 | measuring every 200 / 255 ms | ~4.6 / ~3.7 mA | same calculation |
-| ATtiny416 | awake, 16 MHz, ~3 V | ~3 mA | datasheet fig. 36-1 |
-| ATtiny416 | idle: power-down + ~6 ms awake per wake-up (I²C, catch-up ticks) | ~0.2 mA | 6% of 3 mA; power-down itself ~0.2 µA (fig. 36-9) |
+| TMF8801 | active: every 33 ms, 900k (hand around, or < 15 s after) | ~27 mA | DS000648: 27 mA average at 30 Hz, 900k iterations |
+| TMF8801 | idle: every 200 ms, 600k | **~3.0 mA** | DS000648: 17.7 mA at 30 Hz with 600k → ~0.59 mC per measurement; + 85 µA standby in between |
+| ATtiny416 | awake, 16 MHz, ~3 V (light on) | ~3 mA | datasheet fig. 36-1 |
+| ATtiny416 | light off, idle: power-down + ~6 ms awake per wake-up (I²C, catch-up ticks) | ~0.1 mA | 3% of 3 mA; power-down itself ~0.2 µA (fig. 36-9) |
 | WS2812B-2020 ×4 | dark | ≤ 4 µA | V6 datasheet: quiescent ≤ 1 µA each |
 | WS2812B-2020 ×4 | flame | 3-71 mA average, see below | 12 mA per channel at full, flame simulated |
 | LDO, charger, watchdog, divider, pull-ups | always | a few µA | negligible |
@@ -320,41 +332,45 @@ draws 12 mA × PWM / 255.
 
 ### Total current and run time (270 mAh usable)
 
+After the first 15 s without a hand, the light runs with the sensor idle. The
+"on" rows assume that; the active state only applies briefly after each
+interaction.
+
 | Scenario | Sensor | MCU | LEDs | Total | Run time |
 |---|---|---|---|---|---|
-| **Standby** (light off, idle) | 9.1 | 0.2 | 0 | **9.3 mA** | **~29 h** |
-| Light off, < 15 s after use | 27 | 3 | 0 | 30 mA | (short) |
-| On: red, size 24 | 27 | 3 | 3.1 | 33 mA | 8.2 h |
-| On: red, size 80 | 27 | 3 | 6.9 | 37 mA | 7.3 h |
-| On: red, size 160 | 27 | 3 | 15.6 | 46 mA | 5.9 h |
-| On: red, size 255 (default) | 27 | 3 | 31.5 | 62 mA | 4.4 h |
-| On: warm white, size 255 | 27 | 3 | 41.2 | 71 mA | 3.8 h |
-| On: cool white, size 255 | 27 | 3 | 71.4 | 101 mA | 2.7 h |
+| **Standby** (light off, idle) | 3.0 | 0.1 | 0 | **3.1 mA** | **~87 h (3.6 days)** |
+| Hand around / < 15 s after (light off) | 27 | 3 | 0 | 30 mA | (short) |
+| On: red, size 24 | 3.0 | 3 | 3.1 | 9.1 mA | 30 h |
+| On: red, size 80 | 3.0 | 3 | 6.9 | 12.9 mA | 21 h |
+| On: red, size 160 | 3.0 | 3 | 15.6 | 21.6 mA | 12.5 h |
+| On: red, size 255 (default) | 3.0 | 3 | 31.5 | 37.5 mA | 7.2 h |
+| On: warm white, size 255 | 3.0 | 3 | 41.2 | 47.2 mA | 5.7 h |
+| On: cool white, size 255 | 3.0 | 3 | 71.4 | 77.4 mA | 3.5 h |
 
 **Example day:** the light is on for 30 min (red, size 160) and the rest is
-standby. That's 23 mAh + 219 mAh = **~240 mAh per day, so a charge lasts about
-1 day.**
+standby. That's 11 mAh + 73 mAh = **~84 mAh per day, so a charge lasts about
+3 days.**
+
+Before the sensor idled while on and used fewer iterations (100 ms / 900k idle,
+33 ms whenever on), standby was 9.3 mA (~29 h) and red at size 160 ran 5.9 h.
 
 ### Findings
 
-1. **Standby is the main drain, and almost all of it is the sensor.** One
-   measurement costs ~0.9 mC whatever the interval, so the average current
-   simply scales with how often the sensor measures.
-2. **While the light is on, the sensor costs as much as the flame.** At
-   small and medium sizes it draws more than the LEDs (27 mA vs 3-16 mA),
-   because it keeps measuring every 33 ms even when nobody is around.
+1. **Standby is still mostly the sensor** (3.0 of 3.1 mA). Each measurement
+   costs a fixed charge (~0.59 mC at 600k), so the average current scales
+   with measurement interval and iteration count.
+2. **While the light is on, the MCU is now a big share.** At small sizes the
+   busy 16 MHz loop (3 mA) costs as much as the sensor or the LEDs.
 3. **The LEDs cost nothing when dark** (WS2812B-2020 V6: ≤ 1 µA). Older
    WS2812B revisions and clones draw ~0.5-1 mA each, so check the part
    revision if standby measures higher than expected.
 
-### Ways to extend run time (not implemented)
+### Ways to extend run time further (not implemented)
 
 | Change | Effect | Cost |
 |---|---|---|
-| `SENSOR_IDLE_MS` 100 → 255 | standby ~3.8 mA → **~3 days** | quick flicks are missed more often when idle |
-| + 600k instead of 900k iterations while idle (datasheet: 17.7 mA at 30 Hz) | standby ~2.5 mA → **~4.5 days** | needs a per-mode iteration setting; probably less range in idle (untested) |
-| Measure every 100 ms while the light is on and no hand is near (MCU stays awake) | red, size 160: 5.9 → 9.8 h (+65%); size 24: 8.2 → 17.8 h (+115%) | first wave while on reacts a bit slower |
-| Idle sleep instead of busy-waiting between 10 ms ticks while on | ~-2 mA while on | small code change |
+| Idle sleep instead of busy-waiting between 10 ms ticks while on (MCU ~1 mA instead of 3 mA) | red, size 24: 30 → ~38 h | small code change |
+| Fewer idle iterations (e.g. 400k) | standby roughly -30% | idle range shrinks further (untested) |
 | Power switch off when not in use | ~0 mA | the battery doesn't charge while switched off (see [Board](#board)) |
 
 ---

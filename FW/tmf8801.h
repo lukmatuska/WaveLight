@@ -52,7 +52,7 @@ static const uint8_t tmf8801_meas_cfg[8] = {
     0x00,        // CMD_DATA4: VCSEL pulse output timing (unused)
     0x00,        // CMD_DATA3: detection threshold 0, no spread spectrum
     33,          // CMD_DATA2: repetition period [ms], replaced by tmf8801_start()
-    0x84, 0x03,  // CMD_DATA1/0: 900k iterations (0x0384) - more = longer range, slower
+    0x84, 0x03,  // CMD_DATA1/0: iterations in k, low/high byte (0x0384 = 900k), replaced by tmf8801_start()
 };
 
 static uint8_t tmf8801_write(uint8_t reg, uint8_t val) {
@@ -116,12 +116,16 @@ static uint8_t tmf8801_calibrate(uint8_t *cal) {
  * Load calibration and start continuous measurements
  * @param cal TMF8801_CAL_LEN bytes from tmf8801_calibrate()
  * @param period_ms time between measurements (one takes ~27 ms at 900k iterations)
+ * @param kiters iterations in thousands - more = longer range, longer and more
+ *        power per measurement (current scales roughly with it)
  * @return 0 on success
  */
-static uint8_t tmf8801_start(const uint8_t *cal, uint8_t period_ms) {
+static uint8_t tmf8801_start(const uint8_t *cal, uint8_t period_ms, uint16_t kiters) {
     uint8_t cfg[8];
     for (uint8_t i = 0; i < 8; i++) cfg[i] = tmf8801_meas_cfg[i];
     cfg[5] = period_ms;
+    cfg[6] = kiters;       // datasheet: cmd_data1 = low byte
+    cfg[7] = kiters >> 8;  // cmd_data0 = high byte
 
     tmf8801_write(TMF8801_REG_INT_ENAB, TMF8801_INT_RESULT);  // INT pin low on each result
     tmf8801_write(TMF8801_REG_COMMAND, TMF8801_CMD_LOAD_CAL);
