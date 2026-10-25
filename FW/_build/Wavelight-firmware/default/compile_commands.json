@@ -1,8 +1,8 @@
 [
 {
-  "directory": "/home/lcrm/Documents/WaveLight/FW/_build/Wavelight-firmware/default",
-  "command": "/opt/microchip/xc8/v3.00/bin/xc8-cc -DXPRJ_default=default -D__ATtiny416__ -c -mcpu=ATtiny416 -x c -mdfp=/home/lcrm/.mchp_packs/Microchip/ATtiny_DFP/3.4.278/xc8 -Wl,--gc-sections -O0 -ffunction-sections -fdata-sections -fshort-enums -funsigned-char -funsigned-bitfields -Wall -gdwarf-3 -mno-const-data-in-progmem -o CMakeFiles/Wavelight_firmware_default_default_XC8_compile.dir/home/lcrm/Documents/WaveLight/FW/main.c.o -c /home/lcrm/Documents/WaveLight/FW/main.c",
-  "file": "/home/lcrm/Documents/WaveLight/FW/main.c",
-  "output": "/home/lcrm/Documents/WaveLight/FW/_build/Wavelight-firmware/default/CMakeFiles/Wavelight_firmware_default_default_XC8_compile.dir/home/lcrm/Documents/WaveLight/FW/main.c.o"
+  "directory": "/home/lcrm/Documents/EDA/WaveLight/FW/_build/Wavelight-firmware/default",
+  "command": "/opt/microchip/xc8/v3.10/bin/xc8-cc -DXPRJ_default=default -D__ATtiny416__ -c -mcpu=ATtiny416 -x c -mdfp=/home/lcrm/.mchp_packs/Microchip/ATtiny_DFP/3.4.278/xc8 -Wl,--gc-sections -O0 -ffunction-sections -fdata-sections -fshort-enums -funsigned-char -funsigned-bitfields -Wall -gdwarf-3 -mno-const-data-in-progmem -o CMakeFiles/Wavelight_firmware_default_default_XC8_compile.dir/home/lcrm/Documents/EDA/WaveLight/FW/main.c.o -c /home/lcrm/Documents/EDA/WaveLight/FW/main.c",
+  "file": "/home/lcrm/Documents/EDA/WaveLight/FW/main.c",
+  "output": "/home/lcrm/Documents/EDA/WaveLight/FW/_build/Wavelight-firmware/default/CMakeFiles/Wavelight_firmware_default_default_XC8_compile.dir/home/lcrm/Documents/EDA/WaveLight/FW/main.c.o"
 }
 ]

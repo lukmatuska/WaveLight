@@ -1,0 +1,3350 @@
+
+default.elf:     file format elf32-avr
+
+Sections:
+Idx Name          Size      VMA       LMA       File off  Algn  Flags
+  0 .data         00000000  00803f00  00803f00  00001028  2**0  ALLOC, LOAD, DATA, KEEP
+  1 .text         000000a2  00000000  00000000  00000194  2**1  CONTENTS, ALLOC, LOAD, READONLY, CODE, KEEP
+  2 .comment      0000005b  00000000  00000000  00001028  2**0  CONTENTS, READONLY
+  3 .stack.descriptors.hdr 0000002a  00000000  00000000  00001083  2**0  CONTENTS, READONLY
+  4 .debug_aranges 000001b8  00000000  00000000  000010ad  2**0  CONTENTS, READONLY, DEBUGGING
+  5 .debug_info   00008c05  00000000  00000000  00001265  2**0  CONTENTS, READONLY, DEBUGGING
+  6 .debug_abbrev 00001b59  00000000  00000000  00009e6a  2**0  CONTENTS, READONLY, DEBUGGING
+  7 .debug_line   000010bd  00000000  00000000  0000b9c3  2**0  CONTENTS, READONLY, DEBUGGING
+  8 .debug_frame  00000534  00000000  00000000  0000ca80  2**2  CONTENTS, READONLY, DEBUGGING
+  9 .debug_str    00000af0  00000000  00000000  0000cfb4  2**0  CONTENTS, READONLY, DEBUGGING
+ 10 .debug_ranges 00000208  00000000  00000000  0000daa4  2**0  CONTENTS, READONLY, DEBUGGING
+ 11 .text         00000002  00000e82  00000e82  00001016  2**1  CONTENTS, ALLOC, LOAD, READONLY, CODE
+ 12 .note.gnu.avr.deviceinfo 0000003c  00000000  00000000  0000dcac  2**2  CONTENTS, READONLY, DEBUGGING
+ 13 .text.ws2812b_height 0000001a  00000d0e  00000d0e  00000ea2  2**1  CONTENTS, ALLOC, LOAD, READONLY, CODE
+ 14 .text.ws2812b_init 00000006  00000e5e  00000e5e  00000ff2  2**1  CONTENTS, ALLOC, LOAD, READONLY, CODE
+ 15 .text.ws2812b_send_byte 00000020  00000c5e  00000c5e  00000df2  2**1  CONTENTS, ALLOC, LOAD, READONLY, CODE
+ 16 .text.ws2812b_bar 00000058  000008d8  000008d8  00000a6c  2**1  CONTENTS, ALLOC, LOAD, READONLY, CODE
+ 17 .text.ws2812b_show 0000004c  000009d4  000009d4  00000b68  2**1  CONTENTS, ALLOC, LOAD, READONLY, CODE
+ 18 .text.twi_init 0000001a  00000d28  00000d28  00000ebc  2**1  CONTENTS, ALLOC, LOAD, READONLY, CODE
+ 19 .text.twi_wait 0000000e  00000e08  00000e08  00000f9c  2**1  CONTENTS, ALLOC, LOAD, READONLY, CODE
+ 20 .text.twi_start_reg 0000001e  00000c7e  00000c7e  00000e12  2**1  CONTENTS, ALLOC, LOAD, READONLY, CODE
+ 21 .text.twi_write_reg 00000056  00000930  00000930  00000ac4  2**1  CONTENTS, ALLOC, LOAD, READONLY, CODE
+ 22 .text.twi_read_reg 00000082  000006f6  000006f6  0000088a  2**1  CONTENTS, ALLOC, LOAD, READONLY, CODE
+ 23 .text.tmf8801_write 00000022  00000c3c  00000c3c  00000dd0  2**1  CONTENTS, ALLOC, LOAD, READONLY, CODE
+ 24 .text.tmf8801_read 00000024  00000c18  00000c18  00000dac  2**1  CONTENTS, ALLOC, LOAD, READONLY, CODE
+ 25 .text.tmf8801_wait_for 0000003e  00000aea  00000aea  00000c7e  2**1  CONTENTS, ALLOC, LOAD, READONLY, CODE
+ 26 .text.tmf8801_init 00000044  00000a66  00000a66  00000bfa  2**1  CONTENTS, ALLOC, LOAD, READONLY, CODE
+ 27 .text.tmf8801_calibrate 00000046  00000a20  00000a20  00000bb4  2**1  CONTENTS, ALLOC, LOAD, READONLY, CODE
+ 28 .text.tmf8801_start 0000007e  00000778  00000778  0000090c  2**1  CONTENTS, ALLOC, LOAD, READONLY, CODE
+ 29 .text.tmf8801_stop 0000000a  00000e4a  00000e4a  00000fde  2**1  CONTENTS, ALLOC, LOAD, READONLY, CODE
+ 30 .text.tmf8801_get_distance 00000072  000007f6  000007f6  0000098a  2**1  CONTENTS, ALLOC, LOAD, READONLY, CODE
+ 31 .rodata.white_rgb 0000000f  00808df8  00000df8  00000f8c  2**0  CONTENTS, ALLOC, LOAD, READONLY, DATA
+ 32 .bss.light_on 00000001  00803f2a  00803f2a  00001028  2**0  ALLOC
+ 33 .bss.light_brightness 00000001  00803f2b  00803f2b  00001028  2**0  ALLOC
+ 34 .bss.light_tone 00000001  00803f2c  00803f2c  00001028  2**0  ALLOC
+ 35 .bss.light_level 00000002  00803f18  00803f18  00001028  2**0  ALLOC
+ 36 .bss.flame_heat 00000006  00803f0c  00803f0c  00001028  2**0  ALLOC
+ 37 .bss.flame_target 00000006  00803f12  00803f12  00001028  2**0  ALLOC
+ 38 .data.flame_rng 00000002  00803f1a  00000e8e  00001022  2**0  CONTENTS, ALLOC, LOAD, DATA
+ 39 .text.gamma8  0000000e  00000e16  00000e16  00000faa  2**1  CONTENTS, ALLOC, LOAD, READONLY, CODE
+ 40 .text.scale8  00000016  00000da6  00000da6  00000f3a  2**1  CONTENTS, ALLOC, LOAD, READONLY, CODE
+ 41 .text.light_set_on 00000006  00000e64  00000e64  00000ff8  2**1  CONTENTS, ALLOC, LOAD, READONLY, CODE
+ 42 .text.light_set_brightness 0000000c  00000e32  00000e32  00000fc6  2**1  CONTENTS, ALLOC, LOAD, READONLY, CODE
+ 43 .text.light_set_tone 00000006  00000e6a  00000e6a  00000ffe  2**1  CONTENTS, ALLOC, LOAD, READONLY, CODE
+ 44 .text.light_init 0000000c  00000e3e  00000e3e  00000fd2  2**1  CONTENTS, ALLOC, LOAD, READONLY, CODE
+ 45 .text.flame_rand 00000036  00000b28  00000b28  00000cbc  2**1  CONTENTS, ALLOC, LOAD, READONLY, CODE
+ 46 .text.light_color 00000118  0000037a  0000037a  0000050e  2**1  CONTENTS, ALLOC, LOAD, READONLY, CODE
+ 47 .text.flame_render 00000114  00000492  00000492  00000626  2**1  CONTENTS, ALLOC, LOAD, READONLY, CODE
+ 48 .text.light_target 00000014  00000dd2  00000dd2  00000f66  2**1  CONTENTS, ALLOC, LOAD, READONLY, CODE
+ 49 .text.light_fading 0000001c  00000cba  00000cba  00000e4e  2**1  CONTENTS, ALLOC, LOAD, READONLY, CODE
+ 50 .text.light_flash 0000000a  00000e54  00000e54  00000fe8  2**1  CONTENTS, ALLOC, LOAD, READONLY, CODE
+ 51 .text.light_update 00000070  00000868  00000868  000009fc  2**1  CONTENTS, ALLOC, LOAD, READONLY, CODE
+ 52 .bss.gesture_mm 00000002  00803f1c  00803f1c  00001028  2**0  ALLOC
+ 53 .data.gesture_bg 00000002  00803f1e  00000e90  00001024  2**0  CONTENTS, ALLOC, LOAD, DATA
+ 54 .data.gesture_bg_candidate 00000002  00803f20  00000e92  00001026  2**0  CONTENTS, ALLOC, LOAD, DATA
+ 55 .bss.gesture_bg_ticks 00000002  00803f22  00803f22  00001028  2**0  ALLOC
+ 56 .bss.gesture_present 00000001  00803f2d  00803f2d  00001028  2**0  ALLOC
+ 57 .bss.gesture_missed 00000001  00803f2e  00803f2e  00001028  2**0  ALLOC
+ 58 .bss.gesture_last_mm 00000002  00803f24  00803f24  00001028  2**0  ALLOC
+ 59 .bss.gesture_hist 0000000c  00803f00  00803f00  00001028  2**0  ALLOC
+ 60 .bss.gesture_hist_i 00000001  00803f2f  00803f2f  00001028  2**0  ALLOC
+ 61 .bss.gesture_near_ticks 00000001  00803f30  00803f30  00001028  2**0  ALLOC
+ 62 .bss.gesture_gap_ticks 00000001  00803f31  00803f31  00001028  2**0  ALLOC
+ 63 .bss.gesture_holding 00000001  00803f32  00803f32  00001028  2**0  ALLOC
+ 64 .bss.gesture_hold_start_mm 00000002  00803f26  00803f26  00001028  2**0  ALLOC
+ 65 .bss.gesture_tracking 00000001  00803f33  00803f33  00001028  2**0  ALLOC
+ 66 .bss.gesture_ignore 00000001  00803f34  00803f34  00001028  2**0  ALLOC
+ 67 .text.gesture_diff 00000016  00000dbc  00000dbc  00000f50  2**1  CONTENTS, ALLOC, LOAD, READONLY, CODE
+ 68 .text.gesture_reading 00000098  0000065e  0000065e  000007f2  2**1  CONTENTS, ALLOC, LOAD, READONLY, CODE
+ 69 .text.gesture_set_tracking 0000001c  00000cd6  00000cd6  00000e6a  2**1  CONTENTS, ALLOC, LOAD, READONLY, CODE
+ 70 .text.gesture_idle 00000030  00000b94  00000b94  00000d28  2**1  CONTENTS, ALLOC, LOAD, READONLY, CODE
+ 71 .text.gesture_update 00000194  000000a2  000000a2  00000236  2**1  CONTENTS, ALLOC, LOAD, READONLY, CODE
+ 72 .text.delay_ms 0000001c  00000cf2  00000cf2  00000e86  2**1  CONTENTS, ALLOC, LOAD, READONLY, CODE
+ 73 .text.eeprom_write 00000040  00000aaa  00000aaa  00000c3e  2**1  CONTENTS, ALLOC, LOAD, READONLY, CODE
+ 74 .text.cal_save 00000012  00000de6  00000de6  00000f7a  2**1  CONTENTS, ALLOC, LOAD, READONLY, CODE
+ 75 .text.settings_save 0000004e  00000986  00000986  00000b1a  2**1  CONTENTS, ALLOC, LOAD, READONLY, CODE
+ 76 .text.settings_load 00000018  00000d76  00000d76  00000f0a  2**1  CONTENTS, ALLOC, LOAD, READONLY, CODE
+ 77 .text.adjust_value 0000001a  00000d42  00000d42  00000ed6  2**1  CONTENTS, ALLOC, LOAD, READONLY, CODE
+ 78 .text.blink_red 0000002c  00000bc4  00000bc4  00000d58  2**1  CONTENTS, ALLOC, LOAD, READONLY, CODE
+ 79 .text.fail    00000006  00000e70  00000e70  00001004  2**1  CONTENTS, ALLOC, LOAD, READONLY, CODE
+ 80 .text.power   00000002  00000e84  00000e84  00001018  2**1  CONTENTS, ALLOC, LOAD, READONLY, CODE
+ 81 .text.pins_init 00000036  00000b5e  00000b5e  00000cf2  2**1  CONTENTS, ALLOC, LOAD, READONLY, CODE
+ 82 .bss.tone_mode 00000001  00803f35  00803f35  00001028  2**0  ALLOC
+ 83 .bss.tone_timeout 00000002  00803f28  00803f28  00001028  2**0  ALLOC
+ 84 .text.sensor_mode 00000028  00000bf0  00000bf0  00000d84  2**1  CONTENTS, ALLOC, LOAD, READONLY, CODE
+ 85 .text.__vector_5 0000001a  00000d5c  00000d5c  00000ef0  2**1  CONTENTS, ALLOC, LOAD, READONLY, CODE
+ 86 .text.sleep_until_sensor 00000018  00000d8e  00000d8e  00000f22  2**1  CONTENTS, ALLOC, LOAD, READONLY, CODE
+ 87 .text.is_quiet 0000001e  00000c9c  00000c9c  00000e30  2**1  CONTENTS, ALLOC, LOAD, READONLY, CODE
+ 88 .text.tick    000000b8  000005a6  000005a6  0000073a  2**1  CONTENTS, ALLOC, LOAD, READONLY, CODE
+ 89 .text.startup.main 00000144  00000236  00000236  000003ca  2**1  CONTENTS, ALLOC, LOAD, READONLY, CODE
+ 90 .rodata.magic.4288 00000001  00808e07  00000e07  00000f9b  2**0  CONTENTS, ALLOC, LOAD, READONLY, DATA
+ 91 .bss.last_num.4140 00000001  00803f36  00803f36  00001028  2**0  ALLOC
+ 92 .rodata.wheel_full.4178 00000006  00808e76  00000e76  0000100a  2**0  CONTENTS, ALLOC, LOAD, READONLY, DATA
+ 93 .rodata.wheel_ramp.4179 00000006  00808e7c  00000e7c  00001010  2**0  CONTENTS, ALLOC, LOAD, READONLY, DATA
+ 94 .text.__dummy_fini 00000002  00000e86  00000e86  0000101a  2**1  CONTENTS, ALLOC, LOAD, READONLY, CODE, KEEP
+ 95 .text.__dummy_funcs_on_exit 00000002  00000e88  00000e88  0000101c  2**1  CONTENTS, ALLOC, LOAD, READONLY, CODE
+ 96 .text.__dummy_simulator_exit 00000002  00000e8a  00000e8a  0000101e  2**1  CONTENTS, ALLOC, LOAD, READONLY, CODE
+ 97 .text.exit    0000000e  00000e24  00000e24  00000fb8  2**1  CONTENTS, ALLOC, LOAD, READONLY, CODE
+ 98 .text._Exit   00000002  00000e8c  00000e8c  00001020  2**1  CONTENTS, ALLOC, LOAD, READONLY, CODE
+
+Disassembly of section .text:
+
+00000000 <__vectors>:
+__vectors():
+../../../../../crt1/gcrt1.S:63
+   0:	28 c0       	rjmp	.+80     	; 0x52 <__ctors_end>
+../../../../../crt1/gcrt1.S:67
+   2:	3f c7       	rjmp	.+3710   	; 0xe82 <__bad_interrupt>
+../../../../../crt1/gcrt1.S:68
+   4:	3e c7       	rjmp	.+3708   	; 0xe82 <__bad_interrupt>
+../../../../../crt1/gcrt1.S:69
+   6:	3d c7       	rjmp	.+3706   	; 0xe82 <__bad_interrupt>
+../../../../../crt1/gcrt1.S:71
+   8:	3c c7       	rjmp	.+3704   	; 0xe82 <__bad_interrupt>
+../../../../../crt1/gcrt1.S:72
+   a:	a8 c6       	rjmp	.+3408   	; 0xd5c <__vector_5>
+../../../../../crt1/gcrt1.S:73
+   c:	3a c7       	rjmp	.+3700   	; 0xe82 <__bad_interrupt>
+../../../../../crt1/gcrt1.S:74
+   e:	39 c7       	rjmp	.+3698   	; 0xe82 <__bad_interrupt>
+../../../../../crt1/gcrt1.S:75
+  10:	38 c7       	rjmp	.+3696   	; 0xe82 <__bad_interrupt>
+../../../../../crt1/gcrt1.S:76
+  12:	37 c7       	rjmp	.+3694   	; 0xe82 <__bad_interrupt>
+../../../../../crt1/gcrt1.S:77
+  14:	36 c7       	rjmp	.+3692   	; 0xe82 <__bad_interrupt>
+../../../../../crt1/gcrt1.S:78
+  16:	35 c7       	rjmp	.+3690   	; 0xe82 <__bad_interrupt>
+../../../../../crt1/gcrt1.S:79
+  18:	34 c7       	rjmp	.+3688   	; 0xe82 <__bad_interrupt>
+../../../../../crt1/gcrt1.S:80
+  1a:	33 c7       	rjmp	.+3686   	; 0xe82 <__bad_interrupt>
+../../../../../crt1/gcrt1.S:81
+  1c:	32 c7       	rjmp	.+3684   	; 0xe82 <__bad_interrupt>
+../../../../../crt1/gcrt1.S:82
+  1e:	31 c7       	rjmp	.+3682   	; 0xe82 <__bad_interrupt>
+../../../../../crt1/gcrt1.S:83
+  20:	30 c7       	rjmp	.+3680   	; 0xe82 <__bad_interrupt>
+../../../../../crt1/gcrt1.S:84
+  22:	2f c7       	rjmp	.+3678   	; 0xe82 <__bad_interrupt>
+../../../../../crt1/gcrt1.S:85
+  24:	2e c7       	rjmp	.+3676   	; 0xe82 <__bad_interrupt>
+../../../../../crt1/gcrt1.S:86
+  26:	2d c7       	rjmp	.+3674   	; 0xe82 <__bad_interrupt>
+../../../../../crt1/gcrt1.S:87
+  28:	2c c7       	rjmp	.+3672   	; 0xe82 <__bad_interrupt>
+../../../../../crt1/gcrt1.S:88
+  2a:	2b c7       	rjmp	.+3670   	; 0xe82 <__bad_interrupt>
+../../../../../crt1/gcrt1.S:89
+  2c:	2a c7       	rjmp	.+3668   	; 0xe82 <__bad_interrupt>
+../../../../../crt1/gcrt1.S:90
+  2e:	29 c7       	rjmp	.+3666   	; 0xe82 <__bad_interrupt>
+../../../../../crt1/gcrt1.S:91
+  30:	28 c7       	rjmp	.+3664   	; 0xe82 <__bad_interrupt>
+../../../../../crt1/gcrt1.S:92
+  32:	27 c7       	rjmp	.+3662   	; 0xe82 <__bad_interrupt>
+
+00000034 <.dinit>:
+.dinit():
+  34:	3f 00       	.word	0x003f	; ????
+  36:	3f 1a       	sub	r3, r31
+  38:	80 3f       	cpi	r24, 0xF0	; 240
+  3a:	1a 3f       	cpi	r17, 0xFA	; 250
+  3c:	1c 00       	.word	0x001c	; ????
+  3e:	0e 8e       	std	Y+30, r0	; 0x1e
+  40:	3f 1c       	adc	r3, r15
+  42:	3f 1e       	adc	r3, r31
+  44:	80 3f       	cpi	r24, 0xF0	; 240
+  46:	1e 3f       	cpi	r17, 0xFE	; 254
+  48:	22 00       	.word	0x0022	; ????
+  4a:	0e 90       	ld	r0, -X
+  4c:	3f 22       	and	r3, r31
+  4e:	3f 37       	cpi	r19, 0x7F	; 127
+  50:	80 00       	.word	0x0080	; ????
+
+00000052 <__ctors_end>:
+__trampolines_start():
+../../../../../crt1/gcrt1.S:285
+  52:	11 24       	eor	r1, r1
+../../../../../crt1/gcrt1.S:286
+  54:	1f be       	out	0x3f, r1	; 63
+../../../../../crt1/gcrt1.S:287
+  56:	cf ef       	ldi	r28, 0xFF	; 255
+../../../../../crt1/gcrt1.S:289
+  58:	cd bf       	out	0x3d, r28	; 61
+../../../../../crt1/gcrt1.S:291
+  5a:	df e3       	ldi	r29, 0x3F	; 63
+../../../../../crt1/gcrt1.S:292
+  5c:	de bf       	out	0x3e, r29	; 62
+
+0000005e <__do_copy_data>:
+__do_copy_data():
+  5e:	e4 e3       	ldi	r30, 0x34	; 52
+  60:	f0 e0       	ldi	r31, 0x00	; 0
+  62:	40 e0       	ldi	r20, 0x00	; 0
+  64:	17 c0       	rjmp	.+46     	; 0x94 <__do_clear_bss+0x8>
+  66:	b5 91       	lpm	r27, Z+
+  68:	a5 91       	lpm	r26, Z+
+  6a:	35 91       	lpm	r19, Z+
+  6c:	25 91       	lpm	r18, Z+
+  6e:	05 91       	lpm	r16, Z+
+  70:	07 fd       	sbrc	r16, 7
+  72:	0c c0       	rjmp	.+24     	; 0x8c <__do_clear_bss>
+  74:	95 91       	lpm	r25, Z+
+  76:	85 91       	lpm	r24, Z+
+  78:	ef 01       	movw	r28, r30
+  7a:	f9 2f       	mov	r31, r25
+  7c:	e8 2f       	mov	r30, r24
+  7e:	05 90       	lpm	r0, Z+
+  80:	0d 92       	st	X+, r0
+  82:	a2 17       	cp	r26, r18
+  84:	b3 07       	cpc	r27, r19
+  86:	d9 f7       	brne	.-10     	; 0x7e <__do_copy_data+0x20>
+  88:	fe 01       	movw	r30, r28
+  8a:	04 c0       	rjmp	.+8      	; 0x94 <__do_clear_bss+0x8>
+
+0000008c <__do_clear_bss>:
+__do_clear_bss():
+  8c:	1d 92       	st	X+, r1
+  8e:	a2 17       	cp	r26, r18
+  90:	b3 07       	cpc	r27, r19
+  92:	e1 f7       	brne	.-8      	; 0x8c <__do_clear_bss>
+  94:	e1 35       	cpi	r30, 0x51	; 81
+  96:	f4 07       	cpc	r31, r20
+  98:	31 f7       	brne	.-52     	; 0x66 <__do_copy_data+0x8>
+../../../../../crt1/gcrt1.S:369
+  9a:	cd d0       	rcall	.+410    	; 0x236 <main>
+../../../../../crt1/gcrt1.S:370
+  9c:	c3 c6       	rjmp	.+3462   	; 0xe24 <exit>
+
+0000009e <_exit>:
+_exit():
+  9e:	f8 94       	cli
+
+000000a0 <__stop_program>:
+__stop_program():
+  a0:	ff cf       	rjmp	.-2      	; 0xa0 <__stop_program>
+
+Disassembly of section .text:
+
+00000e82 <__bad_interrupt>:
+__vector_22():
+../../../../../crt1/gcrt1.S:211
+ e82:	be c8       	rjmp	.-3716   	; 0x0 <__TEXT_REGION_ORIGIN__>
+
+Disassembly of section .text.ws2812b_height:
+
+00000d0e <ws2812b_height>:
+ws2812b_height():
+/home/lcrm/Documents/EDA/WaveLight/FW/ws2812b.h:28
+ * @details The strip is folded in half back to its start with the two halves
+ * staggered, so going up the LEDs are 1, N, 2, N-1, 3, ... (for 5: 1 5 2 4 3).
+ * Callers index LEDs by height, the driver sends them in strip order.
+ */
+static inline uint8_t ws2812b_height(uint8_t p) {
+    return (p < (LED_COUNT + 1) / 2) ? 2 * p : 2 * (LED_COUNT - 1 - p) + 1;
+ d0e:	83 30       	cpi	r24, 0x03	; 3
+ d10:	48 f0       	brcs	.+18     	; 0xd24 <ws2812b_height+0x16>
+/home/lcrm/Documents/EDA/WaveLight/FW/ws2812b.h:28 (discriminator 2)
+ d12:	25 e0       	ldi	r18, 0x05	; 5
+ d14:	30 e0       	ldi	r19, 0x00	; 0
+ d16:	a9 01       	movw	r20, r18
+ d18:	48 1b       	sub	r20, r24
+ d1a:	51 09       	sbc	r21, r1
+ d1c:	ca 01       	movw	r24, r20
+ d1e:	88 0f       	add	r24, r24
+ d20:	8f 5f       	subi	r24, 0xFF	; 255
+/home/lcrm/Documents/EDA/WaveLight/FW/ws2812b.h:29 (discriminator 2)
+}
+ d22:	08 95       	ret
+/home/lcrm/Documents/EDA/WaveLight/FW/ws2812b.h:28 (discriminator 1)
+    return (p < (LED_COUNT + 1) / 2) ? 2 * p : 2 * (LED_COUNT - 1 - p) + 1;
+ d24:	88 0f       	add	r24, r24
+ d26:	08 95       	ret
+
+Disassembly of section .text.ws2812b_init:
+
+00000e5e <ws2812b_init>:
+ws2812b_init():
+/home/lcrm/Documents/EDA/WaveLight/FW/ws2812b.h:32
+
+static void ws2812b_init(void) {
+    VPORTB.OUT &= ~(1 << LED_PIN);
+ e5e:	2b 98       	cbi	0x05, 3	; 5
+/home/lcrm/Documents/EDA/WaveLight/FW/ws2812b.h:33
+    VPORTB.DIR |= (1 << LED_PIN);
+ e60:	23 9a       	sbi	0x04, 3	; 4
+ e62:	08 95       	ret
+
+Disassembly of section .text.ws2812b_send_byte:
+
+00000c5e <ws2812b_send_byte>:
+ws2812b_send_byte():
+/home/lcrm/Documents/EDA/WaveLight/FW/ws2812b.h:38
+}
+
+static void ws2812b_send_byte(uint8_t b) {
+    uint8_t n = 8;
+    asm volatile(
+ c5e:	98 e0       	ldi	r25, 0x08	; 8
+ c60:	2b 9a       	sbi	0x05, 3	; 5
+ c62:	00 c0       	rjmp	.+0      	; 0xc64 <ws2812b_send_byte+0x6>
+ c64:	00 00       	nop
+ c66:	87 ff       	sbrs	r24, 7
+ c68:	2b 98       	cbi	0x05, 3	; 5
+ c6a:	88 0f       	add	r24, r24
+ c6c:	00 c0       	rjmp	.+0      	; 0xc6e <ws2812b_send_byte+0x10>
+ c6e:	00 c0       	rjmp	.+0      	; 0xc70 <ws2812b_send_byte+0x12>
+ c70:	2b 98       	cbi	0x05, 3	; 5
+ c72:	00 c0       	rjmp	.+0      	; 0xc74 <ws2812b_send_byte+0x16>
+ c74:	00 c0       	rjmp	.+0      	; 0xc76 <ws2812b_send_byte+0x18>
+ c76:	00 00       	nop
+ c78:	9a 95       	dec	r25
+ c7a:	91 f7       	brne	.-28     	; 0xc60 <ws2812b_send_byte+0x2>
+ c7c:	08 95       	ret
+
+Disassembly of section .text.ws2812b_bar:
+
+000008d8 <ws2812b_bar>:
+ws2812b_bar():
+/home/lcrm/Documents/EDA/WaveLight/FW/ws2812b.h:61
+}
+
+/**
+ * Light the bottom n LEDs with one color, the rest off
+ */
+static void ws2812b_bar(uint8_t n, uint8_t r, uint8_t g, uint8_t b) {
+ 8d8:	ef 92       	push	r14
+ 8da:	ff 92       	push	r15
+ 8dc:	0f 93       	push	r16
+ 8de:	1f 93       	push	r17
+ 8e0:	cf 93       	push	r28
+ 8e2:	df 93       	push	r29
+ 8e4:	d8 2f       	mov	r29, r24
+ 8e6:	16 2f       	mov	r17, r22
+ 8e8:	04 2f       	mov	r16, r20
+ 8ea:	f2 2e       	mov	r15, r18
+/home/lcrm/Documents/EDA/WaveLight/FW/ws2812b.h:62
+    uint8_t sreg = SREG;
+ 8ec:	ef b6       	in	r14, 0x3f	; 63
+/home/lcrm/Documents/EDA/WaveLight/FW/ws2812b.h:63
+    cli();
+ 8ee:	f8 94       	cli
+/home/lcrm/Documents/EDA/WaveLight/FW/ws2812b.h:64
+    for (uint8_t i = 0; i < LED_COUNT; i++) {
+ 8f0:	c0 e0       	ldi	r28, 0x00	; 0
+ 8f2:	09 c0       	rjmp	.+18     	; 0x906 <ws2812b_bar+0x2e>
+/home/lcrm/Documents/EDA/WaveLight/FW/ws2812b.h:66 (discriminator 4)
+        uint8_t on = ws2812b_height(i) < n;
+        ws2812b_send_byte(on ? g : 0);  // GRB order
+ 8f4:	80 2f       	mov	r24, r16
+ 8f6:	b3 d1       	rcall	.+870    	; 0xc5e <ws2812b_send_byte>
+/home/lcrm/Documents/EDA/WaveLight/FW/ws2812b.h:67 (discriminator 4)
+        ws2812b_send_byte(on ? r : 0);
+ 8f8:	81 2f       	mov	r24, r17
+ 8fa:	b1 d1       	rcall	.+866    	; 0xc5e <ws2812b_send_byte>
+/home/lcrm/Documents/EDA/WaveLight/FW/ws2812b.h:68 (discriminator 4)
+        ws2812b_send_byte(on ? b : 0);
+ 8fc:	8f 2d       	mov	r24, r15
+ 8fe:	af d1       	rcall	.+862    	; 0xc5e <ws2812b_send_byte>
+/home/lcrm/Documents/EDA/WaveLight/FW/ws2812b.h:64 (discriminator 4)
+    for (uint8_t i = 0; i < LED_COUNT; i++) {
+ 900:	cf 5f       	subi	r28, 0xFF	; 255
+ 902:	c6 30       	cpi	r28, 0x06	; 6
+ 904:	69 f0       	breq	.+26     	; 0x920 <ws2812b_bar+0x48>
+/home/lcrm/Documents/EDA/WaveLight/FW/ws2812b.h:65
+        uint8_t on = ws2812b_height(i) < n;
+ 906:	8c 2f       	mov	r24, r28
+ 908:	02 d2       	rcall	.+1028   	; 0xd0e <ws2812b_height>
+/home/lcrm/Documents/EDA/WaveLight/FW/ws2812b.h:66
+        ws2812b_send_byte(on ? g : 0);  // GRB order
+ 90a:	8d 17       	cp	r24, r29
+ 90c:	98 f3       	brcs	.-26     	; 0x8f4 <ws2812b_bar+0x1c>
+ 90e:	80 e0       	ldi	r24, 0x00	; 0
+ 910:	a6 d1       	rcall	.+844    	; 0xc5e <ws2812b_send_byte>
+/home/lcrm/Documents/EDA/WaveLight/FW/ws2812b.h:67
+        ws2812b_send_byte(on ? r : 0);
+ 912:	80 e0       	ldi	r24, 0x00	; 0
+ 914:	a4 d1       	rcall	.+840    	; 0xc5e <ws2812b_send_byte>
+/home/lcrm/Documents/EDA/WaveLight/FW/ws2812b.h:68
+        ws2812b_send_byte(on ? b : 0);
+ 916:	80 e0       	ldi	r24, 0x00	; 0
+ 918:	a2 d1       	rcall	.+836    	; 0xc5e <ws2812b_send_byte>
+/home/lcrm/Documents/EDA/WaveLight/FW/ws2812b.h:64
+    for (uint8_t i = 0; i < LED_COUNT; i++) {
+ 91a:	cf 5f       	subi	r28, 0xFF	; 255
+ 91c:	c6 30       	cpi	r28, 0x06	; 6
+ 91e:	99 f7       	brne	.-26     	; 0x906 <ws2812b_bar+0x2e>
+/home/lcrm/Documents/EDA/WaveLight/FW/ws2812b.h:70
+    }
+    SREG = sreg;
+ 920:	ef be       	out	0x3f, r14	; 63
+/home/lcrm/Documents/EDA/WaveLight/FW/ws2812b.h:72
+    // Latch (>280 us low for WS2812B-2020 V6) is guaranteed by the caller's loop delay
+}
+ 922:	df 91       	pop	r29
+ 924:	cf 91       	pop	r28
+ 926:	1f 91       	pop	r17
+ 928:	0f 91       	pop	r16
+ 92a:	ff 90       	pop	r15
+ 92c:	ef 90       	pop	r14
+ 92e:	08 95       	ret
+
+Disassembly of section .text.ws2812b_show:
+
+000009d4 <ws2812b_show>:
+ws2812b_show():
+/home/lcrm/Documents/EDA/WaveLight/FW/ws2812b.h:80
+
+/**
+ * Send individual colors
+ * @param rgb LED_COUNT * 3 bytes, R G B per LED, bottom LED first
+ */
+static inline void ws2812b_show(const uint8_t *rgb) {
+ 9d4:	ef 92       	push	r14
+ 9d6:	ff 92       	push	r15
+ 9d8:	0f 93       	push	r16
+ 9da:	1f 93       	push	r17
+ 9dc:	cf 93       	push	r28
+ 9de:	df 93       	push	r29
+ 9e0:	7c 01       	movw	r14, r24
+/home/lcrm/Documents/EDA/WaveLight/FW/ws2812b.h:81
+    uint8_t sreg = SREG;
+ 9e2:	df b7       	in	r29, 0x3f	; 63
+/home/lcrm/Documents/EDA/WaveLight/FW/ws2812b.h:82
+    cli();
+ 9e4:	f8 94       	cli
+/home/lcrm/Documents/EDA/WaveLight/FW/ws2812b.h:83
+    for (uint8_t i = 0; i < LED_COUNT; i++) {
+ 9e6:	c0 e0       	ldi	r28, 0x00	; 0
+/home/lcrm/Documents/EDA/WaveLight/FW/ws2812b.h:84 (discriminator 3)
+        const uint8_t *c = rgb + 3 * ws2812b_height(i);
+ 9e8:	8c 2f       	mov	r24, r28
+ 9ea:	91 d1       	rcall	.+802    	; 0xd0e <ws2812b_height>
+ 9ec:	87 01       	movw	r16, r14
+ 9ee:	93 e0       	ldi	r25, 0x03	; 3
+ 9f0:	89 9f       	mul	r24, r25
+ 9f2:	00 0d       	add	r16, r0
+ 9f4:	11 1d       	adc	r17, r1
+ 9f6:	11 24       	eor	r1, r1
+/home/lcrm/Documents/EDA/WaveLight/FW/ws2812b.h:85 (discriminator 3)
+        ws2812b_send_byte(c[1]);  // GRB order
+ 9f8:	f8 01       	movw	r30, r16
+ 9fa:	81 81       	ldd	r24, Z+1	; 0x01
+ 9fc:	30 d1       	rcall	.+608    	; 0xc5e <ws2812b_send_byte>
+/home/lcrm/Documents/EDA/WaveLight/FW/ws2812b.h:86 (discriminator 3)
+        ws2812b_send_byte(c[0]);
+ 9fe:	f8 01       	movw	r30, r16
+ a00:	80 81       	ld	r24, Z
+ a02:	2d d1       	rcall	.+602    	; 0xc5e <ws2812b_send_byte>
+/home/lcrm/Documents/EDA/WaveLight/FW/ws2812b.h:87 (discriminator 3)
+        ws2812b_send_byte(c[2]);
+ a04:	f8 01       	movw	r30, r16
+ a06:	82 81       	ldd	r24, Z+2	; 0x02
+ a08:	2a d1       	rcall	.+596    	; 0xc5e <ws2812b_send_byte>
+/home/lcrm/Documents/EDA/WaveLight/FW/ws2812b.h:83 (discriminator 3)
+    for (uint8_t i = 0; i < LED_COUNT; i++) {
+ a0a:	cf 5f       	subi	r28, 0xFF	; 255
+ a0c:	c6 30       	cpi	r28, 0x06	; 6
+ a0e:	61 f7       	brne	.-40     	; 0x9e8 <ws2812b_show+0x14>
+/home/lcrm/Documents/EDA/WaveLight/FW/ws2812b.h:89
+    }
+    SREG = sreg;
+ a10:	df bf       	out	0x3f, r29	; 63
+/home/lcrm/Documents/EDA/WaveLight/FW/ws2812b.h:90
+}
+ a12:	df 91       	pop	r29
+ a14:	cf 91       	pop	r28
+ a16:	1f 91       	pop	r17
+ a18:	0f 91       	pop	r16
+ a1a:	ff 90       	pop	r15
+ a1c:	ef 90       	pop	r14
+ a1e:	08 95       	ret
+
+Disassembly of section .text.twi_init:
+
+00000d28 <twi_init>:
+twi_init():
+/home/lcrm/Documents/EDA/WaveLight/FW/twi.h:18
+// Slow clock: no external pull-ups, the weak internal ones (~20-50k) need long rise time
+#define TWI_FREQ 50000UL
+#define TWI_BAUD ((F_CPU / (2 * TWI_FREQ)) - 5)
+
+static void twi_init(void) {
+    PORTB.PIN0CTRL = PORT_PULLUPEN_bm;  // SCL
+ d28:	e0 e2       	ldi	r30, 0x20	; 32
+ d2a:	f4 e0       	ldi	r31, 0x04	; 4
+ d2c:	88 e0       	ldi	r24, 0x08	; 8
+ d2e:	80 8b       	std	Z+16, r24	; 0x10
+/home/lcrm/Documents/EDA/WaveLight/FW/twi.h:19
+    PORTB.PIN1CTRL = PORT_PULLUPEN_bm;  // SDA
+ d30:	81 8b       	std	Z+17, r24	; 0x11
+/home/lcrm/Documents/EDA/WaveLight/FW/twi.h:20
+    TWI0.MBAUD = TWI_BAUD;
+ d32:	e0 e1       	ldi	r30, 0x10	; 16
+ d34:	f8 e0       	ldi	r31, 0x08	; 8
+ d36:	8b e9       	ldi	r24, 0x9B	; 155
+ d38:	86 83       	std	Z+6, r24	; 0x06
+/home/lcrm/Documents/EDA/WaveLight/FW/twi.h:21
+    TWI0.MCTRLA = TWI_ENABLE_bm;
+ d3a:	81 e0       	ldi	r24, 0x01	; 1
+ d3c:	83 83       	std	Z+3, r24	; 0x03
+/home/lcrm/Documents/EDA/WaveLight/FW/twi.h:22
+    TWI0.MSTATUS = TWI_BUSSTATE_IDLE_gc;  // Force bus state to idle
+ d3e:	85 83       	std	Z+5, r24	; 0x05
+ d40:	08 95       	ret
+
+Disassembly of section .text.twi_wait:
+
+00000e08 <twi_wait>:
+twi_wait():
+/home/lcrm/Documents/EDA/WaveLight/FW/twi.h:31 (discriminator 1)
+ * Wait for the current byte/address to finish
+ * @return 0 on ACK, nonzero on NACK / arbitration lost / bus error
+ */
+static uint8_t twi_wait(void) {
+    uint8_t s;
+    while (!((s = TWI0.MSTATUS) & (TWI_WIF_bm | TWI_RIF_bm)));
+ e08:	80 91 15 08 	lds	r24, 0x0815	; 0x800815 <__RODATA_PM_OFFSET__+0x7f8815>
+ e0c:	98 2f       	mov	r25, r24
+ e0e:	90 7c       	andi	r25, 0xC0	; 192
+ e10:	d9 f3       	breq	.-10     	; 0xe08 <twi_wait>
+/home/lcrm/Documents/EDA/WaveLight/FW/twi.h:33
+    return s & (TWI_RXACK_bm | TWI_ARBLOST_bm | TWI_BUSERR_bm);
+}
+ e12:	8c 71       	andi	r24, 0x1C	; 28
+ e14:	08 95       	ret
+
+Disassembly of section .text.twi_start_reg:
+
+00000c7e <twi_start_reg>:
+twi_start_reg():
+/home/lcrm/Documents/EDA/WaveLight/FW/twi.h:38
+
+/**
+ * Send (repeated) START + address, then register pointer
+ */
+static uint8_t twi_start_reg(uint8_t addr, uint8_t reg) {
+ c7e:	cf 93       	push	r28
+ c80:	c6 2f       	mov	r28, r22
+/home/lcrm/Documents/EDA/WaveLight/FW/twi.h:39
+    TWI0.MADDR = addr << 1;
+ c82:	88 0f       	add	r24, r24
+ c84:	80 93 17 08 	sts	0x0817, r24	; 0x800817 <__RODATA_PM_OFFSET__+0x7f8817>
+/home/lcrm/Documents/EDA/WaveLight/FW/twi.h:40
+    if (twi_wait()) return 1;
+ c88:	bf d0       	rcall	.+382    	; 0xe08 <twi_wait>
+ c8a:	88 23       	and	r24, r24
+ c8c:	19 f0       	breq	.+6      	; 0xc94 <twi_start_reg+0x16>
+/home/lcrm/Documents/EDA/WaveLight/FW/twi.h:43
+    TWI0.MDATA = reg;
+    return twi_wait();
+}
+ c8e:	81 e0       	ldi	r24, 0x01	; 1
+ c90:	cf 91       	pop	r28
+ c92:	08 95       	ret
+/home/lcrm/Documents/EDA/WaveLight/FW/twi.h:41
+    TWI0.MDATA = reg;
+ c94:	c0 93 18 08 	sts	0x0818, r28	; 0x800818 <__RODATA_PM_OFFSET__+0x7f8818>
+/home/lcrm/Documents/EDA/WaveLight/FW/twi.h:43
+}
+ c98:	cf 91       	pop	r28
+/home/lcrm/Documents/EDA/WaveLight/FW/twi.h:42
+    return twi_wait();
+ c9a:	b6 c0       	rjmp	.+364    	; 0xe08 <twi_wait>
+
+Disassembly of section .text.twi_write_reg:
+
+00000930 <twi_write_reg>:
+twi_write_reg():
+/home/lcrm/Documents/EDA/WaveLight/FW/twi.h:45
+
+static uint8_t twi_write_reg(uint8_t addr, uint8_t reg, const uint8_t *data, uint8_t len) {
+ 930:	ff 92       	push	r15
+ 932:	0f 93       	push	r16
+ 934:	1f 93       	push	r17
+ 936:	cf 93       	push	r28
+ 938:	df 93       	push	r29
+ 93a:	f4 2e       	mov	r15, r20
+ 93c:	15 2f       	mov	r17, r21
+ 93e:	c2 2f       	mov	r28, r18
+/home/lcrm/Documents/EDA/WaveLight/FW/twi.h:46
+    uint8_t err = twi_start_reg(addr, reg);
+ 940:	9e d1       	rcall	.+828    	; 0xc7e <twi_start_reg>
+/home/lcrm/Documents/EDA/WaveLight/FW/twi.h:48
+
+    while (!err && len--) {
+ 942:	81 11       	cpse	r24, r1
+ 944:	15 c0       	rjmp	.+42     	; 0x970 <twi_write_reg+0x40>
+ 946:	0f ef       	ldi	r16, 0xFF	; 255
+ 948:	0c 0f       	add	r16, r28
+ 94a:	cc 23       	and	r28, r28
+ 94c:	d1 f0       	breq	.+52     	; 0x982 <twi_write_reg+0x52>
+ 94e:	cf 2d       	mov	r28, r15
+ 950:	d1 2f       	mov	r29, r17
+ 952:	10 e0       	ldi	r17, 0x00	; 0
+ 954:	0f 5f       	subi	r16, 0xFF	; 255
+ 956:	1f 4f       	sbci	r17, 0xFF	; 255
+ 958:	0c 0f       	add	r16, r28
+ 95a:	1d 1f       	adc	r17, r29
+ 95c:	03 c0       	rjmp	.+6      	; 0x964 <twi_write_reg+0x34>
+/home/lcrm/Documents/EDA/WaveLight/FW/twi.h:48 (discriminator 1)
+ 95e:	c0 17       	cp	r28, r16
+ 960:	d1 07       	cpc	r29, r17
+ 962:	79 f0       	breq	.+30     	; 0x982 <twi_write_reg+0x52>
+/home/lcrm/Documents/EDA/WaveLight/FW/twi.h:49
+        TWI0.MDATA = *data++;
+ 964:	89 91       	ld	r24, Y+
+ 966:	80 93 18 08 	sts	0x0818, r24	; 0x800818 <__RODATA_PM_OFFSET__+0x7f8818>
+/home/lcrm/Documents/EDA/WaveLight/FW/twi.h:50
+        err = twi_wait();
+ 96a:	4e d2       	rcall	.+1180   	; 0xe08 <twi_wait>
+/home/lcrm/Documents/EDA/WaveLight/FW/twi.h:48
+    while (!err && len--) {
+ 96c:	88 23       	and	r24, r24
+ 96e:	b9 f3       	breq	.-18     	; 0x95e <twi_write_reg+0x2e>
+/home/lcrm/Documents/EDA/WaveLight/FW/twi.h:53
+    }
+
+    TWI0.MCTRLB = TWI_MCMD_STOP_gc;
+ 970:	93 e0       	ldi	r25, 0x03	; 3
+ 972:	90 93 14 08 	sts	0x0814, r25	; 0x800814 <__RODATA_PM_OFFSET__+0x7f8814>
+/home/lcrm/Documents/EDA/WaveLight/FW/twi.h:55
+    return err;
+}
+ 976:	df 91       	pop	r29
+ 978:	cf 91       	pop	r28
+ 97a:	1f 91       	pop	r17
+ 97c:	0f 91       	pop	r16
+ 97e:	ff 90       	pop	r15
+ 980:	08 95       	ret
+/home/lcrm/Documents/EDA/WaveLight/FW/twi.h:45
+static uint8_t twi_write_reg(uint8_t addr, uint8_t reg, const uint8_t *data, uint8_t len) {
+ 982:	80 e0       	ldi	r24, 0x00	; 0
+ 984:	f5 cf       	rjmp	.-22     	; 0x970 <twi_write_reg+0x40>
+
+Disassembly of section .text.twi_read_reg:
+
+000006f6 <twi_read_reg>:
+twi_read_reg():
+/home/lcrm/Documents/EDA/WaveLight/FW/twi.h:57
+
+static uint8_t twi_read_reg(uint8_t addr, uint8_t reg, uint8_t *data, uint8_t len) {
+ 6f6:	df 92       	push	r13
+ 6f8:	ef 92       	push	r14
+ 6fa:	ff 92       	push	r15
+ 6fc:	0f 93       	push	r16
+ 6fe:	1f 93       	push	r17
+ 700:	cf 93       	push	r28
+ 702:	df 93       	push	r29
+ 704:	c8 2f       	mov	r28, r24
+ 706:	7a 01       	movw	r14, r20
+ 708:	12 2f       	mov	r17, r18
+/home/lcrm/Documents/EDA/WaveLight/FW/twi.h:58
+    if (twi_start_reg(addr, reg)) {
+ 70a:	b9 d2       	rcall	.+1394   	; 0xc7e <twi_start_reg>
+ 70c:	88 23       	and	r24, r24
+ 70e:	71 f0       	breq	.+28     	; 0x72c <twi_read_reg+0x36>
+/home/lcrm/Documents/EDA/WaveLight/FW/twi.h:66
+    }
+
+    // Repeated START with read bit, first byte is clocked in automatically
+    TWI0.MADDR = (addr << 1) | 1;
+    if (twi_wait()) {
+        TWI0.MCTRLB = TWI_MCMD_STOP_gc;
+ 710:	83 e0       	ldi	r24, 0x03	; 3
+ 712:	80 93 14 08 	sts	0x0814, r24	; 0x800814 <__RODATA_PM_OFFSET__+0x7f8814>
+/home/lcrm/Documents/EDA/WaveLight/FW/twi.h:67
+        return 1;
+ 716:	dd 24       	eor	r13, r13
+ 718:	d3 94       	inc	r13
+/home/lcrm/Documents/EDA/WaveLight/FW/twi.h:79
+        twi_wait();
+    }
+
+    TWI0.MCTRLB = TWI_ACKACT_NACK_gc | TWI_MCMD_STOP_gc;  // NACK last byte + STOP
+    return 0;
+}
+ 71a:	8d 2d       	mov	r24, r13
+ 71c:	df 91       	pop	r29
+ 71e:	cf 91       	pop	r28
+ 720:	1f 91       	pop	r17
+ 722:	0f 91       	pop	r16
+ 724:	ff 90       	pop	r15
+ 726:	ef 90       	pop	r14
+ 728:	df 90       	pop	r13
+ 72a:	08 95       	ret
+/home/lcrm/Documents/EDA/WaveLight/FW/twi.h:64
+    TWI0.MADDR = (addr << 1) | 1;
+ 72c:	cc 0f       	add	r28, r28
+ 72e:	c1 60       	ori	r28, 0x01	; 1
+ 730:	c0 93 17 08 	sts	0x0817, r28	; 0x800817 <__RODATA_PM_OFFSET__+0x7f8817>
+/home/lcrm/Documents/EDA/WaveLight/FW/twi.h:65
+    if (twi_wait()) {
+ 734:	69 d3       	rcall	.+1746   	; 0xe08 <twi_wait>
+ 736:	d8 2e       	mov	r13, r24
+ 738:	81 11       	cpse	r24, r1
+ 73a:	ea cf       	rjmp	.-44     	; 0x710 <twi_read_reg+0x1a>
+/home/lcrm/Documents/EDA/WaveLight/FW/twi.h:71
+        *data++ = TWI0.MDATA;
+ 73c:	e7 01       	movw	r28, r14
+ 73e:	21 96       	adiw	r28, 0x01	; 1
+ 740:	80 91 18 08 	lds	r24, 0x0818	; 0x800818 <__RODATA_PM_OFFSET__+0x7f8818>
+ 744:	f7 01       	movw	r30, r14
+ 746:	80 83       	st	Z, r24
+/home/lcrm/Documents/EDA/WaveLight/FW/twi.h:72
+        if (!--len) break;
+ 748:	11 30       	cpi	r17, 0x01	; 1
+ 74a:	91 f0       	breq	.+36     	; 0x770 <twi_read_reg+0x7a>
+ 74c:	12 50       	subi	r17, 0x02	; 2
+ 74e:	01 2f       	mov	r16, r17
+ 750:	10 e0       	ldi	r17, 0x00	; 0
+ 752:	0e 5f       	subi	r16, 0xFE	; 254
+ 754:	1f 4f       	sbci	r17, 0xFF	; 255
+ 756:	0e 0d       	add	r16, r14
+ 758:	1f 1d       	adc	r17, r15
+/home/lcrm/Documents/EDA/WaveLight/FW/twi.h:73
+        TWI0.MCTRLB = TWI_MCMD_RECVTRANS_gc;  // ACK and read next byte
+ 75a:	82 e0       	ldi	r24, 0x02	; 2
+ 75c:	f8 2e       	mov	r15, r24
+ 75e:	f0 92 14 08 	sts	0x0814, r15	; 0x800814 <__RODATA_PM_OFFSET__+0x7f8814>
+/home/lcrm/Documents/EDA/WaveLight/FW/twi.h:74
+        twi_wait();
+ 762:	52 d3       	rcall	.+1700   	; 0xe08 <twi_wait>
+/home/lcrm/Documents/EDA/WaveLight/FW/twi.h:71
+        *data++ = TWI0.MDATA;
+ 764:	80 91 18 08 	lds	r24, 0x0818	; 0x800818 <__RODATA_PM_OFFSET__+0x7f8818>
+ 768:	89 93       	st	Y+, r24
+/home/lcrm/Documents/EDA/WaveLight/FW/twi.h:72
+        if (!--len) break;
+ 76a:	c0 17       	cp	r28, r16
+ 76c:	d1 07       	cpc	r29, r17
+ 76e:	b9 f7       	brne	.-18     	; 0x75e <twi_read_reg+0x68>
+/home/lcrm/Documents/EDA/WaveLight/FW/twi.h:77
+    TWI0.MCTRLB = TWI_ACKACT_NACK_gc | TWI_MCMD_STOP_gc;  // NACK last byte + STOP
+ 770:	87 e0       	ldi	r24, 0x07	; 7
+ 772:	80 93 14 08 	sts	0x0814, r24	; 0x800814 <__RODATA_PM_OFFSET__+0x7f8814>
+/home/lcrm/Documents/EDA/WaveLight/FW/twi.h:78
+    return 0;
+ 776:	d1 cf       	rjmp	.-94     	; 0x71a <twi_read_reg+0x24>
+
+Disassembly of section .text.tmf8801_write:
+
+00000c3c <tmf8801_write>:
+tmf8801_write():
+/home/lcrm/Documents/EDA/WaveLight/FW/tmf8801.h:58
+    0x00,        // CMD_DATA3: detection threshold 0, no spread spectrum
+    33,          // CMD_DATA2: repetition period [ms], replaced by tmf8801_start()
+    0x84, 0x03,  // CMD_DATA1/0: iterations in k, low/high byte (0x0384 = 900k), replaced by tmf8801_start()
+};
+
+static uint8_t tmf8801_write(uint8_t reg, uint8_t val) {
+ c3c:	cf 93       	push	r28
+ c3e:	df 93       	push	r29
+ c40:	0f 92       	push	r0
+ c42:	cd b7       	in	r28, 0x3d	; 61
+ c44:	de b7       	in	r29, 0x3e	; 62
+ c46:	69 83       	std	Y+1, r22	; 0x01
+/home/lcrm/Documents/EDA/WaveLight/FW/tmf8801.h:59
+    return twi_write_reg(TMF8801_ADDR, reg, &val, 1);
+ c48:	21 e0       	ldi	r18, 0x01	; 1
+ c4a:	ae 01       	movw	r20, r28
+ c4c:	4f 5f       	subi	r20, 0xFF	; 255
+ c4e:	5f 4f       	sbci	r21, 0xFF	; 255
+ c50:	68 2f       	mov	r22, r24
+ c52:	81 e4       	ldi	r24, 0x41	; 65
+ c54:	6d de       	rcall	.-806    	; 0x930 <twi_write_reg>
+/home/lcrm/Documents/EDA/WaveLight/FW/tmf8801.h:60
+}
+ c56:	0f 90       	pop	r0
+ c58:	df 91       	pop	r29
+ c5a:	cf 91       	pop	r28
+ c5c:	08 95       	ret
+
+Disassembly of section .text.tmf8801_read:
+
+00000c18 <tmf8801_read>:
+tmf8801_read():
+/home/lcrm/Documents/EDA/WaveLight/FW/tmf8801.h:62
+
+static uint8_t tmf8801_read(uint8_t reg) {
+ c18:	cf 93       	push	r28
+ c1a:	df 93       	push	r29
+ c1c:	0f 92       	push	r0
+ c1e:	cd b7       	in	r28, 0x3d	; 61
+ c20:	de b7       	in	r29, 0x3e	; 62
+/home/lcrm/Documents/EDA/WaveLight/FW/tmf8801.h:63
+    uint8_t val = 0;
+ c22:	19 82       	std	Y+1, r1	; 0x01
+/home/lcrm/Documents/EDA/WaveLight/FW/tmf8801.h:64
+    twi_read_reg(TMF8801_ADDR, reg, &val, 1);
+ c24:	21 e0       	ldi	r18, 0x01	; 1
+ c26:	ae 01       	movw	r20, r28
+ c28:	4f 5f       	subi	r20, 0xFF	; 255
+ c2a:	5f 4f       	sbci	r21, 0xFF	; 255
+ c2c:	68 2f       	mov	r22, r24
+ c2e:	81 e4       	ldi	r24, 0x41	; 65
+ c30:	62 dd       	rcall	.-1340   	; 0x6f6 <twi_read_reg>
+/home/lcrm/Documents/EDA/WaveLight/FW/tmf8801.h:66
+    return val;
+}
+ c32:	89 81       	ldd	r24, Y+1	; 0x01
+ c34:	0f 90       	pop	r0
+ c36:	df 91       	pop	r29
+ c38:	cf 91       	pop	r28
+ c3a:	08 95       	ret
+
+Disassembly of section .text.tmf8801_wait_for:
+
+00000aea <tmf8801_wait_for>:
+tmf8801_wait_for():
+/home/lcrm/Documents/EDA/WaveLight/FW/tmf8801.h:72
+
+/**
+ * Poll a register until it equals the expected value
+ * @param timeout roughly in ms
+ */
+static uint8_t tmf8801_wait_for(uint8_t reg, uint8_t val, uint16_t timeout) {
+ aea:	0f 93       	push	r16
+ aec:	1f 93       	push	r17
+ aee:	cf 93       	push	r28
+ af0:	df 93       	push	r29
+/home/lcrm/Documents/EDA/WaveLight/FW/tmf8801.h:73
+    while (timeout--) {
+ af2:	41 15       	cp	r20, r1
+ af4:	51 05       	cpc	r21, r1
+ af6:	91 f0       	breq	.+36     	; 0xb1c <tmf8801_wait_for+0x32>
+ af8:	06 2f       	mov	r16, r22
+ afa:	18 2f       	mov	r17, r24
+ afc:	ea 01       	movw	r28, r20
+ afe:	04 c0       	rjmp	.+8      	; 0xb08 <tmf8801_wait_for+0x1e>
+/home/lcrm/Documents/EDA/WaveLight/FW/tmf8801.h:75
+        if (tmf8801_read(reg) == val) return 0;
+        delay_ms(1);
+ b00:	81 e0       	ldi	r24, 0x01	; 1
+ b02:	f7 d0       	rcall	.+494    	; 0xcf2 <delay_ms>
+ b04:	21 97       	sbiw	r28, 0x01	; 1
+/home/lcrm/Documents/EDA/WaveLight/FW/tmf8801.h:73
+    while (timeout--) {
+ b06:	51 f0       	breq	.+20     	; 0xb1c <tmf8801_wait_for+0x32>
+/home/lcrm/Documents/EDA/WaveLight/FW/tmf8801.h:74
+        if (tmf8801_read(reg) == val) return 0;
+ b08:	81 2f       	mov	r24, r17
+ b0a:	86 d0       	rcall	.+268    	; 0xc18 <tmf8801_read>
+ b0c:	80 13       	cpse	r24, r16
+ b0e:	f8 cf       	rjmp	.-16     	; 0xb00 <tmf8801_wait_for+0x16>
+ b10:	80 e0       	ldi	r24, 0x00	; 0
+/home/lcrm/Documents/EDA/WaveLight/FW/tmf8801.h:78
+    }
+    return 1;
+}
+ b12:	df 91       	pop	r29
+ b14:	cf 91       	pop	r28
+ b16:	1f 91       	pop	r17
+ b18:	0f 91       	pop	r16
+ b1a:	08 95       	ret
+/home/lcrm/Documents/EDA/WaveLight/FW/tmf8801.h:77
+    return 1;
+ b1c:	81 e0       	ldi	r24, 0x01	; 1
+/home/lcrm/Documents/EDA/WaveLight/FW/tmf8801.h:78
+}
+ b1e:	df 91       	pop	r29
+ b20:	cf 91       	pop	r28
+ b22:	1f 91       	pop	r17
+ b24:	0f 91       	pop	r16
+ b26:	08 95       	ret
+
+Disassembly of section .text.tmf8801_init:
+
+00000a66 <tmf8801_init>:
+tmf8801_init():
+/home/lcrm/Documents/EDA/WaveLight/FW/tmf8801.h:86
+ * Power up the sensor and boot the measurement app
+ * @return 0 on success
+ */
+static uint8_t tmf8801_init(void) {
+    // EN pin (PC1) high
+    PORTC.DIRSET = PIN1_bm;
+ a66:	82 e0       	ldi	r24, 0x02	; 2
+ a68:	80 93 41 04 	sts	0x0441, r24	; 0x800441 <__RODATA_PM_OFFSET__+0x7f8441>
+/home/lcrm/Documents/EDA/WaveLight/FW/tmf8801.h:87
+    PORTC.OUTSET = PIN1_bm;
+ a6c:	80 93 45 04 	sts	0x0445, r24	; 0x800445 <__RODATA_PM_OFFSET__+0x7f8445>
+/home/lcrm/Documents/EDA/WaveLight/FW/tmf8801.h:88
+    delay_ms(5);
+ a70:	85 e0       	ldi	r24, 0x05	; 5
+ a72:	3f d1       	rcall	.+638    	; 0xcf2 <delay_ms>
+/home/lcrm/Documents/EDA/WaveLight/FW/tmf8801.h:91
+
+    // Power on, wait for CPU_READY (bit 6) + PON (bit 0)
+    if (tmf8801_write(TMF8801_REG_ENABLE, 0x01)) return 1;
+ a74:	61 e0       	ldi	r22, 0x01	; 1
+ a76:	80 ee       	ldi	r24, 0xE0	; 224
+ a78:	e1 d0       	rcall	.+450    	; 0xc3c <tmf8801_write>
+ a7a:	88 23       	and	r24, r24
+ a7c:	11 f0       	breq	.+4      	; 0xa82 <tmf8801_init+0x1c>
+/home/lcrm/Documents/EDA/WaveLight/FW/tmf8801.h:99
+    if ((tmf8801_read(TMF8801_REG_ID) & 0x3F) != TMF8801_CHIP_ID) return 1;
+
+    // Switch from bootloader to the measurement app in ROM
+    tmf8801_write(TMF8801_REG_APPREQID, TMF8801_APP_MEAS);
+    return tmf8801_wait_for(TMF8801_REG_APPID, TMF8801_APP_MEAS, 100);
+}
+ a7e:	81 e0       	ldi	r24, 0x01	; 1
+ a80:	08 95       	ret
+/home/lcrm/Documents/EDA/WaveLight/FW/tmf8801.h:92
+    if (tmf8801_wait_for(TMF8801_REG_ENABLE, 0x41, 100)) return 1;
+ a82:	44 e6       	ldi	r20, 0x64	; 100
+ a84:	50 e0       	ldi	r21, 0x00	; 0
+ a86:	61 e4       	ldi	r22, 0x41	; 65
+ a88:	80 ee       	ldi	r24, 0xE0	; 224
+ a8a:	2f d0       	rcall	.+94     	; 0xaea <tmf8801_wait_for>
+ a8c:	81 11       	cpse	r24, r1
+ a8e:	f7 cf       	rjmp	.-18     	; 0xa7e <tmf8801_init+0x18>
+/home/lcrm/Documents/EDA/WaveLight/FW/tmf8801.h:94
+    if ((tmf8801_read(TMF8801_REG_ID) & 0x3F) != TMF8801_CHIP_ID) return 1;
+ a90:	83 ee       	ldi	r24, 0xE3	; 227
+ a92:	c2 d0       	rcall	.+388    	; 0xc18 <tmf8801_read>
+ a94:	8f 73       	andi	r24, 0x3F	; 63
+ a96:	87 30       	cpi	r24, 0x07	; 7
+ a98:	91 f7       	brne	.-28     	; 0xa7e <tmf8801_init+0x18>
+/home/lcrm/Documents/EDA/WaveLight/FW/tmf8801.h:97
+    tmf8801_write(TMF8801_REG_APPREQID, TMF8801_APP_MEAS);
+ a9a:	60 ec       	ldi	r22, 0xC0	; 192
+ a9c:	82 e0       	ldi	r24, 0x02	; 2
+ a9e:	ce d0       	rcall	.+412    	; 0xc3c <tmf8801_write>
+/home/lcrm/Documents/EDA/WaveLight/FW/tmf8801.h:98
+    return tmf8801_wait_for(TMF8801_REG_APPID, TMF8801_APP_MEAS, 100);
+ aa0:	44 e6       	ldi	r20, 0x64	; 100
+ aa2:	50 e0       	ldi	r21, 0x00	; 0
+ aa4:	60 ec       	ldi	r22, 0xC0	; 192
+ aa6:	80 e0       	ldi	r24, 0x00	; 0
+ aa8:	20 c0       	rjmp	.+64     	; 0xaea <tmf8801_wait_for>
+
+Disassembly of section .text.tmf8801_calibrate:
+
+00000a20 <tmf8801_calibrate>:
+tmf8801_calibrate():
+/home/lcrm/Documents/EDA/WaveLight/FW/tmf8801.h:106
+/**
+ * Run factory calibration - no target within 40 cm, as dark as possible
+ * @param cal receives TMF8801_CAL_LEN bytes to store on the host
+ * @return 0 on success
+ */
+static uint8_t tmf8801_calibrate(uint8_t *cal) {
+ a20:	cf 93       	push	r28
+ a22:	df 93       	push	r29
+ a24:	ec 01       	movw	r28, r24
+/home/lcrm/Documents/EDA/WaveLight/FW/tmf8801.h:107
+    tmf8801_write(TMF8801_REG_COMMAND, TMF8801_CMD_CAL);
+ a26:	6a e0       	ldi	r22, 0x0A	; 10
+ a28:	80 e1       	ldi	r24, 0x10	; 16
+ a2a:	08 d1       	rcall	.+528    	; 0xc3c <tmf8801_write>
+/home/lcrm/Documents/EDA/WaveLight/FW/tmf8801.h:108
+    if (tmf8801_wait_for(TMF8801_REG_CONTENTS, TMF8801_CONTENTS_CAL, 5000)) return 1;
+ a2c:	48 e8       	ldi	r20, 0x88	; 136
+ a2e:	53 e1       	ldi	r21, 0x13	; 19
+ a30:	6a e0       	ldi	r22, 0x0A	; 10
+ a32:	8e e1       	ldi	r24, 0x1E	; 30
+ a34:	5a d0       	rcall	.+180    	; 0xaea <tmf8801_wait_for>
+ a36:	88 23       	and	r24, r24
+ a38:	29 f0       	breq	.+10     	; 0xa44 <tmf8801_calibrate+0x24>
+ a3a:	c1 e0       	ldi	r28, 0x01	; 1
+/home/lcrm/Documents/EDA/WaveLight/FW/tmf8801.h:113
+    if (twi_read_reg(TMF8801_ADDR, TMF8801_REG_FACTORY_CAL, cal, TMF8801_CAL_LEN)) return 1;
+    tmf8801_write(TMF8801_REG_COMMAND, TMF8801_CMD_STOP);
+    delay_ms(50);
+    return 0;
+}
+ a3c:	8c 2f       	mov	r24, r28
+ a3e:	df 91       	pop	r29
+ a40:	cf 91       	pop	r28
+ a42:	08 95       	ret
+/home/lcrm/Documents/EDA/WaveLight/FW/tmf8801.h:109
+    if (twi_read_reg(TMF8801_ADDR, TMF8801_REG_FACTORY_CAL, cal, TMF8801_CAL_LEN)) return 1;
+ a44:	2e e0       	ldi	r18, 0x0E	; 14
+ a46:	ae 01       	movw	r20, r28
+ a48:	60 e2       	ldi	r22, 0x20	; 32
+ a4a:	81 e4       	ldi	r24, 0x41	; 65
+ a4c:	54 de       	rcall	.-856    	; 0x6f6 <twi_read_reg>
+ a4e:	c8 2f       	mov	r28, r24
+ a50:	81 11       	cpse	r24, r1
+ a52:	f3 cf       	rjmp	.-26     	; 0xa3a <tmf8801_calibrate+0x1a>
+/home/lcrm/Documents/EDA/WaveLight/FW/tmf8801.h:110
+    tmf8801_write(TMF8801_REG_COMMAND, TMF8801_CMD_STOP);
+ a54:	6f ef       	ldi	r22, 0xFF	; 255
+ a56:	80 e1       	ldi	r24, 0x10	; 16
+ a58:	f1 d0       	rcall	.+482    	; 0xc3c <tmf8801_write>
+/home/lcrm/Documents/EDA/WaveLight/FW/tmf8801.h:111
+    delay_ms(50);
+ a5a:	82 e3       	ldi	r24, 0x32	; 50
+ a5c:	4a d1       	rcall	.+660    	; 0xcf2 <delay_ms>
+/home/lcrm/Documents/EDA/WaveLight/FW/tmf8801.h:113
+}
+ a5e:	8c 2f       	mov	r24, r28
+ a60:	df 91       	pop	r29
+ a62:	cf 91       	pop	r28
+ a64:	08 95       	ret
+
+Disassembly of section .text.tmf8801_start:
+
+00000778 <tmf8801_start>:
+tmf8801_start():
+/home/lcrm/Documents/EDA/WaveLight/FW/tmf8801.h:123
+ * @param period_ms time between measurements (one takes ~27 ms at 900k iterations)
+ * @param kiters iterations in thousands - more = longer range, longer and more
+ *        power per measurement (current scales roughly with it)
+ * @return 0 on success
+ */
+static uint8_t tmf8801_start(const uint8_t *cal, uint8_t period_ms, uint16_t kiters) {
+ 778:	0f 93       	push	r16
+ 77a:	1f 93       	push	r17
+ 77c:	cf 93       	push	r28
+ 77e:	df 93       	push	r29
+ 780:	cd b7       	in	r28, 0x3d	; 61
+ 782:	de b7       	in	r29, 0x3e	; 62
+ 784:	28 97       	sbiw	r28, 0x08	; 8
+ 786:	cd bf       	out	0x3d, r28	; 61
+ 788:	de bf       	out	0x3e, r29	; 62
+ 78a:	8c 01       	movw	r16, r24
+/home/lcrm/Documents/EDA/WaveLight/FW/tmf8801.h:125
+    uint8_t cfg[8];
+    for (uint8_t i = 0; i < 8; i++) cfg[i] = tmf8801_meas_cfg[i];
+ 78c:	81 e0       	ldi	r24, 0x01	; 1
+ 78e:	89 83       	std	Y+1, r24	; 0x01
+ 790:	83 e2       	ldi	r24, 0x23	; 35
+ 792:	8a 83       	std	Y+2, r24	; 0x02
+ 794:	84 e4       	ldi	r24, 0x44	; 68
+ 796:	8b 83       	std	Y+3, r24	; 0x03
+ 798:	1c 82       	std	Y+4, r1	; 0x04
+ 79a:	1d 82       	std	Y+5, r1	; 0x05
+/home/lcrm/Documents/EDA/WaveLight/FW/tmf8801.h:126
+    cfg[5] = period_ms;
+ 79c:	6e 83       	std	Y+6, r22	; 0x06
+/home/lcrm/Documents/EDA/WaveLight/FW/tmf8801.h:127
+    cfg[6] = kiters;       // datasheet: cmd_data1 = low byte
+ 79e:	4f 83       	std	Y+7, r20	; 0x07
+/home/lcrm/Documents/EDA/WaveLight/FW/tmf8801.h:128
+    cfg[7] = kiters >> 8;  // cmd_data0 = high byte
+ 7a0:	58 87       	std	Y+8, r21	; 0x08
+/home/lcrm/Documents/EDA/WaveLight/FW/tmf8801.h:130
+
+    tmf8801_write(TMF8801_REG_INT_ENAB, TMF8801_INT_RESULT);  // INT pin low on each result
+ 7a2:	61 e0       	ldi	r22, 0x01	; 1
+ 7a4:	82 ee       	ldi	r24, 0xE2	; 226
+ 7a6:	4a d2       	rcall	.+1172   	; 0xc3c <tmf8801_write>
+/home/lcrm/Documents/EDA/WaveLight/FW/tmf8801.h:131
+    tmf8801_write(TMF8801_REG_COMMAND, TMF8801_CMD_LOAD_CAL);
+ 7a8:	6b e0       	ldi	r22, 0x0B	; 11
+ 7aa:	80 e1       	ldi	r24, 0x10	; 16
+ 7ac:	47 d2       	rcall	.+1166   	; 0xc3c <tmf8801_write>
+/home/lcrm/Documents/EDA/WaveLight/FW/tmf8801.h:132
+    if (twi_write_reg(TMF8801_ADDR, TMF8801_REG_FACTORY_CAL, cal, TMF8801_CAL_LEN)) return 1;
+ 7ae:	2e e0       	ldi	r18, 0x0E	; 14
+ 7b0:	a8 01       	movw	r20, r16
+ 7b2:	60 e2       	ldi	r22, 0x20	; 32
+ 7b4:	81 e4       	ldi	r24, 0x41	; 65
+ 7b6:	bc d0       	rcall	.+376    	; 0x930 <twi_write_reg>
+ 7b8:	88 23       	and	r24, r24
+ 7ba:	49 f0       	breq	.+18     	; 0x7ce <tmf8801_start+0x56>
+ 7bc:	81 e0       	ldi	r24, 0x01	; 1
+/home/lcrm/Documents/EDA/WaveLight/FW/tmf8801.h:135
+    if (twi_write_reg(TMF8801_ADDR, TMF8801_REG_CMD_DATA7, cfg, 8)) return 1;
+    return tmf8801_write(TMF8801_REG_COMMAND, TMF8801_CMD_MEAS);
+}
+ 7be:	28 96       	adiw	r28, 0x08	; 8
+ 7c0:	cd bf       	out	0x3d, r28	; 61
+ 7c2:	de bf       	out	0x3e, r29	; 62
+ 7c4:	df 91       	pop	r29
+ 7c6:	cf 91       	pop	r28
+ 7c8:	1f 91       	pop	r17
+ 7ca:	0f 91       	pop	r16
+ 7cc:	08 95       	ret
+/home/lcrm/Documents/EDA/WaveLight/FW/tmf8801.h:133
+    if (twi_write_reg(TMF8801_ADDR, TMF8801_REG_CMD_DATA7, cfg, 8)) return 1;
+ 7ce:	28 e0       	ldi	r18, 0x08	; 8
+ 7d0:	ae 01       	movw	r20, r28
+ 7d2:	4f 5f       	subi	r20, 0xFF	; 255
+ 7d4:	5f 4f       	sbci	r21, 0xFF	; 255
+ 7d6:	68 e0       	ldi	r22, 0x08	; 8
+ 7d8:	81 e4       	ldi	r24, 0x41	; 65
+ 7da:	aa d0       	rcall	.+340    	; 0x930 <twi_write_reg>
+ 7dc:	81 11       	cpse	r24, r1
+ 7de:	ee cf       	rjmp	.-36     	; 0x7bc <tmf8801_start+0x44>
+/home/lcrm/Documents/EDA/WaveLight/FW/tmf8801.h:134
+    return tmf8801_write(TMF8801_REG_COMMAND, TMF8801_CMD_MEAS);
+ 7e0:	62 e0       	ldi	r22, 0x02	; 2
+ 7e2:	80 e1       	ldi	r24, 0x10	; 16
+ 7e4:	2b d2       	rcall	.+1110   	; 0xc3c <tmf8801_write>
+/home/lcrm/Documents/EDA/WaveLight/FW/tmf8801.h:135
+}
+ 7e6:	28 96       	adiw	r28, 0x08	; 8
+ 7e8:	cd bf       	out	0x3d, r28	; 61
+ 7ea:	de bf       	out	0x3e, r29	; 62
+ 7ec:	df 91       	pop	r29
+ 7ee:	cf 91       	pop	r28
+ 7f0:	1f 91       	pop	r17
+ 7f2:	0f 91       	pop	r16
+ 7f4:	08 95       	ret
+
+Disassembly of section .text.tmf8801_stop:
+
+00000e4a <tmf8801_stop>:
+tmf8801_stop():
+/home/lcrm/Documents/EDA/WaveLight/FW/tmf8801.h:141
+
+/**
+ * Stop continuous measurement, a running one finishes first
+ */
+static inline void tmf8801_stop(void) {
+    tmf8801_write(TMF8801_REG_COMMAND, TMF8801_CMD_STOP);
+ e4a:	6f ef       	ldi	r22, 0xFF	; 255
+ e4c:	80 e1       	ldi	r24, 0x10	; 16
+ e4e:	f6 de       	rcall	.-532    	; 0xc3c <tmf8801_write>
+/home/lcrm/Documents/EDA/WaveLight/FW/tmf8801.h:142
+    delay_ms(50);
+ e50:	82 e3       	ldi	r24, 0x32	; 50
+ e52:	4f cf       	rjmp	.-354    	; 0xcf2 <delay_ms>
+
+Disassembly of section .text.tmf8801_get_distance:
+
+000007f6 <tmf8801_get_distance>:
+tmf8801_get_distance():
+/home/lcrm/Documents/EDA/WaveLight/FW/tmf8801.h:150
+/**
+ * Get distance if a new result is available
+ * @param mm distance in mm, TMF8801_NO_TARGET if nothing detected
+ * @return 0 if a new result was read
+ */
+static uint8_t tmf8801_get_distance(uint16_t *mm) {
+ 7f6:	ef 92       	push	r14
+ 7f8:	ff 92       	push	r15
+ 7fa:	1f 93       	push	r17
+ 7fc:	cf 93       	push	r28
+ 7fe:	df 93       	push	r29
+ 800:	cd b7       	in	r28, 0x3d	; 61
+ 802:	de b7       	in	r29, 0x3e	; 62
+ 804:	26 97       	sbiw	r28, 0x06	; 6
+ 806:	cd bf       	out	0x3d, r28	; 61
+ 808:	de bf       	out	0x3e, r29	; 62
+ 80a:	7c 01       	movw	r14, r24
+/home/lcrm/Documents/EDA/WaveLight/FW/tmf8801.h:155
+    static uint8_t last_num;
+    // CONTENTS, TID, RESULT_NUMBER, RESULT_INFO, DISTANCE_PEAK_0, DISTANCE_PEAK_1
+    uint8_t r[6];
+
+    if (twi_read_reg(TMF8801_ADDR, TMF8801_REG_CONTENTS, r, 6)) return 1;
+ 80c:	26 e0       	ldi	r18, 0x06	; 6
+ 80e:	ae 01       	movw	r20, r28
+ 810:	4f 5f       	subi	r20, 0xFF	; 255
+ 812:	5f 4f       	sbci	r21, 0xFF	; 255
+ 814:	6e e1       	ldi	r22, 0x1E	; 30
+ 816:	81 e4       	ldi	r24, 0x41	; 65
+ 818:	6e df       	rcall	.-292    	; 0x6f6 <twi_read_reg>
+ 81a:	18 2f       	mov	r17, r24
+ 81c:	81 11       	cpse	r24, r1
+ 81e:	03 c0       	rjmp	.+6      	; 0x826 <tmf8801_get_distance+0x30>
+/home/lcrm/Documents/EDA/WaveLight/FW/tmf8801.h:156
+    if (r[0] != TMF8801_CONTENTS_RESULT || r[2] == last_num) return 1;
+ 820:	89 81       	ldd	r24, Y+1	; 0x01
+ 822:	85 35       	cpi	r24, 0x55	; 85
+ 824:	59 f0       	breq	.+22     	; 0x83c <tmf8801_get_distance+0x46>
+/home/lcrm/Documents/EDA/WaveLight/FW/tmf8801.h:155
+    if (twi_read_reg(TMF8801_ADDR, TMF8801_REG_CONTENTS, r, 6)) return 1;
+ 826:	11 e0       	ldi	r17, 0x01	; 1
+/home/lcrm/Documents/EDA/WaveLight/FW/tmf8801.h:163
+    tmf8801_write(TMF8801_REG_INT_STATUS, TMF8801_INT_RESULT);  // release INT pin
+
+    // RESULT_INFO bits 5:0 = reliability, 0 means no object
+    *mm = (r[3] & 0x3F) ? (uint16_t)(r[4] | (r[5] << 8)) : TMF8801_NO_TARGET;
+    return 0;
+}
+ 828:	81 2f       	mov	r24, r17
+ 82a:	26 96       	adiw	r28, 0x06	; 6
+ 82c:	cd bf       	out	0x3d, r28	; 61
+ 82e:	de bf       	out	0x3e, r29	; 62
+ 830:	df 91       	pop	r29
+ 832:	cf 91       	pop	r28
+ 834:	1f 91       	pop	r17
+ 836:	ff 90       	pop	r15
+ 838:	ef 90       	pop	r14
+ 83a:	08 95       	ret
+/home/lcrm/Documents/EDA/WaveLight/FW/tmf8801.h:156 (discriminator 2)
+    if (r[0] != TMF8801_CONTENTS_RESULT || r[2] == last_num) return 1;
+ 83c:	8b 81       	ldd	r24, Y+3	; 0x03
+ 83e:	90 91 36 3f 	lds	r25, 0x3F36	; 0x803f36 <last_num.4140>
+ 842:	89 17       	cp	r24, r25
+ 844:	81 f3       	breq	.-32     	; 0x826 <tmf8801_get_distance+0x30>
+/home/lcrm/Documents/EDA/WaveLight/FW/tmf8801.h:157
+    last_num = r[2];
+ 846:	80 93 36 3f 	sts	0x3F36, r24	; 0x803f36 <last_num.4140>
+/home/lcrm/Documents/EDA/WaveLight/FW/tmf8801.h:158
+    tmf8801_write(TMF8801_REG_INT_STATUS, TMF8801_INT_RESULT);  // release INT pin
+ 84a:	61 e0       	ldi	r22, 0x01	; 1
+ 84c:	81 ee       	ldi	r24, 0xE1	; 225
+ 84e:	f6 d1       	rcall	.+1004   	; 0xc3c <tmf8801_write>
+/home/lcrm/Documents/EDA/WaveLight/FW/tmf8801.h:161
+    *mm = (r[3] & 0x3F) ? (uint16_t)(r[4] | (r[5] << 8)) : TMF8801_NO_TARGET;
+ 850:	8c 81       	ldd	r24, Y+4	; 0x04
+ 852:	8f 73       	andi	r24, 0x3F	; 63
+ 854:	31 f0       	breq	.+12     	; 0x862 <tmf8801_get_distance+0x6c>
+ 856:	8d 81       	ldd	r24, Y+5	; 0x05
+ 858:	9e 81       	ldd	r25, Y+6	; 0x06
+/home/lcrm/Documents/EDA/WaveLight/FW/tmf8801.h:161 (discriminator 4)
+ 85a:	f7 01       	movw	r30, r14
+ 85c:	80 83       	st	Z, r24
+ 85e:	91 83       	std	Z+1, r25	; 0x01
+/home/lcrm/Documents/EDA/WaveLight/FW/tmf8801.h:162 (discriminator 4)
+    return 0;
+ 860:	e3 cf       	rjmp	.-58     	; 0x828 <tmf8801_get_distance+0x32>
+/home/lcrm/Documents/EDA/WaveLight/FW/tmf8801.h:161
+    *mm = (r[3] & 0x3F) ? (uint16_t)(r[4] | (r[5] << 8)) : TMF8801_NO_TARGET;
+ 862:	8f ef       	ldi	r24, 0xFF	; 255
+ 864:	9f ef       	ldi	r25, 0xFF	; 255
+ 866:	f9 cf       	rjmp	.-14     	; 0x85a <tmf8801_get_distance+0x64>
+
+Disassembly of section .text.gamma8:
+
+00000e16 <gamma8>:
+gamma8():
+/home/lcrm/Documents/EDA/WaveLight/FW/light.h:67
+
+/**
+ * Gamma 2 correction, any nonzero level gives at least 1
+ */
+static uint8_t gamma8(uint8_t l) {
+    return ((uint16_t)l * l + 255) >> 8;
+ e16:	88 9f       	mul	r24, r24
+ e18:	c0 01       	movw	r24, r0
+ e1a:	11 24       	eor	r1, r1
+ e1c:	81 50       	subi	r24, 0x01	; 1
+ e1e:	9f 4f       	sbci	r25, 0xFF	; 255
+/home/lcrm/Documents/EDA/WaveLight/FW/light.h:68
+}
+ e20:	89 2f       	mov	r24, r25
+ e22:	08 95       	ret
+
+Disassembly of section .text.scale8:
+
+00000da6 <scale8>:
+scale8():
+/home/lcrm/Documents/EDA/WaveLight/FW/light.h:74
+
+/**
+ * a * b / 255 - small channels may drop to 0, so dim light gets warmer
+ */
+static uint8_t scale8(uint8_t a, uint8_t b) {
+    return ((uint16_t)a * b + a) >> 8;
+ da6:	70 e0       	ldi	r23, 0x00	; 0
+ da8:	6f 5f       	subi	r22, 0xFF	; 255
+ daa:	7f 4f       	sbci	r23, 0xFF	; 255
+ dac:	28 2f       	mov	r18, r24
+ dae:	26 9f       	mul	r18, r22
+ db0:	c0 01       	movw	r24, r0
+ db2:	27 9f       	mul	r18, r23
+ db4:	90 0d       	add	r25, r0
+ db6:	11 24       	eor	r1, r1
+/home/lcrm/Documents/EDA/WaveLight/FW/light.h:75
+}
+ db8:	89 2f       	mov	r24, r25
+ dba:	08 95       	ret
+
+Disassembly of section .text.light_set_on:
+
+00000e64 <light_set_on>:
+light_set_on():
+/home/lcrm/Documents/EDA/WaveLight/FW/light.h:84
+static uint16_t light_ticks;
+static uint8_t light_minutes;
+#endif
+
+static void light_set_on(uint8_t on) {
+    light_on = on;
+ e64:	80 93 2a 3f 	sts	0x3F2A, r24	; 0x803f2a <light_on>
+ e68:	08 95       	ret
+
+Disassembly of section .text.light_set_brightness:
+
+00000e32 <light_set_brightness>:
+light_set_brightness():
+/home/lcrm/Documents/EDA/WaveLight/FW/light.h:92
+    light_minutes = 0;
+#endif
+}
+
+static void light_set_brightness(uint8_t brightness) {
+    light_brightness = brightness < LIGHT_MIN_BRIGHTNESS ? LIGHT_MIN_BRIGHTNESS : brightness;
+ e32:	88 31       	cpi	r24, 0x18	; 24
+ e34:	08 f4       	brcc	.+2      	; 0xe38 <light_set_brightness+0x6>
+ e36:	88 e1       	ldi	r24, 0x18	; 24
+ e38:	80 93 2b 3f 	sts	0x3F2B, r24	; 0x803f2b <light_brightness>
+ e3c:	08 95       	ret
+
+Disassembly of section .text.light_set_tone:
+
+00000e6a <light_set_tone>:
+light_set_tone():
+/home/lcrm/Documents/EDA/WaveLight/FW/light.h:99
+
+/**
+ * @param tone see light_color()
+ */
+static void light_set_tone(uint8_t tone) {
+    light_tone = tone;
+ e6a:	80 93 2c 3f 	sts	0x3F2C, r24	; 0x803f2c <light_tone>
+ e6e:	08 95       	ret
+
+Disassembly of section .text.light_init:
+
+00000e3e <light_init>:
+light_init():
+/home/lcrm/Documents/EDA/WaveLight/FW/light.h:102
+}
+
+static void light_init(uint8_t brightness, uint8_t tone) {
+ e3e:	cf 93       	push	r28
+ e40:	c6 2f       	mov	r28, r22
+/home/lcrm/Documents/EDA/WaveLight/FW/light.h:103
+    light_set_brightness(brightness);
+ e42:	f7 df       	rcall	.-18     	; 0xe32 <light_set_brightness>
+/home/lcrm/Documents/EDA/WaveLight/FW/light.h:104
+    light_set_tone(tone);
+ e44:	8c 2f       	mov	r24, r28
+/home/lcrm/Documents/EDA/WaveLight/FW/light.h:105
+}
+ e46:	cf 91       	pop	r28
+/home/lcrm/Documents/EDA/WaveLight/FW/light.h:104
+    light_set_tone(tone);
+ e48:	10 c0       	rjmp	.+32     	; 0xe6a <light_set_tone>
+
+Disassembly of section .text.flame_rand:
+
+00000b28 <flame_rand>:
+flame_rand():
+/home/lcrm/Documents/EDA/WaveLight/FW/light.h:111
+
+/**
+ * xorshift16 pseudo random
+ */
+static uint8_t flame_rand(void) {
+    flame_rng ^= flame_rng << 7;
+ b28:	80 91 1a 3f 	lds	r24, 0x3F1A	; 0x803f1a <flame_rng>
+ b2c:	90 91 1b 3f 	lds	r25, 0x3F1B	; 0x803f1b <flame_rng+0x1>
+ b30:	9c 01       	movw	r18, r24
+ b32:	36 95       	lsr	r19
+ b34:	32 2f       	mov	r19, r18
+ b36:	22 27       	eor	r18, r18
+ b38:	37 95       	ror	r19
+ b3a:	27 95       	ror	r18
+ b3c:	82 27       	eor	r24, r18
+ b3e:	93 27       	eor	r25, r19
+/home/lcrm/Documents/EDA/WaveLight/FW/light.h:112
+    flame_rng ^= flame_rng >> 9;
+ b40:	9c 01       	movw	r18, r24
+ b42:	23 2f       	mov	r18, r19
+ b44:	33 27       	eor	r19, r19
+ b46:	26 95       	lsr	r18
+ b48:	82 27       	eor	r24, r18
+ b4a:	93 27       	eor	r25, r19
+/home/lcrm/Documents/EDA/WaveLight/FW/light.h:113
+    flame_rng ^= flame_rng << 8;
+ b4c:	38 2f       	mov	r19, r24
+ b4e:	22 27       	eor	r18, r18
+ b50:	82 27       	eor	r24, r18
+ b52:	93 27       	eor	r25, r19
+ b54:	80 93 1a 3f 	sts	0x3F1A, r24	; 0x803f1a <flame_rng>
+ b58:	90 93 1b 3f 	sts	0x3F1B, r25	; 0x803f1b <flame_rng+0x1>
+/home/lcrm/Documents/EDA/WaveLight/FW/light.h:115
+    return flame_rng;
+}
+ b5c:	08 95       	ret
+
+Disassembly of section .text.light_color:
+
+0000037a <light_color>:
+light_color():
+/home/lcrm/Documents/EDA/WaveLight/FW/light.h:124
+ * - 0..191: color wheel red, yellow (32), green (64), cyan (96), blue (128),
+ *   magenta (160), back to red
+ * - 192..255: red, warm white (2700 K, 208) ... cool white (6500 K, 255)
+ * @param shift moves along the wheel / towards cooler white (flame heat)
+ */
+static void light_color(uint8_t tone, uint8_t shift, uint8_t *rgb) {
+ 37a:	ef 92       	push	r14
+ 37c:	ff 92       	push	r15
+ 37e:	0f 93       	push	r16
+ 380:	1f 93       	push	r17
+ 382:	cf 93       	push	r28
+ 384:	df 93       	push	r29
+ 386:	ea 01       	movw	r28, r20
+/home/lcrm/Documents/EDA/WaveLight/FW/light.h:129
+    // Per sixth of the wheel: channel at full, channel ramping (up on even sixths)
+    static const uint8_t wheel_full[6] = {0, 1, 1, 2, 2, 0};
+    static const uint8_t wheel_ramp[6] = {1, 0, 2, 1, 0, 2};
+
+    rgb[0] = rgb[1] = rgb[2] = 0;
+ 388:	1a 82       	std	Y+2, r1	; 0x02
+ 38a:	19 82       	std	Y+1, r1	; 0x01
+ 38c:	18 82       	st	Y, r1
+/home/lcrm/Documents/EDA/WaveLight/FW/light.h:130
+    if (tone < LIGHT_WHEEL_END) {
+ 38e:	80 3c       	cpi	r24, 0xC0	; 192
+ 390:	08 f0       	brcs	.+2      	; 0x394 <light_color+0x1a>
+ 392:	3e c0       	rjmp	.+124    	; 0x410 <__BOOTROW_REGION_LENGTH__+0x10>
+/home/lcrm/Documents/EDA/WaveLight/FW/light.h:131
+        uint8_t hue = tone + tone / 3 + shift;  // 0..191 -> 0..254, wraps around the wheel
+ 394:	68 0f       	add	r22, r24
+ 396:	9b ea       	ldi	r25, 0xAB	; 171
+ 398:	89 9f       	mul	r24, r25
+ 39a:	81 2d       	mov	r24, r1
+ 39c:	11 24       	eor	r1, r1
+ 39e:	86 95       	lsr	r24
+ 3a0:	86 0f       	add	r24, r22
+/home/lcrm/Documents/EDA/WaveLight/FW/light.h:132
+        uint8_t seg = hue / 43;
+ 3a2:	2f eb       	ldi	r18, 0xBF	; 191
+ 3a4:	82 9f       	mul	r24, r18
+ 3a6:	21 2d       	mov	r18, r1
+ 3a8:	11 24       	eor	r1, r1
+ 3aa:	22 95       	swap	r18
+ 3ac:	26 95       	lsr	r18
+ 3ae:	27 70       	andi	r18, 0x07	; 7
+/home/lcrm/Documents/EDA/WaveLight/FW/light.h:133
+        uint8_t f = (hue - seg * 43) * 6;
+ 3b0:	42 2f       	mov	r20, r18
+ 3b2:	50 e0       	ldi	r21, 0x00	; 0
+ 3b4:	90 e0       	ldi	r25, 0x00	; 0
+ 3b6:	3b e2       	ldi	r19, 0x2B	; 43
+ 3b8:	23 9f       	mul	r18, r19
+ 3ba:	80 19       	sub	r24, r0
+ 3bc:	91 09       	sbc	r25, r1
+ 3be:	11 24       	eor	r1, r1
+ 3c0:	98 2f       	mov	r25, r24
+ 3c2:	99 0f       	add	r25, r25
+ 3c4:	89 0f       	add	r24, r25
+ 3c6:	88 0f       	add	r24, r24
+/home/lcrm/Documents/EDA/WaveLight/FW/light.h:135
+
+        rgb[wheel_full[seg]] = 255;
+ 3c8:	fa 01       	movw	r30, r20
+ 3ca:	ea 58       	subi	r30, 0x8A	; 138
+ 3cc:	f1 47       	sbci	r31, 0x71	; 113
+ 3ce:	90 81       	ld	r25, Z
+ 3d0:	fe 01       	movw	r30, r28
+ 3d2:	e9 0f       	add	r30, r25
+ 3d4:	f1 1d       	adc	r31, r1
+ 3d6:	9f ef       	ldi	r25, 0xFF	; 255
+ 3d8:	90 83       	st	Z, r25
+/home/lcrm/Documents/EDA/WaveLight/FW/light.h:136
+        rgb[wheel_ramp[seg]] = gamma8(seg & 1 ? 255 - f : f);
+ 3da:	fa 01       	movw	r30, r20
+ 3dc:	e4 58       	subi	r30, 0x84	; 132
+ 3de:	f1 47       	sbci	r31, 0x71	; 113
+ 3e0:	90 81       	ld	r25, Z
+ 3e2:	8e 01       	movw	r16, r28
+ 3e4:	09 0f       	add	r16, r25
+ 3e6:	11 1d       	adc	r17, r1
+ 3e8:	20 fd       	sbrc	r18, 0
+/home/lcrm/Documents/EDA/WaveLight/FW/light.h:136 (discriminator 1)
+ 3ea:	80 95       	com	r24
+/home/lcrm/Documents/EDA/WaveLight/FW/light.h:136 (discriminator 4)
+ 3ec:	14 d5       	rcall	.+2600   	; 0xe16 <gamma8>
+ 3ee:	d8 01       	movw	r26, r16
+ 3f0:	8c 93       	st	X, r24
+/home/lcrm/Documents/EDA/WaveLight/FW/light.h:146
+        uint8_t frac = (w & 63) << 2;
+
+        for (uint8_t c = 0; c < 3; c++) rgb[c] = p[c] + (((int16_t)p[c + 3] - p[c]) * frac >> 8);
+    }
+
+    rgb[1] = scale8(rgb[1], LIGHT_WB_G);
+ 3f2:	60 eb       	ldi	r22, 0xB0	; 176
+ 3f4:	89 81       	ldd	r24, Y+1	; 0x01
+ 3f6:	d7 d4       	rcall	.+2478   	; 0xda6 <scale8>
+ 3f8:	89 83       	std	Y+1, r24	; 0x01
+/home/lcrm/Documents/EDA/WaveLight/FW/light.h:147
+    rgb[2] = scale8(rgb[2], LIGHT_WB_B);
+ 3fa:	60 ef       	ldi	r22, 0xF0	; 240
+ 3fc:	8a 81       	ldd	r24, Y+2	; 0x02
+ 3fe:	d3 d4       	rcall	.+2470   	; 0xda6 <scale8>
+ 400:	8a 83       	std	Y+2, r24	; 0x02
+/home/lcrm/Documents/EDA/WaveLight/FW/light.h:148
+}
+ 402:	df 91       	pop	r29
+ 404:	cf 91       	pop	r28
+ 406:	1f 91       	pop	r17
+ 408:	0f 91       	pop	r16
+ 40a:	ff 90       	pop	r15
+ 40c:	ef 90       	pop	r14
+ 40e:	08 95       	ret
+/home/lcrm/Documents/EDA/WaveLight/FW/light.h:138
+        uint16_t w = (tone - LIGHT_WHEEL_END) * 4 + shift;  // 0..255, no wrap
+ 410:	90 e0       	ldi	r25, 0x00	; 0
+ 412:	80 5c       	subi	r24, 0xC0	; 192
+ 414:	91 09       	sbc	r25, r1
+ 416:	88 0f       	add	r24, r24
+ 418:	99 1f       	adc	r25, r25
+ 41a:	88 0f       	add	r24, r24
+ 41c:	99 1f       	adc	r25, r25
+ 41e:	86 0f       	add	r24, r22
+ 420:	91 1d       	adc	r25, r1
+/home/lcrm/Documents/EDA/WaveLight/FW/light.h:139
+        if (w > 255) w = 255;
+ 422:	8f 3f       	cpi	r24, 0xFF	; 255
+ 424:	91 05       	cpc	r25, r1
+ 426:	09 f0       	breq	.+2      	; 0x42a <__BOOTROW_REGION_LENGTH__+0x2a>
+ 428:	7c f5       	brge	.+94     	; 0x488 <__BOOTROW_REGION_LENGTH__+0x88>
+ 42a:	fc 01       	movw	r30, r24
+ 42c:	00 24       	eor	r0, r0
+ 42e:	ee 0f       	add	r30, r30
+ 430:	ff 1f       	adc	r31, r31
+ 432:	00 1c       	adc	r0, r0
+ 434:	ee 0f       	add	r30, r30
+ 436:	ff 1f       	adc	r31, r31
+ 438:	00 1c       	adc	r0, r0
+ 43a:	ef 2f       	mov	r30, r31
+ 43c:	f0 2d       	mov	r31, r0
+ 43e:	88 0f       	add	r24, r24
+ 440:	88 0f       	add	r24, r24
+ 442:	90 e0       	ldi	r25, 0x00	; 0
+/home/lcrm/Documents/EDA/WaveLight/FW/light.h:140
+        const uint8_t *p = white_rgb[w >> 6];  // interpolate p -> p + 3 (next point)
+ 444:	9f 01       	movw	r18, r30
+ 446:	22 0f       	add	r18, r18
+ 448:	33 1f       	adc	r19, r19
+ 44a:	e2 0f       	add	r30, r18
+ 44c:	f3 1f       	adc	r31, r19
+ 44e:	e8 50       	subi	r30, 0x08	; 8
+ 450:	f2 47       	sbci	r31, 0x72	; 114
+ 452:	7e 01       	movw	r14, r28
+ 454:	8f 01       	movw	r16, r30
+ 456:	0d 5f       	subi	r16, 0xFD	; 253
+ 458:	1f 4f       	sbci	r17, 0xFF	; 255
+ 45a:	9f 01       	movw	r18, r30
+/home/lcrm/Documents/EDA/WaveLight/FW/light.h:143 (discriminator 3)
+        for (uint8_t c = 0; c < 3; c++) rgb[c] = p[c] + (((int16_t)p[c + 3] - p[c]) * frac >> 8);
+ 45c:	41 91       	ld	r20, Z+
+ 45e:	d9 01       	movw	r26, r18
+ 460:	13 96       	adiw	r26, 0x03	; 3
+ 462:	2c 91       	ld	r18, X
+ 464:	30 e0       	ldi	r19, 0x00	; 0
+ 466:	24 1b       	sub	r18, r20
+ 468:	31 09       	sbc	r19, r1
+ 46a:	28 9f       	mul	r18, r24
+ 46c:	b0 01       	movw	r22, r0
+ 46e:	29 9f       	mul	r18, r25
+ 470:	70 0d       	add	r23, r0
+ 472:	38 9f       	mul	r19, r24
+ 474:	70 0d       	add	r23, r0
+ 476:	11 24       	eor	r1, r1
+ 478:	47 0f       	add	r20, r23
+ 47a:	d7 01       	movw	r26, r14
+ 47c:	4d 93       	st	X+, r20
+ 47e:	7d 01       	movw	r14, r26
+ 480:	0e 17       	cp	r16, r30
+ 482:	1f 07       	cpc	r17, r31
+ 484:	51 f7       	brne	.-44     	; 0x45a <__BOOTROW_REGION_LENGTH__+0x5a>
+ 486:	b5 cf       	rjmp	.-150    	; 0x3f2 <light_color+0x78>
+ 488:	8c ef       	ldi	r24, 0xFC	; 252
+ 48a:	90 e0       	ldi	r25, 0x00	; 0
+ 48c:	e3 e0       	ldi	r30, 0x03	; 3
+ 48e:	f0 e0       	ldi	r31, 0x00	; 0
+ 490:	d9 cf       	rjmp	.-78     	; 0x444 <__BOOTROW_REGION_LENGTH__+0x44>
+
+Disassembly of section .text.flame_render:
+
+00000492 <flame_render>:
+flame_render():
+/home/lcrm/Documents/EDA/WaveLight/FW/light.h:154
+
+/**
+ * Advance the flicker by one tick and render it at the given output level
+ * @param rgb receives LED_COUNT * 3 bytes
+ */
+static void flame_render(uint8_t level, uint8_t *rgb) {
+ 492:	6f 92       	push	r6
+ 494:	7f 92       	push	r7
+ 496:	8f 92       	push	r8
+ 498:	9f 92       	push	r9
+ 49a:	af 92       	push	r10
+ 49c:	bf 92       	push	r11
+ 49e:	cf 92       	push	r12
+ 4a0:	df 92       	push	r13
+ 4a2:	ef 92       	push	r14
+ 4a4:	ff 92       	push	r15
+ 4a6:	0f 93       	push	r16
+ 4a8:	1f 93       	push	r17
+ 4aa:	cf 93       	push	r28
+ 4ac:	df 93       	push	r29
+ 4ae:	78 2e       	mov	r7, r24
+ 4b0:	8b 01       	movw	r16, r22
+/home/lcrm/Documents/EDA/WaveLight/FW/light.h:155
+    uint8_t gust = flame_rand() < FLAME_GUST;
+ 4b2:	3a d3       	rcall	.+1652   	; 0xb28 <flame_rand>
+ 4b4:	88 2e       	mov	r8, r24
+/home/lcrm/Documents/EDA/WaveLight/FW/light.h:156
+    uint8_t base = scale8(light_brightness, 255 - FLAME_SPREAD);
+ 4b6:	61 e9       	ldi	r22, 0x91	; 145
+ 4b8:	80 91 2b 3f 	lds	r24, 0x3F2B	; 0x803f2b <light_brightness>
+ 4bc:	74 d4       	rcall	.+2280   	; 0xda6 <scale8>
+ 4be:	98 2e       	mov	r9, r24
+ 4c0:	5b e0       	ldi	r21, 0x0B	; 11
+ 4c2:	a5 2e       	mov	r10, r21
+ 4c4:	5f e3       	ldi	r21, 0x3F	; 63
+ 4c6:	b5 2e       	mov	r11, r21
+ 4c8:	62 e1       	ldi	r22, 0x12	; 18
+ 4ca:	c6 2e       	mov	r12, r22
+ 4cc:	6f e3       	ldi	r22, 0x3F	; 63
+ 4ce:	d6 2e       	mov	r13, r22
+ 4d0:	e1 2c       	mov	r14, r1
+ 4d2:	f1 2c       	mov	r15, r1
+/home/lcrm/Documents/EDA/WaveLight/FW/light.h:159
+
+    for (uint8_t i = 0; i < LED_COUNT; i++, rgb += 3) {
+        if (gust) {
+ 4d4:	81 e0       	ldi	r24, 0x01	; 1
+ 4d6:	88 15       	cp	r24, r8
+ 4d8:	08 f0       	brcs	.+2      	; 0x4dc <flame_render+0x4a>
+ 4da:	5a c0       	rjmp	.+180    	; 0x590 <flame_render+0xfe>
+/home/lcrm/Documents/EDA/WaveLight/FW/light.h:161
+            flame_target[i] = base;
+        } else if (flame_rand() < FLAME_CHANGE) {
+ 4dc:	25 d3       	rcall	.+1610   	; 0xb28 <flame_rand>
+ 4de:	88 32       	cpi	r24, 0x28	; 40
+ 4e0:	08 f4       	brcc	.+2      	; 0x4e4 <flame_render+0x52>
+ 4e2:	5a c0       	rjmp	.+180    	; 0x598 <flame_render+0x106>
+ 4e4:	f6 01       	movw	r30, r12
+ 4e6:	80 81       	ld	r24, Z
+/home/lcrm/Documents/EDA/WaveLight/FW/light.h:165
+            flame_target[i] = base + scale8(flame_rand(), FLAME_SPREAD);
+        }
+
+        int16_t h = flame_heat[i];
+ 4e8:	f7 01       	movw	r30, r14
+ 4ea:	e4 5f       	subi	r30, 0xF4	; 244
+ 4ec:	f0 4c       	sbci	r31, 0xC0	; 192
+ 4ee:	20 81       	ld	r18, Z
+ 4f0:	30 e0       	ldi	r19, 0x00	; 0
+/home/lcrm/Documents/EDA/WaveLight/FW/light.h:166
+        h += (flame_target[i] - h) >> FLAME_SPEED;
+ 4f2:	c8 2f       	mov	r28, r24
+ 4f4:	d0 e0       	ldi	r29, 0x00	; 0
+ 4f6:	c2 1b       	sub	r28, r18
+ 4f8:	d3 0b       	sbc	r29, r19
+ 4fa:	d5 95       	asr	r29
+ 4fc:	c7 95       	ror	r28
+ 4fe:	d5 95       	asr	r29
+ 500:	c7 95       	ror	r28
+ 502:	c2 0f       	add	r28, r18
+ 504:	d3 1f       	adc	r29, r19
+/home/lcrm/Documents/EDA/WaveLight/FW/light.h:167
+        if (i) h = (3 * h + flame_heat[i - 1]) >> 2;  // couple neighbors, flicker travels along
+ 506:	ee 20       	and	r14, r14
+ 508:	69 f0       	breq	.+26     	; 0x524 <flame_render+0x92>
+/home/lcrm/Documents/EDA/WaveLight/FW/light.h:167 (discriminator 1)
+ 50a:	ce 01       	movw	r24, r28
+ 50c:	88 0f       	add	r24, r24
+ 50e:	99 1f       	adc	r25, r25
+ 510:	c8 0f       	add	r28, r24
+ 512:	d9 1f       	adc	r29, r25
+ 514:	d5 01       	movw	r26, r10
+ 516:	8c 91       	ld	r24, X
+ 518:	c8 0f       	add	r28, r24
+ 51a:	d1 1d       	adc	r29, r1
+ 51c:	d5 95       	asr	r29
+ 51e:	c7 95       	ror	r28
+ 520:	d5 95       	asr	r29
+ 522:	c7 95       	ror	r28
+/home/lcrm/Documents/EDA/WaveLight/FW/light.h:168
+        flame_heat[i] = h;
+ 524:	c0 83       	st	Z, r28
+/home/lcrm/Documents/EDA/WaveLight/FW/light.h:172
+
+        // Hotter = brighter (heat is perceptual, like brightness) and a bit
+        // further along the color strip
+        uint8_t v = scale8(level, gamma8(h));
+ 526:	8c 2f       	mov	r24, r28
+ 528:	76 d4       	rcall	.+2284   	; 0xe16 <gamma8>
+ 52a:	68 2f       	mov	r22, r24
+ 52c:	87 2d       	mov	r24, r7
+ 52e:	3b d4       	rcall	.+2166   	; 0xda6 <scale8>
+ 530:	68 2e       	mov	r6, r24
+/home/lcrm/Documents/EDA/WaveLight/FW/light.h:173
+        light_color(light_tone, scale8(h, FLAME_HUE_SHIFT), rgb);
+ 532:	68 e1       	ldi	r22, 0x18	; 24
+ 534:	8c 2f       	mov	r24, r28
+ 536:	37 d4       	rcall	.+2158   	; 0xda6 <scale8>
+ 538:	a8 01       	movw	r20, r16
+ 53a:	68 2f       	mov	r22, r24
+ 53c:	80 91 2c 3f 	lds	r24, 0x3F2C	; 0x803f2c <light_tone>
+ 540:	1c df       	rcall	.-456    	; 0x37a <light_color>
+ 542:	e8 01       	movw	r28, r16
+ 544:	0d 5f       	subi	r16, 0xFD	; 253
+ 546:	1f 4f       	sbci	r17, 0xFF	; 255
+/home/lcrm/Documents/EDA/WaveLight/FW/light.h:174 (discriminator 3)
+        for (uint8_t c = 0; c < 3; c++) rgb[c] = scale8(rgb[c], v);
+ 548:	66 2d       	mov	r22, r6
+ 54a:	88 81       	ld	r24, Y
+ 54c:	2c d4       	rcall	.+2136   	; 0xda6 <scale8>
+ 54e:	89 93       	st	Y+, r24
+ 550:	0c 17       	cp	r16, r28
+ 552:	1d 07       	cpc	r17, r29
+ 554:	c9 f7       	brne	.-14     	; 0x548 <flame_render+0xb6>
+ 556:	ef ef       	ldi	r30, 0xFF	; 255
+ 558:	ee 1a       	sub	r14, r30
+ 55a:	fe 0a       	sbc	r15, r30
+ 55c:	ff ef       	ldi	r31, 0xFF	; 255
+ 55e:	af 1a       	sub	r10, r31
+ 560:	bf 0a       	sbc	r11, r31
+ 562:	8f ef       	ldi	r24, 0xFF	; 255
+ 564:	c8 1a       	sub	r12, r24
+ 566:	d8 0a       	sbc	r13, r24
+/home/lcrm/Documents/EDA/WaveLight/FW/light.h:158 (discriminator 2)
+    for (uint8_t i = 0; i < LED_COUNT; i++, rgb += 3) {
+ 568:	a6 e0       	ldi	r26, 0x06	; 6
+ 56a:	ea 16       	cp	r14, r26
+ 56c:	f1 04       	cpc	r15, r1
+ 56e:	09 f0       	breq	.+2      	; 0x572 <flame_render+0xe0>
+ 570:	b1 cf       	rjmp	.-158    	; 0x4d4 <flame_render+0x42>
+/home/lcrm/Documents/EDA/WaveLight/FW/light.h:176
+    }
+}
+ 572:	df 91       	pop	r29
+ 574:	cf 91       	pop	r28
+ 576:	1f 91       	pop	r17
+ 578:	0f 91       	pop	r16
+ 57a:	ff 90       	pop	r15
+ 57c:	ef 90       	pop	r14
+ 57e:	df 90       	pop	r13
+ 580:	cf 90       	pop	r12
+ 582:	bf 90       	pop	r11
+ 584:	af 90       	pop	r10
+ 586:	9f 90       	pop	r9
+ 588:	8f 90       	pop	r8
+ 58a:	7f 90       	pop	r7
+ 58c:	6f 90       	pop	r6
+ 58e:	08 95       	ret
+/home/lcrm/Documents/EDA/WaveLight/FW/light.h:160
+            flame_target[i] = base;
+ 590:	d6 01       	movw	r26, r12
+ 592:	9c 92       	st	X, r9
+ 594:	89 2d       	mov	r24, r9
+ 596:	a8 cf       	rjmp	.-176    	; 0x4e8 <flame_render+0x56>
+/home/lcrm/Documents/EDA/WaveLight/FW/light.h:162
+            flame_target[i] = base + scale8(flame_rand(), FLAME_SPREAD);
+ 598:	c7 d2       	rcall	.+1422   	; 0xb28 <flame_rand>
+ 59a:	6e e6       	ldi	r22, 0x6E	; 110
+ 59c:	04 d4       	rcall	.+2056   	; 0xda6 <scale8>
+ 59e:	89 0d       	add	r24, r9
+ 5a0:	d6 01       	movw	r26, r12
+ 5a2:	8c 93       	st	X, r24
+ 5a4:	a1 cf       	rjmp	.-190    	; 0x4e8 <flame_render+0x56>
+
+Disassembly of section .text.light_target:
+
+00000dd2 <light_target>:
+light_target():
+/home/lcrm/Documents/EDA/WaveLight/FW/light.h:179
+
+static uint16_t light_target(void) {
+    return light_on ? 0xFF00 : 0;  // brightness goes into the flame heat
+ dd2:	80 91 2a 3f 	lds	r24, 0x3F2A	; 0x803f2a <light_on>
+ dd6:	88 23       	and	r24, r24
+ dd8:	19 f0       	breq	.+6      	; 0xde0 <light_target+0xe>
+ dda:	80 e0       	ldi	r24, 0x00	; 0
+ ddc:	9f ef       	ldi	r25, 0xFF	; 255
+/home/lcrm/Documents/EDA/WaveLight/FW/light.h:180
+}
+ dde:	08 95       	ret
+/home/lcrm/Documents/EDA/WaveLight/FW/light.h:179
+    return light_on ? 0xFF00 : 0;  // brightness goes into the flame heat
+ de0:	80 e0       	ldi	r24, 0x00	; 0
+ de2:	90 e0       	ldi	r25, 0x00	; 0
+ de4:	08 95       	ret
+
+Disassembly of section .text.light_fading:
+
+00000cba <light_fading>:
+light_fading():
+/home/lcrm/Documents/EDA/WaveLight/FW/light.h:186
+
+/**
+ * @return 1 while fading (light_update() must keep running)
+ */
+static uint8_t light_fading(void) {
+    return light_level != light_target();
+ cba:	8b d0       	rcall	.+278    	; 0xdd2 <light_target>
+ cbc:	21 e0       	ldi	r18, 0x01	; 1
+ cbe:	40 91 18 3f 	lds	r20, 0x3F18	; 0x803f18 <light_level>
+ cc2:	50 91 19 3f 	lds	r21, 0x3F19	; 0x803f19 <light_level+0x1>
+ cc6:	48 17       	cp	r20, r24
+ cc8:	59 07       	cpc	r21, r25
+ cca:	11 f0       	breq	.+4      	; 0xcd0 <light_fading+0x16>
+/home/lcrm/Documents/EDA/WaveLight/FW/light.h:187
+}
+ ccc:	82 2f       	mov	r24, r18
+ cce:	08 95       	ret
+/home/lcrm/Documents/EDA/WaveLight/FW/light.h:186
+    return light_level != light_target();
+ cd0:	20 e0       	ldi	r18, 0x00	; 0
+/home/lcrm/Documents/EDA/WaveLight/FW/light.h:187
+}
+ cd2:	82 2f       	mov	r24, r18
+ cd4:	08 95       	ret
+
+Disassembly of section .text.light_flash:
+
+00000e54 <light_flash>:
+light_flash():
+/home/lcrm/Documents/EDA/WaveLight/FW/light.h:193
+
+/**
+ * Dip to dark and fade back - acknowledges a mode change
+ */
+static void light_flash(void) {
+    light_level = 0;
+ e54:	10 92 18 3f 	sts	0x3F18, r1	; 0x803f18 <light_level>
+ e58:	10 92 19 3f 	sts	0x3F19, r1	; 0x803f19 <light_level+0x1>
+ e5c:	08 95       	ret
+
+Disassembly of section .text.light_update:
+
+00000868 <light_update>:
+light_update():
+/home/lcrm/Documents/EDA/WaveLight/FW/light.h:199
+}
+
+/**
+ * Advance the fade and the flame by one tick and refresh the LEDs
+ */
+static void light_update(void) {
+ 868:	cf 93       	push	r28
+ 86a:	df 93       	push	r29
+ 86c:	cd b7       	in	r28, 0x3d	; 61
+ 86e:	de b7       	in	r29, 0x3e	; 62
+ 870:	62 97       	sbiw	r28, 0x12	; 18
+ 872:	cd bf       	out	0x3d, r28	; 61
+ 874:	de bf       	out	0x3e, r29	; 62
+/home/lcrm/Documents/EDA/WaveLight/FW/light.h:206
+    if (light_on && ++light_ticks == LIGHT_TICKS_PER_MIN) {
+        light_ticks = 0;
+        if (++light_minutes == LIGHT_AUTO_OFF_MIN) light_on = 0;
+    }
+#endif
+    uint16_t target = light_target();
+ 876:	ad d2       	rcall	.+1370   	; 0xdd2 <light_target>
+/home/lcrm/Documents/EDA/WaveLight/FW/light.h:208
+
+    if (light_level < target) {
+ 878:	20 91 18 3f 	lds	r18, 0x3F18	; 0x803f18 <light_level>
+ 87c:	30 91 19 3f 	lds	r19, 0x3F19	; 0x803f19 <light_level+0x1>
+ 880:	28 17       	cp	r18, r24
+ 882:	39 07       	cpc	r19, r25
+ 884:	d8 f4       	brcc	.+54     	; 0x8bc <light_update+0x54>
+/home/lcrm/Documents/EDA/WaveLight/FW/light.h:209
+        light_level = (target - light_level > LIGHT_STEP_ON) ? light_level + LIGHT_STEP_ON : target;
+ 886:	ac 01       	movw	r20, r24
+ 888:	42 1b       	sub	r20, r18
+ 88a:	53 0b       	sbc	r21, r19
+ 88c:	41 33       	cpi	r20, 0x31	; 49
+ 88e:	53 40       	sbci	r21, 0x03	; 3
+ 890:	08 f1       	brcs	.+66     	; 0x8d4 <light_update+0x6c>
+/home/lcrm/Documents/EDA/WaveLight/FW/light.h:209 (discriminator 1)
+ 892:	20 5d       	subi	r18, 0xD0	; 208
+ 894:	3c 4f       	sbci	r19, 0xFC	; 252
+/home/lcrm/Documents/EDA/WaveLight/FW/light.h:211 (discriminator 4)
+    } else if (light_level > target) {
+        light_level = (light_level - target > LIGHT_STEP_OFF) ? light_level - LIGHT_STEP_OFF : target;
+ 896:	20 93 18 3f 	sts	0x3F18, r18	; 0x803f18 <light_level>
+ 89a:	30 93 19 3f 	sts	0x3F19, r19	; 0x803f19 <light_level+0x1>
+/home/lcrm/Documents/EDA/WaveLight/FW/light.h:215
+    }
+
+    uint8_t rgb[LED_COUNT * 3];
+    flame_render(gamma8(light_level >> 8), rgb);
+ 89e:	83 2f       	mov	r24, r19
+ 8a0:	ba d2       	rcall	.+1396   	; 0xe16 <gamma8>
+ 8a2:	be 01       	movw	r22, r28
+ 8a4:	6f 5f       	subi	r22, 0xFF	; 255
+ 8a6:	7f 4f       	sbci	r23, 0xFF	; 255
+ 8a8:	f4 dd       	rcall	.-1048   	; 0x492 <flame_render>
+/home/lcrm/Documents/EDA/WaveLight/FW/light.h:216
+    ws2812b_show(rgb);
+ 8aa:	ce 01       	movw	r24, r28
+ 8ac:	01 96       	adiw	r24, 0x01	; 1
+ 8ae:	92 d0       	rcall	.+292    	; 0x9d4 <ws2812b_show>
+/home/lcrm/Documents/EDA/WaveLight/FW/light.h:217
+}
+ 8b0:	62 96       	adiw	r28, 0x12	; 18
+ 8b2:	cd bf       	out	0x3d, r28	; 61
+ 8b4:	de bf       	out	0x3e, r29	; 62
+ 8b6:	df 91       	pop	r29
+ 8b8:	cf 91       	pop	r28
+ 8ba:	08 95       	ret
+/home/lcrm/Documents/EDA/WaveLight/FW/light.h:210
+    } else if (light_level > target) {
+ 8bc:	82 17       	cp	r24, r18
+ 8be:	93 07       	cpc	r25, r19
+ 8c0:	70 f7       	brcc	.-36     	; 0x89e <light_update+0x36>
+/home/lcrm/Documents/EDA/WaveLight/FW/light.h:211
+        light_level = (light_level - target > LIGHT_STEP_OFF) ? light_level - LIGHT_STEP_OFF : target;
+ 8c2:	a9 01       	movw	r20, r18
+ 8c4:	48 1b       	sub	r20, r24
+ 8c6:	59 0b       	sbc	r21, r25
+ 8c8:	44 3b       	cpi	r20, 0xB4	; 180
+ 8ca:	51 40       	sbci	r21, 0x01	; 1
+ 8cc:	18 f0       	brcs	.+6      	; 0x8d4 <light_update+0x6c>
+/home/lcrm/Documents/EDA/WaveLight/FW/light.h:211 (discriminator 1)
+ 8ce:	23 5b       	subi	r18, 0xB3	; 179
+ 8d0:	31 40       	sbci	r19, 0x01	; 1
+ 8d2:	e1 cf       	rjmp	.-62     	; 0x896 <light_update+0x2e>
+ 8d4:	9c 01       	movw	r18, r24
+ 8d6:	df cf       	rjmp	.-66     	; 0x896 <light_update+0x2e>
+
+Disassembly of section .text.gesture_diff:
+
+00000dbc <gesture_diff>:
+gesture_diff():
+/home/lcrm/Documents/EDA/WaveLight/FW/gesture.h:76
+static uint16_t gesture_hold_start_mm;
+static uint8_t gesture_tracking;
+static uint8_t gesture_ignore;      // wait for the hand to leave
+
+static uint16_t gesture_diff(uint16_t a, uint16_t b) {
+    return a > b ? a - b : b - a;
+ dbc:	68 17       	cp	r22, r24
+ dbe:	79 07       	cpc	r23, r25
+ dc0:	28 f0       	brcs	.+10     	; 0xdcc <gesture_diff+0x10>
+/home/lcrm/Documents/EDA/WaveLight/FW/gesture.h:76 (discriminator 2)
+ dc2:	9b 01       	movw	r18, r22
+ dc4:	28 1b       	sub	r18, r24
+ dc6:	39 0b       	sbc	r19, r25
+ dc8:	c9 01       	movw	r24, r18
+/home/lcrm/Documents/EDA/WaveLight/FW/gesture.h:77 (discriminator 2)
+}
+ dca:	08 95       	ret
+/home/lcrm/Documents/EDA/WaveLight/FW/gesture.h:76 (discriminator 1)
+    return a > b ? a - b : b - a;
+ dcc:	86 1b       	sub	r24, r22
+ dce:	97 0b       	sbc	r25, r23
+ dd0:	08 95       	ret
+
+Disassembly of section .text.gesture_reading:
+
+0000065e <gesture_reading>:
+gesture_reading():
+/home/lcrm/Documents/EDA/WaveLight/FW/gesture.h:82
+
+/**
+ * Feed a new sensor reading
+ */
+static void gesture_reading(uint16_t mm) {
+ 65e:	cf 93       	push	r28
+ 660:	df 93       	push	r29
+ 662:	ec 01       	movw	r28, r24
+/home/lcrm/Documents/EDA/WaveLight/FW/gesture.h:83
+    if (gesture_diff(mm, gesture_bg_candidate) > GESTURE_BG_TOL_MM) {
+ 664:	60 91 20 3f 	lds	r22, 0x3F20	; 0x803f20 <gesture_bg_candidate>
+ 668:	70 91 21 3f 	lds	r23, 0x3F21	; 0x803f21 <gesture_bg_candidate+0x1>
+ 66c:	a7 d3       	rcall	.+1870   	; 0xdbc <gesture_diff>
+ 66e:	4f 97       	sbiw	r24, 0x1f	; 31
+ 670:	40 f0       	brcs	.+16     	; 0x682 <gesture_reading+0x24>
+/home/lcrm/Documents/EDA/WaveLight/FW/gesture.h:84
+        gesture_bg_candidate = mm;
+ 672:	c0 93 20 3f 	sts	0x3F20, r28	; 0x803f20 <gesture_bg_candidate>
+ 676:	d0 93 21 3f 	sts	0x3F21, r29	; 0x803f21 <gesture_bg_candidate+0x1>
+/home/lcrm/Documents/EDA/WaveLight/FW/gesture.h:85
+        gesture_bg_ticks = 0;
+ 67a:	10 92 22 3f 	sts	0x3F22, r1	; 0x803f22 <gesture_bg_ticks>
+ 67e:	10 92 23 3f 	sts	0x3F23, r1	; 0x803f23 <gesture_bg_ticks+0x1>
+/home/lcrm/Documents/EDA/WaveLight/FW/gesture.h:89
+    }
+
+    // mm < NEAR first, so mm + margin can't overflow
+    if (mm < GESTURE_NEAR_MM && mm + GESTURE_BG_MARGIN_MM < gesture_bg) {
+ 682:	c8 35       	cpi	r28, 0x58	; 88
+ 684:	82 e0       	ldi	r24, 0x02	; 2
+ 686:	d8 07       	cpc	r29, r24
+ 688:	28 f5       	brcc	.+74     	; 0x6d4 <gesture_reading+0x76>
+/home/lcrm/Documents/EDA/WaveLight/FW/gesture.h:89 (discriminator 1)
+ 68a:	20 91 1e 3f 	lds	r18, 0x3F1E	; 0x803f1e <gesture_bg>
+ 68e:	30 91 1f 3f 	lds	r19, 0x3F1F	; 0x803f1f <gesture_bg+0x1>
+ 692:	ce 01       	movw	r24, r28
+ 694:	80 5b       	subi	r24, 0xB0	; 176
+ 696:	9f 4f       	sbci	r25, 0xFF	; 255
+ 698:	82 17       	cp	r24, r18
+ 69a:	93 07       	cpc	r25, r19
+ 69c:	d8 f4       	brcc	.+54     	; 0x6d4 <gesture_reading+0x76>
+/home/lcrm/Documents/EDA/WaveLight/FW/gesture.h:90
+        gesture_present = 1;
+ 69e:	81 e0       	ldi	r24, 0x01	; 1
+ 6a0:	80 93 2d 3f 	sts	0x3F2D, r24	; 0x803f2d <gesture_present>
+/home/lcrm/Documents/EDA/WaveLight/FW/gesture.h:91
+        gesture_missed = 0;
+ 6a4:	10 92 2e 3f 	sts	0x3F2E, r1	; 0x803f2e <gesture_missed>
+/home/lcrm/Documents/EDA/WaveLight/FW/gesture.h:92
+        gesture_last_mm = mm;
+ 6a8:	c0 93 24 3f 	sts	0x3F24, r28	; 0x803f24 <gesture_last_mm>
+ 6ac:	d0 93 25 3f 	sts	0x3F25, r29	; 0x803f25 <gesture_last_mm+0x1>
+/home/lcrm/Documents/EDA/WaveLight/FW/gesture.h:95
+
+        // Only hand readings, so the rollback never lands on "no target"
+        gesture_hist[gesture_hist_i] = mm;
+ 6b0:	80 91 2f 3f 	lds	r24, 0x3F2F	; 0x803f2f <gesture_hist_i>
+ 6b4:	e8 2f       	mov	r30, r24
+ 6b6:	f0 e0       	ldi	r31, 0x00	; 0
+ 6b8:	ee 0f       	add	r30, r30
+ 6ba:	ff 1f       	adc	r31, r31
+ 6bc:	e0 50       	subi	r30, 0x00	; 0
+ 6be:	f1 4c       	sbci	r31, 0xC1	; 193
+ 6c0:	c0 83       	st	Z, r28
+ 6c2:	d1 83       	std	Z+1, r29	; 0x01
+/home/lcrm/Documents/EDA/WaveLight/FW/gesture.h:96
+        if (++gesture_hist_i == GESTURE_HISTORY) gesture_hist_i = 0;
+ 6c4:	8f 5f       	subi	r24, 0xFF	; 255
+ 6c6:	86 30       	cpi	r24, 0x06	; 6
+ 6c8:	99 f0       	breq	.+38     	; 0x6f0 <gesture_reading+0x92>
+ 6ca:	80 93 2f 3f 	sts	0x3F2F, r24	; 0x803f2f <gesture_hist_i>
+/home/lcrm/Documents/EDA/WaveLight/FW/gesture.h:101
+    } else if (gesture_missed < GESTURE_DROPOUT && ++gesture_missed == GESTURE_DROPOUT) {
+        // Bridge single dropouts - readings get unreliable near the range limit
+        gesture_present = 0;
+    }
+}
+ 6ce:	df 91       	pop	r29
+ 6d0:	cf 91       	pop	r28
+ 6d2:	08 95       	ret
+/home/lcrm/Documents/EDA/WaveLight/FW/gesture.h:97
+    } else if (gesture_missed < GESTURE_DROPOUT && ++gesture_missed == GESTURE_DROPOUT) {
+ 6d4:	80 91 2e 3f 	lds	r24, 0x3F2E	; 0x803f2e <gesture_missed>
+ 6d8:	82 30       	cpi	r24, 0x02	; 2
+ 6da:	c8 f7       	brcc	.-14     	; 0x6ce <gesture_reading+0x70>
+/home/lcrm/Documents/EDA/WaveLight/FW/gesture.h:97 (discriminator 1)
+ 6dc:	8f 5f       	subi	r24, 0xFF	; 255
+ 6de:	80 93 2e 3f 	sts	0x3F2E, r24	; 0x803f2e <gesture_missed>
+ 6e2:	82 30       	cpi	r24, 0x02	; 2
+ 6e4:	a1 f7       	brne	.-24     	; 0x6ce <gesture_reading+0x70>
+/home/lcrm/Documents/EDA/WaveLight/FW/gesture.h:99
+        gesture_present = 0;
+ 6e6:	10 92 2d 3f 	sts	0x3F2D, r1	; 0x803f2d <gesture_present>
+/home/lcrm/Documents/EDA/WaveLight/FW/gesture.h:101
+}
+ 6ea:	df 91       	pop	r29
+ 6ec:	cf 91       	pop	r28
+ 6ee:	08 95       	ret
+/home/lcrm/Documents/EDA/WaveLight/FW/gesture.h:96 (discriminator 1)
+        if (++gesture_hist_i == GESTURE_HISTORY) gesture_hist_i = 0;
+ 6f0:	10 92 2f 3f 	sts	0x3F2F, r1	; 0x803f2f <gesture_hist_i>
+ 6f4:	ec cf       	rjmp	.-40     	; 0x6ce <gesture_reading+0x70>
+
+Disassembly of section .text.gesture_set_tracking:
+
+00000cd6 <gesture_set_tracking>:
+gesture_set_tracking():
+/home/lcrm/Documents/EDA/WaveLight/FW/gesture.h:107
+
+/**
+ * Switch tracking mode, resets wave / hold detection
+ */
+static void gesture_set_tracking(uint8_t on) {
+    gesture_tracking = on;
+ cd6:	80 93 33 3f 	sts	0x3F33, r24	; 0x803f33 <gesture_tracking>
+/home/lcrm/Documents/EDA/WaveLight/FW/gesture.h:108
+    gesture_near_ticks = 0;
+ cda:	10 92 30 3f 	sts	0x3F30, r1	; 0x803f30 <gesture_near_ticks>
+/home/lcrm/Documents/EDA/WaveLight/FW/gesture.h:109
+    gesture_gap_ticks = 0;
+ cde:	10 92 31 3f 	sts	0x3F31, r1	; 0x803f31 <gesture_gap_ticks>
+/home/lcrm/Documents/EDA/WaveLight/FW/gesture.h:110
+    gesture_holding = 0;
+ ce2:	10 92 32 3f 	sts	0x3F32, r1	; 0x803f32 <gesture_holding>
+/home/lcrm/Documents/EDA/WaveLight/FW/gesture.h:111
+    gesture_ignore = !on;
+ ce6:	91 e0       	ldi	r25, 0x01	; 1
+ ce8:	81 11       	cpse	r24, r1
+ cea:	90 e0       	ldi	r25, 0x00	; 0
+ cec:	90 93 34 3f 	sts	0x3F34, r25	; 0x803f34 <gesture_ignore>
+ cf0:	08 95       	ret
+
+Disassembly of section .text.gesture_idle:
+
+00000b94 <gesture_idle>:
+gesture_idle():
+/home/lcrm/Documents/EDA/WaveLight/FW/gesture.h:118
+
+/**
+ * @return 1 if nothing is going on (no hand, no gesture pending, not tracking)
+ */
+static uint8_t gesture_idle(void) {
+    return !gesture_present && !gesture_near_ticks && !gesture_gap_ticks && !gesture_tracking && !gesture_ignore;
+ b94:	80 91 2d 3f 	lds	r24, 0x3F2D	; 0x803f2d <gesture_present>
+ b98:	81 11       	cpse	r24, r1
+ b9a:	12 c0       	rjmp	.+36     	; 0xbc0 <gesture_idle+0x2c>
+/home/lcrm/Documents/EDA/WaveLight/FW/gesture.h:118 (discriminator 1)
+ b9c:	90 91 30 3f 	lds	r25, 0x3F30	; 0x803f30 <gesture_near_ticks>
+ ba0:	91 11       	cpse	r25, r1
+ ba2:	0d c0       	rjmp	.+26     	; 0xbbe <gesture_idle+0x2a>
+/home/lcrm/Documents/EDA/WaveLight/FW/gesture.h:118 (discriminator 3)
+ ba4:	80 91 31 3f 	lds	r24, 0x3F31	; 0x803f31 <gesture_gap_ticks>
+ ba8:	81 11       	cpse	r24, r1
+ baa:	0a c0       	rjmp	.+20     	; 0xbc0 <gesture_idle+0x2c>
+/home/lcrm/Documents/EDA/WaveLight/FW/gesture.h:118 (discriminator 5)
+ bac:	90 91 33 3f 	lds	r25, 0x3F33	; 0x803f33 <gesture_tracking>
+ bb0:	91 11       	cpse	r25, r1
+ bb2:	05 c0       	rjmp	.+10     	; 0xbbe <gesture_idle+0x2a>
+ bb4:	81 e0       	ldi	r24, 0x01	; 1
+ bb6:	90 91 34 3f 	lds	r25, 0x3F34	; 0x803f34 <gesture_ignore>
+ bba:	91 11       	cpse	r25, r1
+ bbc:	01 c0       	rjmp	.+2      	; 0xbc0 <gesture_idle+0x2c>
+/home/lcrm/Documents/EDA/WaveLight/FW/gesture.h:119 (discriminator 12)
+}
+ bbe:	08 95       	ret
+ bc0:	80 e0       	ldi	r24, 0x00	; 0
+/home/lcrm/Documents/EDA/WaveLight/FW/gesture.h:119
+ bc2:	08 95       	ret
+
+Disassembly of section .text.gesture_update:
+
+000000a2 <gesture_update>:
+gesture_update():
+/home/lcrm/Documents/EDA/WaveLight/FW/gesture.h:124
+
+/**
+ * @return detected gesture, see GESTURE_*
+ */
+static uint8_t gesture_update(void) {
+  a2:	cf 93       	push	r28
+  a4:	df 93       	push	r29
+/home/lcrm/Documents/EDA/WaveLight/FW/gesture.h:125
+    if (gesture_bg_ticks < GESTURE_BG_LEARN_TICKS && ++gesture_bg_ticks == GESTURE_BG_LEARN_TICKS) {
+  a6:	80 91 22 3f 	lds	r24, 0x3F22	; 0x803f22 <gesture_bg_ticks>
+  aa:	90 91 23 3f 	lds	r25, 0x3F23	; 0x803f23 <gesture_bg_ticks+0x1>
+  ae:	88 3e       	cpi	r24, 0xE8	; 232
+  b0:	23 e0       	ldi	r18, 0x03	; 3
+  b2:	92 07       	cpc	r25, r18
+  b4:	48 f4       	brcc	.+18     	; 0xc8 <gesture_update+0x26>
+/home/lcrm/Documents/EDA/WaveLight/FW/gesture.h:125 (discriminator 1)
+  b6:	01 96       	adiw	r24, 0x01	; 1
+  b8:	80 93 22 3f 	sts	0x3F22, r24	; 0x803f22 <gesture_bg_ticks>
+  bc:	90 93 23 3f 	sts	0x3F23, r25	; 0x803f23 <gesture_bg_ticks+0x1>
+  c0:	88 3e       	cpi	r24, 0xE8	; 232
+  c2:	93 40       	sbci	r25, 0x03	; 3
+  c4:	09 f4       	brne	.+2      	; 0xc8 <gesture_update+0x26>
+  c6:	56 c0       	rjmp	.+172    	; 0x174 <__DATA_REGION_LENGTH__+0x74>
+/home/lcrm/Documents/EDA/WaveLight/FW/gesture.h:129
+        gesture_bg = gesture_bg_candidate;
+    }
+
+    if (gesture_ignore) {
+  c8:	80 91 34 3f 	lds	r24, 0x3F34	; 0x803f34 <gesture_ignore>
+  cc:	88 23       	and	r24, r24
+  ce:	39 f1       	breq	.+78     	; 0x11e <__DATA_REGION_LENGTH__+0x1e>
+/home/lcrm/Documents/EDA/WaveLight/FW/gesture.h:130
+        if (gesture_present) return GESTURE_NONE;
+  d0:	80 91 2d 3f 	lds	r24, 0x3F2D	; 0x803f2d <gesture_present>
+  d4:	81 11       	cpse	r24, r1
+  d6:	4a c0       	rjmp	.+148    	; 0x16c <__DATA_REGION_LENGTH__+0x6c>
+/home/lcrm/Documents/EDA/WaveLight/FW/gesture.h:131
+        gesture_ignore = 0;
+  d8:	10 92 34 3f 	sts	0x3F34, r1	; 0x803f34 <gesture_ignore>
+/home/lcrm/Documents/EDA/WaveLight/FW/gesture.h:134
+    }
+
+    if (gesture_tracking) {
+  dc:	80 91 33 3f 	lds	r24, 0x3F33	; 0x803f33 <gesture_tracking>
+  e0:	81 11       	cpse	r24, r1
+  e2:	51 c0       	rjmp	.+162    	; 0x186 <__DATA_REGION_LENGTH__+0x86>
+/home/lcrm/Documents/EDA/WaveLight/FW/gesture.h:170
+            }
+        }
+        return GESTURE_NONE;
+    }
+
+    if (gesture_near_ticks) {
+  e4:	80 91 30 3f 	lds	r24, 0x3F30	; 0x803f30 <gesture_near_ticks>
+  e8:	88 23       	and	r24, r24
+  ea:	09 f4       	brne	.+2      	; 0xee <gesture_update+0x4c>
+  ec:	61 c0       	rjmp	.+194    	; 0x1b0 <__DATA_REGION_LENGTH__+0xb0>
+/home/lcrm/Documents/EDA/WaveLight/FW/gesture.h:173
+        // Hand just left
+        uint8_t ticks = gesture_near_ticks;
+        gesture_near_ticks = 0;
+  ee:	10 92 30 3f 	sts	0x3F30, r1	; 0x803f30 <gesture_near_ticks>
+/home/lcrm/Documents/EDA/WaveLight/FW/gesture.h:175
+
+        if (gesture_holding) {
+  f2:	90 91 32 3f 	lds	r25, 0x3F32	; 0x803f32 <gesture_holding>
+  f6:	99 23       	and	r25, r25
+  f8:	09 f4       	brne	.+2      	; 0xfc <gesture_update+0x5a>
+  fa:	8d c0       	rjmp	.+282    	; 0x216 <__DATA_REGION_LENGTH__+0x116>
+/home/lcrm/Documents/EDA/WaveLight/FW/gesture.h:176
+            gesture_holding = 0;
+  fc:	10 92 32 3f 	sts	0x3F32, r1	; 0x803f32 <gesture_holding>
+/home/lcrm/Documents/EDA/WaveLight/FW/gesture.h:177
+            gesture_mm = gesture_hist[gesture_hist_i];  // oldest reading
+ 100:	e0 91 2f 3f 	lds	r30, 0x3F2F	; 0x803f2f <gesture_hist_i>
+ 104:	f0 e0       	ldi	r31, 0x00	; 0
+ 106:	ee 0f       	add	r30, r30
+ 108:	ff 1f       	adc	r31, r31
+ 10a:	e0 50       	subi	r30, 0x00	; 0
+ 10c:	f1 4c       	sbci	r31, 0xC1	; 193
+ 10e:	80 81       	ld	r24, Z
+ 110:	91 81       	ldd	r25, Z+1	; 0x01
+ 112:	80 93 1c 3f 	sts	0x3F1C, r24	; 0x803f1c <gesture_mm>
+ 116:	90 93 1d 3f 	sts	0x3F1D, r25	; 0x803f1d <gesture_mm+0x1>
+/home/lcrm/Documents/EDA/WaveLight/FW/gesture.h:178
+            return GESTURE_HOLD_END;
+ 11a:	84 e0       	ldi	r24, 0x04	; 4
+ 11c:	14 c0       	rjmp	.+40     	; 0x146 <__DATA_REGION_LENGTH__+0x46>
+/home/lcrm/Documents/EDA/WaveLight/FW/gesture.h:134
+    if (gesture_tracking) {
+ 11e:	80 91 33 3f 	lds	r24, 0x3F33	; 0x803f33 <gesture_tracking>
+ 122:	88 23       	and	r24, r24
+ 124:	99 f0       	breq	.+38     	; 0x14c <__DATA_REGION_LENGTH__+0x4c>
+/home/lcrm/Documents/EDA/WaveLight/FW/gesture.h:135
+        if (gesture_present) {
+ 126:	80 91 2d 3f 	lds	r24, 0x3F2D	; 0x803f2d <gesture_present>
+ 12a:	88 23       	and	r24, r24
+ 12c:	61 f1       	breq	.+88     	; 0x186 <__DATA_REGION_LENGTH__+0x86>
+/home/lcrm/Documents/EDA/WaveLight/FW/gesture.h:136
+            gesture_holding = 1;
+ 12e:	81 e0       	ldi	r24, 0x01	; 1
+ 130:	80 93 32 3f 	sts	0x3F32, r24	; 0x803f32 <gesture_holding>
+/home/lcrm/Documents/EDA/WaveLight/FW/gesture.h:137
+            gesture_mm = gesture_last_mm;
+ 134:	80 91 24 3f 	lds	r24, 0x3F24	; 0x803f24 <gesture_last_mm>
+ 138:	90 91 25 3f 	lds	r25, 0x3F25	; 0x803f25 <gesture_last_mm+0x1>
+ 13c:	80 93 1c 3f 	sts	0x3F1C, r24	; 0x803f1c <gesture_mm>
+ 140:	90 93 1d 3f 	sts	0x3F1D, r25	; 0x803f1d <gesture_mm+0x1>
+/home/lcrm/Documents/EDA/WaveLight/FW/gesture.h:138
+            return GESTURE_TRACK;
+ 144:	85 e0       	ldi	r24, 0x05	; 5
+/home/lcrm/Documents/EDA/WaveLight/FW/gesture.h:195
+    if (gesture_gap_ticks && ++gesture_gap_ticks > GESTURE_DOUBLE_GAP_TICKS) {
+        gesture_gap_ticks = 0;
+        return GESTURE_WAVE;
+    }
+    return GESTURE_NONE;
+}
+ 146:	df 91       	pop	r29
+ 148:	cf 91       	pop	r28
+ 14a:	08 95       	ret
+/home/lcrm/Documents/EDA/WaveLight/FW/gesture.h:148
+    if (gesture_present) {
+ 14c:	80 91 2d 3f 	lds	r24, 0x3F2D	; 0x803f2d <gesture_present>
+ 150:	88 23       	and	r24, r24
+ 152:	41 f2       	breq	.-112    	; 0xe4 <gesture_update+0x42>
+/home/lcrm/Documents/EDA/WaveLight/FW/gesture.h:149
+        if (gesture_near_ticks < 255) gesture_near_ticks++;
+ 154:	80 91 30 3f 	lds	r24, 0x3F30	; 0x803f30 <gesture_near_ticks>
+ 158:	8f 3f       	cpi	r24, 0xFF	; 255
+ 15a:	b9 f1       	breq	.+110    	; 0x1ca <__DATA_REGION_LENGTH__+0xca>
+/home/lcrm/Documents/EDA/WaveLight/FW/gesture.h:149 (discriminator 1)
+ 15c:	8f 5f       	subi	r24, 0xFF	; 255
+ 15e:	80 93 30 3f 	sts	0x3F30, r24	; 0x803f30 <gesture_near_ticks>
+/home/lcrm/Documents/EDA/WaveLight/FW/gesture.h:150 (discriminator 1)
+        if (gesture_near_ticks == GESTURE_WAVE_MAX_TICKS + 1) {
+ 162:	8d 33       	cpi	r24, 0x3D	; 61
+ 164:	09 f4       	brne	.+2      	; 0x168 <__DATA_REGION_LENGTH__+0x68>
+ 166:	4a c0       	rjmp	.+148    	; 0x1fc <__DATA_REGION_LENGTH__+0xfc>
+/home/lcrm/Documents/EDA/WaveLight/FW/gesture.h:158
+        if (gesture_near_ticks > GESTURE_WAVE_MAX_TICKS) {
+ 168:	8d 33       	cpi	r24, 0x3D	; 61
+ 16a:	78 f5       	brcc	.+94     	; 0x1ca <__DATA_REGION_LENGTH__+0xca>
+/home/lcrm/Documents/EDA/WaveLight/FW/gesture.h:130
+        if (gesture_present) return GESTURE_NONE;
+ 16c:	80 e0       	ldi	r24, 0x00	; 0
+/home/lcrm/Documents/EDA/WaveLight/FW/gesture.h:195
+}
+ 16e:	df 91       	pop	r29
+ 170:	cf 91       	pop	r28
+ 172:	08 95       	ret
+/home/lcrm/Documents/EDA/WaveLight/FW/gesture.h:126
+        gesture_bg = gesture_bg_candidate;
+ 174:	80 91 20 3f 	lds	r24, 0x3F20	; 0x803f20 <gesture_bg_candidate>
+ 178:	90 91 21 3f 	lds	r25, 0x3F21	; 0x803f21 <gesture_bg_candidate+0x1>
+ 17c:	80 93 1e 3f 	sts	0x3F1E, r24	; 0x803f1e <gesture_bg>
+ 180:	90 93 1f 3f 	sts	0x3F1F, r25	; 0x803f1f <gesture_bg+0x1>
+ 184:	a1 cf       	rjmp	.-190    	; 0xc8 <gesture_update+0x26>
+/home/lcrm/Documents/EDA/WaveLight/FW/gesture.h:140
+        if (gesture_holding) {
+ 186:	80 91 32 3f 	lds	r24, 0x3F32	; 0x803f32 <gesture_holding>
+ 18a:	88 23       	and	r24, r24
+ 18c:	79 f3       	breq	.-34     	; 0x16c <__DATA_REGION_LENGTH__+0x6c>
+/home/lcrm/Documents/EDA/WaveLight/FW/gesture.h:141
+            gesture_holding = 0;
+ 18e:	10 92 32 3f 	sts	0x3F32, r1	; 0x803f32 <gesture_holding>
+/home/lcrm/Documents/EDA/WaveLight/FW/gesture.h:142
+            gesture_mm = gesture_hist[gesture_hist_i];  // oldest reading
+ 192:	e0 91 2f 3f 	lds	r30, 0x3F2F	; 0x803f2f <gesture_hist_i>
+ 196:	f0 e0       	ldi	r31, 0x00	; 0
+ 198:	ee 0f       	add	r30, r30
+ 19a:	ff 1f       	adc	r31, r31
+ 19c:	e0 50       	subi	r30, 0x00	; 0
+ 19e:	f1 4c       	sbci	r31, 0xC1	; 193
+ 1a0:	80 81       	ld	r24, Z
+ 1a2:	91 81       	ldd	r25, Z+1	; 0x01
+ 1a4:	80 93 1c 3f 	sts	0x3F1C, r24	; 0x803f1c <gesture_mm>
+ 1a8:	90 93 1d 3f 	sts	0x3F1D, r25	; 0x803f1d <gesture_mm+0x1>
+/home/lcrm/Documents/EDA/WaveLight/FW/gesture.h:143
+            return GESTURE_TRACK_END;
+ 1ac:	86 e0       	ldi	r24, 0x06	; 6
+ 1ae:	cb cf       	rjmp	.-106    	; 0x146 <__DATA_REGION_LENGTH__+0x46>
+/home/lcrm/Documents/EDA/WaveLight/FW/gesture.h:190
+    if (gesture_gap_ticks && ++gesture_gap_ticks > GESTURE_DOUBLE_GAP_TICKS) {
+ 1b0:	80 91 31 3f 	lds	r24, 0x3F31	; 0x803f31 <gesture_gap_ticks>
+ 1b4:	88 23       	and	r24, r24
+ 1b6:	d1 f2       	breq	.-76     	; 0x16c <__DATA_REGION_LENGTH__+0x6c>
+/home/lcrm/Documents/EDA/WaveLight/FW/gesture.h:190 (discriminator 1)
+ 1b8:	8f 5f       	subi	r24, 0xFF	; 255
+ 1ba:	80 93 31 3f 	sts	0x3F31, r24	; 0x803f31 <gesture_gap_ticks>
+ 1be:	83 33       	cpi	r24, 0x33	; 51
+ 1c0:	a8 f2       	brcs	.-86     	; 0x16c <__DATA_REGION_LENGTH__+0x6c>
+/home/lcrm/Documents/EDA/WaveLight/FW/gesture.h:154
+                gesture_gap_ticks = 0;
+ 1c2:	10 92 31 3f 	sts	0x3F31, r1	; 0x803f31 <gesture_gap_ticks>
+/home/lcrm/Documents/EDA/WaveLight/FW/gesture.h:155
+                return GESTURE_WAVE;
+ 1c6:	81 e0       	ldi	r24, 0x01	; 1
+ 1c8:	be cf       	rjmp	.-132    	; 0x146 <__DATA_REGION_LENGTH__+0x46>
+ 1ca:	c0 91 24 3f 	lds	r28, 0x3F24	; 0x803f24 <gesture_last_mm>
+ 1ce:	d0 91 25 3f 	lds	r29, 0x3F25	; 0x803f25 <gesture_last_mm+0x1>
+/home/lcrm/Documents/EDA/WaveLight/FW/gesture.h:159
+            if (!gesture_holding && gesture_diff(gesture_last_mm, gesture_hold_start_mm) > GESTURE_HOLD_MOVE_MM) {
+ 1d2:	80 91 32 3f 	lds	r24, 0x3F32	; 0x803f32 <gesture_holding>
+ 1d6:	81 11       	cpse	r24, r1
+ 1d8:	0b c0       	rjmp	.+22     	; 0x1f0 <__DATA_REGION_LENGTH__+0xf0>
+/home/lcrm/Documents/EDA/WaveLight/FW/gesture.h:159 (discriminator 1)
+ 1da:	60 91 26 3f 	lds	r22, 0x3F26	; 0x803f26 <gesture_hold_start_mm>
+ 1de:	70 91 27 3f 	lds	r23, 0x3F27	; 0x803f27 <gesture_hold_start_mm+0x1>
+ 1e2:	ce 01       	movw	r24, r28
+ 1e4:	eb d5       	rcall	.+3030   	; 0xdbc <gesture_diff>
+ 1e6:	4f 97       	sbiw	r24, 0x1f	; 31
+ 1e8:	08 f2       	brcs	.-126    	; 0x16c <__DATA_REGION_LENGTH__+0x6c>
+/home/lcrm/Documents/EDA/WaveLight/FW/gesture.h:160
+                gesture_holding = 1;
+ 1ea:	81 e0       	ldi	r24, 0x01	; 1
+ 1ec:	80 93 32 3f 	sts	0x3F32, r24	; 0x803f32 <gesture_holding>
+/home/lcrm/Documents/EDA/WaveLight/FW/gesture.h:163
+                gesture_mm = gesture_last_mm;
+ 1f0:	c0 93 1c 3f 	sts	0x3F1C, r28	; 0x803f1c <gesture_mm>
+ 1f4:	d0 93 1d 3f 	sts	0x3F1D, r29	; 0x803f1d <gesture_mm+0x1>
+/home/lcrm/Documents/EDA/WaveLight/FW/gesture.h:164
+                return GESTURE_HOLD;
+ 1f8:	83 e0       	ldi	r24, 0x03	; 3
+ 1fa:	a5 cf       	rjmp	.-182    	; 0x146 <__DATA_REGION_LENGTH__+0x46>
+/home/lcrm/Documents/EDA/WaveLight/FW/gesture.h:152
+            gesture_hold_start_mm = gesture_last_mm;
+ 1fc:	c0 91 24 3f 	lds	r28, 0x3F24	; 0x803f24 <gesture_last_mm>
+ 200:	d0 91 25 3f 	lds	r29, 0x3F25	; 0x803f25 <gesture_last_mm+0x1>
+ 204:	c0 93 26 3f 	sts	0x3F26, r28	; 0x803f26 <gesture_hold_start_mm>
+ 208:	d0 93 27 3f 	sts	0x3F27, r29	; 0x803f27 <gesture_hold_start_mm+0x1>
+/home/lcrm/Documents/EDA/WaveLight/FW/gesture.h:153
+            if (gesture_gap_ticks) {
+ 20c:	80 91 31 3f 	lds	r24, 0x3F31	; 0x803f31 <gesture_gap_ticks>
+ 210:	88 23       	and	r24, r24
+ 212:	f9 f2       	breq	.-66     	; 0x1d2 <__DATA_REGION_LENGTH__+0xd2>
+ 214:	d6 cf       	rjmp	.-84     	; 0x1c2 <__DATA_REGION_LENGTH__+0xc2>
+/home/lcrm/Documents/EDA/WaveLight/FW/gesture.h:180
+        if (ticks >= GESTURE_WAVE_MIN_TICKS && ticks <= GESTURE_WAVE_MAX_TICKS) {
+ 216:	85 50       	subi	r24, 0x05	; 5
+ 218:	88 33       	cpi	r24, 0x38	; 56
+ 21a:	08 f0       	brcs	.+2      	; 0x21e <__DATA_REGION_LENGTH__+0x11e>
+ 21c:	a7 cf       	rjmp	.-178    	; 0x16c <__DATA_REGION_LENGTH__+0x6c>
+/home/lcrm/Documents/EDA/WaveLight/FW/gesture.h:181
+            if (gesture_gap_ticks) {
+ 21e:	80 91 31 3f 	lds	r24, 0x3F31	; 0x803f31 <gesture_gap_ticks>
+ 222:	88 23       	and	r24, r24
+ 224:	21 f0       	breq	.+8      	; 0x22e <__DATA_REGION_LENGTH__+0x12e>
+/home/lcrm/Documents/EDA/WaveLight/FW/gesture.h:182
+                gesture_gap_ticks = 0;
+ 226:	10 92 31 3f 	sts	0x3F31, r1	; 0x803f31 <gesture_gap_ticks>
+/home/lcrm/Documents/EDA/WaveLight/FW/gesture.h:183
+                return GESTURE_DOUBLE_WAVE;
+ 22a:	82 e0       	ldi	r24, 0x02	; 2
+ 22c:	8c cf       	rjmp	.-232    	; 0x146 <__DATA_REGION_LENGTH__+0x46>
+/home/lcrm/Documents/EDA/WaveLight/FW/gesture.h:185
+            gesture_gap_ticks = 1;
+ 22e:	91 e0       	ldi	r25, 0x01	; 1
+ 230:	90 93 31 3f 	sts	0x3F31, r25	; 0x803f31 <gesture_gap_ticks>
+ 234:	88 cf       	rjmp	.-240    	; 0x146 <__DATA_REGION_LENGTH__+0x46>
+
+Disassembly of section .text.delay_ms:
+
+00000cf2 <delay_ms>:
+delay_ms():
+/home/lcrm/Documents/EDA/WaveLight/FW/main.c:79
+/**
+ * Busy-wait using TCB0 overflowing every 1 ms.
+ * Used instead of util/delay.h, which pulls in float math at -O0.
+ */
+void delay_ms(uint8_t ms) {
+    while (ms--) {
+ cf2:	9f ef       	ldi	r25, 0xFF	; 255
+ cf4:	98 0f       	add	r25, r24
+ cf6:	88 23       	and	r24, r24
+ cf8:	49 f0       	breq	.+18     	; 0xd0c <delay_ms+0x1a>
+/home/lcrm/Documents/EDA/WaveLight/FW/main.c:81 (discriminator 1)
+        while (!(TCB0.INTFLAGS & TCB_CAPT_bm));
+        TCB0.INTFLAGS = TCB_CAPT_bm;
+ cfa:	21 e0       	ldi	r18, 0x01	; 1
+/home/lcrm/Documents/EDA/WaveLight/FW/main.c:80 (discriminator 1)
+        while (!(TCB0.INTFLAGS & TCB_CAPT_bm));
+ cfc:	80 91 46 0a 	lds	r24, 0x0A46	; 0x800a46 <__RODATA_PM_OFFSET__+0x7f8a46>
+ d00:	80 ff       	sbrs	r24, 0
+ d02:	fc cf       	rjmp	.-8      	; 0xcfc <delay_ms+0xa>
+/home/lcrm/Documents/EDA/WaveLight/FW/main.c:81
+        TCB0.INTFLAGS = TCB_CAPT_bm;
+ d04:	20 93 46 0a 	sts	0x0A46, r18	; 0x800a46 <__RODATA_PM_OFFSET__+0x7f8a46>
+/home/lcrm/Documents/EDA/WaveLight/FW/main.c:79
+    while (ms--) {
+ d08:	91 50       	subi	r25, 0x01	; 1
+ d0a:	c0 f7       	brcc	.-16     	; 0xcfc <delay_ms+0xa>
+ d0c:	08 95       	ret
+
+Disassembly of section .text.eeprom_write:
+
+00000aaa <eeprom_write>:
+eeprom_write():
+/home/lcrm/Documents/EDA/WaveLight/FW/main.c:129 (discriminator 1)
+
+/**
+ * Write bytes within one EEPROM page
+ */
+static void eeprom_write(uint8_t addr, const uint8_t *data, uint8_t len) {
+    while (NVMCTRL.STATUS & NVMCTRL_EEBUSY_bm);
+ aaa:	90 91 02 10 	lds	r25, 0x1002	; 0x801002 <__RODATA_PM_OFFSET__+0x7f9002>
+ aae:	91 fd       	sbrc	r25, 1
+ ab0:	fc cf       	rjmp	.-8      	; 0xaaa <eeprom_write>
+/home/lcrm/Documents/EDA/WaveLight/FW/main.c:130 (discriminator 1)
+    for (uint8_t i = 0; i < len; i++) EEPROM_BYTES[addr + i] = data[i];  // fills page buffer
+ ab2:	44 23       	and	r20, r20
+ ab4:	81 f0       	breq	.+32     	; 0xad6 <eeprom_write+0x2c>
+ ab6:	fb 01       	movw	r30, r22
+ ab8:	a8 2f       	mov	r26, r24
+ aba:	b0 e0       	ldi	r27, 0x00	; 0
+ abc:	bc 5e       	subi	r27, 0xEC	; 236
+ abe:	41 50       	subi	r20, 0x01	; 1
+ ac0:	24 2f       	mov	r18, r20
+ ac2:	30 e0       	ldi	r19, 0x00	; 0
+ ac4:	2f 5f       	subi	r18, 0xFF	; 255
+ ac6:	3f 4f       	sbci	r19, 0xFF	; 255
+ ac8:	26 0f       	add	r18, r22
+ aca:	37 1f       	adc	r19, r23
+/home/lcrm/Documents/EDA/WaveLight/FW/main.c:130 (discriminator 3)
+ acc:	81 91       	ld	r24, Z+
+ ace:	8d 93       	st	X+, r24
+ ad0:	e2 17       	cp	r30, r18
+ ad2:	f3 07       	cpc	r31, r19
+ ad4:	d9 f7       	brne	.-10     	; 0xacc <eeprom_write+0x22>
+/home/lcrm/Documents/EDA/WaveLight/FW/main.c:131
+    _PROTECTED_WRITE_SPM(NVMCTRL.CTRLA, NVMCTRL_CMD_PAGEERASEWRITE_gc);
+ ad6:	93 e0       	ldi	r25, 0x03	; 3
+ ad8:	8d e9       	ldi	r24, 0x9D	; 157
+ ada:	84 bf       	out	0x34, r24	; 52
+ adc:	90 93 00 10 	sts	0x1000, r25	; 0x801000 <__RODATA_PM_OFFSET__+0x7f9000>
+/home/lcrm/Documents/EDA/WaveLight/FW/main.c:132 (discriminator 1)
+    while (NVMCTRL.STATUS & NVMCTRL_EEBUSY_bm);
+ ae0:	80 91 02 10 	lds	r24, 0x1002	; 0x801002 <__RODATA_PM_OFFSET__+0x7f9002>
+ ae4:	81 fd       	sbrc	r24, 1
+ ae6:	fc cf       	rjmp	.-8      	; 0xae0 <eeprom_write+0x36>
+/home/lcrm/Documents/EDA/WaveLight/FW/main.c:133
+}
+ ae8:	08 95       	ret
+
+Disassembly of section .text.cal_save:
+
+00000de6 <cal_save>:
+cal_save():
+/home/lcrm/Documents/EDA/WaveLight/FW/main.c:137
+
+static void cal_save(const uint8_t *cal) {
+    static const uint8_t magic = CAL_MAGIC;
+    eeprom_write(CAL_ADDR, cal, TMF8801_CAL_LEN);
+ de6:	4e e0       	ldi	r20, 0x0E	; 14
+ de8:	bc 01       	movw	r22, r24
+ dea:	80 e0       	ldi	r24, 0x00	; 0
+ dec:	5e de       	rcall	.-836    	; 0xaaa <eeprom_write>
+/home/lcrm/Documents/EDA/WaveLight/FW/main.c:138
+    eeprom_write(CAL_ADDR + TMF8801_CAL_LEN, &magic, 1);  // last, marks data valid
+ dee:	41 e0       	ldi	r20, 0x01	; 1
+ df0:	67 e0       	ldi	r22, 0x07	; 7
+ df2:	7e e8       	ldi	r23, 0x8E	; 142
+ df4:	8e e0       	ldi	r24, 0x0E	; 14
+ df6:	59 ce       	rjmp	.-846    	; 0xaaa <eeprom_write>
+
+Disassembly of section .text.settings_save:
+
+00000986 <settings_save>:
+settings_save():
+/home/lcrm/Documents/EDA/WaveLight/FW/main.c:145
+
+#if !DEBUG_DISTANCE
+/**
+ * Save brightness and tone if they changed
+ */
+static void settings_save(void) {
+ 986:	cf 93       	push	r28
+ 988:	df 93       	push	r29
+ 98a:	00 d0       	rcall	.+0      	; 0x98c <settings_save+0x6>
+ 98c:	0f 92       	push	r0
+ 98e:	cd b7       	in	r28, 0x3d	; 61
+ 990:	de b7       	in	r29, 0x3e	; 62
+/home/lcrm/Documents/EDA/WaveLight/FW/main.c:146
+    uint8_t s[3] = {light_brightness, light_tone, SETTINGS_MAGIC};
+ 992:	80 91 2b 3f 	lds	r24, 0x3F2B	; 0x803f2b <light_brightness>
+ 996:	89 83       	std	Y+1, r24	; 0x01
+ 998:	90 91 2c 3f 	lds	r25, 0x3F2C	; 0x803f2c <light_tone>
+ 99c:	9a 83       	std	Y+2, r25	; 0x02
+ 99e:	2e e5       	ldi	r18, 0x5E	; 94
+ 9a0:	2b 83       	std	Y+3, r18	; 0x03
+/home/lcrm/Documents/EDA/WaveLight/FW/main.c:148
+    uint8_t *e = EEPROM_BYTES + SETTINGS_ADDR;
+    if (e[0] != s[0] || e[1] != s[1] || e[2] != s[2]) eeprom_write(SETTINGS_ADDR, s, 3);
+ 9a2:	20 91 20 14 	lds	r18, 0x1420	; 0x801420 <__RODATA_PM_OFFSET__+0x7f9420>
+ 9a6:	82 17       	cp	r24, r18
+ 9a8:	61 f0       	breq	.+24     	; 0x9c2 <settings_save+0x3c>
+/home/lcrm/Documents/EDA/WaveLight/FW/main.c:148 (discriminator 5)
+ 9aa:	43 e0       	ldi	r20, 0x03	; 3
+ 9ac:	be 01       	movw	r22, r28
+ 9ae:	6f 5f       	subi	r22, 0xFF	; 255
+ 9b0:	7f 4f       	sbci	r23, 0xFF	; 255
+ 9b2:	80 e2       	ldi	r24, 0x20	; 32
+ 9b4:	7a d0       	rcall	.+244    	; 0xaaa <eeprom_write>
+/home/lcrm/Documents/EDA/WaveLight/FW/main.c:149
+}
+ 9b6:	23 96       	adiw	r28, 0x03	; 3
+ 9b8:	cd bf       	out	0x3d, r28	; 61
+ 9ba:	de bf       	out	0x3e, r29	; 62
+ 9bc:	df 91       	pop	r29
+ 9be:	cf 91       	pop	r28
+ 9c0:	08 95       	ret
+/home/lcrm/Documents/EDA/WaveLight/FW/main.c:148 (discriminator 2)
+    if (e[0] != s[0] || e[1] != s[1] || e[2] != s[2]) eeprom_write(SETTINGS_ADDR, s, 3);
+ 9c2:	80 91 21 14 	lds	r24, 0x1421	; 0x801421 <__RODATA_PM_OFFSET__+0x7f9421>
+ 9c6:	98 13       	cpse	r25, r24
+ 9c8:	f0 cf       	rjmp	.-32     	; 0x9aa <settings_save+0x24>
+/home/lcrm/Documents/EDA/WaveLight/FW/main.c:148 (discriminator 4)
+ 9ca:	80 91 22 14 	lds	r24, 0x1422	; 0x801422 <__RODATA_PM_OFFSET__+0x7f9422>
+ 9ce:	8e 35       	cpi	r24, 0x5E	; 94
+ 9d0:	61 f7       	brne	.-40     	; 0x9aa <settings_save+0x24>
+ 9d2:	f1 cf       	rjmp	.-30     	; 0x9b6 <settings_save+0x30>
+
+Disassembly of section .text.settings_load:
+
+00000d76 <settings_load>:
+settings_load():
+/home/lcrm/Documents/EDA/WaveLight/FW/main.c:153
+
+static void settings_load(void) {
+    uint8_t *e = EEPROM_BYTES + SETTINGS_ADDR;
+    if (e[2] == SETTINGS_MAGIC) {
+ d76:	80 91 22 14 	lds	r24, 0x1422	; 0x801422 <__RODATA_PM_OFFSET__+0x7f9422>
+ d7a:	8e 35       	cpi	r24, 0x5E	; 94
+ d7c:	19 f0       	breq	.+6      	; 0xd84 <settings_load+0xe>
+/home/lcrm/Documents/EDA/WaveLight/FW/main.c:156
+        light_init(e[0], e[1]);
+    } else {
+        light_init(LIGHT_DEFAULT_BRIGHTNESS, LIGHT_DEFAULT_TONE);
+ d7e:	60 e0       	ldi	r22, 0x00	; 0
+ d80:	8f ef       	ldi	r24, 0xFF	; 255
+ d82:	5d c0       	rjmp	.+186    	; 0xe3e <light_init>
+/home/lcrm/Documents/EDA/WaveLight/FW/main.c:154
+        light_init(e[0], e[1]);
+ d84:	60 91 21 14 	lds	r22, 0x1421	; 0x801421 <__RODATA_PM_OFFSET__+0x7f9421>
+ d88:	80 91 20 14 	lds	r24, 0x1420	; 0x801420 <__RODATA_PM_OFFSET__+0x7f9420>
+ d8c:	58 c0       	rjmp	.+176    	; 0xe3e <light_init>
+
+Disassembly of section .text.adjust_value:
+
+00000d42 <adjust_value>:
+adjust_value():
+/home/lcrm/Documents/EDA/WaveLight/FW/main.c:164
+
+/**
+ * Hold distance -> 0-255
+ */
+static uint8_t adjust_value(uint16_t mm) {
+    if (mm <= ADJUST_NEAR_MM) return 0;
+ d42:	8d 33       	cpi	r24, 0x3D	; 61
+ d44:	91 05       	cpc	r25, r1
+ d46:	40 f0       	brcs	.+16     	; 0xd58 <adjust_value+0x16>
+/home/lcrm/Documents/EDA/WaveLight/FW/main.c:165
+    if (mm >= ADJUST_NEAR_MM + 255) return 255;
+ d48:	8b 33       	cpi	r24, 0x3B	; 59
+ d4a:	21 e0       	ldi	r18, 0x01	; 1
+ d4c:	92 07       	cpc	r25, r18
+ d4e:	10 f0       	brcs	.+4      	; 0xd54 <adjust_value+0x12>
+ d50:	8f ef       	ldi	r24, 0xFF	; 255
+/home/lcrm/Documents/EDA/WaveLight/FW/main.c:167
+    return mm - ADJUST_NEAR_MM;
+}
+ d52:	08 95       	ret
+/home/lcrm/Documents/EDA/WaveLight/FW/main.c:166
+    return mm - ADJUST_NEAR_MM;
+ d54:	8c 53       	subi	r24, 0x3C	; 60
+ d56:	08 95       	ret
+/home/lcrm/Documents/EDA/WaveLight/FW/main.c:164
+    if (mm <= ADJUST_NEAR_MM) return 0;
+ d58:	80 e0       	ldi	r24, 0x00	; 0
+ d5a:	08 95       	ret
+
+Disassembly of section .text.blink_red:
+
+00000bc4 <blink_red>:
+blink_red():
+/home/lcrm/Documents/EDA/WaveLight/FW/main.c:173
+#endif
+
+/**
+ * Blink red n times (blocking)
+ */
+static void blink_red(uint8_t n) {
+ bc4:	cf 93       	push	r28
+/home/lcrm/Documents/EDA/WaveLight/FW/main.c:174
+    while (n--) {
+ bc6:	88 23       	and	r24, r24
+ bc8:	89 f0       	breq	.+34     	; 0xbec <blink_red+0x28>
+ bca:	c8 2f       	mov	r28, r24
+/home/lcrm/Documents/EDA/WaveLight/FW/main.c:175
+        ws2812b_set_all(64, 0, 0);
+ bcc:	20 e0       	ldi	r18, 0x00	; 0
+ bce:	40 e0       	ldi	r20, 0x00	; 0
+ bd0:	60 e4       	ldi	r22, 0x40	; 64
+ bd2:	86 e0       	ldi	r24, 0x06	; 6
+ bd4:	81 de       	rcall	.-766    	; 0x8d8 <ws2812b_bar>
+/home/lcrm/Documents/EDA/WaveLight/FW/main.c:176
+        delay_ms(150);
+ bd6:	86 e9       	ldi	r24, 0x96	; 150
+ bd8:	8c d0       	rcall	.+280    	; 0xcf2 <delay_ms>
+/home/lcrm/Documents/EDA/WaveLight/FW/main.c:177
+        ws2812b_set_all(0, 0, 0);
+ bda:	20 e0       	ldi	r18, 0x00	; 0
+ bdc:	40 e0       	ldi	r20, 0x00	; 0
+ bde:	60 e0       	ldi	r22, 0x00	; 0
+ be0:	86 e0       	ldi	r24, 0x06	; 6
+ be2:	7a de       	rcall	.-780    	; 0x8d8 <ws2812b_bar>
+/home/lcrm/Documents/EDA/WaveLight/FW/main.c:178
+        delay_ms(150);
+ be4:	86 e9       	ldi	r24, 0x96	; 150
+ be6:	85 d0       	rcall	.+266    	; 0xcf2 <delay_ms>
+ be8:	c1 50       	subi	r28, 0x01	; 1
+/home/lcrm/Documents/EDA/WaveLight/FW/main.c:174
+    while (n--) {
+ bea:	81 f7       	brne	.-32     	; 0xbcc <blink_red+0x8>
+/home/lcrm/Documents/EDA/WaveLight/FW/main.c:180
+    }
+}
+ bec:	cf 91       	pop	r28
+ bee:	08 95       	ret
+
+Disassembly of section .text.fail:
+
+00000e70 <fail>:
+fail():
+/home/lcrm/Documents/EDA/WaveLight/FW/main.c:186 (discriminator 1)
+
+/**
+ * Sensor error - blink red forever
+ */
+static void fail(void) {
+    while (1) blink_red(1);
+ e70:	81 e0       	ldi	r24, 0x01	; 1
+ e72:	a8 de       	rcall	.-688    	; 0xbc4 <blink_red>
+ e74:	fd cf       	rjmp	.-6      	; 0xe70 <fail>
+
+Disassembly of section .text.power:
+
+00000e84 <power>:
+power():
+/home/lcrm/Documents/EDA/WaveLight/FW/main.c:204
+            return;
+        }
+        if (b == BATTERY_LOW) blink_red(2);
+    }
+#endif
+    light_set_on(on);
+ e84:	ef cf       	rjmp	.-34     	; 0xe64 <light_set_on>
+
+Disassembly of section .text.pins_init:
+
+00000b5e <pins_init>:
+pins_init():
+/home/lcrm/Documents/EDA/WaveLight/FW/main.c:212
+
+/**
+ * Disable digital input on pins that are unconnected or float in sleep
+ */
+static void pins_init(void) {
+    for (uint8_t i = 2; i < 8; i++) (&PORTA.PIN0CTRL)[i] = PORT_ISC_INPUT_DISABLE_gc;  // PA2-PA7 n.c.
+ b5e:	84 e0       	ldi	r24, 0x04	; 4
+ b60:	80 93 12 04 	sts	0x0412, r24	; 0x800412 <__RODATA_PM_OFFSET__+0x7f8412>
+ b64:	80 93 13 04 	sts	0x0413, r24	; 0x800413 <__RODATA_PM_OFFSET__+0x7f8413>
+ b68:	80 93 14 04 	sts	0x0414, r24	; 0x800414 <__RODATA_PM_OFFSET__+0x7f8414>
+ b6c:	80 93 15 04 	sts	0x0415, r24	; 0x800415 <__RODATA_PM_OFFSET__+0x7f8415>
+ b70:	80 93 16 04 	sts	0x0416, r24	; 0x800416 <__RODATA_PM_OFFSET__+0x7f8416>
+ b74:	80 93 17 04 	sts	0x0417, r24	; 0x800417 <__RODATA_PM_OFFSET__+0x7f8417>
+/home/lcrm/Documents/EDA/WaveLight/FW/main.c:213
+    PORTB.PIN2CTRL = PORT_ISC_INPUT_DISABLE_gc;  // sensor GPIO1
+ b78:	e0 e2       	ldi	r30, 0x20	; 32
+ b7a:	f4 e0       	ldi	r31, 0x04	; 4
+ b7c:	82 8b       	std	Z+18, r24	; 0x12
+/home/lcrm/Documents/EDA/WaveLight/FW/main.c:214
+    PORTB.PIN4CTRL = PORT_ISC_INPUT_DISABLE_gc;  // sensor GPIO0
+ b7e:	84 8b       	std	Z+20, r24	; 0x14
+/home/lcrm/Documents/EDA/WaveLight/FW/main.c:215
+    PORTB.PIN5CTRL = PORT_ISC_INPUT_DISABLE_gc;  // n.c.
+ b80:	85 8b       	std	Z+21, r24	; 0x15
+/home/lcrm/Documents/EDA/WaveLight/FW/main.c:216
+    PORTC.PIN2CTRL = PORT_ISC_INPUT_DISABLE_gc;  // n.c.
+ b82:	e0 e4       	ldi	r30, 0x40	; 64
+ b84:	f4 e0       	ldi	r31, 0x04	; 4
+ b86:	82 8b       	std	Z+18, r24	; 0x12
+/home/lcrm/Documents/EDA/WaveLight/FW/main.c:218
+#if !BATTERY_CHECK
+    PORTA.PIN1CTRL = PORT_ISC_INPUT_DISABLE_gc;  // divider not fitted
+ b88:	80 93 11 04 	sts	0x0411, r24	; 0x800411 <__RODATA_PM_OFFSET__+0x7f8411>
+/home/lcrm/Documents/EDA/WaveLight/FW/main.c:219
+    PORTC.PIN3CTRL = PORT_ISC_INPUT_DISABLE_gc;
+ b8c:	83 8b       	std	Z+19, r24	; 0x13
+/home/lcrm/Documents/EDA/WaveLight/FW/main.c:221
+#endif
+    PORTC.PIN0CTRL = PORT_PULLUPEN_bm;           // sensor INT is open drain, no external pull-up
+ b8e:	88 e0       	ldi	r24, 0x08	; 8
+ b90:	80 8b       	std	Z+16, r24	; 0x10
+ b92:	08 95       	ret
+
+Disassembly of section .text.sensor_mode:
+
+00000bf0 <sensor_mode>:
+sensor_mode():
+/home/lcrm/Documents/EDA/WaveLight/FW/main.c:233
+static uint16_t tone_timeout;
+#if BATTERY_CHECK
+static uint16_t battery_ticks;
+#endif
+
+static void sensor_mode(uint8_t idle) {
+ bf0:	cf 93       	push	r28
+ bf2:	c8 2f       	mov	r28, r24
+/home/lcrm/Documents/EDA/WaveLight/FW/main.c:234
+    tmf8801_stop();
+ bf4:	2a d1       	rcall	.+596    	; 0xe4a <tmf8801_stop>
+/home/lcrm/Documents/EDA/WaveLight/FW/main.c:235
+    if (tmf8801_start(CAL_DATA, idle ? SENSOR_IDLE_MS : SENSOR_ACTIVE_MS,
+ bf6:	cc 23       	and	r28, r28
+ bf8:	51 f0       	breq	.+20     	; 0xc0e <sensor_mode+0x1e>
+ bfa:	48 e5       	ldi	r20, 0x58	; 88
+ bfc:	52 e0       	ldi	r21, 0x02	; 2
+ bfe:	68 ec       	ldi	r22, 0xC8	; 200
+/home/lcrm/Documents/EDA/WaveLight/FW/main.c:235 (discriminator 8)
+ c00:	80 e0       	ldi	r24, 0x00	; 0
+ c02:	94 e1       	ldi	r25, 0x14	; 20
+ c04:	b9 dd       	rcall	.-1166   	; 0x778 <tmf8801_start>
+ c06:	81 11       	cpse	r24, r1
+ c08:	06 c0       	rjmp	.+12     	; 0xc16 <sensor_mode+0x26>
+/home/lcrm/Documents/EDA/WaveLight/FW/main.c:237
+                      idle ? SENSOR_IDLE_KITER : SENSOR_ACTIVE_KITER)) fail();
+}
+ c0a:	cf 91       	pop	r28
+ c0c:	08 95       	ret
+/home/lcrm/Documents/EDA/WaveLight/FW/main.c:235
+    if (tmf8801_start(CAL_DATA, idle ? SENSOR_IDLE_MS : SENSOR_ACTIVE_MS,
+ c0e:	44 e8       	ldi	r20, 0x84	; 132
+ c10:	53 e0       	ldi	r21, 0x03	; 3
+ c12:	61 e2       	ldi	r22, 0x21	; 33
+ c14:	f5 cf       	rjmp	.-22     	; 0xc00 <sensor_mode+0x10>
+/home/lcrm/Documents/EDA/WaveLight/FW/main.c:236
+                      idle ? SENSOR_IDLE_KITER : SENSOR_ACTIVE_KITER)) fail();
+ c16:	2c d1       	rcall	.+600    	; 0xe70 <fail>
+
+Disassembly of section .text.__vector_5:
+
+00000d5c <__vector_5>:
+__vector_5():
+/home/lcrm/Documents/EDA/WaveLight/FW/main.c:242
+
+/**
+ * Sensor INT went low - wake up only, the result is read in the main loop
+ */
+ISR(PORTC_PORT_vect) {
+ d5c:	8f 93       	push	r24
+ d5e:	ef 93       	push	r30
+ d60:	ff 93       	push	r31
+/home/lcrm/Documents/EDA/WaveLight/FW/main.c:243
+    PORTC.PIN0CTRL = PORT_PULLUPEN_bm;  // level interrupt off until the next sleep
+ d62:	e0 e4       	ldi	r30, 0x40	; 64
+ d64:	f4 e0       	ldi	r31, 0x04	; 4
+ d66:	88 e0       	ldi	r24, 0x08	; 8
+ d68:	80 8b       	std	Z+16, r24	; 0x10
+/home/lcrm/Documents/EDA/WaveLight/FW/main.c:244
+    PORTC.INTFLAGS = PIN0_bm;
+ d6a:	81 e0       	ldi	r24, 0x01	; 1
+ d6c:	81 87       	std	Z+9, r24	; 0x09
+/home/lcrm/Documents/EDA/WaveLight/FW/main.c:245
+}
+ d6e:	ff 91       	pop	r31
+ d70:	ef 91       	pop	r30
+ d72:	8f 91       	pop	r24
+ d74:	18 95       	reti
+
+Disassembly of section .text.sleep_until_sensor:
+
+00000d8e <sleep_until_sensor>:
+sleep_until_sensor():
+/home/lcrm/Documents/EDA/WaveLight/FW/main.c:251
+
+/**
+ * Power-down until the sensor INT pin is low (returns at once if it already is)
+ */
+static void sleep_until_sensor(void) {
+    cli();
+ d8e:	f8 94       	cli
+/home/lcrm/Documents/EDA/WaveLight/FW/main.c:252
+    PORTC.PIN0CTRL = PORT_PULLUPEN_bm | PORT_ISC_LEVEL_gc;  // PC0 isn't async, level works in power-down
+ d90:	8d e0       	ldi	r24, 0x0D	; 13
+ d92:	80 93 50 04 	sts	0x0450, r24	; 0x800450 <__RODATA_PM_OFFSET__+0x7f8450>
+/home/lcrm/Documents/EDA/WaveLight/FW/main.c:253
+    SLPCTRL.CTRLA = SLPCTRL_SMODE_PDOWN_gc | SLPCTRL_SEN_bm;
+ d96:	e0 e5       	ldi	r30, 0x50	; 80
+ d98:	f0 e0       	ldi	r31, 0x00	; 0
+ d9a:	85 e0       	ldi	r24, 0x05	; 5
+ d9c:	80 83       	st	Z, r24
+/home/lcrm/Documents/EDA/WaveLight/FW/main.c:254
+    sei();
+ d9e:	78 94       	sei
+/home/lcrm/Documents/EDA/WaveLight/FW/main.c:255
+    asm volatile("sleep");  // runs before a pending interrupt, so no wakeup is lost
+ da0:	88 95       	sleep
+/home/lcrm/Documents/EDA/WaveLight/FW/main.c:256
+    SLPCTRL.CTRLA = 0;
+ da2:	10 82       	st	Z, r1
+ da4:	08 95       	ret
+
+Disassembly of section .text.is_quiet:
+
+00000c9c <is_quiet>:
+is_quiet():
+/home/lcrm/Documents/EDA/WaveLight/FW/main.c:263
+
+/**
+ * @return 1 if the sensor may go idle
+ */
+static uint8_t is_quiet(void) {
+    return gesture_idle() && !tone_mode && !light_on;
+ c9c:	7b df       	rcall	.-266    	; 0xb94 <gesture_idle>
+ c9e:	88 23       	and	r24, r24
+ ca0:	49 f0       	breq	.+18     	; 0xcb4 <is_quiet+0x18>
+/home/lcrm/Documents/EDA/WaveLight/FW/main.c:263 (discriminator 1)
+ ca2:	80 91 35 3f 	lds	r24, 0x3F35	; 0x803f35 <tone_mode>
+ ca6:	81 11       	cpse	r24, r1
+ ca8:	06 c0       	rjmp	.+12     	; 0xcb6 <is_quiet+0x1a>
+ caa:	81 e0       	ldi	r24, 0x01	; 1
+ cac:	90 91 2a 3f 	lds	r25, 0x3F2A	; 0x803f2a <light_on>
+ cb0:	91 11       	cpse	r25, r1
+ cb2:	01 c0       	rjmp	.+2      	; 0xcb6 <is_quiet+0x1a>
+/home/lcrm/Documents/EDA/WaveLight/FW/main.c:264 (discriminator 8)
+}
+ cb4:	08 95       	ret
+ cb6:	80 e0       	ldi	r24, 0x00	; 0
+/home/lcrm/Documents/EDA/WaveLight/FW/main.c:264
+ cb8:	08 95       	ret
+
+Disassembly of section .text.tick:
+
+000005a6 <tick>:
+tick():
+/home/lcrm/Documents/EDA/WaveLight/FW/main.c:269
+
+/**
+ * One TICK_MS step of gestures, modes, battery and light
+ */
+static void tick(void) {
+ 5a6:	cf 93       	push	r28
+/home/lcrm/Documents/EDA/WaveLight/FW/main.c:270
+    uint8_t g = gesture_update();
+ 5a8:	7c dd       	rcall	.-1288   	; 0xa2 <__data_load_end>
+ 5aa:	c8 2f       	mov	r28, r24
+/home/lcrm/Documents/EDA/WaveLight/FW/main.c:271
+    switch (g) {
+ 5ac:	85 30       	cpi	r24, 0x05	; 5
+ 5ae:	50 f5       	brcc	.+84     	; 0x604 <tick+0x5e>
+ 5b0:	83 30       	cpi	r24, 0x03	; 3
+ 5b2:	b8 f5       	brcc	.+110    	; 0x622 <tick+0x7c>
+ 5b4:	81 30       	cpi	r24, 0x01	; 1
+ 5b6:	f9 f0       	breq	.+62     	; 0x5f6 <tick+0x50>
+ 5b8:	82 30       	cpi	r24, 0x02	; 2
+ 5ba:	31 f4       	brne	.+12     	; 0x5c8 <tick+0x22>
+/home/lcrm/Documents/EDA/WaveLight/FW/main.c:277
+    case GESTURE_WAVE:
+        power(!light_on);
+        break;
+
+    case GESTURE_DOUBLE_WAVE:
+        power(1);
+ 5bc:	81 e0       	ldi	r24, 0x01	; 1
+ 5be:	62 d4       	rcall	.+2244   	; 0xe84 <power>
+/home/lcrm/Documents/EDA/WaveLight/FW/main.c:278
+        if (!light_on) break;  // battery critical
+ 5c0:	80 91 2a 3f 	lds	r24, 0x3F2A	; 0x803f2a <light_on>
+ 5c4:	81 11       	cpse	r24, r1
+ 5c6:	3e c0       	rjmp	.+124    	; 0x644 <tick+0x9e>
+/home/lcrm/Documents/EDA/WaveLight/FW/main.c:299
+        light_set_tone(adjust_value(gesture_mm));
+        tone_timeout = TONE_MODE_END_MS / TICK_MS;
+        break;
+    }
+
+    if (tone_mode && !--tone_timeout) {
+ 5c8:	80 91 35 3f 	lds	r24, 0x3F35	; 0x803f35 <tone_mode>
+ 5cc:	88 23       	and	r24, r24
+ 5ce:	89 f0       	breq	.+34     	; 0x5f2 <tick+0x4c>
+/home/lcrm/Documents/EDA/WaveLight/FW/main.c:299 (discriminator 1)
+ 5d0:	80 91 28 3f 	lds	r24, 0x3F28	; 0x803f28 <tone_timeout>
+ 5d4:	90 91 29 3f 	lds	r25, 0x3F29	; 0x803f29 <tone_timeout+0x1>
+ 5d8:	01 97       	sbiw	r24, 0x01	; 1
+ 5da:	80 93 28 3f 	sts	0x3F28, r24	; 0x803f28 <tone_timeout>
+ 5de:	90 93 29 3f 	sts	0x3F29, r25	; 0x803f29 <tone_timeout+0x1>
+ 5e2:	89 2b       	or	r24, r25
+ 5e4:	31 f4       	brne	.+12     	; 0x5f2 <tick+0x4c>
+/home/lcrm/Documents/EDA/WaveLight/FW/main.c:300
+        tone_mode = 0;
+ 5e6:	10 92 35 3f 	sts	0x3F35, r1	; 0x803f35 <tone_mode>
+/home/lcrm/Documents/EDA/WaveLight/FW/main.c:301
+        gesture_set_tracking(0);
+ 5ea:	80 e0       	ldi	r24, 0x00	; 0
+ 5ec:	74 d3       	rcall	.+1768   	; 0xcd6 <gesture_set_tracking>
+/home/lcrm/Documents/EDA/WaveLight/FW/main.c:302
+        settings_save();
+ 5ee:	cb d1       	rcall	.+918    	; 0x986 <settings_save>
+/home/lcrm/Documents/EDA/WaveLight/FW/main.c:303
+        light_flash();
+ 5f0:	31 d4       	rcall	.+2146   	; 0xe54 <light_flash>
+/home/lcrm/Documents/EDA/WaveLight/FW/main.c:317
+        }
+    }
+#endif
+
+    light_update();
+}
+ 5f2:	cf 91       	pop	r28
+/home/lcrm/Documents/EDA/WaveLight/FW/main.c:316
+    light_update();
+ 5f4:	39 c1       	rjmp	.+626    	; 0x868 <light_update>
+/home/lcrm/Documents/EDA/WaveLight/FW/main.c:273
+        power(!light_on);
+ 5f6:	81 e0       	ldi	r24, 0x01	; 1
+ 5f8:	90 91 2a 3f 	lds	r25, 0x3F2A	; 0x803f2a <light_on>
+ 5fc:	91 11       	cpse	r25, r1
+ 5fe:	1f c0       	rjmp	.+62     	; 0x63e <tick+0x98>
+ 600:	41 d4       	rcall	.+2178   	; 0xe84 <power>
+/home/lcrm/Documents/EDA/WaveLight/FW/main.c:274
+        break;
+ 602:	e2 cf       	rjmp	.-60     	; 0x5c8 <tick+0x22>
+/home/lcrm/Documents/EDA/WaveLight/FW/main.c:271
+    switch (g) {
+ 604:	87 30       	cpi	r24, 0x07	; 7
+ 606:	00 f7       	brcc	.-64     	; 0x5c8 <tick+0x22>
+/home/lcrm/Documents/EDA/WaveLight/FW/main.c:294
+        light_set_tone(adjust_value(gesture_mm));
+ 608:	80 91 1c 3f 	lds	r24, 0x3F1C	; 0x803f1c <gesture_mm>
+ 60c:	90 91 1d 3f 	lds	r25, 0x3F1D	; 0x803f1d <gesture_mm+0x1>
+ 610:	98 d3       	rcall	.+1840   	; 0xd42 <adjust_value>
+ 612:	2b d4       	rcall	.+2134   	; 0xe6a <light_set_tone>
+/home/lcrm/Documents/EDA/WaveLight/FW/main.c:295
+        tone_timeout = TONE_MODE_END_MS / TICK_MS;
+ 614:	84 e6       	ldi	r24, 0x64	; 100
+ 616:	90 e0       	ldi	r25, 0x00	; 0
+ 618:	80 93 28 3f 	sts	0x3F28, r24	; 0x803f28 <tone_timeout>
+ 61c:	90 93 29 3f 	sts	0x3F29, r25	; 0x803f29 <tone_timeout+0x1>
+/home/lcrm/Documents/EDA/WaveLight/FW/main.c:296
+        break;
+ 620:	d3 cf       	rjmp	.-90     	; 0x5c8 <tick+0x22>
+/home/lcrm/Documents/EDA/WaveLight/FW/main.c:287
+        if (!light_on) break;
+ 622:	80 91 2a 3f 	lds	r24, 0x3F2A	; 0x803f2a <light_on>
+ 626:	88 23       	and	r24, r24
+ 628:	79 f2       	breq	.-98     	; 0x5c8 <tick+0x22>
+/home/lcrm/Documents/EDA/WaveLight/FW/main.c:288
+        light_set_brightness(adjust_value(gesture_mm));
+ 62a:	80 91 1c 3f 	lds	r24, 0x3F1C	; 0x803f1c <gesture_mm>
+ 62e:	90 91 1d 3f 	lds	r25, 0x3F1D	; 0x803f1d <gesture_mm+0x1>
+ 632:	87 d3       	rcall	.+1806   	; 0xd42 <adjust_value>
+ 634:	fe d3       	rcall	.+2044   	; 0xe32 <light_set_brightness>
+/home/lcrm/Documents/EDA/WaveLight/FW/main.c:289
+        if (g == GESTURE_HOLD_END) settings_save();
+ 636:	c4 30       	cpi	r28, 0x04	; 4
+ 638:	39 f6       	brne	.-114    	; 0x5c8 <tick+0x22>
+/home/lcrm/Documents/EDA/WaveLight/FW/main.c:289 (discriminator 1)
+ 63a:	a5 d1       	rcall	.+842    	; 0x986 <settings_save>
+ 63c:	c5 cf       	rjmp	.-118    	; 0x5c8 <tick+0x22>
+/home/lcrm/Documents/EDA/WaveLight/FW/main.c:273
+        power(!light_on);
+ 63e:	80 e0       	ldi	r24, 0x00	; 0
+ 640:	21 d4       	rcall	.+2114   	; 0xe84 <power>
+ 642:	c2 cf       	rjmp	.-124    	; 0x5c8 <tick+0x22>
+/home/lcrm/Documents/EDA/WaveLight/FW/main.c:279
+        tone_mode = 1;
+ 644:	81 e0       	ldi	r24, 0x01	; 1
+ 646:	80 93 35 3f 	sts	0x3F35, r24	; 0x803f35 <tone_mode>
+/home/lcrm/Documents/EDA/WaveLight/FW/main.c:280
+        tone_timeout = TONE_MODE_WAIT_MS / TICK_MS;
+ 64a:	88 ec       	ldi	r24, 0xC8	; 200
+ 64c:	90 e0       	ldi	r25, 0x00	; 0
+ 64e:	80 93 28 3f 	sts	0x3F28, r24	; 0x803f28 <tone_timeout>
+ 652:	90 93 29 3f 	sts	0x3F29, r25	; 0x803f29 <tone_timeout+0x1>
+/home/lcrm/Documents/EDA/WaveLight/FW/main.c:281
+        gesture_set_tracking(1);
+ 656:	81 e0       	ldi	r24, 0x01	; 1
+ 658:	3e d3       	rcall	.+1660   	; 0xcd6 <gesture_set_tracking>
+/home/lcrm/Documents/EDA/WaveLight/FW/main.c:282
+        light_flash();
+ 65a:	fc d3       	rcall	.+2040   	; 0xe54 <light_flash>
+/home/lcrm/Documents/EDA/WaveLight/FW/main.c:283
+        break;
+ 65c:	b5 cf       	rjmp	.-150    	; 0x5c8 <tick+0x22>
+
+Disassembly of section .text.startup.main:
+
+00000236 <main>:
+main():
+/home/lcrm/Documents/EDA/WaveLight/FW/main.c:320
+#endif
+
+int main(void) {
+ 236:	cf 93       	push	r28
+ 238:	df 93       	push	r29
+ 23a:	cd b7       	in	r28, 0x3d	; 61
+ 23c:	de b7       	in	r29, 0x3e	; 62
+ 23e:	2e 97       	sbiw	r28, 0x0e	; 14
+ 240:	cd bf       	out	0x3d, r28	; 61
+ 242:	de bf       	out	0x3e, r29	; 62
+/home/lcrm/Documents/EDA/WaveLight/FW/main.c:321
+    _PROTECTED_WRITE(CLKCTRL.MCLKCTRLB, 0);  // No prescaler -> full 16 MHz
+ 244:	88 ed       	ldi	r24, 0xD8	; 216
+ 246:	90 e0       	ldi	r25, 0x00	; 0
+ 248:	84 bf       	out	0x34, r24	; 52
+ 24a:	90 93 61 00 	sts	0x0061, r25	; 0x800061 <__RODATA_PM_OFFSET__+0x7f8061>
+/home/lcrm/Documents/EDA/WaveLight/FW/main.c:323
+
+    TCB0.CCMP = F_CPU / 1000 - 1;  // 1 ms period, polled by delay_ms
+ 24e:	2f e7       	ldi	r18, 0x7F	; 127
+ 250:	3e e3       	ldi	r19, 0x3E	; 62
+ 252:	20 93 4c 0a 	sts	0x0A4C, r18	; 0x800a4c <__RODATA_PM_OFFSET__+0x7f8a4c>
+ 256:	30 93 4d 0a 	sts	0x0A4D, r19	; 0x800a4d <__RODATA_PM_OFFSET__+0x7f8a4d>
+/home/lcrm/Documents/EDA/WaveLight/FW/main.c:324
+    TCB0.CTRLA = TCB_ENABLE_bm;
+ 25a:	91 e0       	ldi	r25, 0x01	; 1
+ 25c:	90 93 40 0a 	sts	0x0A40, r25	; 0x800a40 <__RODATA_PM_OFFSET__+0x7f8a40>
+/home/lcrm/Documents/EDA/WaveLight/FW/main.c:327
+
+    // Watchdog, also runs in power-down: resets if the sensor ever stops waking us
+    _PROTECTED_WRITE(WDT.CTRLA, WDT_PERIOD_8KCLK_gc);  // ~8 s
+ 260:	9b e0       	ldi	r25, 0x0B	; 11
+ 262:	84 bf       	out	0x34, r24	; 52
+ 264:	90 93 00 01 	sts	0x0100, r25	; 0x800100 <__RODATA_PM_OFFSET__+0x7f8100>
+/home/lcrm/Documents/EDA/WaveLight/FW/main.c:329
+
+    pins_init();
+ 268:	7a d4       	rcall	.+2292   	; 0xb5e <pins_init>
+/home/lcrm/Documents/EDA/WaveLight/FW/main.c:330
+    ws2812b_init();
+ 26a:	f9 d5       	rcall	.+3058   	; 0xe5e <ws2812b_init>
+/home/lcrm/Documents/EDA/WaveLight/FW/main.c:331
+    twi_init();
+ 26c:	5d d5       	rcall	.+2746   	; 0xd28 <twi_init>
+/home/lcrm/Documents/EDA/WaveLight/FW/main.c:332
+    ws2812b_set_all(0, 0, 0);
+ 26e:	20 e0       	ldi	r18, 0x00	; 0
+ 270:	40 e0       	ldi	r20, 0x00	; 0
+ 272:	60 e0       	ldi	r22, 0x00	; 0
+ 274:	86 e0       	ldi	r24, 0x06	; 6
+ 276:	30 d3       	rcall	.+1632   	; 0x8d8 <ws2812b_bar>
+/home/lcrm/Documents/EDA/WaveLight/FW/main.c:337
+#if BATTERY_CHECK
+    battery_init();
+#endif
+
+    if (tmf8801_init()) fail();
+ 278:	f6 d3       	rcall	.+2028   	; 0xa66 <tmf8801_init>
+ 27a:	81 11       	cpse	r24, r1
+ 27c:	7d c0       	rjmp	.+250    	; 0x378 <main+0x142>
+/home/lcrm/Documents/EDA/WaveLight/FW/main.c:340
+
+    // First boot after flashing (programming erases EEPROM): calibrate once
+    if (EEPROM_BYTES[CAL_ADDR + TMF8801_CAL_LEN] != CAL_MAGIC) {
+ 27e:	80 91 0e 14 	lds	r24, 0x140E	; 0x80140e <__RODATA_PM_OFFSET__+0x7f940e>
+ 282:	8a 3c       	cpi	r24, 0xCA	; 202
+ 284:	d1 f0       	breq	.+52     	; 0x2ba <main+0x84>
+/home/lcrm/Documents/EDA/WaveLight/FW/main.c:342
+        uint8_t cal[TMF8801_CAL_LEN];
+        if (tmf8801_calibrate(cal)) fail();
+ 286:	ce 01       	movw	r24, r28
+ 288:	01 96       	adiw	r24, 0x01	; 1
+ 28a:	6c 01       	movw	r12, r24
+ 28c:	c9 d3       	rcall	.+1938   	; 0xa20 <tmf8801_calibrate>
+ 28e:	81 11       	cpse	r24, r1
+ 290:	73 c0       	rjmp	.+230    	; 0x378 <main+0x142>
+/home/lcrm/Documents/EDA/WaveLight/FW/main.c:343
+        cal_save(cal);
+ 292:	c6 01       	movw	r24, r12
+ 294:	a8 d5       	rcall	.+2896   	; 0xde6 <cal_save>
+/home/lcrm/Documents/EDA/WaveLight/FW/main.c:344
+        ws2812b_set_all(32, 0, 32);  // magenta 1 s = calibration stored
+ 296:	20 e2       	ldi	r18, 0x20	; 32
+ 298:	40 e0       	ldi	r20, 0x00	; 0
+ 29a:	60 e2       	ldi	r22, 0x20	; 32
+ 29c:	86 e0       	ldi	r24, 0x06	; 6
+ 29e:	1c d3       	rcall	.+1592   	; 0x8d8 <ws2812b_bar>
+/home/lcrm/Documents/EDA/WaveLight/FW/main.c:345
+        for (uint8_t i = 0; i < 4; i++) delay_ms(250);
+ 2a0:	8a ef       	ldi	r24, 0xFA	; 250
+ 2a2:	27 d5       	rcall	.+2638   	; 0xcf2 <delay_ms>
+ 2a4:	8a ef       	ldi	r24, 0xFA	; 250
+ 2a6:	25 d5       	rcall	.+2634   	; 0xcf2 <delay_ms>
+ 2a8:	8a ef       	ldi	r24, 0xFA	; 250
+ 2aa:	23 d5       	rcall	.+2630   	; 0xcf2 <delay_ms>
+ 2ac:	8a ef       	ldi	r24, 0xFA	; 250
+ 2ae:	21 d5       	rcall	.+2626   	; 0xcf2 <delay_ms>
+/home/lcrm/Documents/EDA/WaveLight/FW/main.c:346
+        ws2812b_set_all(0, 0, 0);
+ 2b0:	20 e0       	ldi	r18, 0x00	; 0
+ 2b2:	40 e0       	ldi	r20, 0x00	; 0
+ 2b4:	60 e0       	ldi	r22, 0x00	; 0
+ 2b6:	86 e0       	ldi	r24, 0x06	; 6
+ 2b8:	0f d3       	rcall	.+1566   	; 0x8d8 <ws2812b_bar>
+/home/lcrm/Documents/EDA/WaveLight/FW/main.c:366
+            ws2812b_set_all(0, DBG, DBG);
+        }
+        delay_ms(TICK_MS);
+    }
+#else
+    settings_load();
+ 2ba:	5d d5       	rcall	.+2746   	; 0xd76 <settings_load>
+/home/lcrm/Documents/EDA/WaveLight/FW/main.c:367
+    if (tmf8801_start(CAL_DATA, SENSOR_ACTIVE_MS, SENSOR_ACTIVE_KITER)) fail();
+ 2bc:	44 e8       	ldi	r20, 0x84	; 132
+ 2be:	53 e0       	ldi	r21, 0x03	; 3
+ 2c0:	61 e2       	ldi	r22, 0x21	; 33
+ 2c2:	80 e0       	ldi	r24, 0x00	; 0
+ 2c4:	94 e1       	ldi	r25, 0x14	; 20
+ 2c6:	58 d2       	rcall	.+1200   	; 0x778 <tmf8801_start>
+ 2c8:	81 11       	cpse	r24, r1
+ 2ca:	56 c0       	rjmp	.+172    	; 0x378 <main+0x142>
+ 2cc:	00 e0       	ldi	r16, 0x00	; 0
+ 2ce:	e1 2c       	mov	r14, r1
+ 2d0:	f1 2c       	mov	r15, r1
+ 2d2:	ce 01       	movw	r24, r28
+ 2d4:	01 96       	adiw	r24, 0x01	; 1
+ 2d6:	6c 01       	movw	r12, r24
+/home/lcrm/Documents/EDA/WaveLight/FW/main.c:372
+
+    uint16_t quiet_ticks = 0;
+    uint8_t sensor_idle = 0;
+    while (1) {
+        __builtin_avr_wdr();
+ 2d8:	a8 95       	wdr
+/home/lcrm/Documents/EDA/WaveLight/FW/main.c:374
+
+        if (sensor_idle && !light_on && !light_fading()) {
+ 2da:	00 23       	and	r16, r16
+ 2dc:	39 f0       	breq	.+14     	; 0x2ec <main+0xb6>
+/home/lcrm/Documents/EDA/WaveLight/FW/main.c:374 (discriminator 1)
+ 2de:	80 91 2a 3f 	lds	r24, 0x3F2A	; 0x803f2a <light_on>
+ 2e2:	81 11       	cpse	r24, r1
+ 2e4:	03 c0       	rjmp	.+6      	; 0x2ec <main+0xb6>
+/home/lcrm/Documents/EDA/WaveLight/FW/main.c:374 (discriminator 2)
+ 2e6:	e9 d4       	rcall	.+2514   	; 0xcba <light_fading>
+ 2e8:	88 23       	and	r24, r24
+ 2ea:	61 f1       	breq	.+88     	; 0x344 <main+0x10e>
+/home/lcrm/Documents/EDA/WaveLight/FW/main.c:389
+            for (uint8_t i = 1; i < SENSOR_IDLE_MS / TICK_MS; i++) tick();
+            gesture_reading(distance);
+            tick();
+        } else {
+            // Sensor active (always while the light is on) or light still fading out
+            if (tmf8801_get_distance(&distance) == 0) gesture_reading(distance);
+ 2ec:	c6 01       	movw	r24, r12
+ 2ee:	83 d2       	rcall	.+1286   	; 0x7f6 <tmf8801_get_distance>
+ 2f0:	88 23       	and	r24, r24
+ 2f2:	89 f0       	breq	.+34     	; 0x316 <main+0xe0>
+/home/lcrm/Documents/EDA/WaveLight/FW/main.c:390
+            tick();
+ 2f4:	58 d1       	rcall	.+688    	; 0x5a6 <tick>
+/home/lcrm/Documents/EDA/WaveLight/FW/main.c:391
+            delay_ms(TICK_MS);
+ 2f6:	8a e0       	ldi	r24, 0x0A	; 10
+ 2f8:	fc d4       	rcall	.+2552   	; 0xcf2 <delay_ms>
+/home/lcrm/Documents/EDA/WaveLight/FW/main.c:394
+        }
+
+        if (!is_quiet()) {
+ 2fa:	d0 d4       	rcall	.+2464   	; 0xc9c <is_quiet>
+ 2fc:	81 11       	cpse	r24, r1
+ 2fe:	14 c0       	rjmp	.+40     	; 0x328 <main+0xf2>
+/home/lcrm/Documents/EDA/WaveLight/FW/main.c:396
+            quiet_ticks = 0;
+            if (sensor_idle) {
+ 300:	01 11       	cpse	r16, r1
+ 302:	30 c0       	rjmp	.+96     	; 0x364 <main+0x12e>
+/home/lcrm/Documents/EDA/WaveLight/FW/main.c:395
+            quiet_ticks = 0;
+ 304:	e1 2c       	mov	r14, r1
+ 306:	f1 2c       	mov	r15, r1
+/home/lcrm/Documents/EDA/WaveLight/FW/main.c:372
+        __builtin_avr_wdr();
+ 308:	a8 95       	wdr
+/home/lcrm/Documents/EDA/WaveLight/FW/main.c:374
+        if (sensor_idle && !light_on && !light_fading()) {
+ 30a:	01 11       	cpse	r16, r1
+ 30c:	e8 cf       	rjmp	.-48     	; 0x2de <main+0xa8>
+/home/lcrm/Documents/EDA/WaveLight/FW/main.c:389
+            if (tmf8801_get_distance(&distance) == 0) gesture_reading(distance);
+ 30e:	c6 01       	movw	r24, r12
+ 310:	72 d2       	rcall	.+1252   	; 0x7f6 <tmf8801_get_distance>
+ 312:	81 11       	cpse	r24, r1
+ 314:	ef cf       	rjmp	.-34     	; 0x2f4 <main+0xbe>
+/home/lcrm/Documents/EDA/WaveLight/FW/main.c:389 (discriminator 1)
+ 316:	89 81       	ldd	r24, Y+1	; 0x01
+ 318:	9a 81       	ldd	r25, Y+2	; 0x02
+ 31a:	a1 d1       	rcall	.+834    	; 0x65e <gesture_reading>
+/home/lcrm/Documents/EDA/WaveLight/FW/main.c:390 (discriminator 1)
+            tick();
+ 31c:	44 d1       	rcall	.+648    	; 0x5a6 <tick>
+/home/lcrm/Documents/EDA/WaveLight/FW/main.c:391 (discriminator 1)
+            delay_ms(TICK_MS);
+ 31e:	8a e0       	ldi	r24, 0x0A	; 10
+ 320:	e8 d4       	rcall	.+2512   	; 0xcf2 <delay_ms>
+/home/lcrm/Documents/EDA/WaveLight/FW/main.c:394 (discriminator 1)
+        if (!is_quiet()) {
+ 322:	bc d4       	rcall	.+2424   	; 0xc9c <is_quiet>
+ 324:	88 23       	and	r24, r24
+ 326:	61 f3       	breq	.-40     	; 0x300 <main+0xca>
+/home/lcrm/Documents/EDA/WaveLight/FW/main.c:400
+                sensor_idle = 0;
+                sensor_mode(0);
+            }
+        } else if (!sensor_idle && ++quiet_ticks >= IDLE_AFTER_MS / TICK_MS) {
+ 328:	01 11       	cpse	r16, r1
+ 32a:	d6 cf       	rjmp	.-84     	; 0x2d8 <main+0xa2>
+/home/lcrm/Documents/EDA/WaveLight/FW/main.c:400 (discriminator 1)
+ 32c:	9f ef       	ldi	r25, 0xFF	; 255
+ 32e:	e9 1a       	sub	r14, r25
+ 330:	f9 0a       	sbc	r15, r25
+ 332:	8c ed       	ldi	r24, 0xDC	; 220
+ 334:	e8 16       	cp	r14, r24
+ 336:	85 e0       	ldi	r24, 0x05	; 5
+ 338:	f8 06       	cpc	r15, r24
+ 33a:	70 f2       	brcs	.-100    	; 0x2d8 <main+0xa2>
+/home/lcrm/Documents/EDA/WaveLight/FW/main.c:402
+            sensor_idle = 1;
+            sensor_mode(1);
+ 33c:	81 e0       	ldi	r24, 0x01	; 1
+ 33e:	58 d4       	rcall	.+2224   	; 0xbf0 <sensor_mode>
+/home/lcrm/Documents/EDA/WaveLight/FW/main.c:401
+            sensor_idle = 1;
+ 340:	01 e0       	ldi	r16, 0x01	; 1
+ 342:	ca cf       	rjmp	.-108    	; 0x2d8 <main+0xa2>
+/home/lcrm/Documents/EDA/WaveLight/FW/main.c:376
+            sleep_until_sensor();
+ 344:	24 d5       	rcall	.+2632   	; 0xd8e <sleep_until_sensor>
+/home/lcrm/Documents/EDA/WaveLight/FW/main.c:377
+            if (tmf8801_get_distance(&distance)) {
+ 346:	c6 01       	movw	r24, r12
+ 348:	56 d2       	rcall	.+1196   	; 0x7f6 <tmf8801_get_distance>
+ 34a:	81 11       	cpse	r24, r1
+ 34c:	11 c0       	rjmp	.+34     	; 0x370 <main+0x13a>
+ 34e:	13 e1       	ldi	r17, 0x13	; 19
+/home/lcrm/Documents/EDA/WaveLight/FW/main.c:384 (discriminator 3)
+            for (uint8_t i = 1; i < SENSOR_IDLE_MS / TICK_MS; i++) tick();
+ 350:	2a d1       	rcall	.+596    	; 0x5a6 <tick>
+ 352:	11 50       	subi	r17, 0x01	; 1
+ 354:	e9 f7       	brne	.-6      	; 0x350 <main+0x11a>
+/home/lcrm/Documents/EDA/WaveLight/FW/main.c:385
+            gesture_reading(distance);
+ 356:	89 81       	ldd	r24, Y+1	; 0x01
+ 358:	9a 81       	ldd	r25, Y+2	; 0x02
+ 35a:	81 d1       	rcall	.+770    	; 0x65e <gesture_reading>
+/home/lcrm/Documents/EDA/WaveLight/FW/main.c:386
+            tick();
+ 35c:	24 d1       	rcall	.+584    	; 0x5a6 <tick>
+/home/lcrm/Documents/EDA/WaveLight/FW/main.c:394
+        if (!is_quiet()) {
+ 35e:	9e d4       	rcall	.+2364   	; 0xc9c <is_quiet>
+ 360:	81 11       	cpse	r24, r1
+ 362:	ba cf       	rjmp	.-140    	; 0x2d8 <main+0xa2>
+/home/lcrm/Documents/EDA/WaveLight/FW/main.c:398
+                sensor_mode(0);
+ 364:	80 e0       	ldi	r24, 0x00	; 0
+ 366:	44 d4       	rcall	.+2184   	; 0xbf0 <sensor_mode>
+/home/lcrm/Documents/EDA/WaveLight/FW/main.c:397
+                sensor_idle = 0;
+ 368:	00 e0       	ldi	r16, 0x00	; 0
+/home/lcrm/Documents/EDA/WaveLight/FW/main.c:395
+            quiet_ticks = 0;
+ 36a:	e1 2c       	mov	r14, r1
+ 36c:	f1 2c       	mov	r15, r1
+ 36e:	b4 cf       	rjmp	.-152    	; 0x2d8 <main+0xa2>
+/home/lcrm/Documents/EDA/WaveLight/FW/main.c:378
+                tmf8801_write(TMF8801_REG_INT_STATUS, TMF8801_INT_RESULT);  // don't spin on a stuck INT
+ 370:	61 e0       	ldi	r22, 0x01	; 1
+ 372:	81 ee       	ldi	r24, 0xE1	; 225
+ 374:	63 d4       	rcall	.+2246   	; 0xc3c <tmf8801_write>
+/home/lcrm/Documents/EDA/WaveLight/FW/main.c:379
+                continue;
+ 376:	b0 cf       	rjmp	.-160    	; 0x2d8 <main+0xa2>
+/home/lcrm/Documents/EDA/WaveLight/FW/main.c:337 (discriminator 1)
+    if (tmf8801_init()) fail();
+ 378:	7b d5       	rcall	.+2806   	; 0xe70 <fail>
+
+Disassembly of section .text.__dummy_fini:
+
+00000e86 <_fini>:
+__dummy_fini():
+ e86:	08 95       	ret
+
+Disassembly of section .text.__dummy_funcs_on_exit:
+
+00000e88 <__funcs_on_exit>:
+__dummy_funcs_on_exit():
+ e88:	08 95       	ret
+
+Disassembly of section .text.__dummy_simulator_exit:
+
+00000e8a <__simulator_exit>:
+__dummy_simulator_exit():
+ e8a:	08 95       	ret
+
+Disassembly of section .text.exit:
+
+00000e24 <exit>:
+exit():
+ e24:	ec 01       	movw	r28, r24
+ e26:	30 d0       	rcall	.+96     	; 0xe88 <__funcs_on_exit>
+ e28:	2e d0       	rcall	.+92     	; 0xe86 <_fini>
+ e2a:	ce 01       	movw	r24, r28
+ e2c:	2e d0       	rcall	.+92     	; 0xe8a <__simulator_exit>
+ e2e:	ce 01       	movw	r24, r28
+ e30:	2d d0       	rcall	.+90     	; 0xe8c <_Exit>
+
+Disassembly of section .text._Exit:
+
+00000e8c <_Exit>:
+_Exit():
+ e8c:	08 d9       	rcall	.-3568   	; 0x9e <_exit>

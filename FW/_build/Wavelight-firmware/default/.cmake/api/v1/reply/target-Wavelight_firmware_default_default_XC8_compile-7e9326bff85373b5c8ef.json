@@ -2,7 +2,7 @@
 	"artifacts" : 
 	[
 		{
-			"path" : "CMakeFiles/Wavelight_firmware_default_default_XC8_compile.dir/./home/lcrm/Documents/WaveLight/FW/main.c.o"
+			"path" : "CMakeFiles/Wavelight_firmware_default_default_XC8_compile.dir/./home/lcrm/Documents/EDA/WaveLight/FW/main.c.o"
 		}
 	],
 	"backtrace" : 3,
@@ -178,7 +178,7 @@
 				3
 			],
 			"compileGroupIndex" : 0,
-			"path" : "/home/lcrm/Documents/WaveLight/FW/main.c",
+			"path" : "/home/lcrm/Documents/EDA/WaveLight/FW/main.c",
 			"sourceGroupIndex" : 0
 		}
 	],

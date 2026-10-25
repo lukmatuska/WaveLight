@@ -19,7 +19,7 @@
 		},
 		{
 			"isGenerated" : true,
-			"path" : "/home/lcrm/Documents/WaveLight/FW/_build/Wavelight-firmware/default/CMakeFiles/4.4.4/CMakeSystem.cmake"
+			"path" : "/home/lcrm/Documents/EDA/WaveLight/FW/_build/Wavelight-firmware/default/CMakeFiles/4.4.3/CMakeSystem.cmake"
 		},
 		{
 			"path" : ".generated/toolchain.cmake"
@@ -2946,7 +2946,7 @@
 		},
 		{
 			"isGenerated" : true,
-			"path" : "/home/lcrm/Documents/WaveLight/FW/_build/Wavelight-firmware/default/CMakeFiles/4.4.4/CMakeCCompiler.cmake"
+			"path" : "/home/lcrm/Documents/EDA/WaveLight/FW/_build/Wavelight-firmware/default/CMakeFiles/4.4.3/CMakeCCompiler.cmake"
 		},
 		{
 			"isCMake" : true,
@@ -3073,7 +3073,7 @@
 		},
 		{
 			"isGenerated" : true,
-			"path" : "/home/lcrm/Documents/WaveLight/FW/_build/Wavelight-firmware/default/CMakeFiles/4.4.4/CMakeCCompiler.cmake"
+			"path" : "/home/lcrm/Documents/EDA/WaveLight/FW/_build/Wavelight-firmware/default/CMakeFiles/4.4.3/CMakeCCompiler.cmake"
 		},
 		{
 			"isCMake" : true,
@@ -3121,8 +3121,8 @@
 	"kind" : "cmakeFiles",
 	"paths" : 
 	{
-		"build" : "/home/lcrm/Documents/WaveLight/FW/_build/Wavelight-firmware/default",
-		"source" : "/home/lcrm/Documents/WaveLight/FW/cmake/Wavelight-firmware/default"
+		"build" : "/home/lcrm/Documents/EDA/WaveLight/FW/_build/Wavelight-firmware/default",
+		"source" : "/home/lcrm/Documents/EDA/WaveLight/FW/cmake/Wavelight-firmware/default"
 	},
 	"version" : 
 	{

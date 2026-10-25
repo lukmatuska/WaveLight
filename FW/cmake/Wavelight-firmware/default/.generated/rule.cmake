@@ -106,3 +106,11 @@ function(Wavelight_firmware_default_objcopy_avr_rule target)
         ARGS -O ihex ${Wavelight_firmware_default_image_name} ${Wavelight_firmware_default_image_base_name}.hex
         WORKING_DIRECTORY ${Wavelight_firmware_default_output_dir})
 endfunction()
+function(Wavelight_firmware_default_objcopy_lss_rule target)
+    add_custom_command(
+        TARGET ${target}
+        POST_BUILD
+        COMMAND ${OBJDUMP}
+        ARGS --disassemble --wide --demangle --line-numbers --section-headers --source ${Wavelight_firmware_default_image_name} > ${Wavelight_firmware_default_image_base_name}.lss
+        WORKING_DIRECTORY ${Wavelight_firmware_default_output_dir})
+endfunction()

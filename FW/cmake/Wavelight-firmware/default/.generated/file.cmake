@@ -19,6 +19,7 @@ set(Wavelight_firmware_default_default_XC8_FILE_TYPE_compile "${CMAKE_CURRENT_SO
 set_source_files_properties(${Wavelight_firmware_default_default_XC8_FILE_TYPE_compile} PROPERTIES LANGUAGE C)
 set(Wavelight_firmware_default_default_XC8_FILE_TYPE_link)
 set(Wavelight_firmware_default_default_XC8_FILE_TYPE_objcopy_avr)
+set(Wavelight_firmware_default_default_XC8_FILE_TYPE_objcopy_lss)
 set(Wavelight_firmware_default_image_name "default.elf")
 set(Wavelight_firmware_default_image_base_name "default")
 

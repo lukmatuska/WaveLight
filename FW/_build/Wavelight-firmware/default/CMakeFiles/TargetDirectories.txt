@@ -1,4 +1,4 @@
-/home/lcrm/Documents/WaveLight/FW/_build/Wavelight-firmware/default/CMakeFiles/Wavelight_firmware_default_default_XC8_compile.dir
-/home/lcrm/Documents/WaveLight/FW/_build/Wavelight-firmware/default/CMakeFiles/Wavelight_firmware_default_image_E5NgOjff.dir
-/home/lcrm/Documents/WaveLight/FW/_build/Wavelight-firmware/default/CMakeFiles/edit_cache.dir
-/home/lcrm/Documents/WaveLight/FW/_build/Wavelight-firmware/default/CMakeFiles/rebuild_cache.dir
+/home/lcrm/Documents/EDA/WaveLight/FW/_build/Wavelight-firmware/default/CMakeFiles/Wavelight_firmware_default_default_XC8_compile.dir
+/home/lcrm/Documents/EDA/WaveLight/FW/_build/Wavelight-firmware/default/CMakeFiles/Wavelight_firmware_default_image_viNqrVWz.dir
+/home/lcrm/Documents/EDA/WaveLight/FW/_build/Wavelight-firmware/default/CMakeFiles/edit_cache.dir
+/home/lcrm/Documents/EDA/WaveLight/FW/_build/Wavelight-firmware/default/CMakeFiles/rebuild_cache.dir

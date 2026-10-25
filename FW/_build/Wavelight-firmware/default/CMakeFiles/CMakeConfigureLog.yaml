@@ -28,17 +28,18 @@ events:
       - "/home/lcrm/.eide/bin/scripts/"
       - "/home/lcrm/.vscode-oss/extensions/cl.eide-3.27.2-universal/res/tools/linux/7z/"
       - "/home/lcrm/.vscode-oss/extensions/cl.eide-3.27.2-universal/res/tools/linux/utils/"
-      - "/usr/bin/"
-      - "/home/lcrm/.config/hyde/scripts/"
-      - "/home/lcrm/.local/bin/"
-      - "/home/lcrm/.local/lib/hyde/"
+      - "/usr/sbin/"
       - "/usr/local/sbin/"
       - "/usr/local/bin/"
+      - "/usr/bin/"
+      - "/sbin/"
+      - "/bin/"
       - "/usr/lib/jvm/default/bin/"
       - "/usr/bin/site_perl/"
       - "/usr/bin/vendor_perl/"
       - "/usr/bin/core_perl/"
-      - "/bin/"
+      - "/opt/rocm/bin/"
+      - "/usr/lib/rustup/bin/"
     searched_directories:
       - "/home/lcrm/.mplab/app-finder/apps/ninja/v1.13.2/uname"
       - "/home/lcrm/.mplab/app-finder/apps/make/v4.4.1/linux/uname"
@@ -48,7 +49,7 @@ events:
       - "/home/lcrm/.eide/bin/scripts/uname"
       - "/home/lcrm/.vscode-oss/extensions/cl.eide-3.27.2-universal/res/tools/linux/7z/uname"
       - "/home/lcrm/.vscode-oss/extensions/cl.eide-3.27.2-universal/res/tools/linux/utils/uname"
-    found: "/usr/bin/uname"
+    found: "/usr/sbin/uname"
     search_context:
       ENV{PATH}:
         - "/home/lcrm/.mplab/app-finder/apps/ninja/v1.13.2"
@@ -59,23 +60,19 @@ events:
         - "/home/lcrm/.eide/bin/scripts"
         - "/home/lcrm/.vscode-oss/extensions/cl.eide-3.27.2-universal/res/tools/linux/7z"
         - "/home/lcrm/.vscode-oss/extensions/cl.eide-3.27.2-universal/res/tools/linux/utils"
-        - "/usr/bin"
-        - "/usr/bin"
-        - "/home/lcrm/.config/hyde/scripts"
-        - "/home/lcrm/.local/bin"
-        - "/home/lcrm/.local/lib/hyde"
-        - "/home/lcrm/.local/bin"
-        - "/home/lcrm/.local/lib/hyde"
-        - "/home/lcrm/.local/bin"
-        - "/home/lcrm/.local/lib/hyde"
-        - "/home/lcrm/.local/bin"
+        - "/usr/sbin"
         - "/usr/local/sbin"
         - "/usr/local/bin"
+        - "/usr/sbin"
         - "/usr/bin"
+        - "/sbin"
+        - "/bin"
         - "/usr/lib/jvm/default/bin"
         - "/usr/bin/site_perl"
         - "/usr/bin/vendor_perl"
         - "/usr/bin/core_perl"
+        - "/opt/rocm/bin"
+        - "/usr/lib/rustup/bin"
   -
     kind: "message-v1"
     backtrace:
@@ -83,7 +80,7 @@ events:
       - "CMakeLists.txt:13 (project)"
     message: |
       The target system is: Generic -  - 
-      The host system is: Linux - 7.2.11-arch1-1 - x86_64
+      The host system is: Linux - 7.2.8-arch1-1 - x86_64
   -
     kind: "find-v1"
     backtrace:
@@ -113,16 +110,18 @@ events:
       - "/home/lcrm/.eide/bin/scripts/"
       - "/home/lcrm/.vscode-oss/extensions/cl.eide-3.27.2-universal/res/tools/linux/7z/"
       - "/home/lcrm/.vscode-oss/extensions/cl.eide-3.27.2-universal/res/tools/linux/utils/"
-      - "/usr/bin/"
-      - "/home/lcrm/.config/hyde/scripts/"
-      - "/home/lcrm/.local/bin/"
-      - "/home/lcrm/.local/lib/hyde/"
+      - "/usr/sbin/"
       - "/usr/local/sbin/"
       - "/usr/local/bin/"
+      - "/usr/bin/"
+      - "/sbin/"
+      - "/bin/"
       - "/usr/lib/jvm/default/bin/"
       - "/usr/bin/site_perl/"
       - "/usr/bin/vendor_perl/"
       - "/usr/bin/core_perl/"
+      - "/opt/rocm/bin/"
+      - "/usr/lib/rustup/bin/"
     searched_directories:
       - "/home/lcrm/.mplab/app-finder/apps/ninja/v1.13.2/ninja-build"
     found: "/home/lcrm/.mplab/app-finder/apps/ninja/v1.13.2/ninja"
@@ -136,23 +135,19 @@ events:
         - "/home/lcrm/.eide/bin/scripts"
         - "/home/lcrm/.vscode-oss/extensions/cl.eide-3.27.2-universal/res/tools/linux/7z"
         - "/home/lcrm/.vscode-oss/extensions/cl.eide-3.27.2-universal/res/tools/linux/utils"
-        - "/usr/bin"
-        - "/usr/bin"
-        - "/home/lcrm/.config/hyde/scripts"
-        - "/home/lcrm/.local/bin"
-        - "/home/lcrm/.local/lib/hyde"
-        - "/home/lcrm/.local/bin"
-        - "/home/lcrm/.local/lib/hyde"
-        - "/home/lcrm/.local/bin"
-        - "/home/lcrm/.local/lib/hyde"
-        - "/home/lcrm/.local/bin"
+        - "/usr/sbin"
         - "/usr/local/sbin"
         - "/usr/local/bin"
+        - "/usr/sbin"
         - "/usr/bin"
+        - "/sbin"
+        - "/bin"
         - "/usr/lib/jvm/default/bin"
         - "/usr/bin/site_perl"
         - "/usr/bin/vendor_perl"
         - "/usr/bin/core_perl"
+        - "/opt/rocm/bin"
+        - "/usr/lib/rustup/bin"
   -
     kind: "find-v1"
     backtrace:
@@ -188,23 +183,19 @@ events:
         - "/home/lcrm/.eide/bin/scripts"
         - "/home/lcrm/.vscode-oss/extensions/cl.eide-3.27.2-universal/res/tools/linux/7z"
         - "/home/lcrm/.vscode-oss/extensions/cl.eide-3.27.2-universal/res/tools/linux/utils"
-        - "/usr/bin"
-        - "/usr/bin"
-        - "/home/lcrm/.config/hyde/scripts"
-        - "/home/lcrm/.local/bin"
-        - "/home/lcrm/.local/lib/hyde"
-        - "/home/lcrm/.local/bin"
-        - "/home/lcrm/.local/lib/hyde"
-        - "/home/lcrm/.local/bin"
-        - "/home/lcrm/.local/lib/hyde"
-        - "/home/lcrm/.local/bin"
+        - "/usr/sbin"
         - "/usr/local/sbin"
         - "/usr/local/bin"
+        - "/usr/sbin"
         - "/usr/bin"
+        - "/sbin"
+        - "/bin"
         - "/usr/lib/jvm/default/bin"
         - "/usr/bin/site_perl"
         - "/usr/bin/vendor_perl"
         - "/usr/bin/core_perl"
+        - "/opt/rocm/bin"
+        - "/usr/lib/rustup/bin"
   -
     kind: "message-v1"
     backtrace:
@@ -214,7 +205,7 @@ events:
       - "CMakeLists.txt:13 (project)"
     message: |
       Compiling the C compiler identification source file "CMakeCCompilerId.c" failed.
-      Compiler: /opt/microchip/xc8/v3.00/bin/xc8-cc 
+      Compiler: /opt/microchip/xc8/v3.10/bin/xc8-cc 
       Build flags: 
       Id flags:  
       
@@ -258,23 +249,19 @@ events:
         - "/home/lcrm/.eide/bin/scripts"
         - "/home/lcrm/.vscode-oss/extensions/cl.eide-3.27.2-universal/res/tools/linux/7z"
         - "/home/lcrm/.vscode-oss/extensions/cl.eide-3.27.2-universal/res/tools/linux/utils"
-        - "/usr/bin"
-        - "/usr/bin"
-        - "/home/lcrm/.config/hyde/scripts"
-        - "/home/lcrm/.local/bin"
-        - "/home/lcrm/.local/lib/hyde"
-        - "/home/lcrm/.local/bin"
-        - "/home/lcrm/.local/lib/hyde"
-        - "/home/lcrm/.local/bin"
-        - "/home/lcrm/.local/lib/hyde"
-        - "/home/lcrm/.local/bin"
+        - "/usr/sbin"
         - "/usr/local/sbin"
         - "/usr/local/bin"
+        - "/usr/sbin"
         - "/usr/bin"
+        - "/sbin"
+        - "/bin"
         - "/usr/lib/jvm/default/bin"
         - "/usr/bin/site_perl"
         - "/usr/bin/vendor_perl"
         - "/usr/bin/core_perl"
+        - "/opt/rocm/bin"
+        - "/usr/lib/rustup/bin"
   -
     kind: "message-v1"
     backtrace:
@@ -284,7 +271,7 @@ events:
       - "CMakeLists.txt:13 (project)"
     message: |
       Compiling the C compiler identification source file "CMakeCCompilerId.c" failed.
-      Compiler: /opt/microchip/xc8/v3.00/bin/xc8-cc 
+      Compiler: /opt/microchip/xc8/v3.10/bin/xc8-cc 
       Build flags: 
       Id flags: -c 
       
@@ -328,23 +315,19 @@ events:
         - "/home/lcrm/.eide/bin/scripts"
         - "/home/lcrm/.vscode-oss/extensions/cl.eide-3.27.2-universal/res/tools/linux/7z"
         - "/home/lcrm/.vscode-oss/extensions/cl.eide-3.27.2-universal/res/tools/linux/utils"
-        - "/usr/bin"
-        - "/usr/bin"
-        - "/home/lcrm/.config/hyde/scripts"
-        - "/home/lcrm/.local/bin"
-        - "/home/lcrm/.local/lib/hyde"
-        - "/home/lcrm/.local/bin"
-        - "/home/lcrm/.local/lib/hyde"
-        - "/home/lcrm/.local/bin"
-        - "/home/lcrm/.local/lib/hyde"
-        - "/home/lcrm/.local/bin"
+        - "/usr/sbin"
         - "/usr/local/sbin"
         - "/usr/local/bin"
+        - "/usr/sbin"
         - "/usr/bin"
+        - "/sbin"
+        - "/bin"
         - "/usr/lib/jvm/default/bin"
         - "/usr/bin/site_perl"
         - "/usr/bin/vendor_perl"
         - "/usr/bin/core_perl"
+        - "/opt/rocm/bin"
+        - "/usr/lib/rustup/bin"
   -
     kind: "message-v1"
     backtrace:
@@ -354,7 +337,7 @@ events:
       - "CMakeLists.txt:13 (project)"
     message: |
       Compiling the C compiler identification source file "CMakeCCompilerId.c" failed.
-      Compiler: /opt/microchip/xc8/v3.00/bin/xc8-cc 
+      Compiler: /opt/microchip/xc8/v3.10/bin/xc8-cc 
       Build flags: 
       Id flags: -Aa 
       
@@ -398,23 +381,19 @@ events:
         - "/home/lcrm/.eide/bin/scripts"
         - "/home/lcrm/.vscode-oss/extensions/cl.eide-3.27.2-universal/res/tools/linux/7z"
         - "/home/lcrm/.vscode-oss/extensions/cl.eide-3.27.2-universal/res/tools/linux/utils"
-        - "/usr/bin"
-        - "/usr/bin"
-        - "/home/lcrm/.config/hyde/scripts"
-        - "/home/lcrm/.local/bin"
-        - "/home/lcrm/.local/lib/hyde"
-        - "/home/lcrm/.local/bin"
-        - "/home/lcrm/.local/lib/hyde"
-        - "/home/lcrm/.local/bin"
-        - "/home/lcrm/.local/lib/hyde"
-        - "/home/lcrm/.local/bin"
+        - "/usr/sbin"
         - "/usr/local/sbin"
         - "/usr/local/bin"
+        - "/usr/sbin"
         - "/usr/bin"
+        - "/sbin"
+        - "/bin"
         - "/usr/lib/jvm/default/bin"
         - "/usr/bin/site_perl"
         - "/usr/bin/vendor_perl"
         - "/usr/bin/core_perl"
+        - "/opt/rocm/bin"
+        - "/usr/lib/rustup/bin"
   -
     kind: "message-v1"
     backtrace:
@@ -424,7 +403,7 @@ events:
       - "CMakeLists.txt:13 (project)"
     message: |
       Compiling the C compiler identification source file "CMakeCCompilerId.c" failed.
-      Compiler: /opt/microchip/xc8/v3.00/bin/xc8-cc 
+      Compiler: /opt/microchip/xc8/v3.10/bin/xc8-cc 
       Build flags: 
       Id flags: -D__CLASSIC_C__ 
       
@@ -468,23 +447,19 @@ events:
         - "/home/lcrm/.eide/bin/scripts"
         - "/home/lcrm/.vscode-oss/extensions/cl.eide-3.27.2-universal/res/tools/linux/7z"
         - "/home/lcrm/.vscode-oss/extensions/cl.eide-3.27.2-universal/res/tools/linux/utils"
-        - "/usr/bin"
-        - "/usr/bin"
-        - "/home/lcrm/.config/hyde/scripts"
-        - "/home/lcrm/.local/bin"
-        - "/home/lcrm/.local/lib/hyde"
-        - "/home/lcrm/.local/bin"
-        - "/home/lcrm/.local/lib/hyde"
-        - "/home/lcrm/.local/bin"
-        - "/home/lcrm/.local/lib/hyde"
-        - "/home/lcrm/.local/bin"
+        - "/usr/sbin"
         - "/usr/local/sbin"
         - "/usr/local/bin"
+        - "/usr/sbin"
         - "/usr/bin"
+        - "/sbin"
+        - "/bin"
         - "/usr/lib/jvm/default/bin"
         - "/usr/bin/site_perl"
         - "/usr/bin/vendor_perl"
         - "/usr/bin/core_perl"
+        - "/opt/rocm/bin"
+        - "/usr/lib/rustup/bin"
   -
     kind: "message-v1"
     backtrace:
@@ -494,7 +469,7 @@ events:
       - "CMakeLists.txt:13 (project)"
     message: |
       Compiling the C compiler identification source file "CMakeCCompilerId.c" failed.
-      Compiler: /opt/microchip/xc8/v3.00/bin/xc8-cc 
+      Compiler: /opt/microchip/xc8/v3.10/bin/xc8-cc 
       Build flags: 
       Id flags: --target=arm-arm-none-eabi;-mcpu=cortex-m3 
       
@@ -538,23 +513,19 @@ events:
         - "/home/lcrm/.eide/bin/scripts"
         - "/home/lcrm/.vscode-oss/extensions/cl.eide-3.27.2-universal/res/tools/linux/7z"
         - "/home/lcrm/.vscode-oss/extensions/cl.eide-3.27.2-universal/res/tools/linux/utils"
-        - "/usr/bin"
-        - "/usr/bin"
-        - "/home/lcrm/.config/hyde/scripts"
-        - "/home/lcrm/.local/bin"
-        - "/home/lcrm/.local/lib/hyde"
-        - "/home/lcrm/.local/bin"
-        - "/home/lcrm/.local/lib/hyde"
-        - "/home/lcrm/.local/bin"
-        - "/home/lcrm/.local/lib/hyde"
-        - "/home/lcrm/.local/bin"
+        - "/usr/sbin"
         - "/usr/local/sbin"
         - "/usr/local/bin"
+        - "/usr/sbin"
         - "/usr/bin"
+        - "/sbin"
+        - "/bin"
         - "/usr/lib/jvm/default/bin"
         - "/usr/bin/site_perl"
         - "/usr/bin/vendor_perl"
         - "/usr/bin/core_perl"
+        - "/opt/rocm/bin"
+        - "/usr/lib/rustup/bin"
   -
     kind: "message-v1"
     backtrace:
@@ -564,7 +535,7 @@ events:
       - "CMakeLists.txt:13 (project)"
     message: |
       Compiling the C compiler identification source file "CMakeCCompilerId.c" failed.
-      Compiler: /opt/microchip/xc8/v3.00/bin/xc8-cc 
+      Compiler: /opt/microchip/xc8/v3.10/bin/xc8-cc 
       Build flags: 
       Id flags: -c;-I__does_not_exist__ 
       
@@ -608,23 +579,19 @@ events:
         - "/home/lcrm/.eide/bin/scripts"
         - "/home/lcrm/.vscode-oss/extensions/cl.eide-3.27.2-universal/res/tools/linux/7z"
         - "/home/lcrm/.vscode-oss/extensions/cl.eide-3.27.2-universal/res/tools/linux/utils"
-        - "/usr/bin"
-        - "/usr/bin"
-        - "/home/lcrm/.config/hyde/scripts"
-        - "/home/lcrm/.local/bin"
-        - "/home/lcrm/.local/lib/hyde"
-        - "/home/lcrm/.local/bin"
-        - "/home/lcrm/.local/lib/hyde"
-        - "/home/lcrm/.local/bin"
-        - "/home/lcrm/.local/lib/hyde"
-        - "/home/lcrm/.local/bin"
+        - "/usr/sbin"
         - "/usr/local/sbin"
         - "/usr/local/bin"
+        - "/usr/sbin"
         - "/usr/bin"
+        - "/sbin"
+        - "/bin"
         - "/usr/lib/jvm/default/bin"
         - "/usr/bin/site_perl"
         - "/usr/bin/vendor_perl"
         - "/usr/bin/core_perl"
+        - "/opt/rocm/bin"
+        - "/usr/lib/rustup/bin"
   -
     kind: "message-v1"
     backtrace:
@@ -634,7 +601,7 @@ events:
       - "CMakeLists.txt:13 (project)"
     message: |
       Compiling the C compiler identification source file "CMakeCCompilerId.c" failed.
-      Compiler: /opt/microchip/xc8/v3.00/bin/xc8-cc 
+      Compiler: /opt/microchip/xc8/v3.10/bin/xc8-cc 
       Build flags: 
       Id flags:  
       
@@ -678,23 +645,19 @@ events:
         - "/home/lcrm/.eide/bin/scripts"
         - "/home/lcrm/.vscode-oss/extensions/cl.eide-3.27.2-universal/res/tools/linux/7z"
         - "/home/lcrm/.vscode-oss/extensions/cl.eide-3.27.2-universal/res/tools/linux/utils"
-        - "/usr/bin"
-        - "/usr/bin"
-        - "/home/lcrm/.config/hyde/scripts"
-        - "/home/lcrm/.local/bin"
-        - "/home/lcrm/.local/lib/hyde"
-        - "/home/lcrm/.local/bin"
-        - "/home/lcrm/.local/lib/hyde"
-        - "/home/lcrm/.local/bin"
-        - "/home/lcrm/.local/lib/hyde"
-        - "/home/lcrm/.local/bin"
+        - "/usr/sbin"
         - "/usr/local/sbin"
         - "/usr/local/bin"
+        - "/usr/sbin"
         - "/usr/bin"
+        - "/sbin"
+        - "/bin"
         - "/usr/lib/jvm/default/bin"
         - "/usr/bin/site_perl"
         - "/usr/bin/vendor_perl"
         - "/usr/bin/core_perl"
+        - "/opt/rocm/bin"
+        - "/usr/lib/rustup/bin"
   -
     kind: "message-v1"
     backtrace:
@@ -704,7 +667,7 @@ events:
       - "CMakeLists.txt:13 (project)"
     message: |
       Compiling the C compiler identification source file "CMakeCCompilerId.c" failed.
-      Compiler: /opt/microchip/xc8/v3.00/bin/xc8-cc 
+      Compiler: /opt/microchip/xc8/v3.10/bin/xc8-cc 
       Build flags: 
       Id flags: -c 
       
@@ -748,23 +711,19 @@ events:
         - "/home/lcrm/.eide/bin/scripts"
         - "/home/lcrm/.vscode-oss/extensions/cl.eide-3.27.2-universal/res/tools/linux/7z"
         - "/home/lcrm/.vscode-oss/extensions/cl.eide-3.27.2-universal/res/tools/linux/utils"
-        - "/usr/bin"
-        - "/usr/bin"
-        - "/home/lcrm/.config/hyde/scripts"
-        - "/home/lcrm/.local/bin"
-        - "/home/lcrm/.local/lib/hyde"
-        - "/home/lcrm/.local/bin"
-        - "/home/lcrm/.local/lib/hyde"
-        - "/home/lcrm/.local/bin"
-        - "/home/lcrm/.local/lib/hyde"
-        - "/home/lcrm/.local/bin"
+        - "/usr/sbin"
         - "/usr/local/sbin"
         - "/usr/local/bin"
+        - "/usr/sbin"
         - "/usr/bin"
+        - "/sbin"
+        - "/bin"
         - "/usr/lib/jvm/default/bin"
         - "/usr/bin/site_perl"
         - "/usr/bin/vendor_perl"
         - "/usr/bin/core_perl"
+        - "/opt/rocm/bin"
+        - "/usr/lib/rustup/bin"
   -
     kind: "message-v1"
     backtrace:
@@ -774,7 +733,7 @@ events:
       - "CMakeLists.txt:13 (project)"
     message: |
       Compiling the C compiler identification source file "CMakeCCompilerId.c" failed.
-      Compiler: /opt/microchip/xc8/v3.00/bin/xc8-cc 
+      Compiler: /opt/microchip/xc8/v3.10/bin/xc8-cc 
       Build flags: 
       Id flags: -Aa 
       
@@ -818,23 +777,19 @@ events:
         - "/home/lcrm/.eide/bin/scripts"
         - "/home/lcrm/.vscode-oss/extensions/cl.eide-3.27.2-universal/res/tools/linux/7z"
         - "/home/lcrm/.vscode-oss/extensions/cl.eide-3.27.2-universal/res/tools/linux/utils"
-        - "/usr/bin"
-        - "/usr/bin"
-        - "/home/lcrm/.config/hyde/scripts"
-        - "/home/lcrm/.local/bin"
-        - "/home/lcrm/.local/lib/hyde"
-        - "/home/lcrm/.local/bin"
-        - "/home/lcrm/.local/lib/hyde"
-        - "/home/lcrm/.local/bin"
-        - "/home/lcrm/.local/lib/hyde"
-        - "/home/lcrm/.local/bin"
+        - "/usr/sbin"
         - "/usr/local/sbin"
         - "/usr/local/bin"
+        - "/usr/sbin"
         - "/usr/bin"
+        - "/sbin"
+        - "/bin"
         - "/usr/lib/jvm/default/bin"
         - "/usr/bin/site_perl"
         - "/usr/bin/vendor_perl"
         - "/usr/bin/core_perl"
+        - "/opt/rocm/bin"
+        - "/usr/lib/rustup/bin"
   -
     kind: "message-v1"
     backtrace:
@@ -844,7 +799,7 @@ events:
       - "CMakeLists.txt:13 (project)"
     message: |
       Compiling the C compiler identification source file "CMakeCCompilerId.c" failed.
-      Compiler: /opt/microchip/xc8/v3.00/bin/xc8-cc 
+      Compiler: /opt/microchip/xc8/v3.10/bin/xc8-cc 
       Build flags: 
       Id flags: -D__CLASSIC_C__ 
       
@@ -888,23 +843,19 @@ events:
         - "/home/lcrm/.eide/bin/scripts"
         - "/home/lcrm/.vscode-oss/extensions/cl.eide-3.27.2-universal/res/tools/linux/7z"
         - "/home/lcrm/.vscode-oss/extensions/cl.eide-3.27.2-universal/res/tools/linux/utils"
-        - "/usr/bin"
-        - "/usr/bin"
-        - "/home/lcrm/.config/hyde/scripts"
-        - "/home/lcrm/.local/bin"
-        - "/home/lcrm/.local/lib/hyde"
-        - "/home/lcrm/.local/bin"
-        - "/home/lcrm/.local/lib/hyde"
-        - "/home/lcrm/.local/bin"
-        - "/home/lcrm/.local/lib/hyde"
-        - "/home/lcrm/.local/bin"
+        - "/usr/sbin"
         - "/usr/local/sbin"
         - "/usr/local/bin"
+        - "/usr/sbin"
         - "/usr/bin"
+        - "/sbin"
+        - "/bin"
         - "/usr/lib/jvm/default/bin"
         - "/usr/bin/site_perl"
         - "/usr/bin/vendor_perl"
         - "/usr/bin/core_perl"
+        - "/opt/rocm/bin"
+        - "/usr/lib/rustup/bin"
   -
     kind: "message-v1"
     backtrace:
@@ -914,7 +865,7 @@ events:
       - "CMakeLists.txt:13 (project)"
     message: |
       Compiling the C compiler identification source file "CMakeCCompilerId.c" failed.
-      Compiler: /opt/microchip/xc8/v3.00/bin/xc8-cc 
+      Compiler: /opt/microchip/xc8/v3.10/bin/xc8-cc 
       Build flags: 
       Id flags: --target=arm-arm-none-eabi;-mcpu=cortex-m3 
       
@@ -958,23 +909,19 @@ events:
         - "/home/lcrm/.eide/bin/scripts"
         - "/home/lcrm/.vscode-oss/extensions/cl.eide-3.27.2-universal/res/tools/linux/7z"
         - "/home/lcrm/.vscode-oss/extensions/cl.eide-3.27.2-universal/res/tools/linux/utils"
-        - "/usr/bin"
-        - "/usr/bin"
-        - "/home/lcrm/.config/hyde/scripts"
-        - "/home/lcrm/.local/bin"
-        - "/home/lcrm/.local/lib/hyde"
-        - "/home/lcrm/.local/bin"
-        - "/home/lcrm/.local/lib/hyde"
-        - "/home/lcrm/.local/bin"
-        - "/home/lcrm/.local/lib/hyde"
-        - "/home/lcrm/.local/bin"
+        - "/usr/sbin"
         - "/usr/local/sbin"
         - "/usr/local/bin"
+        - "/usr/sbin"
         - "/usr/bin"
+        - "/sbin"
+        - "/bin"
         - "/usr/lib/jvm/default/bin"
         - "/usr/bin/site_perl"
         - "/usr/bin/vendor_perl"
         - "/usr/bin/core_perl"
+        - "/opt/rocm/bin"
+        - "/usr/lib/rustup/bin"
   -
     kind: "message-v1"
     backtrace:
@@ -984,7 +931,7 @@ events:
       - "CMakeLists.txt:13 (project)"
     message: |
       Compiling the C compiler identification source file "CMakeCCompilerId.c" failed.
-      Compiler: /opt/microchip/xc8/v3.00/bin/xc8-cc 
+      Compiler: /opt/microchip/xc8/v3.10/bin/xc8-cc 
       Build flags: 
       Id flags: -c;-I__does_not_exist__ 
       
@@ -1033,7 +980,7 @@ events:
     names:
       - "strip"
     candidate_directories:
-      - "/opt/microchip/xc8/v3.00/bin/"
+      - "/opt/microchip/xc8/v3.10/bin/"
       - "/home/lcrm/.mplab/app-finder/apps/ninja/v1.13.2/"
       - "/home/lcrm/.mplab/app-finder/apps/make/v4.4.1/linux/"
       - "/home/lcrm/.mplab/app-finder/apps/hexmate/v3.00/dist/linux/bin/"
@@ -1042,18 +989,20 @@ events:
       - "/home/lcrm/.eide/bin/scripts/"
       - "/home/lcrm/.vscode-oss/extensions/cl.eide-3.27.2-universal/res/tools/linux/7z/"
       - "/home/lcrm/.vscode-oss/extensions/cl.eide-3.27.2-universal/res/tools/linux/utils/"
-      - "/usr/bin/"
-      - "/home/lcrm/.config/hyde/scripts/"
-      - "/home/lcrm/.local/bin/"
-      - "/home/lcrm/.local/lib/hyde/"
+      - "/usr/sbin/"
       - "/usr/local/sbin/"
       - "/usr/local/bin/"
+      - "/usr/bin/"
+      - "/sbin/"
+      - "/bin/"
       - "/usr/lib/jvm/default/bin/"
       - "/usr/bin/site_perl/"
       - "/usr/bin/vendor_perl/"
       - "/usr/bin/core_perl/"
+      - "/opt/rocm/bin/"
+      - "/usr/lib/rustup/bin/"
     searched_directories:
-      - "/opt/microchip/xc8/v3.00/bin/strip"
+      - "/opt/microchip/xc8/v3.10/bin/strip"
       - "/home/lcrm/.mplab/app-finder/apps/ninja/v1.13.2/strip"
       - "/home/lcrm/.mplab/app-finder/apps/make/v4.4.1/linux/strip"
       - "/home/lcrm/.mplab/app-finder/apps/hexmate/v3.00/dist/linux/bin/strip"
@@ -1062,7 +1011,7 @@ events:
       - "/home/lcrm/.eide/bin/scripts/strip"
       - "/home/lcrm/.vscode-oss/extensions/cl.eide-3.27.2-universal/res/tools/linux/7z/strip"
       - "/home/lcrm/.vscode-oss/extensions/cl.eide-3.27.2-universal/res/tools/linux/utils/strip"
-    found: "/usr/bin/strip"
+    found: "/usr/sbin/strip"
     search_context:
       ENV{PATH}:
         - "/home/lcrm/.mplab/app-finder/apps/ninja/v1.13.2"
@@ -1073,23 +1022,19 @@ events:
         - "/home/lcrm/.eide/bin/scripts"
         - "/home/lcrm/.vscode-oss/extensions/cl.eide-3.27.2-universal/res/tools/linux/7z"
         - "/home/lcrm/.vscode-oss/extensions/cl.eide-3.27.2-universal/res/tools/linux/utils"
-        - "/usr/bin"
-        - "/usr/bin"
-        - "/home/lcrm/.config/hyde/scripts"
-        - "/home/lcrm/.local/bin"
-        - "/home/lcrm/.local/lib/hyde"
-        - "/home/lcrm/.local/bin"
-        - "/home/lcrm/.local/lib/hyde"
-        - "/home/lcrm/.local/bin"
-        - "/home/lcrm/.local/lib/hyde"
-        - "/home/lcrm/.local/bin"
+        - "/usr/sbin"
         - "/usr/local/sbin"
         - "/usr/local/bin"
+        - "/usr/sbin"
         - "/usr/bin"
+        - "/sbin"
+        - "/bin"
         - "/usr/lib/jvm/default/bin"
         - "/usr/bin/site_perl"
         - "/usr/bin/vendor_perl"
         - "/usr/bin/core_perl"
+        - "/opt/rocm/bin"
+        - "/usr/lib/rustup/bin"
   -
     kind: "find-v1"
     backtrace:
@@ -1110,7 +1055,7 @@ events:
     names:
       - "ld"
     candidate_directories:
-      - "/opt/microchip/xc8/v3.00/bin/"
+      - "/opt/microchip/xc8/v3.10/bin/"
       - "/home/lcrm/.mplab/app-finder/apps/ninja/v1.13.2/"
       - "/home/lcrm/.mplab/app-finder/apps/make/v4.4.1/linux/"
       - "/home/lcrm/.mplab/app-finder/apps/hexmate/v3.00/dist/linux/bin/"
@@ -1119,18 +1064,20 @@ events:
       - "/home/lcrm/.eide/bin/scripts/"
       - "/home/lcrm/.vscode-oss/extensions/cl.eide-3.27.2-universal/res/tools/linux/7z/"
       - "/home/lcrm/.vscode-oss/extensions/cl.eide-3.27.2-universal/res/tools/linux/utils/"
-      - "/usr/bin/"
-      - "/home/lcrm/.config/hyde/scripts/"
-      - "/home/lcrm/.local/bin/"
-      - "/home/lcrm/.local/lib/hyde/"
+      - "/usr/sbin/"
       - "/usr/local/sbin/"
       - "/usr/local/bin/"
+      - "/usr/bin/"
+      - "/sbin/"
+      - "/bin/"
       - "/usr/lib/jvm/default/bin/"
       - "/usr/bin/site_perl/"
       - "/usr/bin/vendor_perl/"
       - "/usr/bin/core_perl/"
+      - "/opt/rocm/bin/"
+      - "/usr/lib/rustup/bin/"
     searched_directories:
-      - "/opt/microchip/xc8/v3.00/bin/ld"
+      - "/opt/microchip/xc8/v3.10/bin/ld"
       - "/home/lcrm/.mplab/app-finder/apps/ninja/v1.13.2/ld"
       - "/home/lcrm/.mplab/app-finder/apps/make/v4.4.1/linux/ld"
       - "/home/lcrm/.mplab/app-finder/apps/hexmate/v3.00/dist/linux/bin/ld"
@@ -1139,7 +1086,7 @@ events:
       - "/home/lcrm/.eide/bin/scripts/ld"
       - "/home/lcrm/.vscode-oss/extensions/cl.eide-3.27.2-universal/res/tools/linux/7z/ld"
       - "/home/lcrm/.vscode-oss/extensions/cl.eide-3.27.2-universal/res/tools/linux/utils/ld"
-    found: "/usr/bin/ld"
+    found: "/usr/sbin/ld"
     search_context:
       ENV{PATH}:
         - "/home/lcrm/.mplab/app-finder/apps/ninja/v1.13.2"
@@ -1150,23 +1097,19 @@ events:
         - "/home/lcrm/.eide/bin/scripts"
         - "/home/lcrm/.vscode-oss/extensions/cl.eide-3.27.2-universal/res/tools/linux/7z"
         - "/home/lcrm/.vscode-oss/extensions/cl.eide-3.27.2-universal/res/tools/linux/utils"
-        - "/usr/bin"
-        - "/usr/bin"
-        - "/home/lcrm/.config/hyde/scripts"
-        - "/home/lcrm/.local/bin"
-        - "/home/lcrm/.local/lib/hyde"
-        - "/home/lcrm/.local/bin"
-        - "/home/lcrm/.local/lib/hyde"
-        - "/home/lcrm/.local/bin"
-        - "/home/lcrm/.local/lib/hyde"
-        - "/home/lcrm/.local/bin"
+        - "/usr/sbin"
         - "/usr/local/sbin"
         - "/usr/local/bin"
+        - "/usr/sbin"
         - "/usr/bin"
+        - "/sbin"
+        - "/bin"
         - "/usr/lib/jvm/default/bin"
         - "/usr/bin/site_perl"
         - "/usr/bin/vendor_perl"
         - "/usr/bin/core_perl"
+        - "/opt/rocm/bin"
+        - "/usr/lib/rustup/bin"
   -
     kind: "find-v1"
     backtrace:
@@ -1187,7 +1130,7 @@ events:
     names:
       - "nm"
     candidate_directories:
-      - "/opt/microchip/xc8/v3.00/bin/"
+      - "/opt/microchip/xc8/v3.10/bin/"
       - "/home/lcrm/.mplab/app-finder/apps/ninja/v1.13.2/"
       - "/home/lcrm/.mplab/app-finder/apps/make/v4.4.1/linux/"
       - "/home/lcrm/.mplab/app-finder/apps/hexmate/v3.00/dist/linux/bin/"
@@ -1196,18 +1139,20 @@ events:
       - "/home/lcrm/.eide/bin/scripts/"
       - "/home/lcrm/.vscode-oss/extensions/cl.eide-3.27.2-universal/res/tools/linux/7z/"
       - "/home/lcrm/.vscode-oss/extensions/cl.eide-3.27.2-universal/res/tools/linux/utils/"
-      - "/usr/bin/"
-      - "/home/lcrm/.config/hyde/scripts/"
-      - "/home/lcrm/.local/bin/"
-      - "/home/lcrm/.local/lib/hyde/"
+      - "/usr/sbin/"
       - "/usr/local/sbin/"
       - "/usr/local/bin/"
+      - "/usr/bin/"
+      - "/sbin/"
+      - "/bin/"
       - "/usr/lib/jvm/default/bin/"
       - "/usr/bin/site_perl/"
       - "/usr/bin/vendor_perl/"
       - "/usr/bin/core_perl/"
+      - "/opt/rocm/bin/"
+      - "/usr/lib/rustup/bin/"
     searched_directories:
-      - "/opt/microchip/xc8/v3.00/bin/nm"
+      - "/opt/microchip/xc8/v3.10/bin/nm"
       - "/home/lcrm/.mplab/app-finder/apps/ninja/v1.13.2/nm"
       - "/home/lcrm/.mplab/app-finder/apps/make/v4.4.1/linux/nm"
       - "/home/lcrm/.mplab/app-finder/apps/hexmate/v3.00/dist/linux/bin/nm"
@@ -1216,7 +1161,7 @@ events:
       - "/home/lcrm/.eide/bin/scripts/nm"
       - "/home/lcrm/.vscode-oss/extensions/cl.eide-3.27.2-universal/res/tools/linux/7z/nm"
       - "/home/lcrm/.vscode-oss/extensions/cl.eide-3.27.2-universal/res/tools/linux/utils/nm"
-    found: "/usr/bin/nm"
+    found: "/usr/sbin/nm"
     search_context:
       ENV{PATH}:
         - "/home/lcrm/.mplab/app-finder/apps/ninja/v1.13.2"
@@ -1227,23 +1172,19 @@ events:
         - "/home/lcrm/.eide/bin/scripts"
         - "/home/lcrm/.vscode-oss/extensions/cl.eide-3.27.2-universal/res/tools/linux/7z"
         - "/home/lcrm/.vscode-oss/extensions/cl.eide-3.27.2-universal/res/tools/linux/utils"
-        - "/usr/bin"
-        - "/usr/bin"
-        - "/home/lcrm/.config/hyde/scripts"
-        - "/home/lcrm/.local/bin"
-        - "/home/lcrm/.local/lib/hyde"
-        - "/home/lcrm/.local/bin"
-        - "/home/lcrm/.local/lib/hyde"
-        - "/home/lcrm/.local/bin"
-        - "/home/lcrm/.local/lib/hyde"
-        - "/home/lcrm/.local/bin"
+        - "/usr/sbin"
         - "/usr/local/sbin"
         - "/usr/local/bin"
+        - "/usr/sbin"
         - "/usr/bin"
+        - "/sbin"
+        - "/bin"
         - "/usr/lib/jvm/default/bin"
         - "/usr/bin/site_perl"
         - "/usr/bin/vendor_perl"
         - "/usr/bin/core_perl"
+        - "/opt/rocm/bin"
+        - "/usr/lib/rustup/bin"
   -
     kind: "find-v1"
     backtrace:
@@ -1264,7 +1205,7 @@ events:
     names:
       - "objdump"
     candidate_directories:
-      - "/opt/microchip/xc8/v3.00/bin/"
+      - "/opt/microchip/xc8/v3.10/bin/"
       - "/home/lcrm/.mplab/app-finder/apps/ninja/v1.13.2/"
       - "/home/lcrm/.mplab/app-finder/apps/make/v4.4.1/linux/"
       - "/home/lcrm/.mplab/app-finder/apps/hexmate/v3.00/dist/linux/bin/"
@@ -1273,18 +1214,20 @@ events:
       - "/home/lcrm/.eide/bin/scripts/"
       - "/home/lcrm/.vscode-oss/extensions/cl.eide-3.27.2-universal/res/tools/linux/7z/"
       - "/home/lcrm/.vscode-oss/extensions/cl.eide-3.27.2-universal/res/tools/linux/utils/"
-      - "/usr/bin/"
-      - "/home/lcrm/.config/hyde/scripts/"
-      - "/home/lcrm/.local/bin/"
-      - "/home/lcrm/.local/lib/hyde/"
+      - "/usr/sbin/"
       - "/usr/local/sbin/"
       - "/usr/local/bin/"
+      - "/usr/bin/"
+      - "/sbin/"
+      - "/bin/"
       - "/usr/lib/jvm/default/bin/"
       - "/usr/bin/site_perl/"
       - "/usr/bin/vendor_perl/"
       - "/usr/bin/core_perl/"
+      - "/opt/rocm/bin/"
+      - "/usr/lib/rustup/bin/"
     searched_directories:
-      - "/opt/microchip/xc8/v3.00/bin/objdump"
+      - "/opt/microchip/xc8/v3.10/bin/objdump"
       - "/home/lcrm/.mplab/app-finder/apps/ninja/v1.13.2/objdump"
       - "/home/lcrm/.mplab/app-finder/apps/make/v4.4.1/linux/objdump"
       - "/home/lcrm/.mplab/app-finder/apps/hexmate/v3.00/dist/linux/bin/objdump"
@@ -1293,7 +1236,7 @@ events:
       - "/home/lcrm/.eide/bin/scripts/objdump"
       - "/home/lcrm/.vscode-oss/extensions/cl.eide-3.27.2-universal/res/tools/linux/7z/objdump"
       - "/home/lcrm/.vscode-oss/extensions/cl.eide-3.27.2-universal/res/tools/linux/utils/objdump"
-    found: "/usr/bin/objdump"
+    found: "/usr/sbin/objdump"
     search_context:
       ENV{PATH}:
         - "/home/lcrm/.mplab/app-finder/apps/ninja/v1.13.2"
@@ -1304,23 +1247,19 @@ events:
         - "/home/lcrm/.eide/bin/scripts"
         - "/home/lcrm/.vscode-oss/extensions/cl.eide-3.27.2-universal/res/tools/linux/7z"
         - "/home/lcrm/.vscode-oss/extensions/cl.eide-3.27.2-universal/res/tools/linux/utils"
-        - "/usr/bin"
-        - "/usr/bin"
-        - "/home/lcrm/.config/hyde/scripts"
-        - "/home/lcrm/.local/bin"
-        - "/home/lcrm/.local/lib/hyde"
-        - "/home/lcrm/.local/bin"
-        - "/home/lcrm/.local/lib/hyde"
-        - "/home/lcrm/.local/bin"
-        - "/home/lcrm/.local/lib/hyde"
-        - "/home/lcrm/.local/bin"
+        - "/usr/sbin"
         - "/usr/local/sbin"
         - "/usr/local/bin"
+        - "/usr/sbin"
         - "/usr/bin"
+        - "/sbin"
+        - "/bin"
         - "/usr/lib/jvm/default/bin"
         - "/usr/bin/site_perl"
         - "/usr/bin/vendor_perl"
         - "/usr/bin/core_perl"
+        - "/opt/rocm/bin"
+        - "/usr/lib/rustup/bin"
   -
     kind: "find-v1"
     backtrace:
@@ -1341,7 +1280,7 @@ events:
     names:
       - "objcopy"
     candidate_directories:
-      - "/opt/microchip/xc8/v3.00/bin/"
+      - "/opt/microchip/xc8/v3.10/bin/"
       - "/home/lcrm/.mplab/app-finder/apps/ninja/v1.13.2/"
       - "/home/lcrm/.mplab/app-finder/apps/make/v4.4.1/linux/"
       - "/home/lcrm/.mplab/app-finder/apps/hexmate/v3.00/dist/linux/bin/"
@@ -1350,18 +1289,20 @@ events:
       - "/home/lcrm/.eide/bin/scripts/"
       - "/home/lcrm/.vscode-oss/extensions/cl.eide-3.27.2-universal/res/tools/linux/7z/"
       - "/home/lcrm/.vscode-oss/extensions/cl.eide-3.27.2-universal/res/tools/linux/utils/"
-      - "/usr/bin/"
-      - "/home/lcrm/.config/hyde/scripts/"
-      - "/home/lcrm/.local/bin/"
-      - "/home/lcrm/.local/lib/hyde/"
+      - "/usr/sbin/"
       - "/usr/local/sbin/"
       - "/usr/local/bin/"
+      - "/usr/bin/"
+      - "/sbin/"
+      - "/bin/"
       - "/usr/lib/jvm/default/bin/"
       - "/usr/bin/site_perl/"
       - "/usr/bin/vendor_perl/"
       - "/usr/bin/core_perl/"
+      - "/opt/rocm/bin/"
+      - "/usr/lib/rustup/bin/"
     searched_directories:
-      - "/opt/microchip/xc8/v3.00/bin/objcopy"
+      - "/opt/microchip/xc8/v3.10/bin/objcopy"
       - "/home/lcrm/.mplab/app-finder/apps/ninja/v1.13.2/objcopy"
       - "/home/lcrm/.mplab/app-finder/apps/make/v4.4.1/linux/objcopy"
       - "/home/lcrm/.mplab/app-finder/apps/hexmate/v3.00/dist/linux/bin/objcopy"
@@ -1370,7 +1311,7 @@ events:
       - "/home/lcrm/.eide/bin/scripts/objcopy"
       - "/home/lcrm/.vscode-oss/extensions/cl.eide-3.27.2-universal/res/tools/linux/7z/objcopy"
       - "/home/lcrm/.vscode-oss/extensions/cl.eide-3.27.2-universal/res/tools/linux/utils/objcopy"
-    found: "/usr/bin/objcopy"
+    found: "/usr/sbin/objcopy"
     search_context:
       ENV{PATH}:
         - "/home/lcrm/.mplab/app-finder/apps/ninja/v1.13.2"
@@ -1381,23 +1322,19 @@ events:
         - "/home/lcrm/.eide/bin/scripts"
         - "/home/lcrm/.vscode-oss/extensions/cl.eide-3.27.2-universal/res/tools/linux/7z"
         - "/home/lcrm/.vscode-oss/extensions/cl.eide-3.27.2-universal/res/tools/linux/utils"
-        - "/usr/bin"
-        - "/usr/bin"
-        - "/home/lcrm/.config/hyde/scripts"
-        - "/home/lcrm/.local/bin"
-        - "/home/lcrm/.local/lib/hyde"
-        - "/home/lcrm/.local/bin"
-        - "/home/lcrm/.local/lib/hyde"
-        - "/home/lcrm/.local/bin"
-        - "/home/lcrm/.local/lib/hyde"
-        - "/home/lcrm/.local/bin"
+        - "/usr/sbin"
         - "/usr/local/sbin"
         - "/usr/local/bin"
+        - "/usr/sbin"
         - "/usr/bin"
+        - "/sbin"
+        - "/bin"
         - "/usr/lib/jvm/default/bin"
         - "/usr/bin/site_perl"
         - "/usr/bin/vendor_perl"
         - "/usr/bin/core_perl"
+        - "/opt/rocm/bin"
+        - "/usr/lib/rustup/bin"
   -
     kind: "find-v1"
     backtrace:
@@ -1418,7 +1355,7 @@ events:
     names:
       - "readelf"
     candidate_directories:
-      - "/opt/microchip/xc8/v3.00/bin/"
+      - "/opt/microchip/xc8/v3.10/bin/"
       - "/home/lcrm/.mplab/app-finder/apps/ninja/v1.13.2/"
       - "/home/lcrm/.mplab/app-finder/apps/make/v4.4.1/linux/"
       - "/home/lcrm/.mplab/app-finder/apps/hexmate/v3.00/dist/linux/bin/"
@@ -1427,18 +1364,20 @@ events:
       - "/home/lcrm/.eide/bin/scripts/"
       - "/home/lcrm/.vscode-oss/extensions/cl.eide-3.27.2-universal/res/tools/linux/7z/"
       - "/home/lcrm/.vscode-oss/extensions/cl.eide-3.27.2-universal/res/tools/linux/utils/"
-      - "/usr/bin/"
-      - "/home/lcrm/.config/hyde/scripts/"
-      - "/home/lcrm/.local/bin/"
-      - "/home/lcrm/.local/lib/hyde/"
+      - "/usr/sbin/"
       - "/usr/local/sbin/"
       - "/usr/local/bin/"
+      - "/usr/bin/"
+      - "/sbin/"
+      - "/bin/"
       - "/usr/lib/jvm/default/bin/"
       - "/usr/bin/site_perl/"
       - "/usr/bin/vendor_perl/"
       - "/usr/bin/core_perl/"
+      - "/opt/rocm/bin/"
+      - "/usr/lib/rustup/bin/"
     searched_directories:
-      - "/opt/microchip/xc8/v3.00/bin/readelf"
+      - "/opt/microchip/xc8/v3.10/bin/readelf"
       - "/home/lcrm/.mplab/app-finder/apps/ninja/v1.13.2/readelf"
       - "/home/lcrm/.mplab/app-finder/apps/make/v4.4.1/linux/readelf"
       - "/home/lcrm/.mplab/app-finder/apps/hexmate/v3.00/dist/linux/bin/readelf"
@@ -1447,7 +1386,7 @@ events:
       - "/home/lcrm/.eide/bin/scripts/readelf"
       - "/home/lcrm/.vscode-oss/extensions/cl.eide-3.27.2-universal/res/tools/linux/7z/readelf"
       - "/home/lcrm/.vscode-oss/extensions/cl.eide-3.27.2-universal/res/tools/linux/utils/readelf"
-    found: "/usr/bin/readelf"
+    found: "/usr/sbin/readelf"
     search_context:
       ENV{PATH}:
         - "/home/lcrm/.mplab/app-finder/apps/ninja/v1.13.2"
@@ -1458,23 +1397,19 @@ events:
         - "/home/lcrm/.eide/bin/scripts"
         - "/home/lcrm/.vscode-oss/extensions/cl.eide-3.27.2-universal/res/tools/linux/7z"
         - "/home/lcrm/.vscode-oss/extensions/cl.eide-3.27.2-universal/res/tools/linux/utils"
-        - "/usr/bin"
-        - "/usr/bin"
-        - "/home/lcrm/.config/hyde/scripts"
-        - "/home/lcrm/.local/bin"
-        - "/home/lcrm/.local/lib/hyde"
-        - "/home/lcrm/.local/bin"
-        - "/home/lcrm/.local/lib/hyde"
-        - "/home/lcrm/.local/bin"
-        - "/home/lcrm/.local/lib/hyde"
-        - "/home/lcrm/.local/bin"
+        - "/usr/sbin"
         - "/usr/local/sbin"
         - "/usr/local/bin"
+        - "/usr/sbin"
         - "/usr/bin"
+        - "/sbin"
+        - "/bin"
         - "/usr/lib/jvm/default/bin"
         - "/usr/bin/site_perl"
         - "/usr/bin/vendor_perl"
         - "/usr/bin/core_perl"
+        - "/opt/rocm/bin"
+        - "/usr/lib/rustup/bin"
   -
     kind: "find-v1"
     backtrace:
@@ -1495,7 +1430,7 @@ events:
     names:
       - "dlltool"
     candidate_directories:
-      - "/opt/microchip/xc8/v3.00/bin/"
+      - "/opt/microchip/xc8/v3.10/bin/"
       - "/home/lcrm/.mplab/app-finder/apps/ninja/v1.13.2/"
       - "/home/lcrm/.mplab/app-finder/apps/make/v4.4.1/linux/"
       - "/home/lcrm/.mplab/app-finder/apps/hexmate/v3.00/dist/linux/bin/"
@@ -1504,18 +1439,20 @@ events:
       - "/home/lcrm/.eide/bin/scripts/"
       - "/home/lcrm/.vscode-oss/extensions/cl.eide-3.27.2-universal/res/tools/linux/7z/"
       - "/home/lcrm/.vscode-oss/extensions/cl.eide-3.27.2-universal/res/tools/linux/utils/"
-      - "/usr/bin/"
-      - "/home/lcrm/.config/hyde/scripts/"
-      - "/home/lcrm/.local/bin/"
-      - "/home/lcrm/.local/lib/hyde/"
+      - "/usr/sbin/"
       - "/usr/local/sbin/"
       - "/usr/local/bin/"
+      - "/usr/bin/"
+      - "/sbin/"
+      - "/bin/"
       - "/usr/lib/jvm/default/bin/"
       - "/usr/bin/site_perl/"
       - "/usr/bin/vendor_perl/"
       - "/usr/bin/core_perl/"
+      - "/opt/rocm/bin/"
+      - "/usr/lib/rustup/bin/"
     searched_directories:
-      - "/opt/microchip/xc8/v3.00/bin/dlltool"
+      - "/opt/microchip/xc8/v3.10/bin/dlltool"
       - "/home/lcrm/.mplab/app-finder/apps/ninja/v1.13.2/dlltool"
       - "/home/lcrm/.mplab/app-finder/apps/make/v4.4.1/linux/dlltool"
       - "/home/lcrm/.mplab/app-finder/apps/hexmate/v3.00/dist/linux/bin/dlltool"
@@ -1524,16 +1461,18 @@ events:
       - "/home/lcrm/.eide/bin/scripts/dlltool"
       - "/home/lcrm/.vscode-oss/extensions/cl.eide-3.27.2-universal/res/tools/linux/7z/dlltool"
       - "/home/lcrm/.vscode-oss/extensions/cl.eide-3.27.2-universal/res/tools/linux/utils/dlltool"
-      - "/usr/bin/dlltool"
-      - "/home/lcrm/.config/hyde/scripts/dlltool"
-      - "/home/lcrm/.local/bin/dlltool"
-      - "/home/lcrm/.local/lib/hyde/dlltool"
+      - "/usr/sbin/dlltool"
       - "/usr/local/sbin/dlltool"
       - "/usr/local/bin/dlltool"
+      - "/usr/bin/dlltool"
+      - "/sbin/dlltool"
+      - "/bin/dlltool"
       - "/usr/lib/jvm/default/bin/dlltool"
       - "/usr/bin/site_perl/dlltool"
       - "/usr/bin/vendor_perl/dlltool"
       - "/usr/bin/core_perl/dlltool"
+      - "/opt/rocm/bin/dlltool"
+      - "/usr/lib/rustup/bin/dlltool"
     found: false
     search_context:
       ENV{PATH}:
@@ -1545,23 +1484,19 @@ events:
         - "/home/lcrm/.eide/bin/scripts"
         - "/home/lcrm/.vscode-oss/extensions/cl.eide-3.27.2-universal/res/tools/linux/7z"
         - "/home/lcrm/.vscode-oss/extensions/cl.eide-3.27.2-universal/res/tools/linux/utils"
-        - "/usr/bin"
-        - "/usr/bin"
-        - "/home/lcrm/.config/hyde/scripts"
-        - "/home/lcrm/.local/bin"
-        - "/home/lcrm/.local/lib/hyde"
-        - "/home/lcrm/.local/bin"
-        - "/home/lcrm/.local/lib/hyde"
-        - "/home/lcrm/.local/bin"
-        - "/home/lcrm/.local/lib/hyde"
-        - "/home/lcrm/.local/bin"
+        - "/usr/sbin"
         - "/usr/local/sbin"
         - "/usr/local/bin"
+        - "/usr/sbin"
         - "/usr/bin"
+        - "/sbin"
+        - "/bin"
         - "/usr/lib/jvm/default/bin"
         - "/usr/bin/site_perl"
         - "/usr/bin/vendor_perl"
         - "/usr/bin/core_perl"
+        - "/opt/rocm/bin"
+        - "/usr/lib/rustup/bin"
   -
     kind: "find-v1"
     backtrace:
@@ -1582,7 +1517,7 @@ events:
     names:
       - "addr2line"
     candidate_directories:
-      - "/opt/microchip/xc8/v3.00/bin/"
+      - "/opt/microchip/xc8/v3.10/bin/"
       - "/home/lcrm/.mplab/app-finder/apps/ninja/v1.13.2/"
       - "/home/lcrm/.mplab/app-finder/apps/make/v4.4.1/linux/"
       - "/home/lcrm/.mplab/app-finder/apps/hexmate/v3.00/dist/linux/bin/"
@@ -1591,18 +1526,20 @@ events:
       - "/home/lcrm/.eide/bin/scripts/"
       - "/home/lcrm/.vscode-oss/extensions/cl.eide-3.27.2-universal/res/tools/linux/7z/"
       - "/home/lcrm/.vscode-oss/extensions/cl.eide-3.27.2-universal/res/tools/linux/utils/"
-      - "/usr/bin/"
-      - "/home/lcrm/.config/hyde/scripts/"
-      - "/home/lcrm/.local/bin/"
-      - "/home/lcrm/.local/lib/hyde/"
+      - "/usr/sbin/"
       - "/usr/local/sbin/"
       - "/usr/local/bin/"
+      - "/usr/bin/"
+      - "/sbin/"
+      - "/bin/"
       - "/usr/lib/jvm/default/bin/"
       - "/usr/bin/site_perl/"
       - "/usr/bin/vendor_perl/"
       - "/usr/bin/core_perl/"
+      - "/opt/rocm/bin/"
+      - "/usr/lib/rustup/bin/"
     searched_directories:
-      - "/opt/microchip/xc8/v3.00/bin/addr2line"
+      - "/opt/microchip/xc8/v3.10/bin/addr2line"
       - "/home/lcrm/.mplab/app-finder/apps/ninja/v1.13.2/addr2line"
       - "/home/lcrm/.mplab/app-finder/apps/make/v4.4.1/linux/addr2line"
       - "/home/lcrm/.mplab/app-finder/apps/hexmate/v3.00/dist/linux/bin/addr2line"
@@ -1611,7 +1548,7 @@ events:
       - "/home/lcrm/.eide/bin/scripts/addr2line"
       - "/home/lcrm/.vscode-oss/extensions/cl.eide-3.27.2-universal/res/tools/linux/7z/addr2line"
       - "/home/lcrm/.vscode-oss/extensions/cl.eide-3.27.2-universal/res/tools/linux/utils/addr2line"
-    found: "/usr/bin/addr2line"
+    found: "/usr/sbin/addr2line"
     search_context:
       ENV{PATH}:
         - "/home/lcrm/.mplab/app-finder/apps/ninja/v1.13.2"
@@ -1622,23 +1559,19 @@ events:
         - "/home/lcrm/.eide/bin/scripts"
         - "/home/lcrm/.vscode-oss/extensions/cl.eide-3.27.2-universal/res/tools/linux/7z"
         - "/home/lcrm/.vscode-oss/extensions/cl.eide-3.27.2-universal/res/tools/linux/utils"
-        - "/usr/bin"
-        - "/usr/bin"
-        - "/home/lcrm/.config/hyde/scripts"
-        - "/home/lcrm/.local/bin"
-        - "/home/lcrm/.local/lib/hyde"
-        - "/home/lcrm/.local/bin"
-        - "/home/lcrm/.local/lib/hyde"
-        - "/home/lcrm/.local/bin"
-        - "/home/lcrm/.local/lib/hyde"
-        - "/home/lcrm/.local/bin"
+        - "/usr/sbin"
         - "/usr/local/sbin"
         - "/usr/local/bin"
+        - "/usr/sbin"
         - "/usr/bin"
+        - "/sbin"
+        - "/bin"
         - "/usr/lib/jvm/default/bin"
         - "/usr/bin/site_perl"
         - "/usr/bin/vendor_perl"
         - "/usr/bin/core_perl"
+        - "/opt/rocm/bin"
+        - "/usr/lib/rustup/bin"
   -
     kind: "find-v1"
     backtrace:
@@ -1659,7 +1592,7 @@ events:
     names:
       - "tapi"
     candidate_directories:
-      - "/opt/microchip/xc8/v3.00/bin/"
+      - "/opt/microchip/xc8/v3.10/bin/"
       - "/home/lcrm/.mplab/app-finder/apps/ninja/v1.13.2/"
       - "/home/lcrm/.mplab/app-finder/apps/make/v4.4.1/linux/"
       - "/home/lcrm/.mplab/app-finder/apps/hexmate/v3.00/dist/linux/bin/"
@@ -1668,18 +1601,20 @@ events:
       - "/home/lcrm/.eide/bin/scripts/"
       - "/home/lcrm/.vscode-oss/extensions/cl.eide-3.27.2-universal/res/tools/linux/7z/"
       - "/home/lcrm/.vscode-oss/extensions/cl.eide-3.27.2-universal/res/tools/linux/utils/"
-      - "/usr/bin/"
-      - "/home/lcrm/.config/hyde/scripts/"
-      - "/home/lcrm/.local/bin/"
-      - "/home/lcrm/.local/lib/hyde/"
+      - "/usr/sbin/"
       - "/usr/local/sbin/"
       - "/usr/local/bin/"
+      - "/usr/bin/"
+      - "/sbin/"
+      - "/bin/"
       - "/usr/lib/jvm/default/bin/"
       - "/usr/bin/site_perl/"
       - "/usr/bin/vendor_perl/"
       - "/usr/bin/core_perl/"
+      - "/opt/rocm/bin/"
+      - "/usr/lib/rustup/bin/"
     searched_directories:
-      - "/opt/microchip/xc8/v3.00/bin/tapi"
+      - "/opt/microchip/xc8/v3.10/bin/tapi"
       - "/home/lcrm/.mplab/app-finder/apps/ninja/v1.13.2/tapi"
       - "/home/lcrm/.mplab/app-finder/apps/make/v4.4.1/linux/tapi"
       - "/home/lcrm/.mplab/app-finder/apps/hexmate/v3.00/dist/linux/bin/tapi"
@@ -1688,16 +1623,18 @@ events:
       - "/home/lcrm/.eide/bin/scripts/tapi"
       - "/home/lcrm/.vscode-oss/extensions/cl.eide-3.27.2-universal/res/tools/linux/7z/tapi"
       - "/home/lcrm/.vscode-oss/extensions/cl.eide-3.27.2-universal/res/tools/linux/utils/tapi"
-      - "/usr/bin/tapi"
-      - "/home/lcrm/.config/hyde/scripts/tapi"
-      - "/home/lcrm/.local/bin/tapi"
-      - "/home/lcrm/.local/lib/hyde/tapi"
+      - "/usr/sbin/tapi"
       - "/usr/local/sbin/tapi"
       - "/usr/local/bin/tapi"
+      - "/usr/bin/tapi"
+      - "/sbin/tapi"
+      - "/bin/tapi"
       - "/usr/lib/jvm/default/bin/tapi"
       - "/usr/bin/site_perl/tapi"
       - "/usr/bin/vendor_perl/tapi"
       - "/usr/bin/core_perl/tapi"
+      - "/opt/rocm/bin/tapi"
+      - "/usr/lib/rustup/bin/tapi"
     found: false
     search_context:
       ENV{PATH}:
@@ -1709,23 +1646,19 @@ events:
         - "/home/lcrm/.eide/bin/scripts"
         - "/home/lcrm/.vscode-oss/extensions/cl.eide-3.27.2-universal/res/tools/linux/7z"
         - "/home/lcrm/.vscode-oss/extensions/cl.eide-3.27.2-universal/res/tools/linux/utils"
-        - "/usr/bin"
-        - "/usr/bin"
-        - "/home/lcrm/.config/hyde/scripts"
-        - "/home/lcrm/.local/bin"
-        - "/home/lcrm/.local/lib/hyde"
-        - "/home/lcrm/.local/bin"
-        - "/home/lcrm/.local/lib/hyde"
-        - "/home/lcrm/.local/bin"
-        - "/home/lcrm/.local/lib/hyde"
-        - "/home/lcrm/.local/bin"
+        - "/usr/sbin"
         - "/usr/local/sbin"
         - "/usr/local/bin"
+        - "/usr/sbin"
         - "/usr/bin"
+        - "/sbin"
+        - "/bin"
         - "/usr/lib/jvm/default/bin"
         - "/usr/bin/site_perl"
         - "/usr/bin/vendor_perl"
         - "/usr/bin/core_perl"
+        - "/opt/rocm/bin"
+        - "/usr/lib/rustup/bin"
   -
     kind: "message-v1"
     backtrace:
@@ -1734,10 +1667,9 @@ events:
       - "CMakeLists.txt:13 (project)"
     message: |
       Checking whether the ASM compiler is GNU using "--version" did not match "(GNU assembler)|(GCC)|(Free Software Foundation)":
-      Microchip MPLAB XC8 C Compiler V3.00
-      Build date: Dec  4 2024
-      Part Support Version: 3.00
-      Copyright (C) 2024 Microchip Technology Inc.
+      Microchip MPLAB XC8 C Compiler V3.10
+      Build date: Aug 13 2025
+      Copyright (C) 2025 Microchip Technology Inc.
   -
     kind: "message-v1"
     backtrace:
@@ -1746,10 +1678,9 @@ events:
       - "CMakeLists.txt:13 (project)"
     message: |
       Checking whether the ASM compiler is AppleClang using "--version" did not match "(Apple (clang|LLVM) version)":
-      Microchip MPLAB XC8 C Compiler V3.00
-      Build date: Dec  4 2024
-      Part Support Version: 3.00
-      Copyright (C) 2024 Microchip Technology Inc.
+      Microchip MPLAB XC8 C Compiler V3.10
+      Build date: Aug 13 2025
+      Copyright (C) 2025 Microchip Technology Inc.
   -
     kind: "message-v1"
     backtrace:
@@ -1758,10 +1689,9 @@ events:
       - "CMakeLists.txt:13 (project)"
     message: |
       Checking whether the ASM compiler is Clang using "--version" did not match "(clang version)":
-      Microchip MPLAB XC8 C Compiler V3.00
-      Build date: Dec  4 2024
-      Part Support Version: 3.00
-      Copyright (C) 2024 Microchip Technology Inc.
+      Microchip MPLAB XC8 C Compiler V3.10
+      Build date: Aug 13 2025
+      Copyright (C) 2025 Microchip Technology Inc.
   -
     kind: "message-v1"
     backtrace:
@@ -1770,10 +1700,9 @@ events:
       - "CMakeLists.txt:13 (project)"
     message: |
       Checking whether the ASM compiler is ARMClang using "--version" did not match "armclang":
-      Microchip MPLAB XC8 C Compiler V3.00
-      Build date: Dec  4 2024
-      Part Support Version: 3.00
-      Copyright (C) 2024 Microchip Technology Inc.
+      Microchip MPLAB XC8 C Compiler V3.10
+      Build date: Aug 13 2025
+      Copyright (C) 2025 Microchip Technology Inc.
   -
     kind: "message-v1"
     backtrace:
@@ -1782,10 +1711,9 @@ events:
       - "CMakeLists.txt:13 (project)"
     message: |
       Checking whether the ASM compiler is OrangeC using "--version" did not match "occ \\(OrangeC\\) Version":
-      Microchip MPLAB XC8 C Compiler V3.00
-      Build date: Dec  4 2024
-      Part Support Version: 3.00
-      Copyright (C) 2024 Microchip Technology Inc.
+      Microchip MPLAB XC8 C Compiler V3.10
+      Build date: Aug 13 2025
+      Copyright (C) 2025 Microchip Technology Inc.
   -
     kind: "message-v1"
     backtrace:
@@ -1803,10 +1731,9 @@ events:
       - "CMakeLists.txt:13 (project)"
     message: |
       Checking whether the ASM compiler is Intel using "--version" did not match "(ICC)":
-      Microchip MPLAB XC8 C Compiler V3.00
-      Build date: Dec  4 2024
-      Part Support Version: 3.00
-      Copyright (C) 2024 Microchip Technology Inc.
+      Microchip MPLAB XC8 C Compiler V3.10
+      Build date: Aug 13 2025
+      Copyright (C) 2025 Microchip Technology Inc.
   -
     kind: "message-v1"
     backtrace:
@@ -1816,10 +1743,9 @@ events:
     message: |
       Checking whether the ASM compiler is IntelLLVM using "--version" did not match "(Intel[^
       ]+oneAPI)":
-      Microchip MPLAB XC8 C Compiler V3.00
-      Build date: Dec  4 2024
-      Part Support Version: 3.00
-      Copyright (C) 2024 Microchip Technology Inc.
+      Microchip MPLAB XC8 C Compiler V3.10
+      Build date: Aug 13 2025
+      Copyright (C) 2025 Microchip Technology Inc.
   -
     kind: "message-v1"
     backtrace:
@@ -1864,10 +1790,9 @@ events:
       - "CMakeLists.txt:13 (project)"
     message: |
       Checking whether the ASM compiler is TIClang using "--version" did not match "(TI (.*) Clang Compiler)":
-      Microchip MPLAB XC8 C Compiler V3.00
-      Build date: Dec  4 2024
-      Part Support Version: 3.00
-      Copyright (C) 2024 Microchip Technology Inc.
+      Microchip MPLAB XC8 C Compiler V3.10
+      Build date: Aug 13 2025
+      Copyright (C) 2025 Microchip Technology Inc.
   -
     kind: "message-v1"
     backtrace:
@@ -1912,10 +1837,9 @@ events:
       - "CMakeLists.txt:13 (project)"
     message: |
       Checking whether the ASM compiler is YASM using "--version" did not match "(yasm)":
-      Microchip MPLAB XC8 C Compiler V3.00
-      Build date: Dec  4 2024
-      Part Support Version: 3.00
-      Copyright (C) 2024 Microchip Technology Inc.
+      Microchip MPLAB XC8 C Compiler V3.10
+      Build date: Aug 13 2025
+      Copyright (C) 2025 Microchip Technology Inc.
   -
     kind: "message-v1"
     backtrace:
@@ -1942,10 +1866,9 @@ events:
       - "CMakeLists.txt:13 (project)"
     message: |
       Checking whether the ASM compiler is Tasking using "--version" did not match "TASKING":
-      Microchip MPLAB XC8 C Compiler V3.00
-      Build date: Dec  4 2024
-      Part Support Version: 3.00
-      Copyright (C) 2024 Microchip Technology Inc.
+      Microchip MPLAB XC8 C Compiler V3.10
+      Build date: Aug 13 2025
+      Copyright (C) 2025 Microchip Technology Inc.
   -
     kind: "message-v1"
     backtrace:

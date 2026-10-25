@@ -1,67 +1,67 @@
 Archive member included to satisfy reference by file (symbol)
 
-/opt/microchip/xc8/v3.00/avr/bin/../lib/gcc/avr/5.4.0/avrxmega3/short-calls/libgcc.a(_copy_data.o)
-                              CMakeFiles/Wavelight_firmware_default_default_XC8_compile.dir/home/lcrm/Documents/WaveLight/FW/main.c.o (__do_copy_data)
-/opt/microchip/xc8/v3.00/avr/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avrxmega3/short-calls/libc.a(exit.o)
+/opt/microchip/xc8/v3.10/avr/bin/../lib/gcc/avr/5.4.0/avrxmega3/short-calls/libgcc.a(_copy_data.o)
+                              CMakeFiles/Wavelight_firmware_default_default_XC8_compile.dir/home/lcrm/Documents/EDA/WaveLight/FW/main.c.o (__do_copy_data)
+/opt/microchip/xc8/v3.10/avr/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avrxmega3/short-calls/libc.a(exit.o)
                               /home/lcrm/.mchp_packs/Microchip/ATtiny_DFP/3.4.278/xc8/avr/lib/avrxmega3/short-calls/crtattiny416.o (exit)
-/opt/microchip/xc8/v3.00/avr/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avrxmega3/short-calls/libc.a(_Exit.o)
-                              /opt/microchip/xc8/v3.00/avr/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avrxmega3/short-calls/libc.a(exit.o) (_Exit)
-/opt/microchip/xc8/v3.00/avr/bin/../lib/gcc/avr/5.4.0/avrxmega3/short-calls/libgcc.a(_exit.o)
-                              /opt/microchip/xc8/v3.00/avr/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avrxmega3/short-calls/libc.a(_Exit.o) (_exit)
+/opt/microchip/xc8/v3.10/avr/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avrxmega3/short-calls/libc.a(_Exit.o)
+                              /opt/microchip/xc8/v3.10/avr/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avrxmega3/short-calls/libc.a(exit.o) (_Exit)
+/opt/microchip/xc8/v3.10/avr/bin/../lib/gcc/avr/5.4.0/avrxmega3/short-calls/libgcc.a(_exit.o)
+                              /opt/microchip/xc8/v3.10/avr/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avrxmega3/short-calls/libc.a(_Exit.o) (_exit)
 
 Discarded input sections
 
  .data          0x0000000000000000        0x0 /home/lcrm/.mchp_packs/Microchip/ATtiny_DFP/3.4.278/xc8/avr/lib/avrxmega3/short-calls/crtattiny416.o
  .bss           0x0000000000000000        0x0 /home/lcrm/.mchp_packs/Microchip/ATtiny_DFP/3.4.278/xc8/avr/lib/avrxmega3/short-calls/crtattiny416.o
- .text          0x0000000000000000        0x0 CMakeFiles/Wavelight_firmware_default_default_XC8_compile.dir/home/lcrm/Documents/WaveLight/FW/main.c.o
- .data          0x0000000000000000        0x0 CMakeFiles/Wavelight_firmware_default_default_XC8_compile.dir/home/lcrm/Documents/WaveLight/FW/main.c.o
- .bss           0x0000000000000000        0x0 CMakeFiles/Wavelight_firmware_default_default_XC8_compile.dir/home/lcrm/Documents/WaveLight/FW/main.c.o
+ .text          0x0000000000000000        0x0 CMakeFiles/Wavelight_firmware_default_default_XC8_compile.dir/home/lcrm/Documents/EDA/WaveLight/FW/main.c.o
+ .data          0x0000000000000000        0x0 CMakeFiles/Wavelight_firmware_default_default_XC8_compile.dir/home/lcrm/Documents/EDA/WaveLight/FW/main.c.o
+ .bss           0x0000000000000000        0x0 CMakeFiles/Wavelight_firmware_default_default_XC8_compile.dir/home/lcrm/Documents/EDA/WaveLight/FW/main.c.o
  .rodata.tmf8801_meas_cfg
-                0x0000000000000000        0x8 CMakeFiles/Wavelight_firmware_default_default_XC8_compile.dir/home/lcrm/Documents/WaveLight/FW/main.c.o
- .text          0x0000000000000000        0x0 /opt/microchip/xc8/v3.00/avr/bin/../lib/gcc/avr/5.4.0/avrxmega3/short-calls/libgcc.a(_copy_data.o)
- .data          0x0000000000000000        0x0 /opt/microchip/xc8/v3.00/avr/bin/../lib/gcc/avr/5.4.0/avrxmega3/short-calls/libgcc.a(_copy_data.o)
- .bss           0x0000000000000000        0x0 /opt/microchip/xc8/v3.00/avr/bin/../lib/gcc/avr/5.4.0/avrxmega3/short-calls/libgcc.a(_copy_data.o)
+                0x0000000000000000        0x8 CMakeFiles/Wavelight_firmware_default_default_XC8_compile.dir/home/lcrm/Documents/EDA/WaveLight/FW/main.c.o
+ .text          0x0000000000000000        0x0 /opt/microchip/xc8/v3.10/avr/bin/../lib/gcc/avr/5.4.0/avrxmega3/short-calls/libgcc.a(_copy_data.o)
+ .data          0x0000000000000000        0x0 /opt/microchip/xc8/v3.10/avr/bin/../lib/gcc/avr/5.4.0/avrxmega3/short-calls/libgcc.a(_copy_data.o)
+ .bss           0x0000000000000000        0x0 /opt/microchip/xc8/v3.10/avr/bin/../lib/gcc/avr/5.4.0/avrxmega3/short-calls/libgcc.a(_copy_data.o)
  .text.libgcc.mul
-                0x0000000000000000        0x0 /opt/microchip/xc8/v3.00/avr/bin/../lib/gcc/avr/5.4.0/avrxmega3/short-calls/libgcc.a(_copy_data.o)
+                0x0000000000000000        0x0 /opt/microchip/xc8/v3.10/avr/bin/../lib/gcc/avr/5.4.0/avrxmega3/short-calls/libgcc.a(_copy_data.o)
  .text.libgcc.div
-                0x0000000000000000        0x0 /opt/microchip/xc8/v3.00/avr/bin/../lib/gcc/avr/5.4.0/avrxmega3/short-calls/libgcc.a(_copy_data.o)
- .text.libgcc   0x0000000000000000        0x0 /opt/microchip/xc8/v3.00/avr/bin/../lib/gcc/avr/5.4.0/avrxmega3/short-calls/libgcc.a(_copy_data.o)
+                0x0000000000000000        0x0 /opt/microchip/xc8/v3.10/avr/bin/../lib/gcc/avr/5.4.0/avrxmega3/short-calls/libgcc.a(_copy_data.o)
+ .text.libgcc   0x0000000000000000        0x0 /opt/microchip/xc8/v3.10/avr/bin/../lib/gcc/avr/5.4.0/avrxmega3/short-calls/libgcc.a(_copy_data.o)
  .text.libgcc.prologue
-                0x0000000000000000        0x0 /opt/microchip/xc8/v3.00/avr/bin/../lib/gcc/avr/5.4.0/avrxmega3/short-calls/libgcc.a(_copy_data.o)
+                0x0000000000000000        0x0 /opt/microchip/xc8/v3.10/avr/bin/../lib/gcc/avr/5.4.0/avrxmega3/short-calls/libgcc.a(_copy_data.o)
  .text.libgcc.builtins
-                0x0000000000000000        0x0 /opt/microchip/xc8/v3.00/avr/bin/../lib/gcc/avr/5.4.0/avrxmega3/short-calls/libgcc.a(_copy_data.o)
+                0x0000000000000000        0x0 /opt/microchip/xc8/v3.10/avr/bin/../lib/gcc/avr/5.4.0/avrxmega3/short-calls/libgcc.a(_copy_data.o)
  .text.libgcc.fmul
-                0x0000000000000000        0x0 /opt/microchip/xc8/v3.00/avr/bin/../lib/gcc/avr/5.4.0/avrxmega3/short-calls/libgcc.a(_copy_data.o)
+                0x0000000000000000        0x0 /opt/microchip/xc8/v3.10/avr/bin/../lib/gcc/avr/5.4.0/avrxmega3/short-calls/libgcc.a(_copy_data.o)
  .text.libgcc.fixed
-                0x0000000000000000        0x0 /opt/microchip/xc8/v3.00/avr/bin/../lib/gcc/avr/5.4.0/avrxmega3/short-calls/libgcc.a(_copy_data.o)
- .text          0x0000000000000000        0x0 /opt/microchip/xc8/v3.00/avr/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avrxmega3/short-calls/libc.a(exit.o)
- .data          0x0000000000000000        0x0 /opt/microchip/xc8/v3.00/avr/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avrxmega3/short-calls/libc.a(exit.o)
- .bss           0x0000000000000000        0x0 /opt/microchip/xc8/v3.00/avr/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avrxmega3/short-calls/libc.a(exit.o)
+                0x0000000000000000        0x0 /opt/microchip/xc8/v3.10/avr/bin/../lib/gcc/avr/5.4.0/avrxmega3/short-calls/libgcc.a(_copy_data.o)
+ .text          0x0000000000000000        0x0 /opt/microchip/xc8/v3.10/avr/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avrxmega3/short-calls/libc.a(exit.o)
+ .data          0x0000000000000000        0x0 /opt/microchip/xc8/v3.10/avr/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avrxmega3/short-calls/libc.a(exit.o)
+ .bss           0x0000000000000000        0x0 /opt/microchip/xc8/v3.10/avr/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avrxmega3/short-calls/libc.a(exit.o)
  .stack.descriptors
-                0x0000000000000000       0x73 /opt/microchip/xc8/v3.00/avr/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avrxmega3/short-calls/libc.a(exit.o)
- .text          0x0000000000000000        0x0 /opt/microchip/xc8/v3.00/avr/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avrxmega3/short-calls/libc.a(_Exit.o)
- .data          0x0000000000000000        0x0 /opt/microchip/xc8/v3.00/avr/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avrxmega3/short-calls/libc.a(_Exit.o)
- .bss           0x0000000000000000        0x0 /opt/microchip/xc8/v3.00/avr/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avrxmega3/short-calls/libc.a(_Exit.o)
+                0x0000000000000000       0x73 /opt/microchip/xc8/v3.10/avr/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avrxmega3/short-calls/libc.a(exit.o)
+ .text          0x0000000000000000        0x0 /opt/microchip/xc8/v3.10/avr/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avrxmega3/short-calls/libc.a(_Exit.o)
+ .data          0x0000000000000000        0x0 /opt/microchip/xc8/v3.10/avr/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avrxmega3/short-calls/libc.a(_Exit.o)
+ .bss           0x0000000000000000        0x0 /opt/microchip/xc8/v3.10/avr/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avrxmega3/short-calls/libc.a(_Exit.o)
  .stack.descriptors
-                0x0000000000000000       0x13 /opt/microchip/xc8/v3.00/avr/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avrxmega3/short-calls/libc.a(_Exit.o)
- .text          0x0000000000000000        0x0 /opt/microchip/xc8/v3.00/avr/bin/../lib/gcc/avr/5.4.0/avrxmega3/short-calls/libgcc.a(_exit.o)
- .data          0x0000000000000000        0x0 /opt/microchip/xc8/v3.00/avr/bin/../lib/gcc/avr/5.4.0/avrxmega3/short-calls/libgcc.a(_exit.o)
- .bss           0x0000000000000000        0x0 /opt/microchip/xc8/v3.00/avr/bin/../lib/gcc/avr/5.4.0/avrxmega3/short-calls/libgcc.a(_exit.o)
+                0x0000000000000000       0x13 /opt/microchip/xc8/v3.10/avr/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avrxmega3/short-calls/libc.a(_Exit.o)
+ .text          0x0000000000000000        0x0 /opt/microchip/xc8/v3.10/avr/bin/../lib/gcc/avr/5.4.0/avrxmega3/short-calls/libgcc.a(_exit.o)
+ .data          0x0000000000000000        0x0 /opt/microchip/xc8/v3.10/avr/bin/../lib/gcc/avr/5.4.0/avrxmega3/short-calls/libgcc.a(_exit.o)
+ .bss           0x0000000000000000        0x0 /opt/microchip/xc8/v3.10/avr/bin/../lib/gcc/avr/5.4.0/avrxmega3/short-calls/libgcc.a(_exit.o)
  .text.libgcc.mul
-                0x0000000000000000        0x0 /opt/microchip/xc8/v3.00/avr/bin/../lib/gcc/avr/5.4.0/avrxmega3/short-calls/libgcc.a(_exit.o)
+                0x0000000000000000        0x0 /opt/microchip/xc8/v3.10/avr/bin/../lib/gcc/avr/5.4.0/avrxmega3/short-calls/libgcc.a(_exit.o)
  .text.libgcc.div
-                0x0000000000000000        0x0 /opt/microchip/xc8/v3.00/avr/bin/../lib/gcc/avr/5.4.0/avrxmega3/short-calls/libgcc.a(_exit.o)
- .text.libgcc   0x0000000000000000        0x0 /opt/microchip/xc8/v3.00/avr/bin/../lib/gcc/avr/5.4.0/avrxmega3/short-calls/libgcc.a(_exit.o)
+                0x0000000000000000        0x0 /opt/microchip/xc8/v3.10/avr/bin/../lib/gcc/avr/5.4.0/avrxmega3/short-calls/libgcc.a(_exit.o)
+ .text.libgcc   0x0000000000000000        0x0 /opt/microchip/xc8/v3.10/avr/bin/../lib/gcc/avr/5.4.0/avrxmega3/short-calls/libgcc.a(_exit.o)
  .text.libgcc.prologue
-                0x0000000000000000        0x0 /opt/microchip/xc8/v3.00/avr/bin/../lib/gcc/avr/5.4.0/avrxmega3/short-calls/libgcc.a(_exit.o)
+                0x0000000000000000        0x0 /opt/microchip/xc8/v3.10/avr/bin/../lib/gcc/avr/5.4.0/avrxmega3/short-calls/libgcc.a(_exit.o)
  .stack.descriptors
-                0x0000000000000000       0x13 /opt/microchip/xc8/v3.00/avr/bin/../lib/gcc/avr/5.4.0/avrxmega3/short-calls/libgcc.a(_exit.o)
+                0x0000000000000000       0x13 /opt/microchip/xc8/v3.10/avr/bin/../lib/gcc/avr/5.4.0/avrxmega3/short-calls/libgcc.a(_exit.o)
  .text.libgcc.builtins
-                0x0000000000000000        0x0 /opt/microchip/xc8/v3.00/avr/bin/../lib/gcc/avr/5.4.0/avrxmega3/short-calls/libgcc.a(_exit.o)
+                0x0000000000000000        0x0 /opt/microchip/xc8/v3.10/avr/bin/../lib/gcc/avr/5.4.0/avrxmega3/short-calls/libgcc.a(_exit.o)
  .text.libgcc.fmul
-                0x0000000000000000        0x0 /opt/microchip/xc8/v3.00/avr/bin/../lib/gcc/avr/5.4.0/avrxmega3/short-calls/libgcc.a(_exit.o)
+                0x0000000000000000        0x0 /opt/microchip/xc8/v3.10/avr/bin/../lib/gcc/avr/5.4.0/avrxmega3/short-calls/libgcc.a(_exit.o)
  .text.libgcc.fixed
-                0x0000000000000000        0x0 /opt/microchip/xc8/v3.00/avr/bin/../lib/gcc/avr/5.4.0/avrxmega3/short-calls/libgcc.a(_exit.o)
+                0x0000000000000000        0x0 /opt/microchip/xc8/v3.10/avr/bin/../lib/gcc/avr/5.4.0/avrxmega3/short-calls/libgcc.a(_exit.o)
 
 Memory Configuration
 
@@ -82,11 +82,11 @@ Address of section .data set to 0x803f00
                 0x0000000000008000                __RODATA_PM_OFFSET__ = 0x8000
 LOAD /home/lcrm/.mchp_packs/Microchip/ATtiny_DFP/3.4.278/xc8/avr/lib/avrxmega3/short-calls/crtattiny416.o
                 0x0000000000000001                __MPLAB_BUILD = 0x1
-LOAD CMakeFiles/Wavelight_firmware_default_default_XC8_compile.dir/home/lcrm/Documents/WaveLight/FW/main.c.o
+LOAD CMakeFiles/Wavelight_firmware_default_default_XC8_compile.dir/home/lcrm/Documents/EDA/WaveLight/FW/main.c.o
 START GROUP
-LOAD /opt/microchip/xc8/v3.00/avr/bin/../lib/gcc/avr/5.4.0/avrxmega3/short-calls/libgcc.a
-LOAD /opt/microchip/xc8/v3.00/avr/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avrxmega3/short-calls/libm.a
-LOAD /opt/microchip/xc8/v3.00/avr/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avrxmega3/short-calls/libc.a
+LOAD /opt/microchip/xc8/v3.10/avr/bin/../lib/gcc/avr/5.4.0/avrxmega3/short-calls/libgcc.a
+LOAD /opt/microchip/xc8/v3.10/avr/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avrxmega3/short-calls/libm.a
+LOAD /opt/microchip/xc8/v3.10/avr/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avrxmega3/short-calls/libc.a
 LOAD /home/lcrm/.mchp_packs/Microchip/ATtiny_DFP/3.4.278/xc8/avr/lib/avrxmega3/short-calls/libattiny416.a
 END GROUP
                 [0x0000000000000000]                __TEXT_REGION_ORIGIN__ = DEFINED (__TEXT_REGION_ORIGIN__)?__TEXT_REGION_ORIGIN__:0x0
@@ -234,7 +234,7 @@ END GROUP
  *(.init3)
  *(.init3)
  *(.init4)
- .init4         0x000000000000005e       0x3c /opt/microchip/xc8/v3.00/avr/bin/../lib/gcc/avr/5.4.0/avrxmega3/short-calls/libgcc.a(_copy_data.o)
+ .init4         0x000000000000005e       0x3c /opt/microchip/xc8/v3.10/avr/bin/../lib/gcc/avr/5.4.0/avrxmega3/short-calls/libgcc.a(_copy_data.o)
                 0x000000000000005e                __do_copy_data
                 0x000000000000008c                __do_clear_bss
  *(.init4)
@@ -251,7 +251,7 @@ END GROUP
  *(.init9)
                 0x000000000000009e                . = ALIGN (0x2)
  *(.fini9)
- .fini9         0x000000000000009e        0x0 /opt/microchip/xc8/v3.00/avr/bin/../lib/gcc/avr/5.4.0/avrxmega3/short-calls/libgcc.a(_exit.o)
+ .fini9         0x000000000000009e        0x0 /opt/microchip/xc8/v3.10/avr/bin/../lib/gcc/avr/5.4.0/avrxmega3/short-calls/libgcc.a(_exit.o)
                 0x000000000000009e                _exit
  *(.fini9)
  *(.fini8)
@@ -271,7 +271,7 @@ END GROUP
  *(.fini1)
  *(.fini1)
  *(.fini0)
- .fini0         0x000000000000009e        0x4 /opt/microchip/xc8/v3.00/avr/bin/../lib/gcc/avr/5.4.0/avrxmega3/short-calls/libgcc.a(_exit.o)
+ .fini0         0x000000000000009e        0x4 /opt/microchip/xc8/v3.10/avr/bin/../lib/gcc/avr/5.4.0/avrxmega3/short-calls/libgcc.a(_exit.o)
  *(.fini0)
                 0x00000000000000a2                _etext = .
 
@@ -337,27 +337,27 @@ END GROUP
 
 .comment        0x0000000000000000       0x5b
  *(.comment)
- .comment       0x0000000000000000       0x2f CMakeFiles/Wavelight_firmware_default_default_XC8_compile.dir/home/lcrm/Documents/WaveLight/FW/main.c.o
+ .comment       0x0000000000000000       0x2f CMakeFiles/Wavelight_firmware_default_default_XC8_compile.dir/home/lcrm/Documents/EDA/WaveLight/FW/main.c.o
                                          0x30 (size before relaxing)
- .comment       0x000000000000002f       0x2c /opt/microchip/xc8/v3.00/avr/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avrxmega3/short-calls/libc.a(exit.o)
+ .comment       0x000000000000002f       0x2c /opt/microchip/xc8/v3.10/avr/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avrxmega3/short-calls/libc.a(exit.o)
                                          0x2d (size before relaxing)
- .comment       0x000000000000005b       0x2d /opt/microchip/xc8/v3.00/avr/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avrxmega3/short-calls/libc.a(_Exit.o)
+ .comment       0x000000000000005b       0x2d /opt/microchip/xc8/v3.10/avr/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avrxmega3/short-calls/libc.a(_Exit.o)
 
 .stack.descriptors.hdr
                 0x0000000000000000       0x2a
  .stack.descriptors.hdr
-                0x0000000000000000        0xe /opt/microchip/xc8/v3.00/avr/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avrxmega3/short-calls/libc.a(exit.o)
+                0x0000000000000000        0xe /opt/microchip/xc8/v3.10/avr/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avrxmega3/short-calls/libc.a(exit.o)
  .stack.descriptors.hdr
-                0x000000000000000e        0xe /opt/microchip/xc8/v3.00/avr/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avrxmega3/short-calls/libc.a(_Exit.o)
+                0x000000000000000e        0xe /opt/microchip/xc8/v3.10/avr/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avrxmega3/short-calls/libc.a(_Exit.o)
  .stack.descriptors.hdr
-                0x000000000000001c        0xe /opt/microchip/xc8/v3.00/avr/bin/../lib/gcc/avr/5.4.0/avrxmega3/short-calls/libgcc.a(_exit.o)
+                0x000000000000001c        0xe /opt/microchip/xc8/v3.10/avr/bin/../lib/gcc/avr/5.4.0/avrxmega3/short-calls/libgcc.a(_exit.o)
 
 .note.GNU-stack
                 0x0000000000000000        0x0
  .note.GNU-stack
-                0x0000000000000000        0x0 /opt/microchip/xc8/v3.00/avr/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avrxmega3/short-calls/libc.a(exit.o)
+                0x0000000000000000        0x0 /opt/microchip/xc8/v3.10/avr/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avrxmega3/short-calls/libc.a(exit.o)
  .note.GNU-stack
-                0x0000000000000000        0x0 /opt/microchip/xc8/v3.00/avr/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avrxmega3/short-calls/libc.a(_Exit.o)
+                0x0000000000000000        0x0 /opt/microchip/xc8/v3.10/avr/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avrxmega3/short-calls/libc.a(_Exit.o)
 
 .note.gnu.build-id
  *(.note.gnu.build-id)
@@ -374,37 +374,37 @@ END GROUP
 .debug_sfnames
  *(.debug_sfnames)
 
-.debug_aranges  0x0000000000000000      0x1b0
+.debug_aranges  0x0000000000000000      0x1b8
  *(.debug_aranges)
  .debug_aranges
-                0x0000000000000000      0x1b0 CMakeFiles/Wavelight_firmware_default_default_XC8_compile.dir/home/lcrm/Documents/WaveLight/FW/main.c.o
+                0x0000000000000000      0x1b8 CMakeFiles/Wavelight_firmware_default_default_XC8_compile.dir/home/lcrm/Documents/EDA/WaveLight/FW/main.c.o
 
 .debug_pubnames
  *(.debug_pubnames)
 
-.debug_info     0x0000000000000000     0x8baf
+.debug_info     0x0000000000000000     0x8c05
  *(.debug_info .gnu.linkonce.wi.*)
  .debug_info    0x0000000000000000     0x19c7 /home/lcrm/.mchp_packs/Microchip/ATtiny_DFP/3.4.278/xc8/avr/lib/avrxmega3/short-calls/crtattiny416.o
- .debug_info    0x00000000000019c7     0x71e8 CMakeFiles/Wavelight_firmware_default_default_XC8_compile.dir/home/lcrm/Documents/WaveLight/FW/main.c.o
+ .debug_info    0x00000000000019c7     0x723e CMakeFiles/Wavelight_firmware_default_default_XC8_compile.dir/home/lcrm/Documents/EDA/WaveLight/FW/main.c.o
 
 .debug_abbrev   0x0000000000000000     0x1b59
  *(.debug_abbrev)
  .debug_abbrev  0x0000000000000000     0x1864 /home/lcrm/.mchp_packs/Microchip/ATtiny_DFP/3.4.278/xc8/avr/lib/avrxmega3/short-calls/crtattiny416.o
- .debug_abbrev  0x0000000000001864      0x2f5 CMakeFiles/Wavelight_firmware_default_default_XC8_compile.dir/home/lcrm/Documents/WaveLight/FW/main.c.o
+ .debug_abbrev  0x0000000000001864      0x2f5 CMakeFiles/Wavelight_firmware_default_default_XC8_compile.dir/home/lcrm/Documents/EDA/WaveLight/FW/main.c.o
 
-.debug_line     0x0000000000000000     0x1059
+.debug_line     0x0000000000000000     0x10bd
  *(.debug_line .debug_line.* .debug_line_end)
  .debug_line    0x0000000000000000      0x136 /home/lcrm/.mchp_packs/Microchip/ATtiny_DFP/3.4.278/xc8/avr/lib/avrxmega3/short-calls/crtattiny416.o
- .debug_line    0x0000000000000136      0xf23 CMakeFiles/Wavelight_firmware_default_default_XC8_compile.dir/home/lcrm/Documents/WaveLight/FW/main.c.o
+ .debug_line    0x0000000000000136      0xf87 CMakeFiles/Wavelight_firmware_default_default_XC8_compile.dir/home/lcrm/Documents/EDA/WaveLight/FW/main.c.o
 
-.debug_frame    0x0000000000000000      0x520
+.debug_frame    0x0000000000000000      0x534
  *(.debug_frame)
- .debug_frame   0x0000000000000000      0x520 CMakeFiles/Wavelight_firmware_default_default_XC8_compile.dir/home/lcrm/Documents/WaveLight/FW/main.c.o
+ .debug_frame   0x0000000000000000      0x534 CMakeFiles/Wavelight_firmware_default_default_XC8_compile.dir/home/lcrm/Documents/EDA/WaveLight/FW/main.c.o
 
 .debug_str      0x0000000000000000      0xaf0
  *(.debug_str)
  .debug_str     0x0000000000000000      0xab9 /home/lcrm/.mchp_packs/Microchip/ATtiny_DFP/3.4.278/xc8/avr/lib/avrxmega3/short-calls/crtattiny416.o
- .debug_str     0x0000000000000ab9       0x37 CMakeFiles/Wavelight_firmware_default_default_XC8_compile.dir/home/lcrm/Documents/WaveLight/FW/main.c.o
+ .debug_str     0x0000000000000ab9       0x37 CMakeFiles/Wavelight_firmware_default_default_XC8_compile.dir/home/lcrm/Documents/EDA/WaveLight/FW/main.c.o
 
 .debug_loc
  *(.debug_loc)
@@ -427,13 +427,13 @@ END GROUP
 .debug_pubtypes
  *(.debug_pubtypes)
 
-.debug_ranges   0x0000000000000000      0x200
+.debug_ranges   0x0000000000000000      0x208
  *(.debug_ranges)
- .debug_ranges  0x0000000000000000      0x200 CMakeFiles/Wavelight_firmware_default_default_XC8_compile.dir/home/lcrm/Documents/WaveLight/FW/main.c.o
+ .debug_ranges  0x0000000000000000      0x208 CMakeFiles/Wavelight_firmware_default_default_XC8_compile.dir/home/lcrm/Documents/EDA/WaveLight/FW/main.c.o
 
 .debug_macro
  *(.debug_macro)
-OUTPUT(/home/lcrm/Documents/WaveLight/FW/out/Wavelight-firmware/default.elf elf32-avr)
+OUTPUT(/home/lcrm/Documents/EDA/WaveLight/FW/out/Wavelight-firmware/default.elf elf32-avr)
 LOAD linker stubs
 LOAD data_init
 
@@ -442,441 +442,446 @@ LOAD data_init
  .note.gnu.avr.deviceinfo
                 0x0000000000000000       0x3c /home/lcrm/.mchp_packs/Microchip/ATtiny_DFP/3.4.278/xc8/avr/lib/avrxmega3/short-calls/crtattiny416.o
 
-.bss.light_on   0x0000000000803f26        0x1
- .bss.light_on  0x0000000000803f26        0x1 CMakeFiles/Wavelight_firmware_default_default_XC8_compile.dir/home/lcrm/Documents/WaveLight/FW/main.c.o
+.bss.light_on   0x0000000000803f2a        0x1
+ .bss.light_on  0x0000000000803f2a        0x1 CMakeFiles/Wavelight_firmware_default_default_XC8_compile.dir/home/lcrm/Documents/EDA/WaveLight/FW/main.c.o
 
 .bss.light_brightness
-                0x0000000000803f27        0x1
+                0x0000000000803f2b        0x1
  .bss.light_brightness
-                0x0000000000803f27        0x1 CMakeFiles/Wavelight_firmware_default_default_XC8_compile.dir/home/lcrm/Documents/WaveLight/FW/main.c.o
+                0x0000000000803f2b        0x1 CMakeFiles/Wavelight_firmware_default_default_XC8_compile.dir/home/lcrm/Documents/EDA/WaveLight/FW/main.c.o
 
 .bss.light_tone
-                0x0000000000803f28        0x1
+                0x0000000000803f2c        0x1
  .bss.light_tone
-                0x0000000000803f28        0x1 CMakeFiles/Wavelight_firmware_default_default_XC8_compile.dir/home/lcrm/Documents/WaveLight/FW/main.c.o
+                0x0000000000803f2c        0x1 CMakeFiles/Wavelight_firmware_default_default_XC8_compile.dir/home/lcrm/Documents/EDA/WaveLight/FW/main.c.o
 
 .bss.light_level
-                0x0000000000803f14        0x2
+                0x0000000000803f18        0x2
  .bss.light_level
-                0x0000000000803f14        0x2 CMakeFiles/Wavelight_firmware_default_default_XC8_compile.dir/home/lcrm/Documents/WaveLight/FW/main.c.o
+                0x0000000000803f18        0x2 CMakeFiles/Wavelight_firmware_default_default_XC8_compile.dir/home/lcrm/Documents/EDA/WaveLight/FW/main.c.o
 
 .bss.flame_heat
-                0x0000000000803f0c        0x4
+                0x0000000000803f0c        0x6
  .bss.flame_heat
-                0x0000000000803f0c        0x4 CMakeFiles/Wavelight_firmware_default_default_XC8_compile.dir/home/lcrm/Documents/WaveLight/FW/main.c.o
+                0x0000000000803f0c        0x6 CMakeFiles/Wavelight_firmware_default_default_XC8_compile.dir/home/lcrm/Documents/EDA/WaveLight/FW/main.c.o
 
 .bss.flame_target
-                0x0000000000803f10        0x4
+                0x0000000000803f12        0x6
  .bss.flame_target
-                0x0000000000803f10        0x4 CMakeFiles/Wavelight_firmware_default_default_XC8_compile.dir/home/lcrm/Documents/WaveLight/FW/main.c.o
+                0x0000000000803f12        0x6 CMakeFiles/Wavelight_firmware_default_default_XC8_compile.dir/home/lcrm/Documents/EDA/WaveLight/FW/main.c.o
 
 .bss.gesture_mm
-                0x0000000000803f18        0x2
+                0x0000000000803f1c        0x2
  .bss.gesture_mm
-                0x0000000000803f18        0x2 CMakeFiles/Wavelight_firmware_default_default_XC8_compile.dir/home/lcrm/Documents/WaveLight/FW/main.c.o
+                0x0000000000803f1c        0x2 CMakeFiles/Wavelight_firmware_default_default_XC8_compile.dir/home/lcrm/Documents/EDA/WaveLight/FW/main.c.o
 
 .bss.gesture_bg_ticks
-                0x0000000000803f1e        0x2
+                0x0000000000803f22        0x2
  .bss.gesture_bg_ticks
-                0x0000000000803f1e        0x2 CMakeFiles/Wavelight_firmware_default_default_XC8_compile.dir/home/lcrm/Documents/WaveLight/FW/main.c.o
+                0x0000000000803f22        0x2 CMakeFiles/Wavelight_firmware_default_default_XC8_compile.dir/home/lcrm/Documents/EDA/WaveLight/FW/main.c.o
 
 .bss.gesture_present
-                0x0000000000803f29        0x1
+                0x0000000000803f2d        0x1
  .bss.gesture_present
-                0x0000000000803f29        0x1 CMakeFiles/Wavelight_firmware_default_default_XC8_compile.dir/home/lcrm/Documents/WaveLight/FW/main.c.o
+                0x0000000000803f2d        0x1 CMakeFiles/Wavelight_firmware_default_default_XC8_compile.dir/home/lcrm/Documents/EDA/WaveLight/FW/main.c.o
 
 .bss.gesture_missed
-                0x0000000000803f2a        0x1
+                0x0000000000803f2e        0x1
  .bss.gesture_missed
-                0x0000000000803f2a        0x1 CMakeFiles/Wavelight_firmware_default_default_XC8_compile.dir/home/lcrm/Documents/WaveLight/FW/main.c.o
+                0x0000000000803f2e        0x1 CMakeFiles/Wavelight_firmware_default_default_XC8_compile.dir/home/lcrm/Documents/EDA/WaveLight/FW/main.c.o
 
 .bss.gesture_last_mm
-                0x0000000000803f20        0x2
+                0x0000000000803f24        0x2
  .bss.gesture_last_mm
-                0x0000000000803f20        0x2 CMakeFiles/Wavelight_firmware_default_default_XC8_compile.dir/home/lcrm/Documents/WaveLight/FW/main.c.o
+                0x0000000000803f24        0x2 CMakeFiles/Wavelight_firmware_default_default_XC8_compile.dir/home/lcrm/Documents/EDA/WaveLight/FW/main.c.o
 
 .bss.gesture_hist
                 0x0000000000803f00        0xc
  .bss.gesture_hist
-                0x0000000000803f00        0xc CMakeFiles/Wavelight_firmware_default_default_XC8_compile.dir/home/lcrm/Documents/WaveLight/FW/main.c.o
+                0x0000000000803f00        0xc CMakeFiles/Wavelight_firmware_default_default_XC8_compile.dir/home/lcrm/Documents/EDA/WaveLight/FW/main.c.o
 
 .bss.gesture_hist_i
-                0x0000000000803f2b        0x1
+                0x0000000000803f2f        0x1
  .bss.gesture_hist_i
-                0x0000000000803f2b        0x1 CMakeFiles/Wavelight_firmware_default_default_XC8_compile.dir/home/lcrm/Documents/WaveLight/FW/main.c.o
+                0x0000000000803f2f        0x1 CMakeFiles/Wavelight_firmware_default_default_XC8_compile.dir/home/lcrm/Documents/EDA/WaveLight/FW/main.c.o
 
 .bss.gesture_near_ticks
-                0x0000000000803f2c        0x1
+                0x0000000000803f30        0x1
  .bss.gesture_near_ticks
-                0x0000000000803f2c        0x1 CMakeFiles/Wavelight_firmware_default_default_XC8_compile.dir/home/lcrm/Documents/WaveLight/FW/main.c.o
+                0x0000000000803f30        0x1 CMakeFiles/Wavelight_firmware_default_default_XC8_compile.dir/home/lcrm/Documents/EDA/WaveLight/FW/main.c.o
 
 .bss.gesture_gap_ticks
-                0x0000000000803f2d        0x1
+                0x0000000000803f31        0x1
  .bss.gesture_gap_ticks
-                0x0000000000803f2d        0x1 CMakeFiles/Wavelight_firmware_default_default_XC8_compile.dir/home/lcrm/Documents/WaveLight/FW/main.c.o
+                0x0000000000803f31        0x1 CMakeFiles/Wavelight_firmware_default_default_XC8_compile.dir/home/lcrm/Documents/EDA/WaveLight/FW/main.c.o
 
 .bss.gesture_holding
-                0x0000000000803f2e        0x1
+                0x0000000000803f32        0x1
  .bss.gesture_holding
-                0x0000000000803f2e        0x1 CMakeFiles/Wavelight_firmware_default_default_XC8_compile.dir/home/lcrm/Documents/WaveLight/FW/main.c.o
+                0x0000000000803f32        0x1 CMakeFiles/Wavelight_firmware_default_default_XC8_compile.dir/home/lcrm/Documents/EDA/WaveLight/FW/main.c.o
 
 .bss.gesture_hold_start_mm
-                0x0000000000803f22        0x2
+                0x0000000000803f26        0x2
  .bss.gesture_hold_start_mm
-                0x0000000000803f22        0x2 CMakeFiles/Wavelight_firmware_default_default_XC8_compile.dir/home/lcrm/Documents/WaveLight/FW/main.c.o
+                0x0000000000803f26        0x2 CMakeFiles/Wavelight_firmware_default_default_XC8_compile.dir/home/lcrm/Documents/EDA/WaveLight/FW/main.c.o
 
 .bss.gesture_tracking
-                0x0000000000803f2f        0x1
+                0x0000000000803f33        0x1
  .bss.gesture_tracking
-                0x0000000000803f2f        0x1 CMakeFiles/Wavelight_firmware_default_default_XC8_compile.dir/home/lcrm/Documents/WaveLight/FW/main.c.o
+                0x0000000000803f33        0x1 CMakeFiles/Wavelight_firmware_default_default_XC8_compile.dir/home/lcrm/Documents/EDA/WaveLight/FW/main.c.o
 
 .bss.gesture_ignore
-                0x0000000000803f30        0x1
+                0x0000000000803f34        0x1
  .bss.gesture_ignore
-                0x0000000000803f30        0x1 CMakeFiles/Wavelight_firmware_default_default_XC8_compile.dir/home/lcrm/Documents/WaveLight/FW/main.c.o
+                0x0000000000803f34        0x1 CMakeFiles/Wavelight_firmware_default_default_XC8_compile.dir/home/lcrm/Documents/EDA/WaveLight/FW/main.c.o
 
-.bss.tone_mode  0x0000000000803f31        0x1
+.bss.tone_mode  0x0000000000803f35        0x1
  .bss.tone_mode
-                0x0000000000803f31        0x1 CMakeFiles/Wavelight_firmware_default_default_XC8_compile.dir/home/lcrm/Documents/WaveLight/FW/main.c.o
+                0x0000000000803f35        0x1 CMakeFiles/Wavelight_firmware_default_default_XC8_compile.dir/home/lcrm/Documents/EDA/WaveLight/FW/main.c.o
 
 .bss.tone_timeout
-                0x0000000000803f24        0x2
+                0x0000000000803f28        0x2
  .bss.tone_timeout
-                0x0000000000803f24        0x2 CMakeFiles/Wavelight_firmware_default_default_XC8_compile.dir/home/lcrm/Documents/WaveLight/FW/main.c.o
+                0x0000000000803f28        0x2 CMakeFiles/Wavelight_firmware_default_default_XC8_compile.dir/home/lcrm/Documents/EDA/WaveLight/FW/main.c.o
 
-.bss.last_num.4135
-                0x0000000000803f32        0x1
- .bss.last_num.4135
-                0x0000000000803f32        0x1 CMakeFiles/Wavelight_firmware_default_default_XC8_compile.dir/home/lcrm/Documents/WaveLight/FW/main.c.o
+.bss.last_num.4140
+                0x0000000000803f36        0x1
+ .bss.last_num.4140
+                0x0000000000803f36        0x1 CMakeFiles/Wavelight_firmware_default_default_XC8_compile.dir/home/lcrm/Documents/EDA/WaveLight/FW/main.c.o
 
 .text.gesture_update
                 0x00000000000000a2      0x194
  .text.gesture_update
-                0x00000000000000a2      0x194 CMakeFiles/Wavelight_firmware_default_default_XC8_compile.dir/home/lcrm/Documents/WaveLight/FW/main.c.o
+                0x00000000000000a2      0x194 CMakeFiles/Wavelight_firmware_default_default_XC8_compile.dir/home/lcrm/Documents/EDA/WaveLight/FW/main.c.o
 
 .text.startup.main
                 0x0000000000000236      0x144
  .text.startup.main
-                0x0000000000000236      0x144 CMakeFiles/Wavelight_firmware_default_default_XC8_compile.dir/home/lcrm/Documents/WaveLight/FW/main.c.o
+                0x0000000000000236      0x144 CMakeFiles/Wavelight_firmware_default_default_XC8_compile.dir/home/lcrm/Documents/EDA/WaveLight/FW/main.c.o
                 0x0000000000000236                main
 
 .text.light_color
                 0x000000000000037a      0x118
  .text.light_color
-                0x000000000000037a      0x118 CMakeFiles/Wavelight_firmware_default_default_XC8_compile.dir/home/lcrm/Documents/WaveLight/FW/main.c.o
+                0x000000000000037a      0x118 CMakeFiles/Wavelight_firmware_default_default_XC8_compile.dir/home/lcrm/Documents/EDA/WaveLight/FW/main.c.o
 
 .text.flame_render
                 0x0000000000000492      0x114
  .text.flame_render
-                0x0000000000000492      0x114 CMakeFiles/Wavelight_firmware_default_default_XC8_compile.dir/home/lcrm/Documents/WaveLight/FW/main.c.o
+                0x0000000000000492      0x114 CMakeFiles/Wavelight_firmware_default_default_XC8_compile.dir/home/lcrm/Documents/EDA/WaveLight/FW/main.c.o
 
 .text.tick      0x00000000000005a6       0xb8
- .text.tick     0x00000000000005a6       0xb8 CMakeFiles/Wavelight_firmware_default_default_XC8_compile.dir/home/lcrm/Documents/WaveLight/FW/main.c.o
+ .text.tick     0x00000000000005a6       0xb8 CMakeFiles/Wavelight_firmware_default_default_XC8_compile.dir/home/lcrm/Documents/EDA/WaveLight/FW/main.c.o
 
 .text.gesture_reading
                 0x000000000000065e       0x98
  .text.gesture_reading
-                0x000000000000065e       0x98 CMakeFiles/Wavelight_firmware_default_default_XC8_compile.dir/home/lcrm/Documents/WaveLight/FW/main.c.o
+                0x000000000000065e       0x98 CMakeFiles/Wavelight_firmware_default_default_XC8_compile.dir/home/lcrm/Documents/EDA/WaveLight/FW/main.c.o
 
 .text.twi_read_reg
                 0x00000000000006f6       0x82
  .text.twi_read_reg
-                0x00000000000006f6       0x82 CMakeFiles/Wavelight_firmware_default_default_XC8_compile.dir/home/lcrm/Documents/WaveLight/FW/main.c.o
+                0x00000000000006f6       0x82 CMakeFiles/Wavelight_firmware_default_default_XC8_compile.dir/home/lcrm/Documents/EDA/WaveLight/FW/main.c.o
 
 .text.tmf8801_start
                 0x0000000000000778       0x7e
  .text.tmf8801_start
-                0x0000000000000778       0x7e CMakeFiles/Wavelight_firmware_default_default_XC8_compile.dir/home/lcrm/Documents/WaveLight/FW/main.c.o
+                0x0000000000000778       0x7e CMakeFiles/Wavelight_firmware_default_default_XC8_compile.dir/home/lcrm/Documents/EDA/WaveLight/FW/main.c.o
 
 .text.tmf8801_get_distance
                 0x00000000000007f6       0x72
  .text.tmf8801_get_distance
-                0x00000000000007f6       0x72 CMakeFiles/Wavelight_firmware_default_default_XC8_compile.dir/home/lcrm/Documents/WaveLight/FW/main.c.o
+                0x00000000000007f6       0x72 CMakeFiles/Wavelight_firmware_default_default_XC8_compile.dir/home/lcrm/Documents/EDA/WaveLight/FW/main.c.o
 
 .text.light_update
                 0x0000000000000868       0x70
  .text.light_update
-                0x0000000000000868       0x70 CMakeFiles/Wavelight_firmware_default_default_XC8_compile.dir/home/lcrm/Documents/WaveLight/FW/main.c.o
-
-.text.twi_write_reg
-                0x00000000000008d8       0x56
- .text.twi_write_reg
-                0x00000000000008d8       0x56 CMakeFiles/Wavelight_firmware_default_default_XC8_compile.dir/home/lcrm/Documents/WaveLight/FW/main.c.o
-
-.text.settings_save
-                0x000000000000092e       0x4e
- .text.settings_save
-                0x000000000000092e       0x4e CMakeFiles/Wavelight_firmware_default_default_XC8_compile.dir/home/lcrm/Documents/WaveLight/FW/main.c.o
+                0x0000000000000868       0x70 CMakeFiles/Wavelight_firmware_default_default_XC8_compile.dir/home/lcrm/Documents/EDA/WaveLight/FW/main.c.o
 
 .text.ws2812b_bar
-                0x000000000000097c       0x48
+                0x00000000000008d8       0x58
  .text.ws2812b_bar
-                0x000000000000097c       0x48 CMakeFiles/Wavelight_firmware_default_default_XC8_compile.dir/home/lcrm/Documents/WaveLight/FW/main.c.o
+                0x00000000000008d8       0x58 CMakeFiles/Wavelight_firmware_default_default_XC8_compile.dir/home/lcrm/Documents/EDA/WaveLight/FW/main.c.o
 
-.text.tmf8801_calibrate
-                0x00000000000009c4       0x46
- .text.tmf8801_calibrate
-                0x00000000000009c4       0x46 CMakeFiles/Wavelight_firmware_default_default_XC8_compile.dir/home/lcrm/Documents/WaveLight/FW/main.c.o
+.text.twi_write_reg
+                0x0000000000000930       0x56
+ .text.twi_write_reg
+                0x0000000000000930       0x56 CMakeFiles/Wavelight_firmware_default_default_XC8_compile.dir/home/lcrm/Documents/EDA/WaveLight/FW/main.c.o
 
-.text.tmf8801_init
-                0x0000000000000a0a       0x44
- .text.tmf8801_init
-                0x0000000000000a0a       0x44 CMakeFiles/Wavelight_firmware_default_default_XC8_compile.dir/home/lcrm/Documents/WaveLight/FW/main.c.o
-
-.text.eeprom_write
-                0x0000000000000a4e       0x40
- .text.eeprom_write
-                0x0000000000000a4e       0x40 CMakeFiles/Wavelight_firmware_default_default_XC8_compile.dir/home/lcrm/Documents/WaveLight/FW/main.c.o
-
-.text.tmf8801_wait_for
-                0x0000000000000a8e       0x3e
- .text.tmf8801_wait_for
-                0x0000000000000a8e       0x3e CMakeFiles/Wavelight_firmware_default_default_XC8_compile.dir/home/lcrm/Documents/WaveLight/FW/main.c.o
+.text.settings_save
+                0x0000000000000986       0x4e
+ .text.settings_save
+                0x0000000000000986       0x4e CMakeFiles/Wavelight_firmware_default_default_XC8_compile.dir/home/lcrm/Documents/EDA/WaveLight/FW/main.c.o
 
 .text.ws2812b_show
-                0x0000000000000acc       0x38
+                0x00000000000009d4       0x4c
  .text.ws2812b_show
-                0x0000000000000acc       0x38 CMakeFiles/Wavelight_firmware_default_default_XC8_compile.dir/home/lcrm/Documents/WaveLight/FW/main.c.o
+                0x00000000000009d4       0x4c CMakeFiles/Wavelight_firmware_default_default_XC8_compile.dir/home/lcrm/Documents/EDA/WaveLight/FW/main.c.o
+
+.text.tmf8801_calibrate
+                0x0000000000000a20       0x46
+ .text.tmf8801_calibrate
+                0x0000000000000a20       0x46 CMakeFiles/Wavelight_firmware_default_default_XC8_compile.dir/home/lcrm/Documents/EDA/WaveLight/FW/main.c.o
+
+.text.tmf8801_init
+                0x0000000000000a66       0x44
+ .text.tmf8801_init
+                0x0000000000000a66       0x44 CMakeFiles/Wavelight_firmware_default_default_XC8_compile.dir/home/lcrm/Documents/EDA/WaveLight/FW/main.c.o
+
+.text.eeprom_write
+                0x0000000000000aaa       0x40
+ .text.eeprom_write
+                0x0000000000000aaa       0x40 CMakeFiles/Wavelight_firmware_default_default_XC8_compile.dir/home/lcrm/Documents/EDA/WaveLight/FW/main.c.o
+
+.text.tmf8801_wait_for
+                0x0000000000000aea       0x3e
+ .text.tmf8801_wait_for
+                0x0000000000000aea       0x3e CMakeFiles/Wavelight_firmware_default_default_XC8_compile.dir/home/lcrm/Documents/EDA/WaveLight/FW/main.c.o
 
 .text.flame_rand
-                0x0000000000000b04       0x36
+                0x0000000000000b28       0x36
  .text.flame_rand
-                0x0000000000000b04       0x36 CMakeFiles/Wavelight_firmware_default_default_XC8_compile.dir/home/lcrm/Documents/WaveLight/FW/main.c.o
+                0x0000000000000b28       0x36 CMakeFiles/Wavelight_firmware_default_default_XC8_compile.dir/home/lcrm/Documents/EDA/WaveLight/FW/main.c.o
 
 .text.pins_init
-                0x0000000000000b3a       0x36
+                0x0000000000000b5e       0x36
  .text.pins_init
-                0x0000000000000b3a       0x36 CMakeFiles/Wavelight_firmware_default_default_XC8_compile.dir/home/lcrm/Documents/WaveLight/FW/main.c.o
+                0x0000000000000b5e       0x36 CMakeFiles/Wavelight_firmware_default_default_XC8_compile.dir/home/lcrm/Documents/EDA/WaveLight/FW/main.c.o
 
 .text.gesture_idle
-                0x0000000000000b70       0x30
+                0x0000000000000b94       0x30
  .text.gesture_idle
-                0x0000000000000b70       0x30 CMakeFiles/Wavelight_firmware_default_default_XC8_compile.dir/home/lcrm/Documents/WaveLight/FW/main.c.o
+                0x0000000000000b94       0x30 CMakeFiles/Wavelight_firmware_default_default_XC8_compile.dir/home/lcrm/Documents/EDA/WaveLight/FW/main.c.o
 
 .text.blink_red
-                0x0000000000000ba0       0x2c
+                0x0000000000000bc4       0x2c
  .text.blink_red
-                0x0000000000000ba0       0x2c CMakeFiles/Wavelight_firmware_default_default_XC8_compile.dir/home/lcrm/Documents/WaveLight/FW/main.c.o
+                0x0000000000000bc4       0x2c CMakeFiles/Wavelight_firmware_default_default_XC8_compile.dir/home/lcrm/Documents/EDA/WaveLight/FW/main.c.o
 
 .text.sensor_mode
-                0x0000000000000bcc       0x28
+                0x0000000000000bf0       0x28
  .text.sensor_mode
-                0x0000000000000bcc       0x28 CMakeFiles/Wavelight_firmware_default_default_XC8_compile.dir/home/lcrm/Documents/WaveLight/FW/main.c.o
+                0x0000000000000bf0       0x28 CMakeFiles/Wavelight_firmware_default_default_XC8_compile.dir/home/lcrm/Documents/EDA/WaveLight/FW/main.c.o
 
 .text.tmf8801_read
-                0x0000000000000bf4       0x24
+                0x0000000000000c18       0x24
  .text.tmf8801_read
-                0x0000000000000bf4       0x24 CMakeFiles/Wavelight_firmware_default_default_XC8_compile.dir/home/lcrm/Documents/WaveLight/FW/main.c.o
+                0x0000000000000c18       0x24 CMakeFiles/Wavelight_firmware_default_default_XC8_compile.dir/home/lcrm/Documents/EDA/WaveLight/FW/main.c.o
 
 .text.tmf8801_write
-                0x0000000000000c18       0x22
+                0x0000000000000c3c       0x22
  .text.tmf8801_write
-                0x0000000000000c18       0x22 CMakeFiles/Wavelight_firmware_default_default_XC8_compile.dir/home/lcrm/Documents/WaveLight/FW/main.c.o
+                0x0000000000000c3c       0x22 CMakeFiles/Wavelight_firmware_default_default_XC8_compile.dir/home/lcrm/Documents/EDA/WaveLight/FW/main.c.o
 
 .text.ws2812b_send_byte
-                0x0000000000000c3a       0x20
+                0x0000000000000c5e       0x20
  .text.ws2812b_send_byte
-                0x0000000000000c3a       0x20 CMakeFiles/Wavelight_firmware_default_default_XC8_compile.dir/home/lcrm/Documents/WaveLight/FW/main.c.o
+                0x0000000000000c5e       0x20 CMakeFiles/Wavelight_firmware_default_default_XC8_compile.dir/home/lcrm/Documents/EDA/WaveLight/FW/main.c.o
 
 .text.twi_start_reg
-                0x0000000000000c5a       0x1e
+                0x0000000000000c7e       0x1e
  .text.twi_start_reg
-                0x0000000000000c5a       0x1e CMakeFiles/Wavelight_firmware_default_default_XC8_compile.dir/home/lcrm/Documents/WaveLight/FW/main.c.o
+                0x0000000000000c7e       0x1e CMakeFiles/Wavelight_firmware_default_default_XC8_compile.dir/home/lcrm/Documents/EDA/WaveLight/FW/main.c.o
+
+.text.is_quiet  0x0000000000000c9c       0x1e
+ .text.is_quiet
+                0x0000000000000c9c       0x1e CMakeFiles/Wavelight_firmware_default_default_XC8_compile.dir/home/lcrm/Documents/EDA/WaveLight/FW/main.c.o
 
 .text.light_fading
-                0x0000000000000c78       0x1c
+                0x0000000000000cba       0x1c
  .text.light_fading
-                0x0000000000000c78       0x1c CMakeFiles/Wavelight_firmware_default_default_XC8_compile.dir/home/lcrm/Documents/WaveLight/FW/main.c.o
+                0x0000000000000cba       0x1c CMakeFiles/Wavelight_firmware_default_default_XC8_compile.dir/home/lcrm/Documents/EDA/WaveLight/FW/main.c.o
 
 .text.gesture_set_tracking
-                0x0000000000000c94       0x1c
+                0x0000000000000cd6       0x1c
  .text.gesture_set_tracking
-                0x0000000000000c94       0x1c CMakeFiles/Wavelight_firmware_default_default_XC8_compile.dir/home/lcrm/Documents/WaveLight/FW/main.c.o
+                0x0000000000000cd6       0x1c CMakeFiles/Wavelight_firmware_default_default_XC8_compile.dir/home/lcrm/Documents/EDA/WaveLight/FW/main.c.o
 
-.text.delay_ms  0x0000000000000cb0       0x1c
+.text.delay_ms  0x0000000000000cf2       0x1c
  .text.delay_ms
-                0x0000000000000cb0       0x1c CMakeFiles/Wavelight_firmware_default_default_XC8_compile.dir/home/lcrm/Documents/WaveLight/FW/main.c.o
-                0x0000000000000cb0                delay_ms
+                0x0000000000000cf2       0x1c CMakeFiles/Wavelight_firmware_default_default_XC8_compile.dir/home/lcrm/Documents/EDA/WaveLight/FW/main.c.o
+                0x0000000000000cf2                delay_ms
 
-.text.twi_init  0x0000000000000ccc       0x1a
+.text.ws2812b_height
+                0x0000000000000d0e       0x1a
+ .text.ws2812b_height
+                0x0000000000000d0e       0x1a CMakeFiles/Wavelight_firmware_default_default_XC8_compile.dir/home/lcrm/Documents/EDA/WaveLight/FW/main.c.o
+
+.text.twi_init  0x0000000000000d28       0x1a
  .text.twi_init
-                0x0000000000000ccc       0x1a CMakeFiles/Wavelight_firmware_default_default_XC8_compile.dir/home/lcrm/Documents/WaveLight/FW/main.c.o
+                0x0000000000000d28       0x1a CMakeFiles/Wavelight_firmware_default_default_XC8_compile.dir/home/lcrm/Documents/EDA/WaveLight/FW/main.c.o
 
 .text.adjust_value
-                0x0000000000000ce6       0x1a
+                0x0000000000000d42       0x1a
  .text.adjust_value
-                0x0000000000000ce6       0x1a CMakeFiles/Wavelight_firmware_default_default_XC8_compile.dir/home/lcrm/Documents/WaveLight/FW/main.c.o
+                0x0000000000000d42       0x1a CMakeFiles/Wavelight_firmware_default_default_XC8_compile.dir/home/lcrm/Documents/EDA/WaveLight/FW/main.c.o
 
 .text.__vector_5
-                0x0000000000000d00       0x1a
+                0x0000000000000d5c       0x1a
  .text.__vector_5
-                0x0000000000000d00       0x1a CMakeFiles/Wavelight_firmware_default_default_XC8_compile.dir/home/lcrm/Documents/WaveLight/FW/main.c.o
-                0x0000000000000d00                __vector_5
+                0x0000000000000d5c       0x1a CMakeFiles/Wavelight_firmware_default_default_XC8_compile.dir/home/lcrm/Documents/EDA/WaveLight/FW/main.c.o
+                0x0000000000000d5c                __vector_5
 
 .text.settings_load
-                0x0000000000000d1a       0x18
+                0x0000000000000d76       0x18
  .text.settings_load
-                0x0000000000000d1a       0x18 CMakeFiles/Wavelight_firmware_default_default_XC8_compile.dir/home/lcrm/Documents/WaveLight/FW/main.c.o
+                0x0000000000000d76       0x18 CMakeFiles/Wavelight_firmware_default_default_XC8_compile.dir/home/lcrm/Documents/EDA/WaveLight/FW/main.c.o
 
 .text.sleep_until_sensor
-                0x0000000000000d32       0x18
+                0x0000000000000d8e       0x18
  .text.sleep_until_sensor
-                0x0000000000000d32       0x18 CMakeFiles/Wavelight_firmware_default_default_XC8_compile.dir/home/lcrm/Documents/WaveLight/FW/main.c.o
+                0x0000000000000d8e       0x18 CMakeFiles/Wavelight_firmware_default_default_XC8_compile.dir/home/lcrm/Documents/EDA/WaveLight/FW/main.c.o
 
-.text.scale8    0x0000000000000d4a       0x16
- .text.scale8   0x0000000000000d4a       0x16 CMakeFiles/Wavelight_firmware_default_default_XC8_compile.dir/home/lcrm/Documents/WaveLight/FW/main.c.o
+.text.scale8    0x0000000000000da6       0x16
+ .text.scale8   0x0000000000000da6       0x16 CMakeFiles/Wavelight_firmware_default_default_XC8_compile.dir/home/lcrm/Documents/EDA/WaveLight/FW/main.c.o
 
 .text.gesture_diff
-                0x0000000000000d60       0x16
+                0x0000000000000dbc       0x16
  .text.gesture_diff
-                0x0000000000000d60       0x16 CMakeFiles/Wavelight_firmware_default_default_XC8_compile.dir/home/lcrm/Documents/WaveLight/FW/main.c.o
-
-.text.is_quiet  0x0000000000000d76       0x16
- .text.is_quiet
-                0x0000000000000d76       0x16 CMakeFiles/Wavelight_firmware_default_default_XC8_compile.dir/home/lcrm/Documents/WaveLight/FW/main.c.o
+                0x0000000000000dbc       0x16 CMakeFiles/Wavelight_firmware_default_default_XC8_compile.dir/home/lcrm/Documents/EDA/WaveLight/FW/main.c.o
 
 .text.light_target
-                0x0000000000000d8c       0x14
+                0x0000000000000dd2       0x14
  .text.light_target
-                0x0000000000000d8c       0x14 CMakeFiles/Wavelight_firmware_default_default_XC8_compile.dir/home/lcrm/Documents/WaveLight/FW/main.c.o
+                0x0000000000000dd2       0x14 CMakeFiles/Wavelight_firmware_default_default_XC8_compile.dir/home/lcrm/Documents/EDA/WaveLight/FW/main.c.o
 
-.text.cal_save  0x0000000000000da0       0x12
+.text.cal_save  0x0000000000000de6       0x12
  .text.cal_save
-                0x0000000000000da0       0x12 CMakeFiles/Wavelight_firmware_default_default_XC8_compile.dir/home/lcrm/Documents/WaveLight/FW/main.c.o
+                0x0000000000000de6       0x12 CMakeFiles/Wavelight_firmware_default_default_XC8_compile.dir/home/lcrm/Documents/EDA/WaveLight/FW/main.c.o
 
 .rodata.white_rgb
-                0x0000000000808db2        0xf load address 0x0000000000000db2
+                0x0000000000808df8        0xf load address 0x0000000000000df8
  .rodata.white_rgb
-                0x0000000000808db2        0xf CMakeFiles/Wavelight_firmware_default_default_XC8_compile.dir/home/lcrm/Documents/WaveLight/FW/main.c.o
+                0x0000000000808df8        0xf CMakeFiles/Wavelight_firmware_default_default_XC8_compile.dir/home/lcrm/Documents/EDA/WaveLight/FW/main.c.o
 
-.rodata.magic.4283
-                0x0000000000808dc1        0x1 load address 0x0000000000000dc1
- .rodata.magic.4283
-                0x0000000000808dc1        0x1 CMakeFiles/Wavelight_firmware_default_default_XC8_compile.dir/home/lcrm/Documents/WaveLight/FW/main.c.o
+.rodata.magic.4288
+                0x0000000000808e07        0x1 load address 0x0000000000000e07
+ .rodata.magic.4288
+                0x0000000000808e07        0x1 CMakeFiles/Wavelight_firmware_default_default_XC8_compile.dir/home/lcrm/Documents/EDA/WaveLight/FW/main.c.o
 
-.text.twi_wait  0x0000000000000dc2        0xe
+.text.twi_wait  0x0000000000000e08        0xe
  .text.twi_wait
-                0x0000000000000dc2        0xe CMakeFiles/Wavelight_firmware_default_default_XC8_compile.dir/home/lcrm/Documents/WaveLight/FW/main.c.o
+                0x0000000000000e08        0xe CMakeFiles/Wavelight_firmware_default_default_XC8_compile.dir/home/lcrm/Documents/EDA/WaveLight/FW/main.c.o
 
-.text.gamma8    0x0000000000000dd0        0xe
- .text.gamma8   0x0000000000000dd0        0xe CMakeFiles/Wavelight_firmware_default_default_XC8_compile.dir/home/lcrm/Documents/WaveLight/FW/main.c.o
+.text.gamma8    0x0000000000000e16        0xe
+ .text.gamma8   0x0000000000000e16        0xe CMakeFiles/Wavelight_firmware_default_default_XC8_compile.dir/home/lcrm/Documents/EDA/WaveLight/FW/main.c.o
 
-.text.exit      0x0000000000000dde        0xe
- .text.exit     0x0000000000000dde        0xe /opt/microchip/xc8/v3.00/avr/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avrxmega3/short-calls/libc.a(exit.o)
-                0x0000000000000dde                exit
+.text.exit      0x0000000000000e24        0xe
+ .text.exit     0x0000000000000e24        0xe /opt/microchip/xc8/v3.10/avr/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avrxmega3/short-calls/libc.a(exit.o)
+                0x0000000000000e24                exit
 
 .text.light_set_brightness
-                0x0000000000000dec        0xc
+                0x0000000000000e32        0xc
  .text.light_set_brightness
-                0x0000000000000dec        0xc CMakeFiles/Wavelight_firmware_default_default_XC8_compile.dir/home/lcrm/Documents/WaveLight/FW/main.c.o
+                0x0000000000000e32        0xc CMakeFiles/Wavelight_firmware_default_default_XC8_compile.dir/home/lcrm/Documents/EDA/WaveLight/FW/main.c.o
 
 .text.light_init
-                0x0000000000000df8        0xc
+                0x0000000000000e3e        0xc
  .text.light_init
-                0x0000000000000df8        0xc CMakeFiles/Wavelight_firmware_default_default_XC8_compile.dir/home/lcrm/Documents/WaveLight/FW/main.c.o
+                0x0000000000000e3e        0xc CMakeFiles/Wavelight_firmware_default_default_XC8_compile.dir/home/lcrm/Documents/EDA/WaveLight/FW/main.c.o
 
 .text.tmf8801_stop
-                0x0000000000000e04        0xa
+                0x0000000000000e4a        0xa
  .text.tmf8801_stop
-                0x0000000000000e04        0xa CMakeFiles/Wavelight_firmware_default_default_XC8_compile.dir/home/lcrm/Documents/WaveLight/FW/main.c.o
+                0x0000000000000e4a        0xa CMakeFiles/Wavelight_firmware_default_default_XC8_compile.dir/home/lcrm/Documents/EDA/WaveLight/FW/main.c.o
 
 .text.light_flash
-                0x0000000000000e0e        0xa
+                0x0000000000000e54        0xa
  .text.light_flash
-                0x0000000000000e0e        0xa CMakeFiles/Wavelight_firmware_default_default_XC8_compile.dir/home/lcrm/Documents/WaveLight/FW/main.c.o
+                0x0000000000000e54        0xa CMakeFiles/Wavelight_firmware_default_default_XC8_compile.dir/home/lcrm/Documents/EDA/WaveLight/FW/main.c.o
 
 .text.ws2812b_init
-                0x0000000000000e18        0x6
+                0x0000000000000e5e        0x6
  .text.ws2812b_init
-                0x0000000000000e18        0x6 CMakeFiles/Wavelight_firmware_default_default_XC8_compile.dir/home/lcrm/Documents/WaveLight/FW/main.c.o
+                0x0000000000000e5e        0x6 CMakeFiles/Wavelight_firmware_default_default_XC8_compile.dir/home/lcrm/Documents/EDA/WaveLight/FW/main.c.o
 
 .text.light_set_on
-                0x0000000000000e1e        0x6
+                0x0000000000000e64        0x6
  .text.light_set_on
-                0x0000000000000e1e        0x6 CMakeFiles/Wavelight_firmware_default_default_XC8_compile.dir/home/lcrm/Documents/WaveLight/FW/main.c.o
+                0x0000000000000e64        0x6 CMakeFiles/Wavelight_firmware_default_default_XC8_compile.dir/home/lcrm/Documents/EDA/WaveLight/FW/main.c.o
 
 .text.light_set_tone
-                0x0000000000000e24        0x6
+                0x0000000000000e6a        0x6
  .text.light_set_tone
-                0x0000000000000e24        0x6 CMakeFiles/Wavelight_firmware_default_default_XC8_compile.dir/home/lcrm/Documents/WaveLight/FW/main.c.o
+                0x0000000000000e6a        0x6 CMakeFiles/Wavelight_firmware_default_default_XC8_compile.dir/home/lcrm/Documents/EDA/WaveLight/FW/main.c.o
 
-.text.fail      0x0000000000000e2a        0x6
- .text.fail     0x0000000000000e2a        0x6 CMakeFiles/Wavelight_firmware_default_default_XC8_compile.dir/home/lcrm/Documents/WaveLight/FW/main.c.o
+.text.fail      0x0000000000000e70        0x6
+ .text.fail     0x0000000000000e70        0x6 CMakeFiles/Wavelight_firmware_default_default_XC8_compile.dir/home/lcrm/Documents/EDA/WaveLight/FW/main.c.o
 
-.rodata.wheel_full.4173
-                0x0000000000808e30        0x6 load address 0x0000000000000e30
- .rodata.wheel_full.4173
-                0x0000000000808e30        0x6 CMakeFiles/Wavelight_firmware_default_default_XC8_compile.dir/home/lcrm/Documents/WaveLight/FW/main.c.o
+.rodata.wheel_full.4178
+                0x0000000000808e76        0x6 load address 0x0000000000000e76
+ .rodata.wheel_full.4178
+                0x0000000000808e76        0x6 CMakeFiles/Wavelight_firmware_default_default_XC8_compile.dir/home/lcrm/Documents/EDA/WaveLight/FW/main.c.o
 
-.rodata.wheel_ramp.4174
-                0x0000000000808e36        0x6 load address 0x0000000000000e36
- .rodata.wheel_ramp.4174
-                0x0000000000808e36        0x6 CMakeFiles/Wavelight_firmware_default_default_XC8_compile.dir/home/lcrm/Documents/WaveLight/FW/main.c.o
+.rodata.wheel_ramp.4179
+                0x0000000000808e7c        0x6 load address 0x0000000000000e7c
+ .rodata.wheel_ramp.4179
+                0x0000000000808e7c        0x6 CMakeFiles/Wavelight_firmware_default_default_XC8_compile.dir/home/lcrm/Documents/EDA/WaveLight/FW/main.c.o
 
-.text           0x0000000000000e3c        0x2
- .text          0x0000000000000e3c        0x2 /home/lcrm/.mchp_packs/Microchip/ATtiny_DFP/3.4.278/xc8/avr/lib/avrxmega3/short-calls/crtattiny416.o
-                0x0000000000000e3c                __vector_22
-                0x0000000000000e3c                __vector_1
-                0x0000000000000e3c                __vector_24
-                0x0000000000000e3c                __vector_12
-                0x0000000000000e3c                __bad_interrupt
-                0x0000000000000e3c                __vector_6
-                0x0000000000000e3c                __vector_3
-                0x0000000000000e3c                __vector_23
-                0x0000000000000e3c                __vector_25
-                0x0000000000000e3c                __vector_11
-                0x0000000000000e3c                __vector_13
-                0x0000000000000e3c                __vector_17
-                0x0000000000000e3c                __vector_19
-                0x0000000000000e3c                __vector_7
-                0x0000000000000e3c                __vector_4
-                0x0000000000000e3c                __vector_9
-                0x0000000000000e3c                __vector_2
-                0x0000000000000e3c                __vector_21
-                0x0000000000000e3c                __vector_15
-                0x0000000000000e3c                __vector_8
-                0x0000000000000e3c                __vector_14
-                0x0000000000000e3c                __vector_10
-                0x0000000000000e3c                __vector_16
-                0x0000000000000e3c                __vector_18
-                0x0000000000000e3c                __vector_20
+.text           0x0000000000000e82        0x2
+ .text          0x0000000000000e82        0x2 /home/lcrm/.mchp_packs/Microchip/ATtiny_DFP/3.4.278/xc8/avr/lib/avrxmega3/short-calls/crtattiny416.o
+                0x0000000000000e82                __vector_22
+                0x0000000000000e82                __vector_1
+                0x0000000000000e82                __vector_24
+                0x0000000000000e82                __vector_12
+                0x0000000000000e82                __bad_interrupt
+                0x0000000000000e82                __vector_6
+                0x0000000000000e82                __vector_3
+                0x0000000000000e82                __vector_23
+                0x0000000000000e82                __vector_25
+                0x0000000000000e82                __vector_11
+                0x0000000000000e82                __vector_13
+                0x0000000000000e82                __vector_17
+                0x0000000000000e82                __vector_19
+                0x0000000000000e82                __vector_7
+                0x0000000000000e82                __vector_4
+                0x0000000000000e82                __vector_9
+                0x0000000000000e82                __vector_2
+                0x0000000000000e82                __vector_21
+                0x0000000000000e82                __vector_15
+                0x0000000000000e82                __vector_8
+                0x0000000000000e82                __vector_14
+                0x0000000000000e82                __vector_10
+                0x0000000000000e82                __vector_16
+                0x0000000000000e82                __vector_18
+                0x0000000000000e82                __vector_20
 
-.text.power     0x0000000000000e3e        0x2
- .text.power    0x0000000000000e3e        0x2 CMakeFiles/Wavelight_firmware_default_default_XC8_compile.dir/home/lcrm/Documents/WaveLight/FW/main.c.o
+.text.power     0x0000000000000e84        0x2
+ .text.power    0x0000000000000e84        0x2 CMakeFiles/Wavelight_firmware_default_default_XC8_compile.dir/home/lcrm/Documents/EDA/WaveLight/FW/main.c.o
 
 .text.__dummy_fini
-                0x0000000000000e40        0x2
+                0x0000000000000e86        0x2
  .text.__dummy_fini
-                0x0000000000000e40        0x2 /opt/microchip/xc8/v3.00/avr/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avrxmega3/short-calls/libc.a(exit.o)
-                0x0000000000000e40                _fini
+                0x0000000000000e86        0x2 /opt/microchip/xc8/v3.10/avr/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avrxmega3/short-calls/libc.a(exit.o)
+                0x0000000000000e86                _fini
 
 .text.__dummy_funcs_on_exit
-                0x0000000000000e42        0x2
+                0x0000000000000e88        0x2
  .text.__dummy_funcs_on_exit
-                0x0000000000000e42        0x2 /opt/microchip/xc8/v3.00/avr/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avrxmega3/short-calls/libc.a(exit.o)
-                0x0000000000000e42                __funcs_on_exit
+                0x0000000000000e88        0x2 /opt/microchip/xc8/v3.10/avr/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avrxmega3/short-calls/libc.a(exit.o)
+                0x0000000000000e88                __funcs_on_exit
 
 .text.__dummy_simulator_exit
-                0x0000000000000e44        0x2
+                0x0000000000000e8a        0x2
  .text.__dummy_simulator_exit
-                0x0000000000000e44        0x2 /opt/microchip/xc8/v3.00/avr/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avrxmega3/short-calls/libc.a(exit.o)
-                0x0000000000000e44                __simulator_exit
+                0x0000000000000e8a        0x2 /opt/microchip/xc8/v3.10/avr/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avrxmega3/short-calls/libc.a(exit.o)
+                0x0000000000000e8a                __simulator_exit
 
-.text._Exit     0x0000000000000e46        0x2
- .text._Exit    0x0000000000000e46        0x2 /opt/microchip/xc8/v3.00/avr/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avrxmega3/short-calls/libc.a(_Exit.o)
-                0x0000000000000e46                _Exit
+.text._Exit     0x0000000000000e8c        0x2
+ .text._Exit    0x0000000000000e8c        0x2 /opt/microchip/xc8/v3.10/avr/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avrxmega3/short-calls/libc.a(_Exit.o)
+                0x0000000000000e8c                _Exit
 
 .data.flame_rng
-                0x0000000000803f16        0x2 load address 0x0000000000000e48
+                0x0000000000803f1a        0x2 load address 0x0000000000000e8e
  .data.flame_rng
-                0x0000000000803f16        0x2 CMakeFiles/Wavelight_firmware_default_default_XC8_compile.dir/home/lcrm/Documents/WaveLight/FW/main.c.o
+                0x0000000000803f1a        0x2 CMakeFiles/Wavelight_firmware_default_default_XC8_compile.dir/home/lcrm/Documents/EDA/WaveLight/FW/main.c.o
 
 .data.gesture_bg
-                0x0000000000803f1a        0x2 load address 0x0000000000000e4a
+                0x0000000000803f1e        0x2 load address 0x0000000000000e90
  .data.gesture_bg
-                0x0000000000803f1a        0x2 CMakeFiles/Wavelight_firmware_default_default_XC8_compile.dir/home/lcrm/Documents/WaveLight/FW/main.c.o
+                0x0000000000803f1e        0x2 CMakeFiles/Wavelight_firmware_default_default_XC8_compile.dir/home/lcrm/Documents/EDA/WaveLight/FW/main.c.o
 
 .data.gesture_bg_candidate
-                0x0000000000803f1c        0x2 load address 0x0000000000000e4c
+                0x0000000000803f20        0x2 load address 0x0000000000000e92
  .data.gesture_bg_candidate
-                0x0000000000803f1c        0x2 CMakeFiles/Wavelight_firmware_default_default_XC8_compile.dir/home/lcrm/Documents/WaveLight/FW/main.c.o
+                0x0000000000803f20        0x2 CMakeFiles/Wavelight_firmware_default_default_XC8_compile.dir/home/lcrm/Documents/EDA/WaveLight/FW/main.c.o

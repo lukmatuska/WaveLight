@@ -18,12 +18,13 @@
  *
  * Requires fuse OSCCFG = 16 MHz (FREQSEL_16MHZ), factory default is 20 MHz.
  *
- * Power: after IDLE_AFTER_MS without a hand (no gesture pending, no color
- * mode) the sensor slows down to SENSOR_IDLE_MS / SENSOR_IDLE_KITER, whether
- * the light is on or off. If the light is also off (and not fading), the MCU
- * sleeps in power-down between measurements, woken by the sensor INT pin
- * (low on every result - the TMF8801 has no distance threshold interrupt).
- * A hand switches back to SENSOR_ACTIVE_MS / SENSOR_ACTIVE_KITER.
+ * Power: while the light is off and after IDLE_AFTER_MS without a hand (no
+ * gesture pending, no color mode) the sensor slows down to SENSOR_IDLE_MS /
+ * SENSOR_IDLE_KITER. Once the light has also faded out, the MCU sleeps in
+ * power-down between measurements, woken by the sensor INT pin (low on every
+ * result - the TMF8801 has no distance threshold interrupt). A hand or the
+ * light turning on switches back to SENSOR_ACTIVE_MS / SENSOR_ACTIVE_KITER.
+ * While the light is on the sensor always stays active.
  *
  * Controls:
  * - wave: on / off
@@ -42,7 +43,7 @@
 #define F_CPU 16000000UL  // 16 MHz clock
 #define DEBUG_DISTANCE 0  // 1 = show raw distance on LEDs, 0 = night light
  #define BATTERY_CHECK  0  // 1 = battery divider fitted
-#define LED_COUNT      4  // WS2812 LEDs on the strip
+#define LED_COUNT      6  // WS2812 LEDs on the strip
 #define TICK_MS 10        // main loop period (fades, gesture timing)
 
 #define ADJUST_NEAR_MM 60     // hold distance for value 0, +1 per mm up to 255 (~32 cm)
@@ -256,10 +257,10 @@ static void sleep_until_sensor(void) {
 }
 
 /**
- * @return 1 if nothing needs the 10 ms loop
+ * @return 1 if the sensor may go idle
  */
 static uint8_t is_quiet(void) {
-    return gesture_idle() && !tone_mode;
+    return gesture_idle() && !tone_mode && !light_on;
 }
 
 /**
@@ -384,7 +385,7 @@ int main(void) {
             gesture_reading(distance);
             tick();
         } else {
-            // Light on (flame needs the 10 ms loop) or sensor active
+            // Sensor active (always while the light is on) or light still fading out
             if (tmf8801_get_distance(&distance) == 0) gesture_reading(distance);
             tick();
             delay_ms(TICK_MS);

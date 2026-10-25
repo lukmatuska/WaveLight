@@ -15,7 +15,7 @@
 				}
 			],
 			"type" : "FILEPATH",
-			"value" : "/usr/bin/addr2line"
+			"value" : "/usr/sbin/addr2line"
 		},
 		{
 			"name" : "CMAKE_AR",
@@ -31,7 +31,7 @@
 				}
 			],
 			"type" : "FILEPATH",
-			"value" : "/opt/microchip/xc8/v3.00/bin/xc8-ar"
+			"value" : "/opt/microchip/xc8/v3.10/bin/xc8-ar"
 		},
 		{
 			"name" : "CMAKE_ASM_COMPILER",
@@ -47,7 +47,7 @@
 				}
 			],
 			"type" : "STRING",
-			"value" : "/opt/microchip/xc8/v3.00/bin/xc8-cc"
+			"value" : "/opt/microchip/xc8/v3.10/bin/xc8-cc"
 		},
 		{
 			"name" : "CMAKE_ASM_COMPILER_WORKS",
@@ -163,7 +163,7 @@
 				}
 			],
 			"type" : "INTERNAL",
-			"value" : "/home/lcrm/Documents/WaveLight/FW/_build/Wavelight-firmware/default"
+			"value" : "/home/lcrm/Documents/EDA/WaveLight/FW/_build/Wavelight-firmware/default"
 		},
 		{
 			"name" : "CMAKE_CACHE_MAJOR_VERSION",
@@ -199,7 +199,7 @@
 				}
 			],
 			"type" : "INTERNAL",
-			"value" : "4"
+			"value" : "3"
 		},
 		{
 			"name" : "CMAKE_COLOR_DIAGNOSTICS",
@@ -223,7 +223,7 @@
 				}
 			],
 			"type" : "INTERNAL",
-			"value" : "/usr/bin/cmake"
+			"value" : "/usr/sbin/cmake"
 		},
 		{
 			"name" : "CMAKE_CPACK_COMMAND",
@@ -235,7 +235,7 @@
 				}
 			],
 			"type" : "INTERNAL",
-			"value" : "/usr/bin/cpack"
+			"value" : "/usr/sbin/cpack"
 		},
 		{
 			"name" : "CMAKE_CTEST_COMMAND",
@@ -247,7 +247,7 @@
 				}
 			],
 			"type" : "INTERNAL",
-			"value" : "/usr/bin/ctest"
+			"value" : "/usr/sbin/ctest"
 		},
 		{
 			"name" : "CMAKE_C_COMPILER",
@@ -263,7 +263,7 @@
 				}
 			],
 			"type" : "STRING",
-			"value" : "/opt/microchip/xc8/v3.00/bin/xc8-cc"
+			"value" : "/opt/microchip/xc8/v3.10/bin/xc8-cc"
 		},
 		{
 			"name" : "CMAKE_C_FLAGS",
@@ -383,7 +383,7 @@
 				}
 			],
 			"type" : "INTERNAL",
-			"value" : "/usr/bin/ccmake"
+			"value" : "/usr/sbin/ccmake"
 		},
 		{
 			"name" : "CMAKE_ERROR_DEPRECATED",
@@ -539,7 +539,7 @@
 				}
 			],
 			"type" : "STATIC",
-			"value" : "/home/lcrm/Documents/WaveLight/FW/_build/Wavelight-firmware/default/CMakeFiles/pkgRedirects"
+			"value" : "/home/lcrm/Documents/EDA/WaveLight/FW/_build/Wavelight-firmware/default/CMakeFiles/pkgRedirects"
 		},
 		{
 			"name" : "CMAKE_GENERATOR",
@@ -599,7 +599,7 @@
 				}
 			],
 			"type" : "INTERNAL",
-			"value" : "/home/lcrm/Documents/WaveLight/FW/cmake/Wavelight-firmware/default"
+			"value" : "/home/lcrm/Documents/EDA/WaveLight/FW/cmake/Wavelight-firmware/default"
 		},
 		{
 			"name" : "CMAKE_INSTALL_PREFIX",
@@ -627,7 +627,7 @@
 				}
 			],
 			"type" : "FILEPATH",
-			"value" : "/usr/bin/ld"
+			"value" : "/usr/sbin/ld"
 		},
 		{
 			"name" : "CMAKE_LIST_FILE_NAME",
@@ -751,7 +751,7 @@
 				}
 			],
 			"type" : "FILEPATH",
-			"value" : "/usr/bin/nm"
+			"value" : "/usr/sbin/nm"
 		},
 		{
 			"name" : "CMAKE_NUMBER_OF_MAKEFILES",
@@ -779,7 +779,7 @@
 				}
 			],
 			"type" : "FILEPATH",
-			"value" : "/usr/bin/objcopy"
+			"value" : "/usr/sbin/objcopy"
 		},
 		{
 			"name" : "CMAKE_OBJDUMP",
@@ -795,7 +795,7 @@
 				}
 			],
 			"type" : "FILEPATH",
-			"value" : "/usr/bin/objdump"
+			"value" : "/usr/sbin/objdump"
 		},
 		{
 			"name" : "CMAKE_PLATFORM_INFO_INITIALIZED",
@@ -899,7 +899,7 @@
 				}
 			],
 			"type" : "FILEPATH",
-			"value" : "/usr/bin/readelf"
+			"value" : "/usr/sbin/readelf"
 		},
 		{
 			"name" : "CMAKE_ROOT",
@@ -1119,7 +1119,7 @@
 				}
 			],
 			"type" : "FILEPATH",
-			"value" : "/usr/bin/strip"
+			"value" : "/usr/sbin/strip"
 		},
 		{
 			"name" : "CMAKE_TAPI",
@@ -1147,7 +1147,7 @@
 				}
 			],
 			"type" : "FILEPATH",
-			"value" : "/home/lcrm/Documents/WaveLight/FW/cmake/Wavelight-firmware/default/.generated/toolchain.cmake"
+			"value" : "/home/lcrm/Documents/EDA/WaveLight/FW/cmake/Wavelight-firmware/default/.generated/toolchain.cmake"
 		},
 		{
 			"name" : "CMAKE_UNAME",
@@ -1159,7 +1159,7 @@
 				}
 			],
 			"type" : "INTERNAL",
-			"value" : "/usr/bin/uname"
+			"value" : "/usr/sbin/uname"
 		},
 		{
 			"name" : "CMAKE_USER_MAKE_RULES_OVERRIDE",
@@ -1171,7 +1171,7 @@
 				}
 			],
 			"type" : "FILEPATH",
-			"value" : "/home/lcrm/Documents/WaveLight/FW/cmake/Wavelight-firmware/default/.generated/overrides.cmake"
+			"value" : "/home/lcrm/Documents/EDA/WaveLight/FW/cmake/Wavelight-firmware/default/.generated/overrides.cmake"
 		},
 		{
 			"name" : "CMAKE_VERBOSE_MAKEFILE",
@@ -1211,7 +1211,7 @@
 				}
 			],
 			"type" : "FILEPATH",
-			"value" : "/opt/microchip/xc8/v3.00/bin/xc8-ar"
+			"value" : "/opt/microchip/xc8/v3.10/bin/xc8-ar"
 		},
 		{
 			"name" : "MP_AR_DIR",
@@ -1223,7 +1223,7 @@
 				}
 			],
 			"type" : "PATH",
-			"value" : "/opt/microchip/xc8/v3.00/bin"
+			"value" : "/opt/microchip/xc8/v3.10/bin"
 		},
 		{
 			"name" : "MP_AS",
@@ -1235,7 +1235,7 @@
 				}
 			],
 			"type" : "PATH",
-			"value" : "/opt/microchip/xc8/v3.00/bin/xc8-cc"
+			"value" : "/opt/microchip/xc8/v3.10/bin/xc8-cc"
 		},
 		{
 			"name" : "MP_AS_DIR",
@@ -1247,7 +1247,7 @@
 				}
 			],
 			"type" : "PATH",
-			"value" : "/opt/microchip/xc8/v3.00/bin"
+			"value" : "/opt/microchip/xc8/v3.10/bin"
 		},
 		{
 			"name" : "MP_CC",
@@ -1259,7 +1259,7 @@
 				}
 			],
 			"type" : "PATH",
-			"value" : "/opt/microchip/xc8/v3.00/bin/xc8-cc"
+			"value" : "/opt/microchip/xc8/v3.10/bin/xc8-cc"
 		},
 		{
 			"name" : "MP_CC_DIR",
@@ -1271,7 +1271,7 @@
 				}
 			],
 			"type" : "PATH",
-			"value" : "/opt/microchip/xc8/v3.00/bin"
+			"value" : "/opt/microchip/xc8/v3.10/bin"
 		},
 		{
 			"name" : "MP_LD",
@@ -1283,7 +1283,7 @@
 				}
 			],
 			"type" : "FILEPATH",
-			"value" : "/opt/microchip/xc8/v3.00/bin/xc8-cc"
+			"value" : "/opt/microchip/xc8/v3.10/bin/xc8-cc"
 		},
 		{
 			"name" : "MP_LD_DIR",
@@ -1295,7 +1295,7 @@
 				}
 			],
 			"type" : "PATH",
-			"value" : "/opt/microchip/xc8/v3.00/bin"
+			"value" : "/opt/microchip/xc8/v3.10/bin"
 		},
 		{
 			"name" : "OBJCOPY",
@@ -1307,7 +1307,7 @@
 				}
 			],
 			"type" : "FILEPATH",
-			"value" : "/opt/microchip/xc8/v3.00/bin/avr-objcopy"
+			"value" : "/opt/microchip/xc8/v3.10/bin/avr-objcopy"
 		},
 		{
 			"name" : "OBJDUMP",
@@ -1319,7 +1319,7 @@
 				}
 			],
 			"type" : "FILEPATH",
-			"value" : "/opt/microchip/xc8/v3.00/bin/avr-objdump"
+			"value" : "/opt/microchip/xc8/v3.10/bin/avr-objdump"
 		},
 		{
 			"name" : "PACK_REPO_PATH",
@@ -1343,7 +1343,7 @@
 				}
 			],
 			"type" : "STATIC",
-			"value" : "/home/lcrm/Documents/WaveLight/FW/_build/Wavelight-firmware/default"
+			"value" : "/home/lcrm/Documents/EDA/WaveLight/FW/_build/Wavelight-firmware/default"
 		},
 		{
 			"name" : "Wavelight_firmware_default_project_IS_TOP_LEVEL",
@@ -1367,7 +1367,7 @@
 				}
 			],
 			"type" : "STATIC",
-			"value" : "/home/lcrm/Documents/WaveLight/FW/cmake/Wavelight-firmware/default"
+			"value" : "/home/lcrm/Documents/EDA/WaveLight/FW/cmake/Wavelight-firmware/default"
 		}
 	],
 	"kind" : "cache",

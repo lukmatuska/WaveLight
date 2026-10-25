@@ -2,7 +2,7 @@
 	"artifacts" : 
 	[
 		{
-			"path" : "/home/lcrm/Documents/WaveLight/FW/out/Wavelight-firmware/default.elf"
+			"path" : "/home/lcrm/Documents/EDA/WaveLight/FW/out/Wavelight-firmware/default.elf"
 		}
 	],
 	"backtrace" : 3,
@@ -40,13 +40,13 @@
 			{
 				"command" : 0,
 				"file" : 0,
-				"line" : 40,
+				"line" : 48,
 				"parent" : 2
 			},
 			{
 				"command" : 3,
 				"file" : 0,
-				"line" : 49,
+				"line" : 57,
 				"parent" : 2
 			},
 			{
@@ -74,7 +74,7 @@
 			"id" : "Wavelight_firmware_default_default_XC8_compile::@6890427a1f51a3e7e1df"
 		}
 	],
-	"id" : "Wavelight_firmware_default_image_E5NgOjff::@6890427a1f51a3e7e1df",
+	"id" : "Wavelight_firmware_default_image_viNqrVWz::@6890427a1f51a3e7e1df",
 	"link" : 
 	{
 		"commandFragments" : 
@@ -157,7 +157,7 @@
 		],
 		"language" : "C"
 	},
-	"name" : "Wavelight_firmware_default_image_E5NgOjff",
+	"name" : "Wavelight_firmware_default_image_viNqrVWz",
 	"nameOnDisk" : "default.elf",
 	"objectDependencies" : 
 	[
@@ -196,7 +196,7 @@
 				3
 			],
 			"isGenerated" : true,
-			"path" : "/home/lcrm/Documents/WaveLight/FW/_build/Wavelight-firmware/default/CMakeFiles/Wavelight_firmware_default_default_XC8_compile.dir/home/lcrm/Documents/WaveLight/FW/main.c.o",
+			"path" : "/home/lcrm/Documents/EDA/WaveLight/FW/_build/Wavelight-firmware/default/CMakeFiles/Wavelight_firmware_default_default_XC8_compile.dir/home/lcrm/Documents/EDA/WaveLight/FW/main.c.o",
 			"sourceGroupIndex" : 0
 		}
 	],

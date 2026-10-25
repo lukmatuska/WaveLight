@@ -1,7 +1,7 @@
 {
 	"InstallScripts" : 
 	[
-		"/home/lcrm/Documents/WaveLight/FW/_build/Wavelight-firmware/default/cmake_install.cmake"
+		"/home/lcrm/Documents/EDA/WaveLight/FW/_build/Wavelight-firmware/default/cmake_install.cmake"
 	],
 	"Parallel" : false
 }

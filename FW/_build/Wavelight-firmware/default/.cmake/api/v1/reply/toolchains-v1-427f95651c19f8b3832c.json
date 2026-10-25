@@ -7,7 +7,7 @@
 			{
 				"id" : "",
 				"implicit" : {},
-				"path" : "/opt/microchip/xc8/v3.00/bin/xc8-cc",
+				"path" : "/opt/microchip/xc8/v3.10/bin/xc8-cc",
 				"version" : ""
 			},
 			"language" : "ASM",
@@ -29,7 +29,7 @@
 					"linkFrameworkDirectories" : [],
 					"linkLibraries" : []
 				},
-				"path" : "/opt/microchip/xc8/v3.00/bin/xc8-cc",
+				"path" : "/opt/microchip/xc8/v3.10/bin/xc8-cc",
 				"version" : ""
 			},
 			"language" : "C",

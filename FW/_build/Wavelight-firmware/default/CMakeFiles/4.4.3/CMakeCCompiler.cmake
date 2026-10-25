@@ -1,4 +1,4 @@
-set(CMAKE_C_COMPILER "/opt/microchip/xc8/v3.00/bin/xc8-cc")
+set(CMAKE_C_COMPILER "/opt/microchip/xc8/v3.10/bin/xc8-cc")
 set(CMAKE_C_COMPILER_ARG1 "")
 set(CMAKE_C_COMPILER_ID "")
 set(CMAKE_C_COMPILER_VERSION "")
@@ -24,11 +24,11 @@ set(CMAKE_C_COMPILER_ARCHITECTURE_ID "")
 
 
 
-set(CMAKE_AR "/opt/microchip/xc8/v3.00/bin/xc8-ar")
+set(CMAKE_AR "/opt/microchip/xc8/v3.10/bin/xc8-ar")
 set(CMAKE_C_COMPILER_AR "")
 set(CMAKE_RANLIB ":")
 set(CMAKE_C_COMPILER_RANLIB "")
-set(CMAKE_LINKER "/usr/bin/ld")
+set(CMAKE_LINKER "/usr/sbin/ld")
 set(CMAKE_LINKER_LINK "")
 set(CMAKE_LINKER_LLD "")
 set(CMAKE_C_COMPILER_LINKER "")
